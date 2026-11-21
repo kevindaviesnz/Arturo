@@ -1,0 +1,46 @@
+# Scenario 021 — Energy grid operations: three Functions, delegation, governance, schedule
+/reset
+yes
+/enterprise
+1
+Southern Grid Co
+Keep the network stable with evidence-led analysis and accountable human control of every switching decision.
+skip
+/function
+1
+Grid Monitoring
+Frame monitoring signals and evidence gaps for network events.
+skip
+/function
+1
+Load Analysis
+Analyse synthetic load and constraint scenarios for accountable review.
+skip
+/function
+1
+Response Planning
+Prepare bounded response options and route switching decisions to a person.
+skip
+/add-human-worker
+Control Engineer
+1
+skip
+/function start "Grid Monitoring"
+/function start "Load Analysis"
+/function start "Response Planning"
+@timeout 300
+@staff /staff
+/governance policy add "Response analysis requires engineer sign-off" --effect require-approval --capability "analysis"
+/governance policy add "Automated switching is denied" --effect deny --capability "execution"
+/schedule add "Summarise overnight constraint breaches and list those needing engineer review, labelling assumptions." --every daily --at "06:00" --timezone "Pacific/Auckland" --function "Grid Monitoring"
+@cap DELEG_ID {ID\s+([0-9a-f-]{36})}
+/delegation request "Analyse a synthetic scenario where a feeder approaches its thermal limit during evening peak: evidence needed, load-transfer options at a high level, risks, and the switching decisions a human must make. Do not issue switching instructions." --from "Response Planning" --to "Load Analysis"
+/delegation list
+@cap TASK_ID {Task\s+(task-[0-9]+)}
+/delegation inspect {{DELEG_ID}}
+@wait 8
+/approve {{TASK_ID}}
+@wait 55
+/task inspect {{TASK_ID}}
+/functions
+/timeline

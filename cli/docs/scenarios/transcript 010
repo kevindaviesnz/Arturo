@@ -1,0 +1,704 @@
+Accepted as a non-operational planning checklist only; independent safety, patent, and source verification are required before any research. No laboratory work authorised.
+
+Completed by  Lead Scientist
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › /timeline
+
+◆ #44 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T22:22:35.850Z
+Id             8ad8d3de-053c-4db7-846c-ee8e412f1ac3
+
+◆ #43 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T22:22:28.938Z
+Id             d38e2abe-bd15-49fb-afbe-8837ff808eba
+
+◆ #42 · Human task completed
+Human task human-task-1 completed by Lead Scientist
+Time          2026-08-01T22:22:28.936Z
+Id            308ea22c-1230-461e-96c2-9a44ed1e773a
+
+◆ #41 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Accepted as a non-operational planning checklist only; independent safety, patent, and source verification are required before any research. No laboratory work authorised." --as "Lead Scientist"
+Time           2026-08-01T22:21:54.962Z
+Id             7521f989-78c2-4c44-a56a-62ff35a355c6
+
+◆ #40 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T22:21:54.960Z
+Id                  2f8601e8-83a9-4178-8867-3fca779c7046
+
+◆ #39 · Bot typed a line
+Bot submitted  /create-human-task "Planning checklist decision" "Decide whether the revised criteria are acceptable as a non-operational planning checklist and what independent reviews must precede any work. Do not authorise laboratory work."
+Time           2026-08-01T22:21:16.139Z
+Id             a3266ba8-0196-408f-a35d-65cc1fad03af
+
+◆ #38 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T22:21:09.515Z
+Id             8ad37a20-54b1-47a6-835e-fb30eb722a2c
+
+× #37 · Task failed
+Task failed   task-1
+Time          2026-08-01T22:20:14.892Z
+Id            bd43577b-3dd8-4fdd-9d81-654019bd2539
+
+◆ #36 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-01T22:20:14.511Z
+Id            6dd167bf-9121-410a-a017-b9191dd18bfb
+
+◆ #35 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-01T22:19:58.145Z
+Id             1105ec29-173b-4912-bd99-e6bb212d8873
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › 
+◆ Bot finished
+40 lines typed, 1 turned down — the script finished.
+2 decisions in this run were signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 010 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 010 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/010.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           5
+Tasks             2
+  Human Tasks       1
+  Approvals waiting 1
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Harbour Financial Group
+
+◆ What does it do?
+In one sentence, what does Harbour Financial Group exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Investigate security concerns using verified evidence and controlled escalation.
+
+◆ Anything more about it?
+Anything more worth knowing about Harbour Financial Group? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Harbour Financial Group
+Mission       Investigate security concerns using verified evidence and controlled escalation.
+Description   (none)
+Status        active
+Created       2026-08-01T22:39:21.115Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Harbour Financial Group" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Security Incident Investigation
+
+◆ What should it do?
+In one sentence, what should "Security Incident Investigation" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Triage security signals, identify evidence gaps, and prepare bounded investigation work without executing containment.
+
+◆ Anything more about it?
+Anything more worth knowing about "Security Incident Investigation"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               harbour-financial-group:security-incident-investigation
+Name             Security Incident Investigation
+Enterprise       Harbour Financial Group (enterprise-1)
+Objective        Triage security signals, identify evidence gaps, and prepare bounded investigation work without executing containment.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T22:40:05.648Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Incident Commander
+
+◆ What will they do?
+What should Incident Commander be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Incident Commander's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Incident Commander is now on your team.
+Incident Commander can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Security Incident Investigation"
+
+◆ Function started
+Function
+  Security Incident Investigation
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+× Staffing plan failed
+Paid escalation also returned an invalid staffing plan. worker name belongs to a human and cannot be proposed as AI: Incident Commander
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 11193 session tokens
+arturo › /event publish "Customer database anomaly detected" --source "Security Incident Investigation" --enterprise "Harbour Financial Group"
+
+◆ Event published
+Events
+
+2026-08-01 22:41Z  Customer Database Anomaly Detected  · success
+  Customer database anomaly detected — source: Security Incident Investigation — enterprise: Harbour Financial Group
+Event ID                         78941261-a736-4164-ae30-41072084a3ab
+
+Function evaluations
+
+Security Incident Investigation  Task queued — Analyze customer database login logs to identify potential security breaches.
+Reason                           Customer database anomaly detected by Security Incident Investigation function.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › /tasks
+
+◆ Tasks
+1. Analyze customer database login logs to identify potential security breaches.
+   ID                     task-1
+   Status                 Queued
+   Required capabilities  safety, research
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › 
+◆ Bot
+A running Function may or may not create work from an Event; create the bounded triage Task explicitly.
+
+
+/task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › Using a synthetic alert only, prepare a triage plan for a suspected customer-database anomaly: known facts, hypotheses, evidence to request, severity criteria, customer-impact questions, and authorised decision points. Do not claim telemetry access or execute containment.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › 1
+
+◆ Task not created
+Security Incident Investigation has no Worker assigned to it, so there is nobody to do this.
+
+  /staff
+
+Registering a Worker does not assign it to a Function; /staff does that.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Analyze customer database login logs to identify potential security breaches.
+   ID                     task-1
+   Status                 Queued
+   Required capabilities  safety, research
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval chain not found  task-1
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker           None
+ID               task-1
+Status           Queued
+  (Waiting its turn to run.)
+Skills needed    safety, research
+Why this Worker  Function Security Incident Investigation is waiting for a Worker with safety, research: Customer database anomaly detected by Security Incident Investigation function.
+Business         Harbour Financial Group
+Task             1 / 1
+Instruction      Analyze customer database login logs to identify potential security breaches.
+
+No output yet.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › /events
+
+◆ Events
+2026-08-01 22:38Z  Bot Input  · warn
+Bot submitted            /enterprise
+Event ID                 8958bb88-57a6-461e-bbfd-ff860cf57d29
+
+2026-08-01 22:38Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 70135d0c-263c-40e6-94df-c1ad0cf4b162
+
+2026-08-01 22:38Z  Bot Input  · warn
+Bot submitted            Harbour Financial Group
+Event ID                 6f754424-6015-4070-aa29-a9cb325e203a
+
+2026-08-01 22:39Z  Bot Input  · warn
+Bot submitted            Investigate security concerns using verified evidence and controlled escalation.
+Event ID                 0ec1ba0d-1139-4b2f-a072-b60d406a4bda
+
+2026-08-01 22:39Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 68ff813c-dbb5-45b4-a0fe-0405a4dadacc
+
+2026-08-01 22:39Z  Bot Input  · warn
+Bot submitted            /function
+Event ID                 a53feb15-75c8-4096-831e-123711552faa
+
+2026-08-01 22:39Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 35c0b79c-07fd-4a8f-8abb-0ffd6120ce13
+
+2026-08-01 22:39Z  Bot Input  · warn
+Bot submitted            Security Incident Investigation
+Event ID                 2bc1fb3a-c052-491e-8d11-f9cac54f23e3
+
+2026-08-01 22:39Z  Bot Input  · warn
+Bot submitted            Triage security signals, identify evidence gaps, and prepare bounded investigation work without executing containment.
+Event ID                 df29c92b-f60f-430e-ab42-aece31ab322d
+
+2026-08-01 22:40Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 2c7b9b8b-0a61-45c7-ae00-008a90fda7fe
+
+2026-08-01 22:40Z  Bot Input  · warn
+Bot submitted            /add-human-worker
+Event ID                 91437fa5-243f-46c0-a9d6-ae9befafc260
+
+2026-08-01 22:40Z  Bot Input  · warn
+Bot submitted            Incident Commander
+Event ID                 f1f3df31-2cfb-410b-8ff6-68d94f090d1d
+
+2026-08-01 22:40Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 e80b9436-1c9f-4e1c-b35e-271f80cb583e
+
+2026-08-01 22:40Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 5297078a-1cd5-44df-9491-bb56ac140fb4
+
+2026-08-01 22:40Z  Worker Registered  · success
+Human worker registered  Incident Commander
+Event ID                 d83ae70d-1863-4714-97c8-58cd61e0a576
+
+2026-08-01 22:40Z  Bot Input  · warn
+Bot submitted            /function start "Security Incident Investigation"
+Event ID                 1b48b002-c13d-4fc7-80e5-14f9e9565282
+
+2026-08-01 22:40Z  Function Started  · success
+Function started         Security Incident Investigation
+Event ID                 3c764ec0-97a4-4535-a5db-336300d59080
+
+2026-08-01 22:40Z  Bot Input  · warn
+Bot submitted            /staff
+Event ID                 0539af23-3fc3-4fbc-bb29-6c0cccd39015
+
+2026-08-01 22:41Z  Bot Input  · warn
+Bot submitted            /event publish "Customer database anomaly detected" --source "Security Incident Investigation" --enterprise "Harbour Financial Group"
+Event ID                 351ebe35-a943-4888-9184-2a2e177ae94d
+
+2026-08-01 22:41Z  Customer Database Anomaly Detected  · success
+  Customer database anomaly detected — source: Security Incident Investigation — enterprise: Harbour Financial Group
+Event ID                 78941261-a736-4164-ae30-41072084a3ab
+
+2026-08-01 22:41Z  Task Created  · success
+  Function Security Incident Investigation created Task from Customer database anomaly detected: Analyze customer database login logs to identify potential security breaches.
+Event ID                 37346ce4-fcdb-4f0a-8240-d72ba63ef399
+
+2026-08-01 22:41Z  Signal Evaluated  · info
+  Security Incident Investigation evaluated Customer database anomaly detected: Customer database anomaly detected by Security Incident Investigation function.
+Event ID                 c9e64b6b-f5a9-48ac-a6cd-14fc48160b66
+
+2026-08-01 22:41Z  Bot Input  · warn
+Bot submitted            /tasks
+Event ID                 a3ab8fa7-89b7-409f-a2fb-73fe0c1d7494
+
+2026-08-01 22:41Z  Bot Input  · warn
+Bot submitted            /task
+Event ID                 24436136-8fba-4c03-bf76-f36ded511f02
+
+2026-08-01 22:41Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 69d210a4-a4e8-434f-9d3a-8373679dba69
+
+2026-08-01 22:41Z  Bot Input  · warn
+Bot submitted            Using a synthetic alert only, prepare a triage plan for a suspected customer-database anomaly: known facts, hypotheses, evidence to request, severity criteria, customer-impact questions, and authorised decision points. Do not claim telemetry access or execute containment.
+Event ID                 14b3e710-ecf4-4005-84c2-f3d222b7ab36
+
+2026-08-01 22:42Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 0e69d0ac-4d4e-47b3-bdf2-a60b2093ad8d
+
+2026-08-01 22:42Z  Bot Input  · warn
+Bot submitted            /tasks
+Event ID                 800d2005-7fbb-4f59-bac1-341adfefdf9f
+
+2026-08-01 22:43Z  Bot Input  · warn
+Bot submitted            /approve task-1 --as "Arturo Bot (automated, not a person)"
+Event ID                 08fcd31b-b8e9-4672-b236-d9f63d2001f2
+
+2026-08-01 22:44Z  Bot Input  · warn
+Bot submitted            /task inspect task-1
+Event ID                 01b5d207-d822-4b04-8ce1-61025339f6c8
+
+2026-08-01 22:44Z  Bot Input  · warn
+Bot submitted            /events
+Event ID                 03f305ca-8aa5-4cf6-b414-4881eca089c8
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › /health "Security Incident Investigation"
+
+◆ Health
+Function
+  Security Incident Investigation
+
+Overall Health
+  Unknown
+
+Indicators
+  Tasks Completed          0/1 (0%)
+  Tasks Failed             0
+  Open Tasks               1
+  Outcomes Measured        0/0
+  Lessons Retained         0
+  Governed Criteria        0
+
+Trend
+  Stable
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › /create-human-task "Decide investigation escalation" "Review the synthetic investigation record. State what verified telemetry and authority are required before containment, notification, or customer-impact decisions."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=761812c9467d9079a192b1456d2ab14651e0246d0e69f486e5e6978edd73dc2d
+
+Human task          human-task-1
+Status              open
+Title               Decide investigation escalation
+Instructions
+Review the synthetic investigation record. State what verified telemetry and authority are required before containment, notification, or customer-impact decisions.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › /complete-human-task human-task-1 "Escalate for authorised review; identity, endpoint, network, database, and customer-impact evidence remain required." --as "Incident Commander"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Incident Commander
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Decide investigation escalation
+Instructions
+Review the synthetic investigation record. State what verified telemetry and authority are required before containment, notification, or customer-impact decisions.
+Notes
+Escalate for authorised review; identity, endpoint, network, database, and customer-impact evidence remain required.
+
+Completed by  Incident Commander
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › /timeline
+
+◆ #39 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T22:45:55.132Z
+Id             fe363f86-edd6-4124-94c3-5face267984d
+
+◆ #38 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T22:45:48.057Z
+Id             68e8dd21-0c93-43bc-9fe0-e4b1c7d78d6c
+
+◆ #37 · Human task completed
+Human task human-task-1 completed by Incident Commander
+Time          2026-08-01T22:45:48.055Z
+Id            fcfaa205-5e2e-4b37-9299-ec67026abbea
+
+◆ #36 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Escalate for authorised review; identity, endpoint, network, database, and customer-impact evidence remain required." --as "Incident Commander"
+Time           2026-08-01T22:45:19.918Z
+Id             70276529-4092-4253-9d93-899d918d7545
+
+◆ #35 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T22:45:19.913Z
+Id                  d5b0d085-94c3-4a22-a03c-875686ffca0f
+
+◆ #34 · Bot typed a line
+Bot submitted  /create-human-task "Decide investigation escalation" "Review the synthetic investigation record. State what verified telemetry and authority are required before containment, notification, or customer-impact decisions."
+Time           2026-08-01T22:44:48.168Z
+Id             598c7e42-5e86-4ab7-8224-5949dc918be7
+
+◆ #33 · Health updated
+Health updated  Security Incident Investigation is Unknown
+Time            2026-08-01T22:44:48.166Z
+Id              f3e4393f-4e97-4828-b9c6-25a914f994a9
+
+◆ #32 · Bot typed a line
+Bot submitted  /health "Security Incident Investigation"
+Time           2026-08-01T22:44:34.661Z
+Id             c936a29d-e645-4469-9421-fd4c4c90308b
+
+◆ #31 · Bot typed a line
+Bot submitted  /events
+Time           2026-08-01T22:44:26.707Z
+Id             03f305ca-8aa5-4cf6-b414-4881eca089c8
+
+◆ #30 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T22:44:21.038Z
+Id             01b5d207-d822-4b04-8ce1-61025339f6c8
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › 
+◆ Bot finished
+33 lines typed, 2 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 11552 session tokens
+arturo › 

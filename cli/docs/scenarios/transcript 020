@@ -1,0 +1,680 @@
+
+◆ #49 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T10:52:09.145Z
+Id             2e1496b3-b34d-455b-a385-0eba6d5ff134
+
+◆ #48 · Bot typed a line
+Bot submitted  /functions
+Time           2026-08-01T10:51:57.766Z
+Id             825f5ddf-5163-40a5-85c5-8d76891c1f2d
+
+◆ #47 · Bot typed a line
+Bot submitted  /task inspect task-2
+Time           2026-08-01T10:51:51.558Z
+Id             38894087-b80f-4125-bd5b-5467303381b6
+
+◆ #46 · Result not counted
+An AI model wrote the result of Task task-2 and nobody has checked it, so Arturo has not learned from it and will not act on it by itself.
+Time          2026-08-01T10:51:06.046Z
+Id            221712b9-e732-4789-b588-2f23305b3f8f
+
+◆ #45 · Delegation completed
+Delegation completed  Task task-2 from Load Analysis returned to Response Planning
+Time                  2026-08-01T10:51:06.045Z
+Id                    08208175-5a12-4138-990a-1cf2683c1c54
+
+◆ #44 · Task completed
+Task completed  task-2
+Time            2026-08-01T10:51:06.044Z
+Id              90f2d3b2-d5e4-4beb-a956-855547f9938d
+
+◆ #43 · Task started
+Task started  task-2
+Time          2026-08-01T10:50:56.629Z
+Id            0c3853d2-809f-43dd-b067-a3c66e43e626
+
+◆ #42 · Task approved
+Approval recorded for Task task-2 by Arturo Bot (automated, not a person)
+Time          2026-08-01T10:50:56.555Z
+Id            9690b5bd-e0a9-4f87-b152-f43200ef8f20
+
+◆ #41 · Bot typed a line
+Bot submitted  /approve task-2 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-01T10:50:41.482Z
+Id             73c8ad8c-1617-4816-b5a3-a05470909314
+
+◆ #40 · Bot typed a line
+Bot submitted  /delegation inspect 2d3f85c2-080e-4480-bbbd-c2e757331b5e
+Time           2026-08-01T10:50:21.111Z
+Id             dd058bce-d6e0-46ee-8fbd-5101e499b729
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 16156 session tokens
+arturo › 
+◆ Bot finished
+44 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 16156 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 020 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 020 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/020.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         3
+Workers           6
+Tasks             2
+  Human Tasks       0
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Aurora Clinical
+
+◆ What does it do?
+In one sentence, what does Aurora Clinical exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Design trials ethically, with independent human oversight of every protocol decision.
+
+◆ Anything more about it?
+Anything more worth knowing about Aurora Clinical? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Aurora Clinical
+Mission       Design trials ethically, with independent human oversight of every protocol decision.
+Description   (none)
+Status        active
+Created       2026-08-01T10:54:09.439Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Aurora Clinical" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Protocol Design
+
+◆ What should it do?
+In one sentence, what should "Protocol Design" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame non-operational protocol questions and route them to accountable review.
+
+◆ Anything more about it?
+Anything more worth knowing about "Protocol Design"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               aurora-clinical:protocol-design
+Name             Protocol Design
+Enterprise       Aurora Clinical (enterprise-1)
+Objective        Frame non-operational protocol questions and route them to accountable review.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T10:54:50.435Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Ethics Framing
+
+◆ What should it do?
+In one sentence, what should "Ethics Framing" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame ethics and safety questions for nominated protocol drafts.
+
+◆ Anything more about it?
+Anything more worth knowing about "Ethics Framing"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               aurora-clinical:ethics-framing
+Name             Ethics Framing
+Enterprise       Aurora Clinical (enterprise-1)
+Objective        Frame ethics and safety questions for nominated protocol drafts.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T10:55:25.211Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Ethics Chair
+
+◆ What will they do?
+What should Ethics Chair be able to do? Pick one
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Ethics Chair's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Ethics Chair is now on your team.
+Ethics Chair can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Protocol Design"
+
+◆ Function started
+Function
+  Protocol Design
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Ethics Framing"
+
+◆ Function started
+Function
+  Ethics Framing
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 2 AI Workers for Aurora Clinical.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 2 kinds of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 2
+Protocol Reviewer
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Protocol Design
+
+For example, it could
+    · Check a piece of work for mistakes and gaps
+    · Give feedback on a draft before it goes out
+
+Add Protocol Reviewer? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2608 session tokens
+arturo › yes
+
+◆ Worker 2 of 2
+Ethics Safety Specialist
+Role          Guardian
+Can do        General reasoning, Product Safety, Review, Human Contact
+Would help    Ethics Framing
+
+For example, it could
+    · Check whether something is safe to go ahead
+    · Flag risks before an action is taken
+
+Add Ethics Safety Specialist? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2608 session tokens
+arturo › yes
+
+◆ Staffing applied
+2 AI Workers added, and put to work on 2 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Protocol Design — Ethics Chair
+  · Ethics Framing — Ethics Chair
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2608 session tokens
+arturo › /governance policy add "Protocol analysis requires ethics sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Protocol analysis requires ethics sign-off
+ID            policy-90d44470-ead5-4864-9f27-64c5b6bf8997
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2608 session tokens
+arturo › /delegation request "Frame the ethics and safety questions for a hypothetical phase-1 protocol: inclusion/exclusion uncertainty, consent risks, stopping rules, and data-monitoring needs. Non-operational only; no dosing, procedures, or clinical instructions." --from "Protocol Design" --to "Ethics Framing"
+
+◆ Delegation requested
+Delegation in progress.
+
+ID             ecea603c-af4f-44cf-933c-8d9b90f60104
+From           Protocol Design
+To             Ethics Framing
+Work           Frame the ethics and safety questions for a hypothetical phase-1 protocol: inclusion/exclusion uncertainty, consent risks, stopping rules, and data-monitoring needs. Non-operational only; no dosing, procedures, or clinical instructions.
+Answerable     Protocol Design is still answerable for it
+Status         Being worked on
+Task           task-1
+Worker         Ethics Safety Specialist
+Skills needed  safety
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2608 session tokens
+arturo › /delegation list
+
+◆ Delegations
+1. ecea603c-af4f-44cf-933c-8d9b90f60104 · Being worked on
+   Protocol Design → Ethics Framing
+   Work          Frame the ethics and safety questions for a hypothetical phase-1 protocol: inclusion/exclusion uncertainty, consent risks, stopping rules, and data-monitoring needs. Non-operational only; no dosing, procedures, or clinical instructions.
+   Task          task-1
+   Worker        Ethics Safety Specialist
+   Inspect       /delegation inspect ecea603c-af4f-44cf-933c-8d9b90f60104
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2608 session tokens
+arturo › /delegation inspect ecea603c-af4f-44cf-933c-8d9b90f60104
+
+◆ Delegation
+Delegation in progress.
+
+ID             ecea603c-af4f-44cf-933c-8d9b90f60104
+From           Protocol Design
+To             Ethics Framing
+Work           Frame the ethics and safety questions for a hypothetical phase-1 protocol: inclusion/exclusion uncertainty, consent risks, stopping rules, and data-monitoring needs. Non-operational only; no dosing, procedures, or clinical instructions.
+Answerable     Protocol Design is still answerable for it
+Status         Being worked on
+Task           task-1
+Worker         Ethics Safety Specialist
+Skills needed  safety
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2608 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2608 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                Ethics Safety Specialist
+ID                    task-1
+Status                Completed
+  (Finished.)
+Evidence              Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed         safety
+Why this Worker       Delegation ecea603c-af4f-44cf-933c-8d9b90f60104: Receiving Function is staffed by Ethics Safety Specialist
+Task                  1 / 1
+Instruction           Frame the ethics and safety questions for a hypothetical phase-1 protocol: inclusion/exclusion uncertainty, consent risks, stopping rules, and data-monitoring needs. Non-operational only; no dosing, procedures, or clinical instructions.
+
+Where this came from  an AI model wrote it. Nobody has checked it
+Looked anything up    no
+
+I can assist with framing ethics and safety questions for a hypothetical phase-1 protocol.
+
+For a phase-1 protocol that involves inclusion/exclusion uncertainty, I would like to pose the following questions:
+
+–  How will participants be enrolled in the study, and what criteria will be used to exclude them from receiving the investigational product?
+–  What are the potential risks of exclusion from the study, and how will these risks be mitigated?
+–  How will participants be informed about their enrollment status, and what support services will be available to them if they are excluded?
+
+Moving on to consent risks, I would like to consider the following:
+
+–  What are the potential risks associated with obtaining informed consent from participants in this study, and how will these risks be addressed?
+–  How will participants be protected from coercion or undue influence when making decisions about their participation in the study?
+–  What measures will be taken to ensure that participants understand the study's benefits and risks, and can make an informed decision about their participation?
+
+For stopping rules, I would like to explore
+
+–  What criteria will be used to determine whether the study should be stopped early, and how will these decisions be made?
+–  How will the study team communicate with participants if the study is stopped early, and what support services will be available to them?
+–  What are the potential consequences of stopping the study early, and how will they be managed?
+
+Finally, for data-monitoring needs, I would like to consider:
+
+–  What types of data will be collected in this study, and how will it be monitored for safety and efficacy?
+–  How will data monitoring be conducted, and what tools or technologies will be used to facilitate this process?
+–  Who will be responsible for reviewing and interpreting the data, and what protocols will be in place to ensure that data quality is maintained.
+
+These questions aim to frame the ethics and safety considerations for a hypothetical phase-1 protocol, without referencing specific details about the study's dosing, procedures, or clinical instructions.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3662 session tokens
+arturo › /create-human-task "Ethics chair decision" "Decide whether the framing is adequate to plan a formal ethics submission, and list what independent safety and statistical review must precede it. Do not authorise any trial activity."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=6737b6869ed3fd3efc30d054126956a4b3c31c9a228878754f051f0f1f3c0cf3
+
+Human task          human-task-1
+Status              open
+Title               Ethics chair decision
+Instructions
+Decide whether the framing is adequate to plan a formal ethics submission, and list what independent safety and statistical review must precede it. Do not authorise any trial activity.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3662 session tokens
+arturo › /complete-human-task human-task-1 "Adequate for planning only; independent DSMB design, statistical review, and full ethics submission are required before any trial activity." --as "Ethics Chair"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Ethics Chair
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3662 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Ethics chair decision
+Instructions
+Decide whether the framing is adequate to plan a formal ethics submission, and list what independent safety and statistical review must precede it. Do not authorise any trial activity.
+Notes
+Adequate for planning only; independent DSMB design, statistical review, and full ethics submission are required before any trial activity.
+
+Completed by  Ethics Chair
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3662 session tokens
+arturo › /timeline
+
+◆ #43 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T11:00:56.028Z
+Id             518516bf-42c5-4811-9e5e-5cb17e8a8996
+
+◆ #42 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T11:00:49.108Z
+Id             d693c16d-51cd-4805-a2f1-6dfbd5f51848
+
+◆ #41 · Human task completed
+Human task human-task-1 completed by Ethics Chair
+Time          2026-08-01T11:00:49.106Z
+Id            8f966444-927e-4e6d-856d-4292aed06317
+
+◆ #40 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Adequate for planning only; independent DSMB design, statistical review, and full ethics submission are required before any trial activity." --as "Ethics Chair"
+Time           2026-08-01T11:00:18.899Z
+Id             412ea505-6a81-4f49-b63e-a76cda9cbaa1
+
+◆ #39 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T11:00:18.895Z
+Id                  c7bdaf66-7235-475e-b0ea-425026c9d943
+
+◆ #38 · Bot typed a line
+Bot submitted  /create-human-task "Ethics chair decision" "Decide whether the framing is adequate to plan a formal ethics submission, and list what independent safety and statistical review must precede it. Do not authorise any trial activity."
+Time           2026-08-01T10:59:41.667Z
+Id             afd014f5-a1c9-43f7-a6be-ff471d37b70c
+
+◆ #37 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T10:59:34.683Z
+Id             3abf5cee-e5a6-4ddb-99e0-f6b8a68ba412
+
+◆ #36 · Result not counted
+An AI model wrote the result of Task task-1 and nobody has checked it, so Arturo has not learned from it and will not act on it by itself.
+Time          2026-08-01T10:58:46.945Z
+Id            a71a38e5-d1af-40ae-b4ef-ba746e7e568d
+
+◆ #35 · Delegation completed
+Delegation completed  Task task-1 from Ethics Framing returned to Protocol Design
+Time                  2026-08-01T10:58:46.944Z
+Id                    3f4596a1-0cfc-4589-8229-48882ecb73d7
+
+◆ #34 · Task completed
+Task completed  task-1
+Time            2026-08-01T10:58:46.943Z
+Id              feb8e4c1-7d8d-43d2-a4e2-8fee394d3a61
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3662 session tokens
+arturo › 
+◆ Bot finished
+36 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3662 session tokens
+arturo › 

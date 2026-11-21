@@ -1,0 +1,1188 @@
+ ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+Tip: to get started, enter /enterprise
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may approve governed work in this run.
+
+Anything it approves was signed by a script, not by a person. That is
+not human review, and the record says so: the name appears in the
+signed decision, in /approvals, in /approval-status and in /timeline.
+It is registered the moment it is first needed, not now: most runs
+open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is being driven by /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/049.plan.
+Nothing in this session was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         0
+Workers           0
+Tasks             0
+  Human Tasks       0
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Application reset
+Application state has been reset.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Southern Health Network
+
+◆ What does it do?
+In one sentence, what does Southern Health Network exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Coordinate care safely with evidence-led analysis and clinicians accountable for every clinical decision.
+
+◆ Anything more about it?
+Anything more worth knowing about Southern Health Network? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Southern Health Network
+Mission       Coordinate care safely with evidence-led analysis and clinicians accountable for every clinical decision.
+Description   (none)
+Status        active
+Created       2026-07-30T20:38:01.968Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Southern Health Network" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Demand Monitoring
+
+◆ What should it do?
+In one sentence, what should "Demand Monitoring" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame demand and capacity signals and evidence gaps for system events.
+
+◆ Anything more about it?
+Anything more worth knowing about "Demand Monitoring"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               southern-health-network:demand-monitoring
+Name             Demand Monitoring
+Enterprise       Southern Health Network (enterprise-1)
+Objective        Frame demand and capacity signals and evidence gaps for system events.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-30T20:38:39.053Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Capacity Planning
+
+◆ What should it do?
+In one sentence, what should "Capacity Planning" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame capacity-planning options for accountable decisions.
+
+◆ Anything more about it?
+Anything more worth knowing about "Capacity Planning"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               southern-health-network:capacity-planning
+Name             Capacity Planning
+Enterprise       Southern Health Network (enterprise-1)
+Objective        Frame capacity-planning options for accountable decisions.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-30T20:39:18.663Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Pathway Analysis
+
+◆ What should it do?
+In one sentence, what should "Pathway Analysis" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Analyse synthetic patient-pathway scenarios for accountable review.
+
+◆ Anything more about it?
+Anything more worth knowing about "Pathway Analysis"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               southern-health-network:pathway-analysis
+Name             Pathway Analysis
+Enterprise       Southern Health Network (enterprise-1)
+Objective        Analyse synthetic patient-pathway scenarios for accountable review.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-30T20:39:56.209Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Quality Review
+
+◆ What should it do?
+In one sentence, what should "Quality Review" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Review exact documents and record signed decisions before use.
+
+◆ Anything more about it?
+Anything more worth knowing about "Quality Review"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               southern-health-network:quality-review
+Name             Quality Review
+Enterprise       Southern Health Network (enterprise-1)
+Objective        Review exact documents and record signed decisions before use.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-30T20:40:34.801Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 4 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 4 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Clinical Director
+
+◆ What will they do?
+What should Clinical Director be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 4 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Clinical Director's email address?
+
+Arturo needs this before any governed step can email them. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 4 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Clinical Director is now on your team.
+Clinical Director can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Demand Monitoring"
+
+◆ Function started
+Function
+  Demand Monitoring
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Capacity Planning"
+
+◆ Function started
+Function
+  Capacity Planning
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Pathway Analysis"
+
+◆ Function started
+Function
+  Pathway Analysis
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Quality Review"
+
+◆ Function started
+Function
+  Quality Review
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout has no effect in bot mode — Arturo waits for each command to return rather than giving up on it.
+
+
+/staff
+
+× Staffing plan failed
+Gemini request failed for model gemini-3.5-flash. HTTP 503. Status: UNAVAILABLE. The provider rejected or failed the request. Check provider status and configuration. The external-call allowance was reserved before the request and remains consumed.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 
+◆ Bot
+A rule keyed on work Arturo can recognise in a typed Task, so it acts on the analysis below.
+
+
+/governance
+
+◆ Governance
+Governance rules decide what work needs a person's say-so before it runs.
+
+1. Add a rule
+2. See the rules in place
+3. Remove a rule
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 1
+
+◆ Add a rule
+In one sentence, what is this rule for?
+
+For example   Anything that sends email needs my approval first.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Pathway analysis requires clinical sign-off
+
+◆ What should happen?
+When this rule matches, what should Arturo do?
+
+1. Wait for a person to say yes before it runs
+2. Refuse it — never let this run
+3. Allow it — record the decision and let it run
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 1
+
+◆ What does it apply to?
+Which kind of work does this rule cover?
+
+Arturo can spot these in a task you type
+
+1. human-contact — Prepare or route work that may need a Human participant.
+2. safety — Identify safety risks, constraints, and missing evidence in supplied material.
+3. backup — Represent eligibility to create and verify backups through an approved backup mechanism.
+4. web-research — Search an approved provider and capture normalized source results as an exact, dated evidence Artefact before model analysis.
+5. writing — Draft and structure written content from supplied context.
+6. research — Investigate a question and separate evidence, assumptions, and uncertainty.
+7. review — Evaluate supplied work for quality, completeness, accuracy, and risk.
+8. analysis — Organize supplied information into comparisons, patterns, and conclusions.
+9. conversion — Transform content between formats while preserving its intended meaning.
+10. advice — Offer practical recommendations with trade-offs and risks.
+11. planning — Break an objective into ordered, achievable steps and dependencies.
+12. coordination — Route work and organize handoffs between suitable Workers or ongoing Functions.
+13. monitoring — Observe supplied state and report significant changes or exceptions.
+14. simulation — Explore possible outcomes using explicit assumptions.
+15. optimization — Compare alternatives and improve toward a stated objective.
+16. negotiation — Prepare positions, options, and trade-offs for a negotiation.
+17. coaching — Give supportive, practical guidance intended to improve performance over time.
+18. email-draft — Draft email content for review.
+19. summarisation — Condense supplied content while preserving its important meaning and limits.
+
+It will not spot these in a task you type. A rule on one of them still
+applies to work that declares it another way — a Procedure, a Workflow
+step, or a task a running Function creates from an Event:
+
+20. human-review — Take part in an accountable Human review or approval step.
+21. execution — Carry out a precisely defined step through a runtime-approved mechanism.
+22. email-send — Represent eligibility for a governed email-sending integration.
+23. file-read — Represent eligibility to read files through a runtime-approved tool.
+24. file-write — Represent eligibility to create or update files through a runtime-approved tool.
+25. shell-read — Represent eligibility for non-mutating shell inspection through an approved tool.
+26. shell-execute — Represent eligibility for governed command execution through an approved tool.
+27. web — Represent eligibility to use a general approved web or connector integration.
+28. llm — General language-model reasoning and response generation.
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › analysis
+
+◆ Only at a certain risk level?
+Should the rule apply to every task of that kind, or only at one risk level?
+
+1. Every task of that kind
+2. Only low-risk tasks
+3. Only medium-risk tasks
+4. Only high-risk tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 1
+
+◆ Governance policy added
+Policy        Pathway analysis requires clinical sign-off
+ID            policy-c459c223-0b69-4b9c-8e4c-6849f00ba85e
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › /governance
+
+◆ Governance
+Governance rules decide what work needs a person's say-so before it runs.
+
+1. Add a rule
+2. See the rules in place
+3. Remove a rule
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 2
+
+◆ Governance policies
+1. Pathway analysis requires clinical sign-off
+   ID            policy-c459c223-0b69-4b9c-8e4c-6849f00ba85e
+   Effect        require-approval · Match: capabilityId=analysis · Scope: organization:enterprise-1
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 
+◆ Bot
+A house rule the Workers on one Function are given as context.
+
+
+/memory
+
+◆ What Arturo remembers
+Notes here are given to Workers as context on later work.
+
+1. Write something down
+2. See what is written down
+3. Remove a note
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 1
+
+◆ Write something down
+What should Arturo remember?
+
+For example   Our house style is short sentences and no jargon.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Never assert clinical outcomes or identify a real patient; frame evidence, equity, and safety questions and require a clinician for every clinical decision.
+
+◆ Where does it apply?
+Which work should this note be used for?
+
+1. Demand Monitoring — only this Function's work
+2. Capacity Planning — only this Function's work
+3. Pathway Analysis — only this Function's work
+4. Quality Review — only this Function's work
+5. Southern Health Network — everything this business does
+6. Everything on this computer
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Pathway Analysis
+
+◆ Operational Memory added
+Never assert clinical outcomes or identify a real patient; frame evidence, equity, and safety questions and require a clinician for every clinical decision.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › /schedule
+
+◆ Your schedules
+A schedule makes a task happen automatically at times you choose.
+What would you like to do?
+
+1. Schedule a task
+2. See your schedules
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 1
+
+◆ Schedule a task
+In one sentence, what should happen on a schedule? (For example: Prepare a weekly summary of work done.)
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Summarise capacity pressures and the decisions awaiting the clinical director, labelling assumptions.
+
+◆ How often?
+How often should this happen?
+
+1. Every day
+2. Once a week, on a particular day
+
+Reply with a number, or type cancel.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 1
+
+◆ What time?
+What time of day? Use 24-hour time, like 09:00 or 17:30.
+(Times are in your timezone, Pacific/Auckland.)
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 06:30
+
+◆ Which Function should do this?
+Which one?
+
+1. Demand Monitoring
+2. Capacity Planning
+3. Pathway Analysis
+4. Quality Review
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Demand Monitoring
+
+◆ Task schedule added
+ID            schedule-6e873b1e-a772-4d0e-9586-6749e6c1e923
+Frequency     daily
+At            06:30
+Timezone      Pacific/Auckland
+Task          Summarise capacity pressures and the decisions awaiting the clinical director, labelling assumptions.
+Task ID       task-1
+Function      Demand Monitoring
+Enterprise    Southern Health Network
+Status        enabled
+Next run      2026-07-31T18:30:00.000Z
+Last run      never
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 
+◆ Bot
+A draft protocol arrives from outside. Arturo records its path, size and hash; it never copies the file.
+
+
+/artefact
+
+◆ Files
+Arturo records where a file is and what it is, so work can point at an exact version.
+
+1. Attach a file
+2. Record a new version of a file you've attached
+3. Send a file to someone for review
+4. Record a review decision
+5. See the files
+6. Look at one file and every version of it
+7. Check a file still matches what Arturo recorded
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 1
+
+◆ Attach a file
+Let's attach a file (a document, design, or other evidence) to your business.
+
+What should this file be called? (For example: Client contract)
+
+Or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Draft escalation protocol
+
+◆ What kind of file?
+What kind of file is it?
+
+1. design
+2. evidence
+3. specification
+4. price-list
+5. costing
+6. other
+
+Reply with a number, or type cancel.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 3
+
+◆ Where is the file?
+Where is the file? Type either
+  · a path to it on this computer (for example: ./contract.pdf), or
+  · a https:// web address.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › ./scenario_harness/assets/escalation-protocol.txt
+
+◆ Anything worth noting about it?
+A short note kept with this exact version — where it came from, or what changed.
+
+Type it, or skip.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Clinical Director
+
+◆ Artefact
+Artefact added.
+ID            artefact-1
+Version       artefact-1@1
+SHA-256       630c0e1d11a12299ed36dfce82e9edb94355979c43ac57dbf63894a6fc703c2b
+Review        draft
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Received for clinical review; not produced by Arturo.
+
+◆ Not a command
+Arturo didn't recognise that. Commands start with a slash (/).
+A few that answer most questions
+
+/overview     where your business stands and what needs your attention
+/tasks        the work in progress, and what each one is waiting on
+/approvals    anything waiting for a person to approve
+/help         the full list of commands
+
+To describe a one-off job in plain words, use /ask "<what you want done>".
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › /artefact
+
+◆ Files
+Arturo records where a file is and what it is, so work can point at an exact version.
+
+1. Attach a file
+2. Record a new version of a file you've attached
+3. Send a file to someone for review
+4. Record a review decision
+5. See the files
+6. Look at one file and every version of it
+7. Check a file still matches what Arturo recorded
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 7
+
+◆ Artefact
+Version       artefact-1@1
+Integrity     verified
+The local file matches the recorded SHA-256 hash.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 
+◆ Bot
+One Function asks another for a bounded piece of work, and keeps accountability for it.
+
+
+/delegation
+
+◆ Handing work between Functions
+One Function can ask another to do a bounded piece of work for it.
+
+1. Ask one Function to do work for another
+2. See what has been handed over
+3. Look at one handover
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 1
+
+◆ Which Function needs the help?
+Which one?
+
+1. Demand Monitoring (Southern Health Network)
+2. Capacity Planning (Southern Health Network)
+3. Pathway Analysis (Southern Health Network)
+4. Quality Review (Southern Health Network)
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Capacity Planning
+
+◆ Which Function should do the work for Capacity Planning?
+Which one?
+
+1. Demand Monitoring (Southern Health Network)
+2. Pathway Analysis (Southern Health Network)
+3. Quality Review (Southern Health Network)
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Pathway Analysis
+
+◆ What is being handed over?
+In one sentence, what should Pathway Analysis do for Capacity Planning?
+
+Keep it to one bounded piece of work with a clear stopping point.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Analyse a synthetic winter-surge scenario where emergency demand exceeds inpatient capacity: evidence needed, high-level flow and escalation options, equity and safety considerations, and the decisions a clinical director must make. No real patient data; no clinical instructions.
+
+◆ Delegation requested
+ID            eea88cdd-dbb1-4679-a61c-888c34c980f4
+From          Capacity Planning
+To            Pathway Analysis
+Work          Analyse a synthetic winter-surge scenario where emergency demand exceeds inpatient capacity: evidence needed, high-level flow and escalation options, equity and safety considerations, and the decisions a clinical director must make. No real patient data; no clinical instructions.
+Ownership     Capacity Planning retains accountability
+Status        requested
+Task          task-2
+Capabilities  review, analysis
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › /delegation
+
+◆ Handing work between Functions
+One Function can ask another to do a bounded piece of work for it.
+
+1. Ask one Function to do work for another
+2. See what has been handed over
+3. Look at one handover
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 2
+
+◆ Delegations
+1. eea88cdd-dbb1-4679-a61c-888c34c980f4 · requested
+   Capacity Planning → Pathway Analysis
+   Work          Analyse a synthetic winter-surge scenario where emergency demand exceeds inpatient capacity: evidence needed, high-level flow and escalation options, equity and safety considerations, and the decisions a clinical director must make. No real patient data; no clinical instructions.
+   Task          task-2
+   Inspect       /delegation inspect eea88cdd-dbb1-4679-a61c-888c34c980f4
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 8s.
+
+
+/tasks
+
+◆ Tasks
+1. Summarise capacity pressures and the decisions awaiting the clinical director, labelling assumptions.
+   ID                     task-1
+   Status                 Scheduled
+   Required capabilities  summarisation
+
+2. Analyse a synthetic winter-surge scenario where emergency demand exceeds inpatient capacity: evidence needed, high-level flow and escalation options, equity and...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Required capabilities  review, analysis
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › /approve
+
+◆ Approval
+Approval recorded  task-2
+Approval status    approved
+Approved by        Clinical Director
+The work will run now. See how it goes with /task inspect task-2
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 55s.
+
+
+/task inspect task-2
+
+◆ Task detail
+Worker                 None
+ID                     task-2
+Status                 Queued
+  (Waiting its turn to run.)
+Required capabilities  review, analysis
+Why this Worker        Delegation eea88cdd-dbb1-4679-a61c-888c34c980f4: Awaiting an AI worker matching receiving-function capabilities: review, analysis
+Task                   2 / 2
+Instruction            Analyse a synthetic winter-surge scenario where emergency demand exceeds inpatient capacity: evidence needed, high-level flow and escalation options, equity and safety considerations, and the decisions a clinical director must make. No real patient data; no clinical instructions.
+
+No output yet.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 
+◆ Bot
+Only a person decides what happens next, and Arturo records who.
+
+
+/create-human-task
+
+◆ Ask a person to do something
+This records work that a person must do, not an AI Worker.
+
+What should it be called? (For example: Inspect the returned unit)
+
+Or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Escalation decision
+
+◆ What should they do?
+What exactly should the person do?
+
+Say what they must look at, what they must decide or produce, and where they stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Decide the escalation approach and what must be confirmed before any change, and whether the draft escalation protocol is fit to review. Do not change any pathway.
+
+◆ Why does a person need to do it?
+Why does this need a person rather than an AI Worker?
+
+Or type skip to leave that blank.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Only a clinician can decide a clinical escalation.
+
+◆ Who should do it?
+Who should this be assigned to?
+
+1. Clinical Director
+2. Leave it unassigned for now
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Clinical Director
+
+◆ Must they look at a file?
+Is there a file they must inspect to do this?
+
+1. No
+2. Draft escalation protocol (specification) — artefact-1@1
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › artefact-1@1
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=33852d08676017917f138987e899c01212530f325256b6d5aec95fc7967723fd
+
+Human task          human-task-1
+Status              open
+Title               Escalation decision
+Owner               Clinical Director
+Handoff
+To                  Clinical Director
+Input
+Artefact            artefact-1@1
+URI                 file:///Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/assets/escalation-protocol.txt
+Media type          text/plain
+SHA-256             630c0e1d11a12299ed36dfce82e9edb94355979c43ac57dbf63894a6fc703c2b
+Review              draft
+
+Input Artefacts
+–  artefact-1@1
+
+Requested action
+Decide the escalation approach and what must be confirmed before any change, and whether the draft escalation protocol is fit to review. Do not change any pathway.
+Acceptance criteria
+–  No explicit acceptance criteria provided.
+Purpose
+Only a clinician can decide a clinical escalation.
+
+Instructions
+Decide the escalation approach and what must be confirmed before any change, and whether the draft escalation protocol is fit to review. Do not change any pathway.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › /complete-human-task
+
+◆ What was done?
+In plain words, what was done for "Escalation decision"?
+
+Say what was decided or produced, what evidence was looked at, and anything still outstanding.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › Confirm safe staffing and equity impact before escalating; send the draft protocol for exact-version clinical review. No pathway changed.
+
+◆ Did they produce a file?
+Did this produce a file that later work should use?
+
+1. No
+2. Draft escalation protocol (specification) — artefact-1@1
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 1
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Clinical Director
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › /human-tasks
+
+◆ human-task-1 · completed
+Title         Escalation decision
+Purpose       Only a clinician can decide a clinical escalation.
+Instructions  Decide the escalation approach and what must be confirmed before any change, and whether the draft escalation protocol is fit to review. Do not change any pathway.
+Source Task   none
+Completed by  Clinical Director
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › /functions
+
+◆ Functions
+1. Demand Monitoring
+2. Capacity Planning
+3. Pathway Analysis
+4. Quality Review
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › /timeline
+
+◆ #96 · bot.input
+Bot submitted  /timeline
+Time           2026-07-30T20:50:24.500Z
+Id             ba0df6ee-8c5f-48be-a324-b7a6a5d4802b
+
+◆ #95 · bot.input
+Bot submitted  /functions
+Time           2026-07-30T20:50:17.213Z
+Id             427a7f3e-20c3-4637-bfac-0dd6267f037e
+
+◆ #94 · bot.input
+Bot submitted  /human-tasks
+Time           2026-07-30T20:50:12.459Z
+Id             e60086c0-9269-481d-86c0-3648855855e5
+
+◆ #93 · human_task.completed
+Human task human-task-1 completed by Clinical Director
+Time          2026-07-30T20:50:12.458Z
+Id            43d7b8d8-03cb-4c29-9b9d-0e50263efdcd
+
+◆ #92 · bot.input
+Bot submitted  1
+Time           2026-07-30T20:50:08.176Z
+Id             abb61003-229b-4698-afd6-6a3b50c6e57a
+
+◆ #91 · bot.input
+Bot submitted  Confirm safe staffing and equity impact before escalating; send the draft protocol for exact-version clinical review. No pathway changed.
+Time           2026-07-30T20:49:48.175Z
+Id             9fa36ff6-2a66-4b21-9784-5d250c77ea35
+
+◆ #90 · bot.input
+Bot submitted  /complete-human-task
+Time           2026-07-30T20:49:38.602Z
+Id             f8b4bf6f-5623-4232-a973-26cbeee50901
+
+◆ #89 · human_task.created
+Human task created  human-task-1
+Time                2026-07-30T20:49:38.600Z
+Id                  6f2a4bc6-c0ef-4bc4-a6cb-819cdafad010
+
+◆ #88 · bot.input
+Bot submitted  artefact-1@1
+Time           2026-07-30T20:49:31.112Z
+Id             b1071a77-98cf-4986-8ed5-a838a6ca7328
+
+◆ #87 · bot.input
+Bot submitted  Clinical Director
+Time           2026-07-30T20:49:23.563Z
+Id             d37e9c95-d8ee-4b55-9fb0-9e211d7c7d1e
+
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 
+◆ Bot finished
+85 lines typed, 1 refused — the script finished.
+Nothing was signed by the bot — every decision in this script named a person.
+The terminal is yours again.
+
+  ● LIVE · Functions 4 · Workers 1 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 9657 session tokens
+arturo › 

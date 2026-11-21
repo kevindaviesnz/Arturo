@@ -1,0 +1,820 @@
+
+◆ #40 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T05:45:53.108Z
+Id             951ba6e3-8ec9-44f1-a2e3-38060d04ad8a
+
+◆ #39 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T05:45:46.634Z
+Id             b7165ebf-b74a-4177-80c8-4f147986ce5c
+
+◆ #38 · Human task completed
+Human task human-task-1 completed by Credit Officer
+Time          2026-08-01T05:45:46.631Z
+Id            df80c323-f5ff-46dd-84b4-34d2439b9b76
+
+◆ #37 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Proceed to full assessment once income verification and a rate-rise sensitivity are provided; hardship indicators need a manual check." --as "Credit Officer"
+Time           2026-08-01T05:45:18.476Z
+Id             ac46add1-163b-4280-9142-def88d95618f
+
+◆ #36 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T05:45:18.473Z
+Id                  230496aa-8acf-4e60-83ff-12277f21b1aa
+
+◆ #35 · Bot typed a line
+Bot submitted  /create-human-task "Credit decision" "Decide whether the application can proceed to a full assessment or what evidence is required first. Do not approve or decline the loan."
+Time           2026-08-01T05:44:49.443Z
+Id             abea6575-9a76-4ac1-829f-31b0bb2fd780
+
+◆ #34 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T05:44:41.917Z
+Id             b10f5610-d4d9-41a7-941f-5122ca864f23
+
+◆ #33 · Task completed
+Task completed  task-1
+Time            2026-08-01T05:43:56.751Z
+Id              8bb0d651-1b4f-410d-b694-ce26bc06f029
+
+◆ #32 · Task started
+Task started  task-1
+Time          2026-08-01T05:43:46.966Z
+Id            e9faaf1d-1646-4757-931e-3e1f91f8a395
+
+◆ #31 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-01T05:43:46.915Z
+Id            850879d2-be6c-41d1-a8fa-66cfa7300c43
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3166 session tokens
+arturo › 
+◆ Bot finished
+34 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3166 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 026 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 026 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/026.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           3
+Tasks             1
+  Human Tasks       1
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Riverside Hospital Flow
+
+◆ What does it do?
+In one sentence, what does Riverside Hospital Flow exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Move patients through care safely, with clinicians accountable for every clinical decision.
+
+◆ Anything more about it?
+Anything more worth knowing about Riverside Hospital Flow? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Riverside Hospital Flow
+Mission       Move patients through care safely, with clinicians accountable for every clinical decision.
+Description   (none)
+Status        active
+Created       2026-08-01T05:48:35.141Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Riverside Hospital Flow" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Triage Support
+
+◆ What should it do?
+In one sentence, what should "Triage Support" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame triage questions and evidence needs for clinical review.
+
+◆ Anything more about it?
+Anything more worth knowing about "Triage Support"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               riverside-hospital-flow:triage-support
+Name             Triage Support
+Enterprise       Riverside Hospital Flow (enterprise-1)
+Objective        Frame triage questions and evidence needs for clinical review.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T05:49:07.983Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Bed Management
+
+◆ What should it do?
+In one sentence, what should "Bed Management" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame bed-allocation options and constraints for accountable decisions.
+
+◆ Anything more about it?
+Anything more worth knowing about "Bed Management"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               riverside-hospital-flow:bed-management
+Name             Bed Management
+Enterprise       Riverside Hospital Flow (enterprise-1)
+Objective        Frame bed-allocation options and constraints for accountable decisions.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T05:49:45.091Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Discharge Planning
+
+◆ What should it do?
+In one sentence, what should "Discharge Planning" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame discharge-readiness questions and route decisions to a clinician.
+
+◆ Anything more about it?
+Anything more worth knowing about "Discharge Planning"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               riverside-hospital-flow:discharge-planning
+Name             Discharge Planning
+Enterprise       Riverside Hospital Flow (enterprise-1)
+Objective        Frame discharge-readiness questions and route decisions to a clinician.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T05:50:23.522Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Charge Nurse
+
+◆ What will they do?
+What should Charge Nurse be able to do? Pick one
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Charge Nurse's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Charge Nurse is now on your team.
+Charge Nurse can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Triage Support"
+
+◆ Function started
+Function
+  Triage Support
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Bed Management"
+
+◆ Function started
+Function
+  Bed Management
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Discharge Planning"
+
+◆ Function started
+Function
+  Discharge Planning
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 4 AI Workers for Riverside Hospital Flow.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 3 kinds of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 4
+Triage Research Assistant
+Role          Researcher
+Can do        General reasoning, Research, Web Research, Summarisation, Human Contact
+Would help    Triage Support
+
+For example, it could
+    · Find and summarise what's known about a topic
+    · Gather sources on a question and flag what's uncertain
+
+Add Triage Research Assistant? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 14339 session tokens
+arturo › yes
+
+◆ Worker 2 of 4
+Triage Review Specialist
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Triage Support
+
+For example, it could
+    · Check a piece of work for mistakes and gaps
+    · Give feedback on a draft before it goes out
+
+Add Triage Review Specialist? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 14339 session tokens
+arturo › yes
+
+◆ Worker 3 of 4
+Bed Management Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Bed Management
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Bed Management Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 14339 session tokens
+arturo › yes
+
+◆ Worker 4 of 4
+Discharge Planning Assistant
+Role          Planner
+Can do        General reasoning, Planning, Human Contact
+Would help    Discharge Planning
+
+For example, it could
+    · Break a goal into clear, ordered steps
+    · Draft a schedule or plan for a piece of work
+
+Add Discharge Planning Assistant? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 14339 session tokens
+arturo › yes
+
+◆ Staffing applied
+4 AI Workers added, and put to work on 4 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Triage Support — Charge Nurse
+  · Bed Management — Charge Nurse
+  · Discharge Planning — Charge Nurse
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 14339 session tokens
+arturo › /governance policy add "Clinical analysis requires clinician sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Clinical analysis requires clinician sign-off
+ID            policy-41775f8b-bad9-487a-9e3a-ceff68cbce9f
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 14339 session tokens
+arturo › /schedule add "Summarise beds likely to free today and discharges awaiting a clinician decision, labelling assumptions." --every daily --at "07:00" --timezone "Pacific/Auckland" --function "Bed Management"
+
+◆ Task schedule added
+ID            schedule-91199f28-280e-4252-ac5b-2dd621ca310e
+Frequency     daily
+At            07:00
+Timezone      Pacific/Auckland
+Task          Summarise beds likely to free today and discharges awaiting a clinician decision, labelling assumptions.
+Task ID       task-1
+Function      Bed Management
+Enterprise    Riverside Hospital Flow
+Status        enabled
+Next run      2026-08-01T19:00:00.000Z
+Last run      never
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 14339 session tokens
+arturo › /delegation request "Frame the discharge-readiness questions for a synthetic medically-stable patient awaiting a home-support package: safety checks, follow-up needs, information a clinician must confirm, and the point a human must decide. No real patient data; no clinical instructions." --from "Discharge Planning" --to "Triage Support"
+
+◆ Delegation requested
+Delegation in progress.
+
+ID             94556874-fcc2-46e3-b146-92310cdaa09f
+From           Discharge Planning
+To             Triage Support
+Work           Frame the discharge-readiness questions for a synthetic medically-stable patient awaiting a home-support package: safety checks, follow-up needs, information a clinician must confirm, and the point a human must decide. No real patient data; no clinical instructions.
+Answerable     Discharge Planning is still answerable for it
+Status         Being worked on
+Task           task-2
+Worker         Triage Research Assistant
+Skills needed  research, review
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 14339 session tokens
+arturo › /delegation list
+
+◆ Delegations
+1. 94556874-fcc2-46e3-b146-92310cdaa09f · Being worked on
+   Discharge Planning → Triage Support
+   Work          Frame the discharge-readiness questions for a synthetic medically-stable patient awaiting a home-support package: safety checks, follow-up needs, information a clinician must confirm, and the point a human must decide. No real patient data; no clinical instructions.
+   Task          task-2
+   Worker        Triage Research Assistant
+   Inspect       /delegation inspect 94556874-fcc2-46e3-b146-92310cdaa09f
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 14339 session tokens
+arturo › /delegation inspect 94556874-fcc2-46e3-b146-92310cdaa09f
+
+◆ Delegation
+Delegation in progress.
+
+ID             94556874-fcc2-46e3-b146-92310cdaa09f
+From           Discharge Planning
+To             Triage Support
+Work           Frame the discharge-readiness questions for a synthetic medically-stable patient awaiting a home-support package: safety checks, follow-up needs, information a clinician must confirm, and the point a human must decide. No real patient data; no clinical instructions.
+Answerable     Discharge Planning is still answerable for it
+Status         Being worked on
+Task           task-2
+Worker         Triage Research Assistant
+Skills needed  research, review
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 14339 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-2 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-2
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-2
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 14339 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect task-2
+
+◆ Task detail
+Worker                Triage Research Assistant
+ID                    task-2
+Status                Completed
+  (Finished.)
+Evidence              Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed         research, review
+Why this Worker       Delegation 94556874-fcc2-46e3-b146-92310cdaa09f: Receiving Function is staffed by Triage Research Assistant
+Task                  2 / 2
+Instruction           Frame the discharge-readiness questions for a synthetic medically-stable patient awaiting a home-support package: safety checks, follow-up needs, information a clinician must confirm, and the point a human must decide. No real patient data; no clinical instructions.
+
+Where this came from  an AI model wrote it. Nobody has checked it
+Looked anything up    no
+
+I can provide guidance on framing triage questions for a synthetic medically-stable patient awaiting a home-support package.
+
+To frame these questions, I'll focus on identifying safety checks, follow-up needs, information that clinicians need to confirm, and the point at which a human must decide.
+
+Safety Checks
+
+1. Home environment: Is the patient's home safe for them to return to, considering any recent renovations or hazards?
+2. Equipment and supplies: Are all necessary medical equipment and supplies available for the patient's care at home?
+3. Support system: Does the patient have a reliable support system in place, including family members or caregivers?
+
+Follow-up Needs
+
+1. Medication management: Will the patient be able to manage their medications safely and effectively at home?
+2. Wound care: If applicable, will the patient require ongoing wound care or monitoring at home?
+3. Follow-up appointments: Has the patient scheduled any follow-up appointments with healthcare providers?
+
+Information for Clinicians
+
+1. Medical history: Are there any concerns or questions about the patient's medical history that need to be clarified?
+2. Treatment plans: Have all relevant treatment plans been shared with the patient, and are they aware of their responsibilities in implementing these plans?
+3. Contact information: Is the clinician's contact information readily available for the patient to reach out with concerns or questions?
+
+Point of Human Decision
+
+1. Transition readiness: Is the patient ready to transition from hospital care to home-based care, considering any concerns or uncertainties?
+2. Support needs assessment: Has a thorough assessment been conducted to determine the level and type of support needed for the patient's care at home?
+3. Next steps: Are there any additional next steps that need to be taken, such as arranging home health care services?
+
+Please note that these questions are based on general principles and may not apply to every individual case. External evidence or specific clinical guidelines would be necessary to determine the most appropriate questions for a particular patient.
+
+If external evidence is needed to inform these questions, I am unable to provide it as there is no available information in this context.
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 15513 session tokens
+arturo › /create-human-task "Discharge decision" "Decide whether the synthetic patient is ready for discharge planning to proceed and what a clinician must confirm first. Do not discharge anyone."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=d2e2986d4859dbfa3ef25dc23a76e2adf9004758d498a5f299ba073264bc7336
+
+Human task          human-task-1
+Status              open
+Title               Discharge decision
+Instructions
+Decide whether the synthetic patient is ready for discharge planning to proceed and what a clinician must confirm first. Do not discharge anyone.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 15513 session tokens
+arturo › /complete-human-task human-task-1 "Proceed to plan only; a clinician must confirm home-support capacity, medication reconciliation, and follow-up before any discharge." --as "Charge Nurse"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Charge Nurse
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 15513 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Discharge decision
+Instructions
+Decide whether the synthetic patient is ready for discharge planning to proceed and what a clinician must confirm first. Do not discharge anyone.
+Notes
+Proceed to plan only; a clinician must confirm home-support capacity, medication reconciliation, and follow-up before any discharge.
+
+Completed by  Charge Nurse
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 15513 session tokens
+arturo › /functions
+
+◆ Functions
+1. Triage Support
+2. Bed Management
+3. Discharge Planning
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 15513 session tokens
+arturo › /timeline
+
+◆ #53 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T05:57:28.626Z
+Id             c03e565e-8010-486e-8e54-851bd1f80930
+
+◆ #52 · Bot typed a line
+Bot submitted  /functions
+Time           2026-08-01T05:57:18.654Z
+Id             4b3a0254-80a9-4c96-8385-ab042542b469
+
+◆ #51 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T05:57:11.224Z
+Id             f9156603-0e22-451c-a781-74a2164dc57c
+
+◆ #50 · Human task completed
+Human task human-task-1 completed by Charge Nurse
+Time          2026-08-01T05:57:11.222Z
+Id            0f76e58c-bb18-4df3-b983-5e97f31ff883
+
+◆ #49 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Proceed to plan only; a clinician must confirm home-support capacity, medication reconciliation, and follow-up before any discharge." --as "Charge Nurse"
+Time           2026-08-01T05:56:42.994Z
+Id             d7c7a239-aaea-4ba1-b18b-f122c08c73fe
+
+◆ #48 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T05:56:42.991Z
+Id                  4d89582a-ea72-4702-a299-cef2a227b438
+
+◆ #47 · Bot typed a line
+Bot submitted  /create-human-task "Discharge decision" "Decide whether the synthetic patient is ready for discharge planning to proceed and what a clinician must confirm first. Do not discharge anyone."
+Time           2026-08-01T05:56:12.749Z
+Id             489d0033-858a-4599-a8f3-2efb2ca989e7
+
+◆ #46 · Bot typed a line
+Bot submitted  /task inspect task-2
+Time           2026-08-01T05:56:04.775Z
+Id             75541672-5b8b-49d9-8ab1-d1713d396324
+
+◆ #45 · Result not counted
+An AI model wrote the result of Task task-2 and nobody has checked it, so Arturo has not learned from it and will not act on it by itself.
+Time          2026-08-01T05:55:18.589Z
+Id            b3d86639-58e4-4d0a-ab44-1329bdb8f545
+
+◆ #44 · Delegation completed
+Delegation completed  Task task-2 from Triage Support returned to Discharge Planning
+Time                  2026-08-01T05:55:18.588Z
+Id                    70391130-c6a6-4eb2-93f5-b2eea6f42af9
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 15513 session tokens
+arturo › 
+◆ Bot finished
+46 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 15513 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % 

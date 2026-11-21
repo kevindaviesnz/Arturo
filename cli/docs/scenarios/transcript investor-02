@@ -1,0 +1,435 @@
+===> (startup)
+
+> worker-cli@0.5.0 ui
+> ts-node src/ui/lineInterface.ts
+
+]0;Arturo · Native Terminal
+  ◆  A  R  T  U  R  O
+  AI-NATIVE COMPANY OS
+
+  ──────────────────
+  READY · /help
+
+
+Tip: to get started, enter /enterprise
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /reset
+ /reset
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         0
+Workers           0
+Tasks             0
+  Human Tasks       0
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> yes
+ yes
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /enterprise
+ /enterprise
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — a name, then one sentence
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> 1
+ 1
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> Koru Toys
+ Koru Toys
+◆ What does it do?
+In one sentence, what does Koru Toys exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> Create inclusive physical learning toys that support imaginative play.
+ Create inclusive physical learning toys that support imaginative play.
+◆ Anything more about it?
+Anything more worth knowing about Koru Toys? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> skip
+ skip
+◆ Enterprise created
+ID            enterprise-1
+Name          Koru Toys
+Mission       Create inclusive physical learning toys that support imaginative play.
+Description   (none)
+Status        active
+Created       2026-08-03T01:51:52.321Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Koru Toys" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /function
+ /function
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> 1
+ 1
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> Product Development
+ Product Development
+◆ What should it do?
+In one sentence, what should "Product Development" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> Turn supplied product concepts into bounded physical-toy development requirements.
+ Turn supplied product concepts into bounded physical-toy development requirements.
+◆ Anything more about it?
+Anything more worth knowing about "Product Development"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> skip
+ skip
+◆ Function created
+ID               koru-toys:product-development
+Name             Product Development
+Enterprise       Koru Toys (enterprise-1)
+Objective        Turn supplied product concepts into bounded physical-toy development requirements.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-03T01:51:52.325Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /function
+ /function
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> 1
+ 1
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> Learning Design
+ Learning Design
+◆ What should it do?
+In one sentence, what should "Learning Design" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> Assess supplied physical-toy concepts for play-based learning opportunities and limitations.
+ Assess supplied physical-toy concepts for play-based learning opportunities and limitations.
+◆ Anything more about it?
+Anything more worth knowing about "Learning Design"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> skip
+ skip
+◆ Function created
+ID               koru-toys:learning-design
+Name             Learning Design
+Enterprise       Koru Toys (enterprise-1)
+Objective        Assess supplied physical-toy concepts for play-based learning opportunities and limitations.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-03T01:51:52.328Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /functions
+ /functions
+◆ Functions
+1. Product Development
+2. Learning Design
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /staff
+
+◆ Let's set up your team
+Arturo suggests 2 AI Workers for Koru Toys.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 2 kinds of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 2
+Product Development Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Product Development
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Product Development Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2569 session tokens
+arturo ›
+ yes
+◆ Worker 2 of 2
+Learning Design Reviewer
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Learning Design
+
+For example, it could
+    · Check a piece of work for mistakes and gaps
+    · Give feedback on a draft before it goes out
+
+Add Learning Design Reviewer? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2569 session tokens
+arturo ›
+ yes
+◆ Staffing applied
+2 AI Workers added, and put to work on 2 Functions.
+
+Before this business can do that work, 2 Functions still need a person who can approve, or their work will block with nobody able to approve it:
+  · Product Development
+  · Learning Design
+
+  Add that person with /add-human-worker — it can be you. Once they're
+  on the team, work waiting for sign-off shows under /approvals.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 2 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2569 session tokens
+arturo ›
+===> /workers
+ /workers
+◆ Workers
+1. Product Development Analyst
+Type           AI
+Archetype      analyst
+Availability   available
+Status         Available
+Current Tasks  0
+
+2. Learning Design Reviewer
+Type           AI
+Archetype      reviewer
+Availability   available
+Status         Available
+Current Tasks  0
+
+
+  ● LIVE · Functions 2 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2569 session tokens
+arturo ›
+===> /function start "Product Development"
+ /function start "Product Development"
+◆ Function started
+Function
+  Product Development
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 2 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2569 session tokens
+arturo ›
+===> /function start "Learning Design"
+ /function start "Learning Design"
+◆ Function started
+Function
+  Learning Design
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 2 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2569 session tokens
+arturo ›
+===> /event
+ /event
+◆ Signals
+An Event is a signal that something happened, which other Functions can react to.
+
+1. Announce that something has happened
+2. Announce it automatically whenever work finishes
+3. See the automatic announcements
+4. Stop an automatic announcement
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2569 session tokens
+arturo ›
+===> 1
+ 1
+◆ What happened?
+What should the announcement be called?
+
+For example   evidence-ready, or design-submitted.
+
+
+  ● LIVE · Functions 2 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2569 session tokens
+arturo ›
+===> New tactile storytelling kit submitted for concept review
+ New tactile storytelling kit submitted for concept review
+◆ Which Function is this about?
+Which one?
+
+1. Product Development (Koru Toys)
+2. Learning Design (Koru Toys)
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2569 session tokens
+arturo ›
+===> 1
+ 1
+◆ Event published
+Events
+
+2026-08-03 01:52Z  New Tactile Storytelling Kit Submitted For Concept Review  · success
+  New tactile storytelling kit submitted for concept review — source: Product Development — enterprise: Koru Toys
+Event ID             79c66d9b-7556-457c-a760-06377fccbbef
+
+Function evaluations
+
+Product Development  No Task created
+Reason               New signal lacks concrete feedback, insufficient to warrant task creation.
+Learning Design      No Task created
+Reason               No specific signal to task mapping provided, requiring more contextual information.
+
+
+  ● LIVE · Functions 2 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4076 session tokens
+arturo ›
+===NOTE: waiting 90s for runtime to process work
+===> /tasks
+ /tasks
+◆ Tasks
+No tasks found.
+
+
+  ● LIVE · Functions 2 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4076 session tokens
+arturo ›

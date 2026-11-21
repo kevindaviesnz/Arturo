@@ -1,0 +1,715 @@
+
+◆ Functions
+1. Site Feasibility
+2. Planning Analysis
+3. Financial Modelling
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 16512 session tokens
+arturo › /timeline
+
+◆ #51 · bot.input
+Bot submitted  /timeline
+Time           2026-07-31T03:11:33.907Z
+Id             773aaec1-8c1c-4451-91a5-19abf30b6b49
+
+◆ #50 · bot.input
+Bot submitted  /functions
+Time           2026-07-31T03:11:24.722Z
+Id             b389782f-7026-4afb-9a63-030846c0ddc3
+
+◆ #49 · bot.input
+Bot submitted  /human-task human-task-1
+Time           2026-07-31T03:11:17.512Z
+Id             4888fa15-8e7c-40b0-8e99-e40f36ee7e43
+
+◆ #48 · human_task.completed
+Human task human-task-1 completed by Development Director
+Time          2026-07-31T03:11:17.510Z
+Id            fed49aca-efff-4a14-b6dd-151461023ca1
+
+◆ #47 · bot.input
+Bot submitted  /complete-human-task human-task-1 "Proceed to detailed feasibility only after consent risk, ground conditions, and a financial sensitivity are confirmed. No commitment made." --as "Development Director"
+Time           2026-07-31T03:10:44.861Z
+Id             a4b378a1-e68a-4a96-ab2a-b7fe4016b63f
+
+◆ #46 · human_task.created
+Human task created  human-task-1
+Time                2026-07-31T03:10:44.859Z
+Id                  e522dee4-73c2-4ee7-8dab-ccae264d7ae4
+
+◆ #45 · bot.input
+Bot submitted  /create-human-task "Feasibility go/no-go" "Decide whether the site proceeds to detailed feasibility and what evidence must be confirmed first. Do not commit to a purchase."
+Time           2026-07-31T03:10:16.992Z
+Id             4a86ee9c-18d7-43d7-9f98-8f6454b73520
+
+◆ #44 · bot.input
+Bot submitted  /task inspect task-1
+Time           2026-07-31T03:10:11.436Z
+Id             007d4e67-282a-434c-b2f7-dbb5f70c23f5
+
+◆ #43 · runtime.outcome.measurement_skipped
+Unverified model synthesis from Task task-1 was excluded from Function learning and autonomous follow-up work.
+Time          2026-07-31T03:09:26.607Z
+Id            01b14eda-ca70-4230-9aa9-982216e8f96a
+
+◆ #42 · delegation.completed
+Delegation completed  Task task-1 from Planning Analysis returned to Site Feasibility
+Time                  2026-07-31T03:09:26.606Z
+Id                    2b23fc92-4754-45cb-8087-bf19241abc45
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 16512 session tokens
+arturo › 
+◆ Bot finished
+44 lines typed, 1 refused — the script finished.
+1 decision in this run was signed by Arturo Bot (automated, not a person), not by a person.
+It is still registered, and shows in /workers, so those decisions still name someone.
+The terminal is yours again.
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 16512 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 037 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 037 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may approve governed work in this run.
+
+Anything it approves was signed by a script, not by a person. That is
+not human review, and the record says so: the name appears in the
+signed decision, in /approvals, in /approval-status and in /timeline.
+It is registered the moment it is first needed, not now: most runs
+open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is being driven by /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/037.plan.
+Nothing in this session was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         3
+Workers           5
+Tasks             1
+  Human Tasks       1
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Application reset
+Application state has been reset.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Regional Support Agency
+
+◆ What does it do?
+In one sentence, what does Regional Support Agency exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Assess entitlements consistently and fairly, with a person accountable for every determination.
+
+◆ Anything more about it?
+Anything more worth knowing about Regional Support Agency? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Regional Support Agency
+Mission       Assess entitlements consistently and fairly, with a person accountable for every determination.
+Description   (none)
+Status        active
+Created       2026-07-31T03:15:59.073Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Regional Support Agency" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Entitlement Framing
+
+◆ What should it do?
+In one sentence, what should "Entitlement Framing" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame entitlement-assessment questions and route determinations to an accountable case manager.
+
+◆ Anything more about it?
+Anything more worth knowing about "Entitlement Framing"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               regional-support-agency:entitlement-framing
+Name             Entitlement Framing
+Enterprise       Regional Support Agency (enterprise-1)
+Objective        Frame entitlement-assessment questions and route determinations to an accountable case manager.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-31T03:16:38.210Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Case Manager
+
+◆ What will they do?
+What should Case Manager be able to do? Pick one
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Case Manager's email address?
+
+Arturo needs this before any governed step can email them. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Case Manager is now on your team.
+Case Manager can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Entitlement Framing"
+
+◆ Function started
+Function
+  Entitlement Framing
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout has no effect in bot mode — Arturo waits for each command to return rather than giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 3 AI Workers for Regional Support Agency.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 3
+Entitlement Reviewer
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Entitlement Framing
+
+For example, it could
+    · Check a piece of work for mistakes and gaps
+    · Give feedback on a draft before it goes out
+
+Add Entitlement Reviewer? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › yes
+
+◆ Worker 2 of 3
+Client Communication Analyst
+Role          Assistant
+Can do        General reasoning, Writing, Summarisation, Human Contact
+Would help    Entitlement Framing
+
+For example, it could
+    · Take a rough request and turn it into a tidy result
+    · Handle a small, well-defined task end to end
+
+Add Client Communication Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › yes
+
+◆ Worker 3 of 3
+Entitlement Framing Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Entitlement Framing
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Entitlement Framing Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › yes
+
+◆ Staffing applied
+3 AI Workers added. 3 Function assignment(s) saved.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Entitlement Framing — Case Manager
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing consequential runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › /governance policy add "Entitlement analysis requires case-manager sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Entitlement analysis requires case-manager sign-off
+ID            policy-edb50ef8-0c88-4934-a9cd-ebcea946a45e
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › /memory add "Never determine entitlement or identify a real person; frame evidence needs, fairness checks, and appeal rights, and require a human for every determination." --scope "Entitlement Framing"
+
+◆ Operational Memory added
+Never determine entitlement or identify a real person; frame evidence needs, fairness checks, and appeal rights, and require a human for every determination.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › Analyse, using a fully synthetic and anonymised example only, how a hardship-grant request should be assessed as a process: evidence needed, eligibility questions, fairness and vulnerability considerations, appeal rights, and why a case manager must decide. Do not determine eligibility or identify anyone.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Entitlement Framing
+Selected worker    Entitlement Framing Analyst
+Partial coverage   Entitlement Framing Analyst does not hold research — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 20s.
+
+
+/tasks
+
+◆ Tasks
+1. Analyse, using a fully synthetic and anonymised example only, how a hardship-grant request should be assessed as a process: evidence needed, eligibility questio...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Entitlement Framing Analyst
+   Required capabilities  research, analysis
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 8s.
+
+
+/approval-status task-1
+
+◆ Approval status
+Task                task-1
+Status              pending
+Waiting because     Human approval required for Entitlement Framing, from the staffing plan you applied. (staffing-approval:regional-support-agency:entitlement-framing)
+Required approvals  1
+Current approvals   0
+
+No decisions recorded
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › /reject task-1 "Example includes identifying details; reframe as an anonymised process before analysis." --as "Arturo Bot (automated, not a person)"
+
+◆ Rejection
+Rejection recorded  task-1
+Approval status     rejected
+Rejected by         Arturo Bot (automated, not a person)
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › Revised analysis, fully synthetic and anonymised: analyse only the assessment process, evidence needs, fairness checks, appeal rights, and the point a case manager must decide. No identities, no determination.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-2
+Selected Function  Entitlement Framing
+Selected worker    Entitlement Framing Analyst
+Partial coverage   Entitlement Framing Analyst does not hold research — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 20s.
+
+
+/tasks
+
+◆ Tasks
+1. Analyse, using a fully synthetic and anonymised example only, how a hardship-grant request should be assessed as a process: evidence needed, eligibility questio...
+   ID                     task-1
+   Status                 Failed
+   Worker                 Entitlement Framing Analyst
+   Required capabilities  research, analysis
+
+2. Revised analysis, fully synthetic and anonymised: analyse only the assessment process, evidence needs, fairness checks, appeal rights, and the point a case mana...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Worker                 Entitlement Framing Analyst
+   Required capabilities  research, analysis
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 8s.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    rejected
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 55s.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                 Entitlement Framing Analyst
+ID                     task-1
+Status                 Failed
+  (Didn't finish — see the error below.)
+Required capabilities  research, analysis
+Why this Worker        Inferred Function Entitlement Framing; selected its staffed Worker Entitlement Framing Analyst. Best-available coverage: Entitlement Framing Analyst does not hold research; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business               Regional Support Agency
+Task                   1 / 2
+Instruction            Analyse, using a fully synthetic and anonymised example only, how a hardship-grant request should be assessed as a process: evidence needed, eligibility questions, fairness and vulnerability considerations, appeal rights, and why a case manager must decide. Do not determine eligibility or identify anyone.
+
+No output yet.
+
+Error                  Approval chain rejected
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › /create-human-task "Determination approach decision" "Decide what evidence and fairness checks a determination requires and how appeal rights are communicated. Do not determine entitlement."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=65b8bf48698ddf9448d5f794bf65feaeb308d1d84f11a1e2a8ab6cfc0ff66bd9
+
+Human task          human-task-1
+Status              open
+Title               Determination approach decision
+Instructions
+Decide what evidence and fairness checks a determination requires and how appeal rights are communicated. Do not determine entitlement.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › /complete-human-task human-task-1 "Require verified income and circumstances, a documented fairness check, and a written appeal path before any determination. Planning only." --as "Case Manager"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Case Manager
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Determination approach decision
+Instructions
+Decide what evidence and fairness checks a determination requires and how appeal rights are communicated. Do not determine entitlement.
+Notes
+Require verified income and circumstances, a documented fairness check, and a written appeal path before any determination. Planning only.
+
+Completed by  Case Manager
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › /timeline
+
+◆ #46 · bot.input
+Bot submitted  /timeline
+Time           2026-07-31T03:24:52.955Z
+Id             58c83ec5-3fdb-48ae-b721-dcf015a50131
+
+◆ #45 · bot.input
+Bot submitted  /human-task human-task-1
+Time           2026-07-31T03:24:47.146Z
+Id             91917cc4-f547-4f9b-908e-d6d108bed8b0
+
+◆ #44 · human_task.completed
+Human task human-task-1 completed by Case Manager
+Time          2026-07-31T03:24:47.144Z
+Id            4bd98718-7b75-46e4-9a83-d49a4d59111c
+
+◆ #43 · bot.input
+Bot submitted  /complete-human-task human-task-1 "Require verified income and circumstances, a documented fairness check, and a written appeal path before any determination. Planning only." --as "Case Manager"
+Time           2026-07-31T03:24:16.118Z
+Id             44061a45-51b8-49c1-94c6-46997ed72107
+
+◆ #42 · human_task.created
+Human task created  human-task-1
+Time                2026-07-31T03:24:16.116Z
+Id                  208dcb7b-51c1-4065-9c2d-230745e3eca5
+
+◆ #41 · bot.input
+Bot submitted  /create-human-task "Determination approach decision" "Decide what evidence and fairness checks a determination requires and how appeal rights are communicated. Do not determine entitlement."
+Time           2026-07-31T03:23:41.122Z
+Id             32df5275-7e7f-4af2-bc90-597e1ec5c05b
+
+◆ #40 · bot.input
+Bot submitted  /task inspect task-1
+Time           2026-07-31T03:23:33.924Z
+Id             4c455a67-21f1-443c-b5db-4ec6b0e18f0b
+
+× #39 · task.failed
+Task failed   task-1
+Time          2026-07-31T03:22:39.013Z
+Id            cc10a5db-0ad3-4aef-a2ab-4e60bd62807b
+
+◆ #38 · task.approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-07-31T03:22:38.920Z
+Id            4e5a3b15-96e1-45f7-9821-4df2845e1c5f
+
+◆ #37 · bot.input
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-07-31T03:22:23.189Z
+Id             eb123d47-ab02-4d9b-98ab-6c113e3a937c
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › 
+◆ Bot finished
+41 lines typed, 1 refused — the script finished.
+2 decisions in this run were signed by Arturo Bot (automated, not a person), not by a person.
+It is still registered, and shows in /workers, so those decisions still name someone.
+The terminal is yours again.
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 4346 session tokens
+arturo › 

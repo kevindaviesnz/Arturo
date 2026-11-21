@@ -1,0 +1,56 @@
+# Blueprint 3 — The Sensor: a person is the instrument, the AI does the reasoning.
+#
+# The reverse of the Dispatcher. The physical observation comes first and is
+# recorded by a named person; only then does an AI Worker reason about it.
+#
+# The AI is given the person's findings by Arturo, not by the operator. This
+# plan used to retype every measurement into the Task instruction while the
+# header claimed the findings were supplied verbatim -- so the operator was the
+# carrier, and a slip in the retyping would have been theirs and invisible.
+# The Task now continues from the completed Human Task, and what the Worker
+# reasoned from can be read back off the record.
+/reset
+yes
+/clear
+@timeout 300
+/enterprise
+1
+Ashgrove Instruments
+Value and resell second-hand stringed instruments honestly.
+@blank
+/function
+1
+Instrument Valuation
+Turn a physical inspection of an instrument into a defensible asking price and a listing a buyer can trust.
+@blank
+@staff /staff
+@note the Worker /staff proposed is generic. This is what makes it a specialist.
+/refine-worker
+1
+You are an expert valuer of second-hand stringed instruments. You reason only from the physical findings a luthier reports, you separate what was observed from what you have inferred, and you state plainly what cannot be determined without provenance or a second opinion. You never present a price as verified market data.
+/add-human-worker
+Workshop Luthier
+1
+@blank
+@note first the physical world, recorded by the person who looked at it
+/create-human-task
+Examine the instrument in person: the grain, the varnish, the seams and the scroll. Note any cracks or repairs, measure the back length, and photograph the label. Record what you can see and what you cannot.
+1
+/human-tasks
+/complete-human-task
+Back length 356mm. Two-piece back, medium flame. Old repaired crack in the upper treble bout, cleanly done, stable. Seam open 40mm on the bass side. Label reads Mittenwald, no date, almost certainly a trade label rather than a maker's. Varnish original, heavily worn at the chin rest.
+/human-tasks
+@note now the AI reasons about what the person found, without being told it again
+/task
+1
+Set out what the luthier's findings mean for value, what the asking price should turn on, and what must be disclosed to a buyer. Do not state a price as though it were verified market data.
+2
+1
+@wait 240
+@note the record, end to end: both lists, both records in full, and the trail
+/tasks
+/human-tasks
+/task
+2
+/human-task human-task-1
+/timeline

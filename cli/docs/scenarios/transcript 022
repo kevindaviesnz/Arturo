@@ -1,0 +1,629 @@
+arturo › /timeline
+
+◆ #30 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T10:32:48.222Z
+Id             e6a9e155-530e-4298-a9d5-69e53a2d5580
+
+◆ #29 · Bot typed a line
+Bot submitted  /artefact inspect artefact-1
+Time           2026-08-01T10:32:40.803Z
+Id             d87f302b-c115-4d9f-b542-8930485abc1e
+
+◆ #28 · Artefact review approved
+Artefact review approved  artefact-1@1 by Document Reviewer
+Time                      2026-08-01T10:32:40.802Z
+Id                        cacc234a-e052-4bf2-81ee-81a21ff69657
+
+◆ #27 · Bot typed a line
+Bot submitted  /artefact review artefact-1@1 --decision approve --as "Document Reviewer" --notes "Approved for use after a qualified legal check."
+Time           2026-08-01T10:32:16.980Z
+Id             8f06476d-9987-4ed8-917f-2e8caa536893
+
+◆ #26 · Bot typed a line
+Bot submitted  /human-tasks
+Time           2026-08-01T10:32:09.237Z
+Id             52990bf4-6582-4ef5-9362-a50637385547
+
+◆ #25 · Artefact review requested
+Artefact review requested  artefact-1@1 from Document Reviewer
+Time                       2026-08-01T10:32:09.235Z
+Id                         532fa190-0fba-466f-b41e-24f7abbee56a
+
+◆ #24 · Bot typed a line
+Bot submitted  /artefact submit artefact-1@1 --reviewer "Document Reviewer" --notes "Check scope, retention, and rights statement."
+Time           2026-08-01T10:31:50.384Z
+Id             a6a13d9d-79fd-4299-8a49-76ec394dfc44
+
+◆ #23 · Bot typed a line
+Bot submitted  /artefact verify artefact-1@1
+Time           2026-08-01T10:31:34.406Z
+Id             f8c7ab1e-1a6d-477b-ac0e-4330ff6f56c8
+
+◆ #22 · Bot typed a line
+Bot submitted  /artefact inspect artefact-1
+Time           2026-08-01T10:31:24.788Z
+Id             dfa72f67-e4eb-41ba-9c47-77c095857160
+
+◆ #21 · Bot typed a line
+Bot submitted  /artefacts
+Time           2026-08-01T10:31:18.736Z
+Id             6a10058c-0811-4eac-b7d8-bcf8dff49120
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › 
+◆ Bot finished
+29 lines typed, 0 turned down — the script finished.
+The bot signed nothing off — every decision in this script named a real person.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear                                   
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 022 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 022 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/022.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           3
+Tasks             0
+  Human Tasks       1
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Kauri University Research Office
+
+◆ What does it do?
+In one sentence, what does Kauri University Research Office exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Support sound research administration with accountable human decisions on every submission.
+
+◆ Anything more about it?
+Anything more worth knowing about Kauri University Research Office? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Kauri University Research Office
+Mission       Support sound research administration with accountable human decisions on every submission.
+Description   (none)
+Status        active
+Created       2026-08-01T10:34:51.773Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Kauri University Research Office" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Grant Readiness
+
+◆ What should it do?
+In one sentence, what should "Grant Readiness" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame grant-readiness checks and route submission decisions to an accountable officer.
+
+◆ Anything more about it?
+Anything more worth knowing about "Grant Readiness"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               kauri-university-research-office:grant-readiness
+Name             Grant Readiness
+Enterprise       Kauri University Research Office (enterprise-1)
+Objective        Frame grant-readiness checks and route submission decisions to an accountable officer.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T10:35:34.795Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Research Office Manager
+
+◆ What will they do?
+What should Research Office Manager be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Research Office Manager's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Research Office Manager is now on your team.
+Research Office Manager can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Grant Readiness"
+
+◆ Function started
+Function
+  Grant Readiness
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 1 AI Worker for Kauri University Research Office.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 1
+Research Office Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Grant Readiness
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Research Office Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2003 session tokens
+arturo › yes
+
+◆ Staffing applied
+1 AI Worker added, and put to work on 1 Function.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Grant Readiness — Research Office Manager
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2003 session tokens
+arturo › /governance policy add "Grant analysis requires manager sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Grant analysis requires manager sign-off
+ID            policy-3edd3d2b-dc08-4cba-83f1-c2cda01e13b6
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2003 session tokens
+arturo › /memory add "Flag eligibility, ethics approval, data-management, and budget-justification gaps explicitly; never assume approvals exist." --scope "Grant Readiness"
+
+◆ Operational Memory added
+Flag eligibility, ethics approval, data-management, and budget-justification gaps explicitly; never assume approvals exist.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2003 session tokens
+arturo › /schedule add "List grant applications approaching their deadline and the readiness gaps still open, labelling assumptions." --every weekly --at "09:00" --timezone "Pacific/Auckland" --function "Grant Readiness"
+
+◆ Task schedule not changed
+Arturo cannot repeat something "weekly". Use daily, or a day of the week such as friday.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2003 session tokens
+arturo › /schedule list
+
+◆ Task schedules
+No Task schedules found.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2003 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2003 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2003 session tokens
+arturo › Using synthetic assumptions only, draft a grant-readiness checklist for a research funding application: eligibility, ethics approval status, data-management plan, budget justification, and named gaps that must be resolved before submission. Do not claim access to a real application.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2003 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Grant Readiness
+Selected worker    Research Office Analyst
+Partial coverage   Research Office Analyst does not hold research, planning — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2003 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Using synthetic assumptions only, draft a grant-readiness checklist for a research funding application: eligibility, ethics approval status, data-management pla...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Research Office Analyst
+   Required capabilities  research, planning
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2003 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2003 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                Research Office Analyst
+ID                    task-1
+Status                Completed
+  (Finished.)
+Evidence              Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed         research, planning
+Why this Worker       Inferred Function Grant Readiness; selected its staffed Worker Research Office Analyst. Best-available coverage: Research Office Analyst does not hold research, planning; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business              Kauri University Research Office
+Task                  1 / 1
+Instruction           Using synthetic assumptions only, draft a grant-readiness checklist for a research funding application: eligibility, ethics approval status, data-management plan, budget justification, and named gaps that must be resolved before submission. Do not claim access to a real application.
+
+Where this came from  an AI model wrote it. Nobody has checked it
+Looked anything up    no
+
+Grant Readiness Checklist
+
+I have synthesized information from the provided context to create a grant readiness checklist. Please note that this is an illustrative example, and actual data may vary.
+
+1. Eligibility
+–  Is the researcher employed by Kauri University?
+–  Does the research align with Kauri University's strategic goals?
+2. Ethics Approval Status
+–  Has ethics approval been obtained from an approved Institutional Review Board (IRB)?
+–  Are all human subjects treated in accordance with applicable laws and regulations?
+3. Data Management Plan
+–  Is a data management plan in place to ensure the secure storage, sharing, and disposal of research data?
+–  Does the plan address data privacy, ownership, and access controls?
+4. Budget Justification
+–  Are budget lines clearly justified and aligned with the proposed research objectives?
+–  Has a detailed breakdown of costs, including personnel, equipment, and travel expenses, been provided?
+
+Named Gaps that Must be Resolved Before Submission
+
+1. Verification of researcher's employment status
+2. Confirmation of ethics approval from an approved IRB
+3. Completion of data management plan
+4. Review and validation of budget justification
+
+Next Steps
+
+–  The researcher must obtain verification of their employment status with Kauri University.
+–  The researcher must provide confirmation of ethics approval from an approved IRB.
+–  The researcher must complete and submit the data management plan for review and approval.
+–  The researcher must review and validate the budget justification to ensure alignment with the proposed research objectives.
+
+Please note that this checklist is based on synthetic assumptions only, and actual grant readiness requirements may vary.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2995 session tokens
+arturo › /create-human-task "Submission go/no-go" "Decide whether the application is ready to submit or what must be resolved first. Do not submit anything."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=5e7ca7a0a3b3c39b348947bb454ba836b34b0f4feb00566c56b4e7975c8315bf
+
+Human task          human-task-1
+Status              open
+Title               Submission go/no-go
+Instructions
+Decide whether the application is ready to submit or what must be resolved first. Do not submit anything.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 2995 session tokens
+arturo › /complete-human-task human-task-1 "Not ready: ethics approval and the data-management plan are outstanding; resubmit for review once both are attached." --as "Research Office Manager"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Research Office Manager
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 2995 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Submission go/no-go
+Instructions
+Decide whether the application is ready to submit or what must be resolved first. Do not submit anything.
+Notes
+Not ready     ethics approval and the data-management plan are outstanding; resubmit for review once both are attached.
+
+Completed by  Research Office Manager
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 2995 session tokens
+arturo › /timeline
+
+◆ #40 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T10:41:55.628Z
+Id             6b55a450-9950-43fc-aed8-4e779c5f80ab
+
+◆ #39 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T10:41:49.553Z
+Id             e1e00856-a19b-491c-99c7-c7a2281e1636
+
+◆ #38 · Human task completed
+Human task human-task-1 completed by Research Office Manager
+Time          2026-08-01T10:41:49.551Z
+Id            a328a1c1-d98d-416e-9e80-c610431001c5
+
+◆ #37 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Not ready: ethics approval and the data-management plan are outstanding; resubmit for review once both are attached." --as "Research Office Manager"
+Time           2026-08-01T10:41:19.873Z
+Id             ed04ddda-0e45-4014-a427-5eedbc012b7a
+
+◆ #36 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T10:41:19.870Z
+Id                  a4b24c32-2d82-4e0f-8c7f-4c03b86ede1e
+
+◆ #35 · Bot typed a line
+Bot submitted  /create-human-task "Submission go/no-go" "Decide whether the application is ready to submit or what must be resolved first. Do not submit anything."
+Time           2026-08-01T10:40:50.843Z
+Id             bc9122ad-c7b9-4028-9b8b-fd9bf7205d3f
+
+◆ #34 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T10:40:43.134Z
+Id             403289cd-be06-4c75-beb6-c4052ac78aa3
+
+◆ #33 · Task completed
+Task completed  task-1
+Time            2026-08-01T10:39:54.932Z
+Id              bb2e5711-7914-4532-b358-cfc376b564e6
+
+◆ #32 · Task started
+Task started  task-1
+Time          2026-08-01T10:39:48.350Z
+Id            f8af5dfa-8d1f-4bee-8ff0-62c4606c90a8
+
+◆ #31 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-01T10:39:48.131Z
+Id            a7d1c8b7-9f64-40d3-9e0a-223ec80d3b27
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 2995 session tokens
+arturo › 
+◆ Bot finished
+34 lines typed, 1 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 2995 session tokens
+arturo › 

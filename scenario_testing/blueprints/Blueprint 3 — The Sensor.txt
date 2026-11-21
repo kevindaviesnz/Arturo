@@ -1,0 +1,346 @@
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+arturo › /enterprise
+◆ Please select an option:
+1. Set up a new business
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Name:
+
+arturo › Ashgrove Instruments
+◆ Mission:
+
+arturo › Value and resell second-hand stringed instruments honestly.
+◆ Description:
+
+arturo › 
+◆ Enterprise created
+ID            enterprise-1
+Name          Ashgrove Instruments
+Mission       Value and resell second-hand stringed instruments honestly.
+Description   (none)
+Status        active
+Created       17 August 2026
+
+Run /next "Ashgrove Instruments" to create this Enterprise's ongoing Functions, or /function to add one yourself.
+
+arturo › /function
+◆ Please select an option:
+1. Add a new Function
+2. Start one running
+3. Look at a Function you've set up
+4. Change a Function's details
+5. See all your Functions
+6. Go back
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Name (eg 'Accounts', 'Product marketing'):
+
+arturo › Instrument Valuation
+◆ Objective:
+
+arturo › Turn a physical inspection of an instrument into a defensible asking price and a listing a buyer can trust.
+◆ Description:
+
+arturo › 
+◆ Function created
+To inspect enter /function inspect "Instrument Valuation"
+
+Run /staff to add Workers.
+
+arturo › /staff
+
+◆ Arturo suggests two AI Workers for Ashgrove Instruments.
+
+◆ Worker one of two
+Instrument Valuation Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Instrument Valuation
+
+Add Instrument Valuation Analyst? Reply yes to add, no to skip, or ESC to stop.
+
+arturo › yes
+◆ Worker two of two
+Client Communication Specialist
+Role          Assistant
+Can do        General reasoning, Writing, Summarisation, Human Contact
+Would help    Instrument Valuation
+
+Add Client Communication Specialist? Reply yes to add, no to skip, or ESC to stop.
+
+arturo › yes
+◆ Staffing applied
+Two AI Workers added, and put to work on Instrument Valuation.
+
+Before this business can do that work, Instrument Valuation still needs a person who can approve, or its work will block with nobody able to approve it.
+
+Add that person with /add-human-worker — it can be you. Once they're on
+the team, work waiting for sign-off shows under /approvals.
+
+Instrument Valuation only does the work you ask for directly. You can change this by entering:
+
+/event
+and choosing "Announce it automatically whenever work finishes"
+
+◆ What to do next:
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+arturo › /refine-worker
+◆ Refine a Worker
+Which one?
+
+1. Instrument Valuation Analyst
+2. Client Communication Specialist
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ How should Instrument Valuation Analyst specialise?
+Type your instructions, or ESC to go back.
+
+For example   You are a softball coach who specialises in coaching softball for girls under 15. You have many years of experience and have played at top levels.
+
+arturo › You are an expert valuer of second-hand stringed instruments. You reason only from the physical findings a luthier reports, you separate what was observed from what you have inferred, and you state pl
+arturo › You are an expert valuer of second-hand stringed instruments. You reason only from the physical findings a luthier reports, you separate what was observed from what you have inferred, and you state pla inly what cannot be determined without provenance or a second opinion. You never present a price as verified market data.
+◆ Worker refined
+Worker refined  Instrument Valuation Analyst
+
+Specialisation
+You are an expert valuer of second-hand stringed instruments. You reason only from the physical findings a luthier reports, you separate what was observed from what you have inferred, and you state plainly what cannot be determined without provenance or a second opinion. You never present a price as verified market data.
+
+arturo › /add-human-worker
+◆ Name (eg Warehouse Lead):
+
+arturo › Workshop Luthier
+◆ Responsibilities:
+1. Sign off sensitive work. If it's just you, this is you.
+2. Review work before it's delivered.
+3. Just do the tasks they're given.
+4. Something else — choose from the full list of roles.
+
+Reply with a number, or ESC to go back.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+
+arturo › 1
+◆ Email address:
+
+arturo › 
+◆ Human worker added
+Workshop Luthier is now on your team.
+Workshop Luthier can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+arturo › /create-human-task
+◆ Description:
+
+arturo › Examine the instrument in person: the grain, the varnish, the seams and the scroll. Note any cracks or repairs, measure the back length, and photograph the label. Record what you can see and what you 
+arturo › Examine the instrument in person: the grain, the varnish, the seams and the scroll. Note any cracks or repairs, measure the back length, and photograph the label. Record what you can see and what you c annot.
+◆ Worker:
+1. Workshop Luthier
+2. Leave it unassigned for now
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=f5a63f89fd2207860ec8e2381d2b501b07bb52badbc985962702484475a00a73
+
+Human task          human-task-1
+Status              open
+Title               Examine the instrument in person: the grain, the varnish, the seams...
+Owner               Workshop Luthier
+Instructions
+Examine the instrument in person: the grain, the varnish, the seams and the scroll. Note any cracks or repairs, measure the back length, and photograph the label. Record what you can see and what you cannot.
+Commands:
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+arturo › /human-tasks
+◆ human-task-1 · open
+Instructions  Examine the instrument in person: the grain, the varnish, the seams and the scroll. Note any cracks or repairs, measure the back length, and photograph the label. Record what you can see and what you cannot.
+
+arturo › /complete-human-task
+◆ What was done for "Examine the instrument in person: the grain, the varnish, the seams..."?
+
+arturo › Back length 356mm. Two-piece back, medium flame. Old repaired crack in the upper treble bout, cleanly done, stable. Seam open 40mm on the bass side. Label reads Mittenwald, no date, almost certainly a
+arturo › Back length 356mm. Two-piece back, medium flame. Old repaired crack in the upper treble bout, cleanly done, stable. Seam open 40mm on the bass side. Label reads Mittenwald, no date, almost certainly a  trade label rather than a maker's. Varnish original, heavily worn at the chin rest.
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Workshop Luthier
+
+arturo › /human-tasks
+◆ human-task-1 · completed
+Instructions  Examine the instrument in person: the grain, the varnish, the seams and the scroll. Note any cracks or repairs, measure the back length, and photograph the label. Record what you can see and what you cannot.
+Completed by  Workshop Luthier
+
+arturo › /task
+◆ Please select an option:
+1. Create a task
+2. Look at one task in full
+3. See all your tasks
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Description:
+
+arturo › Set out what the luthier's findings mean for value, what the asking price should turn on, and what must be disclosed to a buyer. Do not state a price as though it were verified market data.
+◆ Does this task need anything else?
+1. No, it has everything it needs
+2. Continue from work that's already finished
+3. Search the public web first
+
+Reply with a number, or ESC to go back.
+
+arturo › 2
+◆ Which finished work should it continue from?
+Which one?
+
+1. Examine the instrument in person: the grain, the varnish, the seams... — human-task-1
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Task created
+Task queued          task-1
+Selected Function    Instrument Valuation
+Selected worker      Client Communication Specialist
+No capability match  Client Communication Specialist holds none of research — it was chosen because it can reason and no staffed Worker holds any of them. Add a Worker whose archetype covers this if the Task depends on it.
+
+arturo › /tasks
+◆ Tasks
+1. Set out what the luthier's findings mean for value, what the asking price should turn on, and what must be disclosed to a buyer. Do not state a price as though ...
+   ID              task-1
+   Status          Completed
+   Worker          Client Communication Specialist
+   Result preview  Based on the provided records from Workshop Luthier's inspection, here are the key findings that impact the instrument's value: 1. The instrument has a back length of 356mm, indicating it is a standard or near-standard size. 2. The two-p...
+
+arturo › /human-tasks
+◆ human-task-1 · completed
+Instructions  Examine the instrument in person: the grain, the varnish, the seams and the scroll. Note any cracks or repairs, measure the back length, and photograph the label. Record what you can see and what you cannot.
+Completed by  Workshop Luthier
+
+arturo › /task
+◆ Please select an option:
+1. Create a task
+2. Look at one task in full
+3. See all your tasks
+
+Reply with a number, or ESC to go back.
+
+arturo › 2
+◆ Task details
+Worker          Client Communication Specialist
+ID              task-1
+Status          Completed
+  (Finished.)
+Continues from  human-task-1 (what a person found)
+Task            1 / 1
+Instruction     Set out what the luthier's findings mean for value, what the asking price should turn on, and what must be disclosed to a buyer. Do not state a price as though it were verified market data.
+
+Based on the provided records from Workshop Luthier's inspection, here are the key findings that impact the instrument's value:
+
+1. The instrument has a back length of 356mm, indicating it is a standard or near-standard size.
+2. The two-piece back with medium flame suggests that the instrument is made from high-quality spruce, which is valued for its acoustic properties.
+3. The old repaired crack in the upper treble bout, cleaned and stable, indicates that the instrument has been well-maintained and cared for over time.
+4. The seam open 40mm on the bass side suggests that the backplate has been opened or re-glued at some point, potentially affecting the instrument's structural integrity.
+
+Given these findings, the asking price should be influenced by:
+
+–  The quality of the spruce used in the construction
+–  The instrument's size and standardization
+–  The condition of the backplate and seams
+
+However, it is essential to note that the exact asking price cannot be determined without further information on market demand, comparable sales data, and other relevant factors.
+
+To provide a buyer with accurate information, the following should be disclosed:
+
+–  The presence of a repaired crack in the upper treble bout and the extent of the repair
+–  The condition of the backplate and seams
+–  The instrument's size and standardization
+–  Any potential issues or concerns related to the instrument's construction
+
+A clear and transparent description of these findings will help buyers make an informed decision when purchasing the instrument.
+
+arturo › /human-task human-task-1
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Examine the instrument in person: the grain, the varnish, the seams...
+Owner         Workshop Luthier
+Instructions
+Examine the instrument in person: the grain, the varnish, the seams and the scroll. Note any cracks or repairs, measure the back length, and photograph the label. Record what you can see and what you cannot.
+Notes:
+Back length 356mm. Two-piece back, medium flame. Old repaired crack in the upper treble bout, cleanly done, stable. Seam open 40mm on the bass side. Label reads Mittenwald, no date, almost certainly a trade label rather than a maker's. Varnish original, heavily worn at the chin rest.
+
+Completed by  Workshop Luthier
+Commands
+(no actions available)
+
+arturo › /timeline
+◆ #9 · Result counted towards Function health
+Instrument Valuation measured Task outcome: Partially Advanced
+Time          2026-08-17T03:57:25.644Z
+Id            12879606-e9ff-449d-bb58-9851aea16b56
+
+◆ #8 · Result not counted
+An AI model wrote the result of Task task-1 and nobody has checked it, so Arturo has not learned from it. It may still create follow-on work from it.
+Time          2026-08-17T03:57:23.799Z
+Id            c9dcefcf-444f-4030-b0fa-fd63ba0fe3fc
+
+◆ #7 · Task completed
+Task completed  task-1
+Time            2026-08-17T03:57:23.798Z
+Id              2cd9d3ab-dacf-4904-a30a-8e3b1dd247ac
+
+◆ #6 · Task started
+Task started  task-1
+Time          2026-08-17T03:57:17.920Z
+Id            953100d9-18bb-4789-8679-2ce9aac07296
+
+◆ #5 · Task queued
+Task queued for Client Communication Specialist: task-1
+Time          2026-08-17T03:57:17.911Z
+Id            0d890ef7-d1c9-4f84-af03-2a5448bd5a42
+
+◆ #4 · Human task completed
+Human task human-task-1 completed by Workshop Luthier
+Time          2026-08-17T03:56:43.914Z
+Id            1a5d3c2d-d257-4a15-b732-d36abf777102
+
+◆ #3 · Human task created
+Human task created  human-task-1
+Time                2026-08-17T03:56:00.773Z
+Id                  21f7ecb3-1453-41ed-967b-13a777381223
+
+◆ #2 · Worker registered
+Human worker registered  Workshop Luthier
+Time                     2026-08-17T03:55:28.648Z
+Id                       dcd07179-16a1-4295-b2c7-8c5bf8bf7abc
+
+◆ #1 · Function started
+Function started  Instrument Valuation
+Time              2026-08-17T03:54:34.262Z
+Id                59007e6d-9b4f-4e16-9941-e8f19401fc62
+
+arturo › /exit
+
+Arturo stopped.
+⠙

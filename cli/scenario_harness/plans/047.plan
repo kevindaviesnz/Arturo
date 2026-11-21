@@ -1,0 +1,65 @@
+# Scenario 047 — Regional disaster recovery coordination: three Functions, schedule, delegation, human decision
+/reset
+yes
+/enterprise
+1
+Regional Recovery Office
+Coordinate recovery with evidence-led planning and accountable human decisions on every commitment.
+skip
+/function
+1
+Needs Assessment
+Frame community-needs questions and route priority decisions to an accountable coordinator.
+skip
+/function
+1
+Resource Analysis
+Analyse synthetic resource and logistics scenarios for accountable review.
+skip
+/function
+1
+Community Liaison
+Frame community-communication outlines for human approval.
+skip
+/add-human-worker
+Recovery Coordinator
+1
+skip
+/function start "Needs Assessment"
+/function start "Resource Analysis"
+/function start "Community Liaison"
+@timeout 300
+@staff /staff
+/schedule
+1
+Summarise the recovery priorities still open and the decisions awaiting the coordinator, labelling assumptions.
+1
+07:00
+Needs Assessment
+@note One Function asks another for a bounded piece of work, and keeps accountability for it.
+/delegation
+1
+Needs Assessment
+Resource Analysis
+@cap TASK_ID {Task\s+(task-[0-9]+)}
+Analyse a synthetic post-flood scenario: assessing community needs (shelter, water, health), the evidence required to prioritise, resource and logistics constraints, equity considerations, and the decisions a coordinator must make. Do not commit resources or contact anyone.
+/delegation
+2
+/delegation
+3
+1
+@wait 8
+/tasks
+/approve
+@wait 55
+/task inspect {{TASK_ID}}
+@note Only a person decides what happens next, and Arturo records who.
+/create-human-task
+Decide the priority order and what must be confirmed before committing resources. Do not commit resources.
+1
+Recovery Coordinator
+/complete-human-task
+Prioritise safe water and shelter, confirm supply and access before committing, and coordinate with agencies and iwi. No resources committed yet.
+/human-tasks
+/functions
+/timeline

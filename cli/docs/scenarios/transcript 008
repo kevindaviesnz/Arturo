@@ -1,0 +1,650 @@
+–  Develop a well-defined clinical trial protocol
+–  Verify the validity of contradictory studies
+–  Complete Phase I clinical trials to assess long-term safety
+
+It is essential to note that this map is hypothetical, and actual evidence-gaps for Target X would require access to relevant records and data from NovaCure Therapeutics.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3699 session tokens
+arturo › /timeline
+
+◆ #37 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-02T00:15:45.447Z
+Id             48411f71-84ec-46a3-a121-fd2b71215f18
+
+◆ #36 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-02T00:15:37.867Z
+Id             b82ebf55-8127-44c8-8925-5c13fa6ca50c
+
+◆ #35 · Result not counted
+An AI model wrote the result of Task task-1 and nobody has checked it, so Arturo has not learned from it and will not act on it by itself.
+Time          2026-08-02T00:14:51.239Z
+Id            70084e7c-3305-420d-820a-098b84c90c4c
+
+◆ #34 · Delegation completed
+Delegation completed  Task task-1 from Evidence Synthesis returned to Translational Assessment
+Time                  2026-08-02T00:14:51.239Z
+Id                    d71cafd2-6898-4228-b3d6-88875f45205e
+
+◆ #33 · Task completed
+Task completed  task-1
+Time            2026-08-02T00:14:51.238Z
+Id              fb19404f-13c9-495d-b5b2-b814b2aea700
+
+◆ #32 · Task started
+Task started  task-1
+Time          2026-08-02T00:14:43.041Z
+Id            d212c738-c2c6-493a-b31a-df1f4b5467a6
+
+◆ #31 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-02T00:14:42.864Z
+Id            e938375c-f8c1-4922-93c6-09cfb2256fae
+
+◆ #30 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-02T00:14:24.919Z
+Id             3edbc8d1-5c0b-4224-ba8a-2d25d27541f3
+
+◆ #29 · Bot typed a line
+Bot submitted  /delegation inspect 8e7e215d-eb40-49b7-8441-296ef7c62d6d
+Time           2026-08-02T00:14:02.238Z
+Id             9d581121-9ab0-4fc5-9af8-e2523e94bc69
+
+◆ #28 · Bot typed a line
+Bot submitted  /delegation list
+Time           2026-08-02T00:13:52.426Z
+Id             dcdcfe1c-e95c-4358-8137-f27153990d67
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3699 session tokens
+arturo › 
+◆ Bot finished
+32 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3699 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 008 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 008 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/008.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         2
+Workers           4
+Tasks             1
+  Human Tasks       0
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Harbour Bank NZ
+
+◆ What does it do?
+In one sentence, what does Harbour Bank NZ exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Protect customer services through controlled, evidence-led security operations.
+
+◆ Anything more about it?
+Anything more worth knowing about Harbour Bank NZ? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Harbour Bank NZ
+Mission       Protect customer services through controlled, evidence-led security operations.
+Description   (none)
+Status        active
+Created       2026-08-02T00:18:34.463Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Harbour Bank NZ" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Incident Response
+
+◆ What should it do?
+In one sentence, what should "Incident Response" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Triage synthetic security alerts into evidence needs and authorised decision points without executing containment.
+
+◆ Anything more about it?
+Anything more worth knowing about "Incident Response"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               harbour-bank-nz:incident-response
+Name             Incident Response
+Enterprise       Harbour Bank NZ (enterprise-1)
+Objective        Triage synthetic security alerts into evidence needs and authorised decision points without executing containment.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-02T00:19:17.037Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Incident Commander
+
+◆ What will they do?
+What should Incident Commander be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Incident Commander's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Incident Commander is now on your team.
+Incident Commander can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Incident Response"
+
+◆ Function started
+Function
+  Incident Response
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 2 AI Workers for Harbour Bank NZ.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 2
+Property Research Assistant
+Role          Researcher
+Can do        General reasoning, Research, Web Research, Summarisation, Human Contact
+Would help    Incident Response
+
+For example, it could
+    · Find and summarise what's known about a topic
+    · Gather sources on a question and flag what's uncertain
+
+Add Property Research Assistant? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1962 session tokens
+arturo › yes
+
+◆ Worker 2 of 2
+Incident Response Guardian
+Role          Guardian
+Can do        General reasoning, Product Safety, Review, Human Contact
+Would help    Incident Response
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Check whether something is safe to go ahead
+    · Flag risks before an action is taken
+
+Add Incident Response Guardian? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1962 session tokens
+arturo › yes
+
+◆ Staffing applied
+2 AI Workers added, and put to work on 2 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Incident Response — Incident Commander
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1962 session tokens
+arturo › /governance policy add "Automated containment is denied" --effect deny --capability "execution"
+
+◆ Governance policy added
+Policy        Automated containment is denied
+ID            policy-a25ea7f6-711f-47b0-868c-01fa025c19d8
+Effect        deny
+Match         capabilityId=execution
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1962 session tokens
+arturo › /governance policy list
+
+◆ Governance policies
+1. Human approval required for Incident Response, from the staffing plan you applied.
+   ID            staffing-approval:harbour-bank-nz:incident-response
+   Effect        require-approval · Match: businessFunctionId=harbour-bank-nz:incident-response · Scope: organization:enterprise-1
+2. Automated containment is denied
+   ID            policy-a25ea7f6-711f-47b0-868c-01fa025c19d8
+   Effect        deny · Match: capabilityId=execution · Scope: organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1962 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1962 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1962 session tokens
+arturo › Using a synthetic alert description only, prepare an incident triage plan for unusual employee authentication activity. Separate known facts, hypotheses, evidence requests, severity criteria, customer-impact questions, and authorised containment decision points. Do not claim access to telemetry and do not execute containment.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1962 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Incident Response
+Selected worker    Incident Response Guardian
+Partial coverage   Incident Response Guardian does not hold research, planning — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1962 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Using a synthetic alert description only, prepare an incident triage plan for unusual employee authentication activity. Separate known facts, hypotheses, eviden...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Incident Response Guardian
+   Required capabilities  safety, research, planning
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1962 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1962 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 50s to get on with the work.
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1962 session tokens
+arturo › /tasks
+
+◆ Tasks
+1. Using a synthetic alert description only, prepare an incident triage plan for unusual employee authentication activity. Separate known facts, hypotheses, eviden...
+   ID                     task-1
+   Status                 Completed
+   Worker                 Incident Response Guardian
+   Required capabilities  safety, research, planning
+   Evidence               An AI model wrote it; nobody has checked it
+   Result preview         Evidence status: UNVERIFIED MODEL SYNTHESIS External tools used: none Incident Triage Plan: Unusual Employee Authentication Activity Known Facts: * A synthetic security alert has been generated regarding unusual employee authenti...
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3074 session tokens
+arturo › /task inspect task-1
+
+◆ Task detail
+Worker                  Incident Response Guardian
+ID                      task-1
+Status                  Completed
+  (Finished.)
+Evidence                Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed           safety, research, planning
+Why this Worker         Inferred Function Incident Response; selected its staffed Worker Incident Response Guardian. Best-available coverage: Incident Response Guardian does not hold research, planning; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business                Harbour Bank NZ
+Task                    1 / 1
+Instruction             Using a synthetic alert description only, prepare an incident triage plan for unusual employee authentication activity. Separate known facts, hypotheses, evidence requests, severity criteria, customer-impact questions, and authorised containment decision points. Do not claim access to telemetry and do not execute containment.
+
+Where this came from    an AI model wrote it. Nobody has checked it
+Looked anything up      no
+
+Incident Triage Plan: Unusual Employee Authentication Activity
+
+Known Facts
+
+–  A synthetic security alert has been generated regarding unusual employee authentication activity.
+–  The incident occurred during regular working hours.
+–  No user reports or complaints were received prior to the alert.
+
+Hypotheses
+
+–  Possible phishing attempt or social engineering attack
+–  Insider threat or malicious actor within the organization
+–  Technical issue with authentication system
+
+Evidence Requests
+
+1. Review of security logs and event data to determine the origin of the unusual activity.
+2. Analysis of user interaction records to identify potential anomalies.
+3. Inspection of employee accounts and credentials for any signs of tampering or suspicious activity.
+
+Severity Criteria
+
+–  Low: Minimal impact on business operations, no data breach reported.
+–  Medium: Moderate impact on business operations, some data compromised.
+–  High: Significant impact on business operations, large-scale data breach reported.
+
+Customer-Impact Questions
+
+1. Will the unusual authentication activity affect our ability to provide services to customers?
+2. Are there any potential risks to customer data or confidentiality?
+
+Authorised Containment Decision Points
+
+1. Review security logs and event data to determine the extent of the issue.
+2. Conduct a thorough analysis of user interaction records to identify potential anomalies.
+3. Engage with IT department to review employee accounts and credentials.
+
+Decision Point 1
+
+–  If severity is Low, proceed with informational notification to employees only.
+–  If severity is Medium, engage with IT department to investigate and contain the issue.
+–  If severity is High, activate incident response plan for full containment and breach notification.
+
+Decision Point 2
+
+–  If containment is feasible, execute containment measures without escalating further.
+–  If containment is not feasible, escalate to Incident Response Team for assistance.
+
+Next Steps
+
+1. Assign a dedicated team member to lead the investigation and containment efforts.
+2. Communicate with relevant stakeholders (e.g., IT department, management) throughout the incident response process.
+3. Document all activities, findings, and decisions in the incident report.
+
+Please note that this plan is based solely on the provided synthetic alert description and does not claim access to telemetry or system records.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3074 session tokens
+arturo › /governance policy inspect "Automated containment is denied"
+
+◆ Governance policy
+Policy        Automated containment is denied
+ID            policy-a25ea7f6-711f-47b0-868c-01fa025c19d8
+Effect        deny
+Match         capabilityId=execution
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3074 session tokens
+arturo › /timeline
+
+◆ #36 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-02T00:35:14.314Z
+Id             f3679a41-dfff-40fe-a645-0da92a9aa65c
+
+◆ #35 · Governance policy inspected
+Governance policy inspected  Automated containment is denied
+Time                         2026-08-02T00:35:14.312Z
+Id                           eddb2902-7226-40ee-a1df-7437f2ef0f8a
+
+◆ #34 · Bot typed a line
+Bot submitted  /governance policy inspect "Automated containment is denied"
+Time           2026-08-02T00:34:57.761Z
+Id             aa33ce29-cf33-4a73-9abe-ac77f3c56814
+
+◆ #33 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-02T00:34:44.771Z
+Id             8b0358b3-8778-49cc-b2a6-96787ceb7140
+
+◆ #32 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T00:34:39.082Z
+Id             ac1b5b4e-af7d-4687-af29-ae1a0fb1ccb8
+
+◆ #31 · Task completed
+Task completed  task-1
+Time            2026-08-02T00:22:50.522Z
+Id              85066091-28ba-4542-a225-bf35ae4433ed
+
+◆ #30 · Task started
+Task started  task-1
+Time          2026-08-02T00:22:42.616Z
+Id            9fdf030d-547a-4842-9115-c527aae1d2e7
+
+◆ #29 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-02T00:22:42.167Z
+Id            a8d0508e-4edb-4129-a588-350bf3685592
+
+◆ #28 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-02T00:22:28.216Z
+Id             407bd25c-ceff-423f-b79e-0ec0c53b6508
+
+◆ #27 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T00:22:15.576Z
+Id             2217ae40-83df-499f-83e7-7fb30b5e7a2a
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3074 session tokens
+arturo › 
+◆ Bot finished
+32 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3074 session tokens
+arturo › 

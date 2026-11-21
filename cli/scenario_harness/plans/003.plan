@@ -1,0 +1,38 @@
+# Scenario 003 — Legal contract review (governance + approve)
+/reset
+yes
+/enterprise
+1
+Harbour Legal
+Provide careful, independent and client-centred legal services.
+skip
+/function
+1
+Commercial Contract Review
+Identify material commercial contract issues and prepare a traceable briefing for principal-lawyer review.
+skip
+/add-human-worker
+Principal Lawyer
+1
+skip
+/function start "Commercial Contract Review"
+@timeout 240
+@staff /staff
+/governance policy add "Legal analysis requires principal review" --effect require-approval --capability "analysis"
+/governance policy inspect "Legal analysis requires principal review"
+/task
+1
+Using synthetic assumptions only, identify the material commercial issues a principal lawyer should check in a software supply agreement: liability, indemnities, IP ownership, data protection, termination, and service levels. Separate general issue-spotting from claims needing the actual contract text. Do not give legal advice or claim to have read a real agreement.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approval-status {{TASK_ID}}
+/approve {{TASK_ID}}
+@wait 50
+/tasks
+/task inspect {{TASK_ID}}
+/timeline
+/health "Commercial Contract Review"
+/memory

@@ -1,0 +1,612 @@
+
+◆ #41 · Human task completed
+Human task human-task-1 completed by Ethics Chair
+Time          2026-08-01T11:00:49.106Z
+Id            8f966444-927e-4e6d-856d-4292aed06317
+
+◆ #40 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Adequate for planning only; independent DSMB design, statistical review, and full ethics submission are required before any trial activity." --as "Ethics Chair"
+Time           2026-08-01T11:00:18.899Z
+Id             412ea505-6a81-4f49-b63e-a76cda9cbaa1
+
+◆ #39 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T11:00:18.895Z
+Id                  c7bdaf66-7235-475e-b0ea-425026c9d943
+
+◆ #38 · Bot typed a line
+Bot submitted  /create-human-task "Ethics chair decision" "Decide whether the framing is adequate to plan a formal ethics submission, and list what independent safety and statistical review must precede it. Do not authorise any trial activity."
+Time           2026-08-01T10:59:41.667Z
+Id             afd014f5-a1c9-43f7-a6be-ff471d37b70c
+
+◆ #37 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T10:59:34.683Z
+Id             3abf5cee-e5a6-4ddb-99e0-f6b8a68ba412
+
+◆ #36 · Result not counted
+An AI model wrote the result of Task task-1 and nobody has checked it, so Arturo has not learned from it and will not act on it by itself.
+Time          2026-08-01T10:58:46.945Z
+Id            a71a38e5-d1af-40ae-b4ef-ba746e7e568d
+
+◆ #35 · Delegation completed
+Delegation completed  Task task-1 from Ethics Framing returned to Protocol Design
+Time                  2026-08-01T10:58:46.944Z
+Id                    3f4596a1-0cfc-4589-8229-48882ecb73d7
+
+◆ #34 · Task completed
+Task completed  task-1
+Time            2026-08-01T10:58:46.943Z
+Id              feb8e4c1-7d8d-43d2-a4e2-8fee394d3a61
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3662 session tokens
+arturo › 
+◆ Bot finished
+36 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3662 session tokens
+arturo › /exir
+
+× Unsupported command
+The terminal UI does not handle /exir yet.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3662 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % cleaf
+zsh: command not found: cleaf
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 019 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 019 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/019.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         2
+Workers           4
+Tasks             1
+  Human Tasks       1
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Meridian Newsroom
+
+◆ What does it do?
+In one sentence, what does Meridian Newsroom exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Publish only what has been checked, with an editor accountable for every claim.
+
+◆ Anything more about it?
+Anything more worth knowing about Meridian Newsroom? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Meridian Newsroom
+Mission       Publish only what has been checked, with an editor accountable for every claim.
+Description   (none)
+Status        active
+Created       2026-08-01T19:56:03.495Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Meridian Newsroom" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Fact Check Desk
+
+◆ What should it do?
+In one sentence, what should "Fact Check Desk" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Turn draft claims into checkable questions and evidence gaps for an accountable editor.
+
+◆ Anything more about it?
+Anything more worth knowing about "Fact Check Desk"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               meridian-newsroom:fact-check-desk
+Name             Fact Check Desk
+Enterprise       Meridian Newsroom (enterprise-1)
+Objective        Turn draft claims into checkable questions and evidence gaps for an accountable editor.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T19:56:42.748Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Managing Editor
+
+◆ What will they do?
+What should Managing Editor be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Managing Editor's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Managing Editor is now on your team.
+Managing Editor can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Fact Check Desk"
+
+◆ Function started
+Function
+  Fact Check Desk
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 1 AI Worker for Meridian Newsroom.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 1
+Fact Checker
+Role          Researcher
+Can do        General reasoning, Research, Web Research, Summarisation, Human Contact
+Would help    Fact Check Desk
+
+For example, it could
+    · Find and summarise what's known about a topic
+    · Gather sources on a question and flag what's uncertain
+
+Add Fact Checker? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1881 session tokens
+arturo › yes
+
+◆ Staffing applied
+1 AI Worker added, and put to work on 1 Function.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Fact Check Desk — Managing Editor
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1881 session tokens
+arturo › /memory add "Separate what a source says from what is established; never present an unverified claim as fact." --scope "Fact Check Desk"
+
+◆ Operational Memory added
+Separate what a source says from what is established; never present an unverified claim as fact.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1881 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1881 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1881 session tokens
+arturo › For a hypothetical local story claiming a new cycleway cut commute times by 30 percent, list the specific claims to verify, the primary sources and data needed, the caveats, and which statements must not run until checked. Do not assert any figure as verified.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1881 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Fact Check Desk
+Selected worker    Fact Checker
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1881 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. For a hypothetical local story claiming a new cycleway cut commute times by 30 percent, list the specific claims to verify, the primary sources and data needed,...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Fact Checker
+   Required capabilities  research
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1881 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1881 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                Fact Checker
+ID                    task-1
+Status                Completed
+  (Finished.)
+Evidence              Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed         research
+Why this Worker       Inferred Function Fact Check Desk; selected its staffed Worker Fact Checker.
+Business              Meridian Newsroom
+Task                  1 / 1
+Instruction           For a hypothetical local story claiming a new cycleway cut commute times by 30 percent, list the specific claims to verify, the primary sources and data needed, the caveats, and which statements must not run until checked. Do not assert any figure as verified.
+
+Where this came from  an AI model wrote it. Nobody has checked it
+Looked anything up    no
+
+Fact Check Desk Report
+
+Hypothetical Local Story
+
+Title                 "New Cycleway Cuts Commute Times by 30 Percent"
+
+Claims to Verify
+
+1. A new cycleway has been constructed in the area.
+2. The cycleway's completion date is confirmed.
+3. The cycleway's design and construction were conducted according to standard safety guidelines.
+4. There are no reported accidents or incidents related to the cycleway.
+
+Primary Sources and Data Needed
+
+–  Official announcements from local authorities regarding the cycleway's construction and opening date.
+–  Reports from transportation agencies or studies on commute times before and after the cycleway's completion.
+–  Safety inspection reports from regulatory bodies or independent auditors.
+–  Incident reports or statements from law enforcement agencies related to accidents or incidents near the cycleway.
+
+Caveats
+
+–  The report does not specify which areas of the city were affected by the cycleway, potentially excluding other factors that may have impacted commute times.
+–  There is no mention of potential environmental or health impacts on cyclists using the new path.
+–  No data is provided to support a 30% reduction in commute times specifically attributed to the cycleway.
+
+Statements to be Checked
+
+1. "A new cycleway has been constructed in the area." (Verification required)
+2. "The cycleway's completion date is confirmed." (Verification required)
+3. "The cycleway's design and construction were conducted according to standard safety guidelines." (Verification required)
+4. "There are no reported accidents or incidents related to the cycleway." (Verification required)
+5. "Commute times have been reduced by 30 percent due to the new cycleway." (Data and primary sources needed for verification)
+
+Evidence Gaps
+
+–  Lack of detailed information on the cycleway's design, construction process, and safety features.
+–  Insufficient data to support a specific reduction in commute times.
+
+Next Steps
+
+To verify these claims, it is recommended that the editor conduct further research and fact-checking using primary sources and credible reports. The Fact Check Desk will provide guidance and support as needed to ensure accurate reporting for Meridian Newsroom.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3058 session tokens
+arturo › /create-human-task "Editor decision on publication readiness" "Decide whether the piece can proceed to editing, what must be independently verified first, and which claims are held. Do not authorise publication."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=c4afdebee4ac3dc9953cfecd7438befb5fc8f5bf6a19c6e950c80ec2a72c805c
+
+Human task          human-task-1
+Status              open
+Title               Editor decision on publication readiness
+Instructions
+Decide whether the piece can proceed to editing, what must be independently verified first, and which claims are held. Do not authorise publication.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3058 session tokens
+arturo › /complete-human-task human-task-1 "Hold the 30 percent figure until the traffic dataset and methodology are verified; proceed to edit the rest with caveats." --as "Managing Editor"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Managing Editor
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3058 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Editor decision on publication readiness
+Instructions
+Decide whether the piece can proceed to editing, what must be independently verified first, and which claims are held. Do not authorise publication.
+Notes
+Hold the 30 percent figure until the traffic dataset and methodology are verified; proceed to edit the rest with caveats.
+
+Completed by  Managing Editor
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3058 session tokens
+arturo › /timeline
+
+◆ #37 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T20:01:51.043Z
+Id             efd1f1e0-9099-4d03-aa6e-85cfcef4cd7d
+
+◆ #36 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T20:01:44.609Z
+Id             1f8f6ba9-5523-40e4-a816-b40a77047816
+
+◆ #35 · Human task completed
+Human task human-task-1 completed by Managing Editor
+Time          2026-08-01T20:01:44.606Z
+Id            514fc5ce-77a8-4a5b-92c6-45d79561017d
+
+◆ #34 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Hold the 30 percent figure until the traffic dataset and methodology are verified; proceed to edit the rest with caveats." --as "Managing Editor"
+Time           2026-08-01T20:01:16.365Z
+Id             8c0e860a-ed54-4ca9-9369-179e63a5de98
+
+◆ #33 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T20:01:16.364Z
+Id                  77234a88-2752-43dd-b9c6-518beb1876a8
+
+◆ #32 · Bot typed a line
+Bot submitted  /create-human-task "Editor decision on publication readiness" "Decide whether the piece can proceed to editing, what must be independently verified first, and which claims are held. Do not authorise publication."
+Time           2026-08-01T20:00:42.810Z
+Id             b6aa27f7-7c97-488a-8ef5-20f9a8236c5f
+
+◆ #31 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T20:00:33.905Z
+Id             9df578fe-eb36-4f20-85b8-e5bd325db30b
+
+◆ #30 · Task completed
+Task completed  task-1
+Time            2026-08-01T19:59:50.304Z
+Id              14f7a778-b792-46ff-9e2b-b38d7de5a0bd
+
+◆ #29 · Task started
+Task started  task-1
+Time          2026-08-01T19:59:39.368Z
+Id            45b85912-f76f-46c5-9456-91e86a6dbfca
+
+◆ #28 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-01T19:59:38.902Z
+Id            abdf0883-b7d1-49cd-84f3-887fd6e43f5d
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3058 session tokens
+arturo › 
+◆ Bot finished
+31 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3058 session tokens
+arturo › 

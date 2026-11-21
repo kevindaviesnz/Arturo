@@ -1,0 +1,12 @@
+DRAFT ESCALATION PROTOCOL (synthetic sample; for scenario testing only)
+
+Purpose: outline escalation steps when inpatient demand exceeds capacity.
+1. Trigger: occupancy above an agreed threshold for a sustained period.
+2. Steps: review discharges ready today; open surge capacity; notify on-call
+   director; coordinate with regional partners.
+3. Safeguards: maintain safe staffing ratios; protect priority and vulnerable
+   patients; document every decision.
+4. Review: a clinician signs off each escalation; equity impact is checked.
+
+This is a synthetic sample, not a real protocol, and must be reviewed by
+qualified clinicians before any use.

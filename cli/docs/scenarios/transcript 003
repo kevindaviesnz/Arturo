@@ -1,0 +1,649 @@
+1. Using synthetic assumptions only, triage a reported storm-damage claim involving a roof, internal ceiling water damage, and a fence. List evidence required, pos...
+   ID                     task-1
+   Status                 Failed
+   Worker                 Southern Shield Researcher
+   Required capabilities  research
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1944 session tokens
+arturo › /timeline
+
+◆ #31 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-02T03:43:20.295Z
+Id             58d32fc4-c338-4d5c-b9ee-146784129837
+
+◆ #30 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T03:43:10.788Z
+Id             3b5aa76f-6b46-493f-86db-6d1b3616757e
+
+◆ #29 · Bot typed a line
+Bot submitted  /approval-status task-1
+Time           2026-08-02T03:43:05.113Z
+Id             ed9b1ae4-4469-4935-bc01-c04bdcb3de28
+
+× #28 · Task rejected
+Approval rejected for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-02T03:43:05.111Z
+Id            c9e17034-dd7d-4809-b133-d2c528ccd617
+
+◆ #27 · Bot typed a line
+Bot submitted  /reject task-1 "Policy wording, loss evidence, and customer-impact information are missing." --as "Arturo Bot (automated, not a person)"
+Time           2026-08-02T03:42:41.845Z
+Id             7b7d8a00-6557-4180-9ec0-74a476475819
+
+◆ #26 · Bot typed a line
+Bot submitted  /approval-status task-1
+Time           2026-08-02T03:42:29.523Z
+Id             4ba02c75-0be2-4e5b-ac37-20384831e67f
+
+◆ #25 · Bot typed a line
+Bot submitted  /approvals
+Time           2026-08-02T03:42:21.223Z
+Id             e988708d-5edc-4eae-897c-c79d00778c2d
+
+◆ #24 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T03:42:08.458Z
+Id             72091139-0aa0-4f0b-a590-fb61c749f4ed
+
+◆ #23 · Task queued
+Task queued for Southern Shield Researcher: task-1
+Time          2026-08-02T03:41:48.452Z
+Id            f4b56eb1-be6e-4710-bb00-46c8b59eb0d4
+
+◆ #22 · Bot typed a line
+Bot submitted  1
+Time           2026-08-02T03:41:42.167Z
+Id             5e1e4c8a-ecfa-4459-af48-708202f26592
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1944 session tokens
+arturo › 
+◆ Bot finished
+30 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1944 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 004 --approve
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 003 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 003 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/003.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           3
+Tasks             1
+  Human Tasks       0
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Harbour Legal
+
+◆ What does it do?
+In one sentence, what does Harbour Legal exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Provide careful, independent and client-centred legal services.
+
+◆ Anything more about it?
+Anything more worth knowing about Harbour Legal? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Harbour Legal
+Mission       Provide careful, independent and client-centred legal services.
+Description   (none)
+Status        active
+Created       2026-08-02T03:44:53.526Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Harbour Legal" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Commercial Contract Review
+
+◆ What should it do?
+In one sentence, what should "Commercial Contract Review" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Identify material commercial contract issues and prepare a traceable briefing for principal-lawyer review.
+
+◆ Anything more about it?
+Anything more worth knowing about "Commercial Contract Review"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               harbour-legal:commercial-contract-review
+Name             Commercial Contract Review
+Enterprise       Harbour Legal (enterprise-1)
+Objective        Identify material commercial contract issues and prepare a traceable briefing for principal-lawyer review.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-02T03:45:38.514Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Principal Lawyer
+
+◆ What will they do?
+What should Principal Lawyer be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Principal Lawyer's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Principal Lawyer is now on your team.
+Principal Lawyer can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Commercial Contract Review"
+
+◆ Function started
+Function
+  Commercial Contract Review
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 1 AI Worker for Harbour Legal.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 1
+Contract Review Specialist
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Commercial Contract Review
+
+For example, it could
+    · Check a piece of work for mistakes and gaps
+    · Give feedback on a draft before it goes out
+
+Add Contract Review Specialist? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1950 session tokens
+arturo › yes
+
+◆ Staffing applied
+1 AI Worker added, and put to work on 1 Function.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Commercial Contract Review — Principal Lawyer
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1950 session tokens
+arturo › /governance policy add "Legal analysis requires principal review" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Legal analysis requires principal review
+ID            policy-7003d584-349e-4157-a8e6-8471f489c14f
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1950 session tokens
+arturo › /governance policy inspect "Legal analysis requires principal review"
+
+◆ Governance policy
+Policy        Legal analysis requires principal review
+ID            policy-7003d584-349e-4157-a8e6-8471f489c14f
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1950 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1950 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1950 session tokens
+arturo › Using synthetic assumptions only, identify the material commercial issues a principal lawyer should check in a software supply agreement: liability, indemnities, IP ownership, data protection, termination, and service levels. Separate general issue-spotting from claims needing the actual contract text. Do not give legal advice or claim to have read a real agreement.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1950 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Commercial Contract Review
+Selected worker    Contract Review Specialist
+Partial coverage   Contract Review Specialist does not hold advice — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1950 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Using synthetic assumptions only, identify the material commercial issues a principal lawyer should check in a software supply agreement: liability, indemnities...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Contract Review Specialist
+   Required capabilities  advice
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1950 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approval-status task-1
+
+◆ Approval status
+Task                task-1
+Status              pending
+Waiting because     Human approval required for Commercial Contract Review, from the staffing plan you applied. (staffing-approval:harbour-legal:commercial-contract-review)
+Required approvals  1
+Current approvals   0
+
+No decisions recorded
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1950 session tokens
+arturo › /approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1950 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 50s to get on with the work.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1950 session tokens
+arturo › /tasks
+
+◆ Tasks
+1. Using synthetic assumptions only, identify the material commercial issues a principal lawyer should check in a software supply agreement: liability, indemnities...
+   ID                     task-1
+   Status                 Completed
+   Worker                 Contract Review Specialist
+   Required capabilities  advice
+   Evidence               An AI model wrote it; nobody has checked it
+   Result preview         Evidence status: UNVERIFIED MODEL SYNTHESIS External tools used: none I'll provide an evaluation of the provided work. Quality: The prompt provides clear guidelines for reviewing the software supply agreement. The reviewer should identif...
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2946 session tokens
+arturo › /task inspect task-1
+
+◆ Task detail
+Worker                Contract Review Specialist
+ID                    task-1
+Status                Completed
+  (Finished.)
+Evidence              Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed         advice
+Why this Worker       Inferred Function Commercial Contract Review; selected its staffed Worker Contract Review Specialist. Best-available coverage: Contract Review Specialist does not hold advice; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business              Harbour Legal
+Task                  1 / 1
+Instruction           Using synthetic assumptions only, identify the material commercial issues a principal lawyer should check in a software supply agreement: liability, indemnities, IP ownership, data protection, termination, and service levels. Separate general issue-spotting from claims needing the actual contract text. Do not give legal advice or claim to have read a real agreement.
+
+Where this came from  an AI model wrote it. Nobody has checked it
+Looked anything up    no
+
+I'll provide an evaluation of the provided work.
+
+Quality
+The prompt provides clear guidelines for reviewing the software supply agreement. The reviewer should identify material commercial issues, separate general issue-spotting from claims needing actual contract text, and avoid providing legal advice.
+
+Accuracy
+The reviewer must rely on synthetic assumptions only, without claiming to have searched or accessed external sources. They should not present invented values as real data.
+
+Completeness
+The prompt does not provide a specific sample agreement for the reviewer to work with. It is unclear whether a sample agreement will be provided later or if the reviewer should assume one exists.
+
+Risks
+The reviewer may face challenges in identifying material commercial issues without access to external information, such as industry standards or previous contracts.
+
+Improvements
+
+1. Provide clear guidelines for general issue-spotting, such as evaluating the level of disclosure, contract duration, and service level obligations.
+2. Request additional guidance on what specific provisions should be scrutinized within each category (e.g., liability, indemnities, IP ownership).
+3. Suggest a method or structure that would be applied once relevant data is supplied.
+
+Signature block
+
+To be completed by a named human reviewer
+
+I have reviewed the provided work based on the given capabilities and guardrails.
+
+Please note that I am not claiming to have searched or accessed external sources, nor can I provide legal advice. This review is intended to provide guidance for principal-lawyer review only.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2946 session tokens
+arturo › /timeline
+
+◆ #35 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-02T03:55:33.015Z
+Id             acae9ace-ba2e-4560-b817-d76f232a2a1a
+
+◆ #34 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-02T03:55:21.795Z
+Id             e58ed2f9-c1d1-4395-a947-fc2bd04c4a55
+
+◆ #33 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T03:55:15.294Z
+Id             ed6f7f41-8931-4070-b300-bc04944c4458
+
+◆ #32 · Task completed
+Task completed  task-1
+Time            2026-08-02T03:49:22.728Z
+Id              45033a61-8b96-44fa-8b0e-1aa7577d5f88
+
+◆ #31 · Task started
+Task started  task-1
+Time          2026-08-02T03:49:17.138Z
+Id            3610e99d-f048-4fad-9c30-f07e8a7a5788
+
+◆ #30 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-02T03:49:16.692Z
+Id            6f299329-cb6c-48c5-a00b-e0866f16f572
+
+◆ #29 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-02T03:49:04.065Z
+Id             1a8e708e-5280-480f-8778-32921ea0ff6d
+
+◆ #28 · Bot typed a line
+Bot submitted  /approval-status task-1
+Time           2026-08-02T03:48:55.800Z
+Id             e0869c86-1522-4835-8a0d-9ae7c48c01a9
+
+◆ #27 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T03:48:40.842Z
+Id             4ac4b779-fb90-4752-b35c-890667cfa111
+
+◆ #26 · Task queued
+Task queued for Contract Review Specialist: task-1
+Time          2026-08-02T03:48:20.840Z
+Id            080eca41-b7b2-4be2-8d1b-d2d772937822
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2946 session tokens
+arturo › /health "Commercial Contract Review"
+
+◆ Health
+Function
+  Commercial Contract Review
+
+Overall Health
+  Unknown
+
+Indicators
+  Tasks Completed          0/0 (0%)
+  Tasks Failed             0
+  Open Tasks               0
+  Outcomes Measured        0/0
+  Lessons Retained         0
+  Governed Criteria        0
+
+Trend
+  Stable
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2946 session tokens
+arturo › /memory
+
+◆ What Arturo remembers
+Notes here are given to Workers as context on later work.
+
+1. Write something down
+2. See what is written down
+3. Remove a note
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2946 session tokens
+arturo › cancel
+
+◆ Cancelled
+No problem — nothing was changed.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2946 session tokens
+arturo › 
+◆ Bot finished
+33 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2946 session tokens
+arturo › 

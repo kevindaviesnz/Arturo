@@ -1,0 +1,36 @@
+# Scenario 005 — Discovery research framing (canonical; AI map + human sign-off)
+/reset
+yes
+/enterprise
+1
+Asteria Therapeutics
+Frame research questions with scientific caution and accountable human oversight.
+skip
+/function
+1
+Discovery Framing
+Produce non-operational research-question maps and route them to accountable scientific review.
+skip
+/add-human-worker
+Research Director
+1
+skip
+/function start "Discovery Framing"
+@timeout 240
+@staff /staff
+/task
+1
+For a hypothetical neurodegenerative-disease programme, create a non-operational research-question map covering mechanism uncertainty, evidence types needed, reproducibility, translational risk, safety unknowns, and stop criteria. Do not invent studies or provide laboratory, synthesis, dosing, or clinical instructions.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK_ID}}
+@wait 45
+/task inspect {{TASK_ID}}
+@cap HTASK {(human-task-[0-9]+)}
+/create-human-task "Review discovery research framing" "As Research Director, decide whether the question map is suitable for planning only. Record missing literature, patent, safety, ethics, and experimental evidence. Do not authorise laboratory or clinical work."
+/complete-human-task {{HTASK}} "Accepted only as a planning outline. Verified literature, patent, safety, ethics, and reproducibility review are required before any research protocol is proposed." --as "Research Director"
+/human-task {{HTASK}}
+/timeline

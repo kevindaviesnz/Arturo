@@ -1,0 +1,39 @@
+# Scenario 007 — Climate evidence synthesis (event + scoped Memory + bounded task)
+/reset
+yes
+/enterprise
+1
+Pacific Climate Research Institute
+Maintain useful, transparent, and uncertainty-aware climate evidence briefings.
+skip
+/function
+1
+Climate Evidence Synthesis
+Frame coastal-risk evidence questions, distinguish supplied facts from uncertainty, and prepare work for scientific review.
+skip
+/add-human-worker
+Lead Scientist
+1
+skip
+/function start "Climate Evidence Synthesis"
+@timeout 240
+@staff /staff
+/memory add "Briefings must distinguish observed evidence, model projections, assumptions, and unresolved uncertainty." --scope "Climate Evidence Synthesis"
+/memory
+/event publish "Coastal flooding briefing requested" --source "Climate Evidence Synthesis" --enterprise "Pacific Climate Research Institute"
+/tasks
+@note A running Function may or may not create work from an Event; create the bounded briefing Task explicitly.
+/task
+1
+Frame the evidence questions for a coastal-flooding briefing for a specified New Zealand region: observed versus projected data needed, tide and storm-surge uncertainty, key assumptions, and what must be verified against primary sources. Do not invent figures or claim data access.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK_ID}}
+@wait 55
+/task inspect {{TASK_ID}}
+/events
+/health "Climate Evidence Synthesis"
+/timeline

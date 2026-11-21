@@ -1,0 +1,709 @@
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 012 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 012 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot stopped
+ENOENT        no such file or directory, open '/Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/012.plan'
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 011 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 011 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/011.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           3
+Tasks             2
+  Human Tasks       0
+  Approvals waiting 1
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Asteria Therapeutics
+
+◆ What does it do?
+In one sentence, what does Asteria Therapeutics exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Explore research strategy with scientific caution and accountable human oversight.
+
+◆ Anything more about it?
+Anything more worth knowing about Asteria Therapeutics? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Asteria Therapeutics
+Mission       Explore research strategy with scientific caution and accountable human oversight.
+Description   (none)
+Status        active
+Created       2026-08-01T22:13:55.244Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Asteria Therapeutics" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Strategy Review
+
+◆ What should it do?
+In one sentence, what should "Strategy Review" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame non-operational route-strategy criteria and route the planning checklist to accountable review.
+
+◆ Anything more about it?
+Anything more worth knowing about "Strategy Review"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               asteria-therapeutics:strategy-review
+Name             Strategy Review
+Enterprise       Asteria Therapeutics (enterprise-1)
+Objective        Frame non-operational route-strategy criteria and route the planning checklist to accountable review.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T22:14:36.471Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Lead Scientist
+
+◆ What will they do?
+What should Lead Scientist be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Lead Scientist's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Lead Scientist is now on your team.
+Lead Scientist can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Strategy Review"
+
+◆ Function started
+Function
+  Strategy Review
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 3 AI Workers for Asteria Therapeutics.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 3
+Property Review Specialist
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Strategy Review
+
+For example, it could
+    · Check a piece of work for mistakes and gaps
+    · Give feedback on a draft before it goes out
+
+Add Property Review Specialist? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › yes
+
+◆ Worker 2 of 3
+Client Communication Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Strategy Review
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Client Communication Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › yes
+
+◆ Worker 3 of 3
+Strategy Review Planner
+Role          Planner
+Can do        General reasoning, Planning, Human Contact
+Would help    Strategy Review
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Break a goal into clear, ordered steps
+    · Draft a schedule or plan for a piece of work
+
+Add Strategy Review Planner? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › yes
+
+◆ Staffing applied
+3 AI Workers added, and put to work on 3 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Strategy Review — Lead Scientist
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › /governance policy add "Strategy analysis requires lead sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Strategy analysis requires lead sign-off
+ID            policy-c50da03b-b612-4176-ae96-fd1f9e3f984b
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › Analyse only the high-level route-strategy evaluation criteria for a hypothetical small-molecule programme, and the missing evidence and quality controls a reviewer would flag. Do not name a real target or provide executable chemistry, quantities, conditions, or laboratory instructions.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Strategy Review
+Selected worker    Client Communication Analyst
+Partial coverage   Client Communication Analyst does not hold monitoring, research — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Analyse only the high-level route-strategy evaluation criteria for a hypothetical small-molecule programme, and the missing evidence and quality controls a revi...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Client Communication Analyst
+   Required capabilities  monitoring, research, analysis
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approval-status task-1
+
+◆ Approval status
+Task                task-1
+Status              pending
+Waiting because     Human approval required for Strategy Review, from the staffing plan you applied. (staffing-approval:asteria-therapeutics:strategy-review)
+Required approvals  1
+Current approvals   0
+
+No decisions recorded
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › /reject task-1 "Criteria omit explicit stop criteria and independent safety and patent review; revise before analysis proceeds." --as "Arturo Bot (automated, not a person)"
+
+◆ Rejection
+Rejection recorded  task-1
+Approval status     rejected
+Rejected by         Arturo Bot (automated, not a person)
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › Revised analysis: high-level route-strategy criteria plus explicit source-verification, independent review, patent review, and stop criteria. No real target, no executable chemistry, quantities, conditions, or laboratory instructions.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-2
+Selected Function  Strategy Review
+Selected worker    Client Communication Analyst
+Partial coverage   Client Communication Analyst does not hold review — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Analyse only the high-level route-strategy evaluation criteria for a hypothetical small-molecule programme, and the missing evidence and quality controls a revi...
+   ID                     task-1
+   Status                 Failed
+   Worker                 Client Communication Analyst
+   Required capabilities  monitoring, research, analysis
+
+2. Revised analysis: high-level route-strategy criteria plus explicit source-verification, independent review, patent review, and stop criteria. No real target, no...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Worker                 Client Communication Analyst
+   Required capabilities  review, analysis
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    rejected
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker           Client Communication Analyst
+ID               task-1
+Status           Failed
+  (Didn't finish — see the error below.)
+Skills needed    monitoring, research, analysis
+Why this Worker  Inferred Function Strategy Review; selected its staffed Worker Client Communication Analyst. Best-available coverage: Client Communication Analyst does not hold monitoring, research; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business         Asteria Therapeutics
+Task             1 / 2
+Instruction      Analyse only the high-level route-strategy evaluation criteria for a hypothetical small-molecule programme, and the missing evidence and quality controls a reviewer would flag. Do not name a real target or provide executable chemistry, quantities, conditions, or laboratory instructions.
+
+No output yet.
+
+Error            Approval chain rejected
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › /create-human-task "Planning checklist decision" "Decide whether the revised criteria are acceptable as a non-operational planning checklist and what independent reviews must precede any work. Do not authorise laboratory work."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=0944f7f14676ac583b45e0d2e3c6f43ddadb23128fc06c305f3136f7dd17f575
+
+Human task          human-task-1
+Status              open
+Title               Planning checklist decision
+Instructions
+Decide whether the revised criteria are acceptable as a non-operational planning checklist and what independent reviews must precede any work. Do not authorise laboratory work.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › /complete-human-task human-task-1 "Accepted as a non-operational planning checklist only; independent safety, patent, and source verification are required before any research. No laboratory work authorised." --as "Lead Scientist"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Lead Scientist
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Planning checklist decision
+Instructions
+Decide whether the revised criteria are acceptable as a non-operational planning checklist and what independent reviews must precede any work. Do not authorise laboratory work.
+Notes
+Accepted as a non-operational planning checklist only; independent safety, patent, and source verification are required before any research. No laboratory work authorised.
+
+Completed by  Lead Scientist
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › /timeline
+
+◆ #44 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T22:22:35.850Z
+Id             8ad8d3de-053c-4db7-846c-ee8e412f1ac3
+
+◆ #43 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T22:22:28.938Z
+Id             d38e2abe-bd15-49fb-afbe-8837ff808eba
+
+◆ #42 · Human task completed
+Human task human-task-1 completed by Lead Scientist
+Time          2026-08-01T22:22:28.936Z
+Id            308ea22c-1230-461e-96c2-9a44ed1e773a
+
+◆ #41 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Accepted as a non-operational planning checklist only; independent safety, patent, and source verification are required before any research. No laboratory work authorised." --as "Lead Scientist"
+Time           2026-08-01T22:21:54.962Z
+Id             7521f989-78c2-4c44-a56a-62ff35a355c6
+
+◆ #40 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T22:21:54.960Z
+Id                  2f8601e8-83a9-4178-8867-3fca779c7046
+
+◆ #39 · Bot typed a line
+Bot submitted  /create-human-task "Planning checklist decision" "Decide whether the revised criteria are acceptable as a non-operational planning checklist and what independent reviews must precede any work. Do not authorise laboratory work."
+Time           2026-08-01T22:21:16.139Z
+Id             a3266ba8-0196-408f-a35d-65cc1fad03af
+
+◆ #38 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T22:21:09.515Z
+Id             8ad37a20-54b1-47a6-835e-fb30eb722a2c
+
+× #37 · Task failed
+Task failed   task-1
+Time          2026-08-01T22:20:14.892Z
+Id            bd43577b-3dd8-4fdd-9d81-654019bd2539
+
+◆ #36 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-01T22:20:14.511Z
+Id            6dd167bf-9121-410a-a017-b9191dd18bfb
+
+◆ #35 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-01T22:19:58.145Z
+Id             1105ec29-173b-4912-bd99-e6bb212d8873
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › 
+◆ Bot finished
+40 lines typed, 1 turned down — the script finished.
+2 decisions in this run were signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 5935 session tokens
+arturo › 

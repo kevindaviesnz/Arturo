@@ -1,0 +1,48 @@
+# Scenario 034 — Online platform trust & safety: governance, scoped Memory, reject, human decision
+/reset
+yes
+/enterprise
+1
+Beacon Platform Trust
+Moderate consistently and fairly, with a person accountable for every enforcement decision.
+skip
+/function
+1
+Policy Framing
+Frame content-moderation questions into process and evidence needs for an accountable lead.
+skip
+/add-human-worker
+Trust & Safety Lead
+1
+skip
+/function start "Policy Framing"
+@timeout 240
+@staff /staff
+/governance policy add "Enforcement analysis requires lead sign-off" --effect require-approval --capability "analysis"
+/memory add "Never identify a real user or make an enforcement decision; frame process, thresholds, and appeal rights, and require a human for every action." --scope "Policy Framing"
+/task
+1
+Analyse, using a fully synthetic and anonymised example only, the moderation process for suspected coordinated inauthentic behaviour: signals to gather, false-positive risks, proportionate responses, appeal rights, and why a human must decide. Do not identify anyone or decide enforcement.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approval-status {{TASK_ID}}
+/reject {{TASK_ID}} "Example names a specific account pattern; reframe as anonymised process only before analysis."
+/task
+1
+Revised analysis, fully synthetic and anonymised: analyse only the moderation process steps, signal thresholds, proportionality ladder, appeal rights, and the point a human must decide. No identities, no enforcement.
+1
+@wait 20
+@cap TASK2 {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK2}}
+@wait 55
+/task inspect {{TASK2}}
+@cap HTASK {(human-task-[0-9]+)}
+/create-human-task "Enforcement approach decision" "Decide the proportionate response ladder and what evidence and human review each step requires. Do not enforce against anyone."
+/complete-human-task {{HTASK}} "Adopt a graduated response with human review before any account-level action, and a documented appeal path. Planning only; no enforcement authorised." --as "Trust & Safety Lead"
+/human-task {{HTASK}}
+/timeline

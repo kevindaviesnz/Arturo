@@ -1,0 +1,632 @@
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Asteria Therapeutics
+Mission       Frame research questions with scientific caution and accountable human oversight.
+Description   (none)
+Status        active
+Created       2026-08-02T01:50:32.371Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Asteria Therapeutics" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot paused
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot paused
+The terminal is yours — the bot stops where it is.
+Space, or Enter on an empty line, hands it back. Ctrl+C stops it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot paused
+The terminal is yours — the bot stops where it is.
+Space, or Enter on an empty line, hands it back. Ctrl+C stops it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot paused
+The terminal is yours — the bot stops where it is.
+Space, or Enter on an empty line, hands it back. Ctrl+C stops it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot paused
+The terminal is yours — the bot stops where it is.
+Space, or Enter on an empty line, hands it back. Ctrl+C stops it.
+/exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 005 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 005 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/005.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         0
+Workers           0
+Tasks             0
+  Human Tasks       0
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Asteria Therapeutics
+
+◆ What does it do?
+In one sentence, what does Asteria Therapeutics exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame research questions with scientific caution and accountable human oversight.
+
+◆ Anything more about it?
+Anything more worth knowing about Asteria Therapeutics? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Asteria Therapeutics
+Mission       Frame research questions with scientific caution and accountable human oversight.
+Description   (none)
+Status        active
+Created       2026-08-02T01:52:05.087Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Asteria Therapeutics" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Discovery Framing
+
+◆ What should it do?
+In one sentence, what should "Discovery Framing" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Produce non-operational research-question maps and route them to accountable scientific review.
+
+◆ Anything more about it?
+Anything more worth knowing about "Discovery Framing"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               asteria-therapeutics:discovery-framing
+Name             Discovery Framing
+Enterprise       Asteria Therapeutics (enterprise-1)
+Objective        Produce non-operational research-question maps and route them to accountable scientific review.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-02T01:52:49.294Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Research Director
+
+◆ What will they do?
+What should Research Director be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Research Director's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Research Director is now on your team.
+Research Director can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Discovery Framing"
+
+◆ Function started
+Function
+  Discovery Framing
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 2 AI Workers for Asteria Therapeutics.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 2
+Property Research Assistant
+Role          Researcher
+Can do        General reasoning, Research, Web Research, Summarisation, Human Contact
+Would help    Discovery Framing
+
+For example, it could
+    · Find and summarise what's known about a topic
+    · Gather sources on a question and flag what's uncertain
+
+Add Property Research Assistant? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4947 session tokens
+arturo › yes
+
+◆ Worker 2 of 2
+Discovery Framing Guardian
+Role          Guardian
+Can do        General reasoning, Product Safety, Review, Human Contact
+Would help    Discovery Framing
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Check whether something is safe to go ahead
+    · Flag risks before an action is taken
+
+Add Discovery Framing Guardian? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4947 session tokens
+arturo › yes
+
+◆ Staffing applied
+2 AI Workers added, and put to work on 2 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Discovery Framing — Research Director
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4947 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4947 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4947 session tokens
+arturo › For a hypothetical neurodegenerative-disease programme, create a non-operational research-question map covering mechanism uncertainty, evidence types needed, reproducibility, translational risk, safety unknowns, and stop criteria. Do not invent studies or provide laboratory, synthesis, dosing, or clinical instructions.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4947 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Discovery Framing
+Selected worker    Property Research Assistant
+Partial coverage   Property Research Assistant does not hold safety, conversion — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4947 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. For a hypothetical neurodegenerative-disease programme, create a non-operational research-question map covering mechanism uncertainty, evidence types needed, re...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Property Research Assistant
+   Required capabilities  safety, research, summarisation, conversion
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4947 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4947 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 45s to get on with the work.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                     Property Research Assistant
+ID                         task-1
+Status                     Completed
+  (Finished.)
+Evidence                   Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed              safety, research, summarisation, conversion
+Why this Worker            Inferred Function Discovery Framing; selected its staffed Worker Property Research Assistant. Best-available coverage: Property Research Assistant does not hold safety, conversion; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business                   Asteria Therapeutics
+Task                       1 / 1
+Instruction                For a hypothetical neurodegenerative-disease programme, create a non-operational research-question map covering mechanism uncertainty, evidence types needed, reproducibility, translational risk, safety unknowns, and stop criteria. Do not invent studies or provide laboratory, synthesis, dosing, or clinical instructions.
+
+Where this came from       an AI model wrote it. Nobody has checked it
+Looked anything up         no
+
+Research Question Map: Hypothetical Neurodegenerative-Disease Programme
+
+As per the provided guidelines, I have created a non-operational research-question map covering key aspects of a hypothetical neurodegenerative-disease programme.
+
+Mechanism Uncertainty
+
+1. What are the underlying molecular mechanisms contributing to the progression and severity of this disease?
+2. How do environmental factors (e.g., diet, lifestyle) impact the development and progression of this disease?
+3. Are there any potential biomarkers or diagnostic indicators that can detect early stages of this disease?
+
+Evidence Types Needed
+
+1. Experimental studies: Investigate the effects of specific compounds on disease progression in animal models.
+2. Clinical trials: Evaluate the efficacy and safety of novel treatments in human patients.
+3. Computational modeling: Develop predictive models to simulate disease progression and test potential interventions.
+
+Reproducibility
+
+1. What are the key factors contributing to variability in study results across different laboratories and research groups?
+2. How can we ensure consistency in data collection, analysis, and interpretation across studies?
+
+Translational Risk
+
+1. What are the potential risks associated with rapidly advancing treatments for this disease?
+2. How can we balance the need for timely treatment with concerns about long-term safety and efficacy?
+
+Safety Unknowns
+
+1. What are the known and potential side effects of current treatments for this disease?
+2. How can we mitigate risks associated with new treatments, such as immunogenicity or neurological toxicity?
+
+Stop Criteria
+
+1. What are the criteria that would indicate a treatment has failed to demonstrate meaningful efficacy in clinical trials?
+2. At what point should research efforts be redirected towards alternative therapeutic strategies?
+
+Uncertainty Acknowledgement
+
+Some of these questions may not have definitive answers, and further investigation is required to fill knowledge gaps. I have not claimed to have searched or browsed sources, as external evidence is unavailable.
+
+Please note that this map is a starting point for research questions, and additional refinement is necessary through scientific review and collaboration with experts in the field.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6106 session tokens
+arturo › /create-human-task "Review discovery research framing" "As Research Director, decide whether the question map is suitable for planning only. Record missing literature, patent, safety, ethics, and experimental evidence. Do not authorise laboratory or clinical work."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=03cd60c026626ecce91518a48fb9aeaaf5ac70471be41e0af780f54f8ce4a18d
+
+Human task          human-task-1
+Status              open
+Title               Review discovery research framing
+Instructions
+As Research Director, decide whether the question map is suitable for planning only. Record missing literature, patent, safety, ethics, and experimental evidence. Do not authorise laboratory or clinical work.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 6106 session tokens
+arturo › /complete-human-task human-task-1 "Accepted only as a planning outline. Verified literature, patent, safety, ethics, and reproducibility review are required before any research protocol is proposed." --as "Research Director"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Research Director
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 6106 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Review discovery research framing
+Instructions
+As Research Director, decide whether the question map is suitable for planning only. Record missing literature, patent, safety, ethics, and experimental evidence. Do not authorise laboratory or clinical work.
+Notes
+Accepted only as a planning outline. Verified literature, patent, safety, ethics, and reproducibility review are required before any research protocol is proposed.
+
+Completed by  Research Director
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 6106 session tokens
+arturo › /timeline
+
+◆ #35 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-02T02:48:40.337Z
+Id             c310ec2e-c2c8-44ba-a42b-7de20f3b06c5
+
+◆ #34 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-02T02:48:32.469Z
+Id             66a74178-cfcc-4b2a-ad2a-eaa0bab42bb7
+
+◆ #33 · Human task completed
+Human task human-task-1 completed by Research Director
+Time          2026-08-02T02:48:32.466Z
+Id            0f3a3bc0-9917-4382-aeb2-4514f40f6f59
+
+◆ #32 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Accepted only as a planning outline. Verified literature, patent, safety, ethics, and reproducibility review are required before any research protocol is proposed." --as "Research Director"
+Time           2026-08-02T02:30:48.830Z
+Id             163ad430-a30f-46e8-ae11-edc412729eb8
+
+◆ #31 · Human task created
+Human task created  human-task-1
+Time                2026-08-02T02:30:48.829Z
+Id                  1ee6d783-6b5e-4988-ac85-cb875f6de2af
+
+◆ #30 · Bot typed a line
+Bot submitted  /create-human-task "Review discovery research framing" "As Research Director, decide whether the question map is suitable for planning only. Record missing literature, patent, safety, ethics, and experimental evidence. Do not authorise laboratory or clinical work."
+Time           2026-08-02T01:56:50.320Z
+Id             72385a71-3c4d-401e-9ba6-b0a17f7e18ec
+
+◆ #29 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-02T01:56:41.632Z
+Id             ef7277dc-d14b-4d55-b927-e7c49d090442
+
+◆ #28 · Task completed
+Task completed  task-1
+Time            2026-08-02T01:56:04.451Z
+Id              ccb4533d-d7d6-4945-8a8b-d1b555712cec
+
+◆ #27 · Task started
+Task started  task-1
+Time          2026-08-02T01:55:56.882Z
+Id            22318900-1134-44d1-bd64-8273967a24d8
+
+◆ #26 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-02T01:55:56.628Z
+Id            91883f41-defe-4233-979b-411afd3590a7
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 6106 session tokens
+arturo › 
+◆ Bot finished
+31 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 6106 session tokens
+arturo › 

@@ -1,0 +1,47 @@
+# Scenario 011 — Synthesis strategy review loop (reliable reject -> revise -> approve + human sign-off)
+/reset
+yes
+/enterprise
+1
+Asteria Therapeutics
+Explore research strategy with scientific caution and accountable human oversight.
+skip
+/function
+1
+Strategy Review
+Frame non-operational route-strategy criteria and route the planning checklist to accountable review.
+skip
+/add-human-worker
+Lead Scientist
+1
+skip
+/function start "Strategy Review"
+@timeout 260
+@staff /staff
+/governance policy add "Strategy analysis requires lead sign-off" --effect require-approval --capability "analysis"
+/task
+1
+Analyse only the high-level route-strategy evaluation criteria for a hypothetical small-molecule programme, and the missing evidence and quality controls a reviewer would flag. Do not name a real target or provide executable chemistry, quantities, conditions, or laboratory instructions.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approval-status {{TASK_ID}}
+/reject {{TASK_ID}} "Criteria omit explicit stop criteria and independent safety and patent review; revise before analysis proceeds."
+/task
+1
+Revised analysis: high-level route-strategy criteria plus explicit source-verification, independent review, patent review, and stop criteria. No real target, no executable chemistry, quantities, conditions, or laboratory instructions.
+1
+@wait 20
+@cap TASK2 {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK2}}
+@wait 55
+/task inspect {{TASK2}}
+@cap HTASK {(human-task-[0-9]+)}
+/create-human-task "Planning checklist decision" "Decide whether the revised criteria are acceptable as a non-operational planning checklist and what independent reviews must precede any work. Do not authorise laboratory work."
+/complete-human-task {{HTASK}} "Accepted as a non-operational planning checklist only; independent safety, patent, and source verification are required before any research. No laboratory work authorised." --as "Lead Scientist"
+/human-task {{HTASK}}
+/timeline

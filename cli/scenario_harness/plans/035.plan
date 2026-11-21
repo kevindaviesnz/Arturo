@@ -1,0 +1,42 @@
+# Scenario 035 — Telecom NOC: event rule chains a completed analysis to the next stage
+/reset
+yes
+/enterprise
+1
+Meridian Telecom NOC
+Keep the network up with evidence-led analysis and accountable human control of every change.
+skip
+/function
+1
+Fault Analysis
+Analyse synthetic network faults and prepare an accountable recommendation.
+skip
+/function
+1
+Change Coordination
+Prepare change options once a fault is analysed, for human approval.
+skip
+/add-human-worker
+Shift Lead
+1
+skip
+/function start "Fault Analysis"
+/function start "Change Coordination"
+@timeout 260
+@staff /staff
+/event rule add --when task.completed --job "Fault Analysis" --publish "Fault analysed"
+/event rule list
+/task
+1
+Analyse a synthetic scenario where a regional link shows rising packet loss during peak hours: evidence needed, likely causes at a high level, customer-impact questions, and the change decisions a shift lead must make. Do not issue a network change.
+1
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK_ID}}
+@wait 55
+/task inspect {{TASK_ID}}
+/events
+/timeline

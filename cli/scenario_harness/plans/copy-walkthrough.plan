@@ -1,0 +1,42 @@
+# The proposed outputs, top to bottom, as one session.
+#
+# Walks every surface in the owner's mock in order: /enterprise, /function,
+# /staff, /add-human-worker, /task, /tasks, task details, /create-human-task,
+# /human-tasks, /complete-human-task. Not a filmed scenario -- it exists to
+# put the new copy on screen so it can be read against the drawing.
+/reset
+yes
+/clear
+@timeout 300
+/enterprise
+1
+Larkfield Software
+Answer customer support enquiries quickly and honestly.
+skip
+/function
+1
+Order Preparation
+Pick, pack and dispatch the day's orders.
+skip
+@staff /staff
+/add-human-worker
+Warehouse Lead
+1
+lead@example.com
+@note the task surfaces
+/task
+1
+List what a picker must check before sealing a box.
+1
+@wait 120
+/tasks
+/task
+2
+1
+@note the human-task surfaces
+/create-human-task
+Open the packaging, photograph any damage, and record the serial number.
+1
+/human-tasks
+/complete-human-task
+Casing is cracked on the left corner; photographed and logged.

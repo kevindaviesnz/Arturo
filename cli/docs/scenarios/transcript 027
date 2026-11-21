@@ -1,0 +1,669 @@
+
+◆ #47 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-07-31T20:20:15.438Z
+Id             be2ca664-0209-4b33-aa2a-cf2ad3b37e8c
+
+◆ #46 · Bot typed a line
+Bot submitted  /events
+Time           2026-07-31T20:20:08.084Z
+Id             760b78ca-ea22-4c02-9c6a-5300b139d31d
+
+◆ #45 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-07-31T20:20:00.816Z
+Id             af67e0ce-d8a7-486f-b82f-aa804d28531c
+
+◆ #44 · Event rule published
+Event rule event-rule-5517fde8-2776-4124-872c-6c456e3adb4f published Manuscript assessed from completed Task task-1
+Time          2026-07-31T20:19:17.146Z
+Id            8b92996b-91e1-479f-a6f6-3e742335f75a
+
+◆ #43 · Runtime checked whether work was needed
+Production Readiness evaluated Manuscript assessed: Manuscript has been fully assessed.
+Time          2026-07-31T20:19:17.143Z
+Id            9fdf95ce-8a52-499a-881e-1d5db0ff8ddb
+
+◆ #42 · Task created
+Function Production Readiness created Task from Manuscript assessed: Perform production-readiness checks on the assessed manuscript and report findings.
+Time          2026-07-31T20:19:17.141Z
+Id            5d932e2d-b1f0-4f33-a3f7-437db7883f44
+
+◆ #41 · Worker assigned
+Worker Production Analysis Specialist assigned to Task task-2
+Time          2026-07-31T20:19:17.133Z
+Id            7bde20f5-b494-4811-9788-7f4c1e1fd99d
+
+◆ #40 · Business manuscript assessed
+Manuscript assessed — source  Manuscript Assessment — enterprise: Lumen Press
+Time                          2026-07-31T20:19:15.692Z
+Id                            4b60a37f-cd87-474e-856c-5b4639a323a0
+
+◆ #39 · Task completed
+Task completed  task-1
+Time            2026-07-31T20:19:15.691Z
+Id              77d3a9e2-c5ce-49f2-bd89-758210b8269a
+
+◆ #38 · Task started
+Task started  task-1
+Time          2026-07-31T20:19:05.851Z
+Id            69d4a9b7-d297-4dbd-8e54-b465c391042d
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4292 session tokens
+arturo › 
+◆ Bot finished
+39 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4292 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 027 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 027 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/027.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         2
+Workers           5
+Tasks             2
+  Human Tasks       0
+  Approvals waiting 1
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Kotuku Bank
+
+◆ What does it do?
+In one sentence, what does Kotuku Bank exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Lend responsibly, with evidence and a person accountable for every credit decision.
+
+◆ Anything more about it?
+Anything more worth knowing about Kotuku Bank? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Kotuku Bank
+Mission       Lend responsibly, with evidence and a person accountable for every credit decision.
+Description   (none)
+Status        active
+Created       2026-08-01T05:39:12.906Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Kotuku Bank" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Credit Review
+
+◆ What should it do?
+In one sentence, what should "Credit Review" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame credit-assessment questions and route decisions to an accountable credit officer.
+
+◆ Anything more about it?
+Anything more worth knowing about "Credit Review"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               kotuku-bank:credit-review
+Name             Credit Review
+Enterprise       Kotuku Bank (enterprise-1)
+Objective        Frame credit-assessment questions and route decisions to an accountable credit officer.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T05:39:50.971Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Credit Officer
+
+◆ What will they do?
+What should Credit Officer be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Credit Officer's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Credit Officer is now on your team.
+Credit Officer can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Credit Review"
+
+◆ Function started
+Function
+  Credit Review
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 1 AI Worker for Kotuku Bank.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 1
+Credit Review Specialist
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Credit Review
+
+For example, it could
+    · Check a piece of work for mistakes and gaps
+    · Give feedback on a draft before it goes out
+
+Add Credit Review Specialist? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1908 session tokens
+arturo › yes
+
+◆ Staffing applied
+1 AI Worker added, and put to work on 1 Function.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Credit Review — Credit Officer
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1908 session tokens
+arturo › /governance policy add "Credit analysis requires officer sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Credit analysis requires officer sign-off
+ID            policy-6802e7c7-628a-454e-9cb0-423e580f48f5
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1908 session tokens
+arturo › /artefact add "Synthetic loan summary" --enterprise "Kotuku Bank" --kind evidence --file "./scenario_harness/assets/loan-summary.txt" --created-by "Credit Officer"
+
+◆ Artefact
+Artefact added.
+ID            artefact-1
+Version       artefact-1@1
+SHA-256       df812cdb290fcbedd9a20a3a042f52ee026cc64be1d4db870f68c6d89ecfa706
+Review        draft
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1908 session tokens
+arturo › /artefact inspect artefact-1
+
+◆ Artefact
+Artefact           Synthetic loan summary
+ID                 artefact-1
+Enterprise         enterprise-1
+Kind               evidence
+Versions           1
+
+Version            artefact-1@1
+URI                file:///Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/assets/loan-summary.txt
+Media type         text/plain
+Size               481
+SHA-256            df812cdb290fcbedd9a20a3a042f52ee026cc64be1d4db870f68c6d89ecfa706
+Integrity          verified — The local file matches the recorded SHA-256 hash.
+Created by         Credit Officer
+Source Task        none
+Source Human Task  none
+Created            2026-08-01T05:41:36.626Z
+Review             draft
+Review task        none
+Reviewer           none
+Review signature   none
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1908 session tokens
+arturo › /artefact verify artefact-1@1
+
+◆ Artefact
+Version       artefact-1@1
+Integrity     verified
+The local file matches the recorded SHA-256 hash.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1908 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1908 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1908 session tokens
+arturo › Using the synthetic loan summary only, frame a responsible-lending review: affordability evidence needed, income verification gaps, sensitivity to rate rises, hardship considerations, and the reasons a credit officer must decide. Do not approve or decline; do not invent figures beyond the summary.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Work from a file you've attached
+3. Wait until a file has been approved, then work from it
+4. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1908 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Credit Review
+Selected worker    Credit Review Specialist
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1908 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Using the synthetic loan summary only, frame a responsible-lending review: affordability evidence needed, income verification gaps, sensitivity to rate rises, h...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Credit Review Specialist
+   Required capabilities  review
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1908 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1908 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                Credit Review Specialist
+ID                    task-1
+Status                Completed
+  (Finished.)
+Evidence              Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed         review
+Why this Worker       Inferred Function Credit Review; selected its staffed Worker Credit Review Specialist.
+Business              Kotuku Bank
+Task                  1 / 1
+Instruction           Using the synthetic loan summary only, frame a responsible-lending review: affordability evidence needed, income verification gaps, sensitivity to rate rises, hardship considerations, and the reasons a credit officer must decide. Do not approve or decline; do not invent figures beyond the summary.
+
+Where this came from  an AI model wrote it. Nobody has checked it
+Looked anything up    no
+
+Review of Synthetic Loan Summary
+
+The provided synthetic loan summary appears to be incomplete, as it does not contain specific details about the borrower's income, employment history, or credit score. To conduct a responsible lending review, I will identify gaps in the information and outline questions that would need to be addressed.
+
+Affordability Evidence Needed
+To assess the borrower's ability to repay the loan, we require evidence of their income stability, debt-to-income ratio, and assets. Specifically:
+
+–  What are the borrower's monthly gross income and net income?
+–  Are there any other sources of income or expenses that would impact affordability?
+–  Does the borrower have a stable employment history, or are they self-employed?
+
+Income Verification Gaps
+The summary does not provide information about the borrower's employment status, job security, or any changes in income. We need to verify:
+
+–  What is the borrower's current employment status and duration?
+–  Are there any plans for job changes or reductions in income?
+–  How do we know that the reported income is accurate?
+
+Sensitivity to Rate Rises
+The summary does not provide information about the borrower's sensitivity to interest rate increases. We need to understand:
+
+–  What are the borrower's expectations regarding interest rates and inflation?
+–  Are they comfortable with potential rate rises, or would it impact their ability to repay the loan?
+
+Hardship Considerations
+To assess the borrower's risk profile, we must consider potential hardship scenarios. Specifically:
+
+–  What is the borrower's credit history, and are there any past defaults or accounts in arrears?
+–  Are there any other financial obligations that might impact the borrower's ability to repay the loan?
+
+Reasons for Credit Officer Decision
+Based on the synthetic loan summary, it would be essential to consult with a credit officer who can assess the overall risk profile of the borrower and make an informed decision. The reasons for this decision would depend on the specific outcomes of the affordability analysis, income verification, sensitivity to rate rises, and hardship considerations.
+
+Recommendation
+To conduct a responsible lending review, we require additional information to fill in the gaps in the synthetic loan summary. This would include:
+
+–  A comprehensive income statement and proof of employment
+–  Credit reports and history
+–  Documentation of assets and expenses
+
+Without this information, it is not possible to provide an accurate assessment of the borrower's risk profile or make a final decision about creditworthiness.
+
+Signature Block
+This review has been completed by [Name], on behalf of Kotuku Bank. Please contact a credit officer for further discussion and guidance.
+
+Note                  As per the guardrails, I have not signed or branded the output as Arturo or the model. Instead, a signature block is left for a named human to complete.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3166 session tokens
+arturo › /create-human-task "Credit decision" "Decide whether the application can proceed to a full assessment or what evidence is required first. Do not approve or decline the loan."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=c6021a7e66c48986bfdc4f2bb5867a76fde275965677d9489e9793d6e5a0b7dd
+
+Human task          human-task-1
+Status              open
+Title               Credit decision
+Instructions
+Decide whether the application can proceed to a full assessment or what evidence is required first. Do not approve or decline the loan.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3166 session tokens
+arturo › /complete-human-task human-task-1 "Proceed to full assessment once income verification and a rate-rise sensitivity are provided; hardship indicators need a manual check." --as "Credit Officer"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Credit Officer
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3166 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Credit decision
+Instructions
+Decide whether the application can proceed to a full assessment or what evidence is required first. Do not approve or decline the loan.
+Notes
+Proceed to full assessment once income verification and a rate-rise sensitivity are provided; hardship indicators need a manual check.
+
+Completed by  Credit Officer
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3166 session tokens
+arturo › /timeline
+
+◆ #40 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T05:45:53.108Z
+Id             951ba6e3-8ec9-44f1-a2e3-38060d04ad8a
+
+◆ #39 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T05:45:46.634Z
+Id             b7165ebf-b74a-4177-80c8-4f147986ce5c
+
+◆ #38 · Human task completed
+Human task human-task-1 completed by Credit Officer
+Time          2026-08-01T05:45:46.631Z
+Id            df80c323-f5ff-46dd-84b4-34d2439b9b76
+
+◆ #37 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Proceed to full assessment once income verification and a rate-rise sensitivity are provided; hardship indicators need a manual check." --as "Credit Officer"
+Time           2026-08-01T05:45:18.476Z
+Id             ac46add1-163b-4280-9142-def88d95618f
+
+◆ #36 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T05:45:18.473Z
+Id                  230496aa-8acf-4e60-83ff-12277f21b1aa
+
+◆ #35 · Bot typed a line
+Bot submitted  /create-human-task "Credit decision" "Decide whether the application can proceed to a full assessment or what evidence is required first. Do not approve or decline the loan."
+Time           2026-08-01T05:44:49.443Z
+Id             abea6575-9a76-4ac1-829f-31b0bb2fd780
+
+◆ #34 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T05:44:41.917Z
+Id             b10f5610-d4d9-41a7-941f-5122ca864f23
+
+◆ #33 · Task completed
+Task completed  task-1
+Time            2026-08-01T05:43:56.751Z
+Id              8bb0d651-1b4f-410d-b694-ce26bc06f029
+
+◆ #32 · Task started
+Task started  task-1
+Time          2026-08-01T05:43:46.966Z
+Id            e9faaf1d-1646-4757-931e-3e1f91f8a395
+
+◆ #31 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-01T05:43:46.915Z
+Id            850879d2-be6c-41d1-a8fa-66cfa7300c43
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3166 session tokens
+arturo › 
+◆ Bot finished
+34 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3166 session tokens
+arturo › 

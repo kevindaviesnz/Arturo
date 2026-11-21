@@ -1,0 +1,708 @@
+
+◆ #58 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T06:42:17.646Z
+Id             e8bc56bb-7cbb-4021-9ecb-d02acd671b96
+
+◆ #57 · Bot typed a line
+Bot submitted  /human-tasks
+Time           2026-08-01T06:42:11.796Z
+Id             2f55043c-f312-4853-b540-7703590272c6
+
+◆ #56 · Human task completed
+Human task human-task-1 completed by Safeguarding Lead
+Time          2026-08-01T06:42:11.794Z
+Id            d20beebf-6702-420f-8349-89d116f6f5cc
+
+◆ #55 · Bot typed a line
+Bot submitted  On these synthetic facts the threshold is met; a trained lead would refer with a written chronology and ensure immediate safety and support. Planning only.
+Time           2026-08-01T06:41:49.835Z
+Id             17a05750-fd68-44bb-a239-2474ccf238e9
+
+◆ #54 · Bot typed a line
+Bot submitted  /complete-human-task
+Time           2026-08-01T06:41:42.496Z
+Id             31734f0e-35f6-47c7-96f1-0d4c1881332f
+
+◆ #53 · Bot typed a line
+Bot submitted  /human-tasks
+Time           2026-08-01T06:41:31.305Z
+Id             44029240-35d6-4a84-9f82-506ebe60e394
+
+◆ #52 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T06:41:31.303Z
+Id                  1511e901-3cb1-4d37-95ab-373c9cb1211f
+
+◆ #51 · Bot typed a line
+Bot submitted  1
+Time           2026-08-01T06:41:26.972Z
+Id             bf43f87f-9dfc-4bc3-b97d-1769efc452eb
+
+◆ #50 · Bot typed a line
+Bot submitted  Only a trained lead can make a referral decision.
+Time           2026-08-01T06:41:16.247Z
+Id             25b72de7-9bcd-4442-851f-d0e9f2e31227
+
+◆ #49 · Bot typed a line
+Bot submitted  Decide whether the synthetic concern would meet the threshold for external referral, and what evidence and support must accompany it. Do not make a real referral.
+Time           2026-08-01T06:40:50.862Z
+Id             6ebf918c-97b1-4e69-911a-231111de22d0
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 10375 session tokens
+arturo › 
+◆ Bot finished
+52 lines typed, 0 turned down — the script finished.
+2 decisions in this run were signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 10375 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 024 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 024 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/024.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           3
+Tasks             2
+  Human Tasks       1
+  Approvals waiting 1
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Aotearoa Air Ops
+
+◆ What does it do?
+In one sentence, what does Aotearoa Air Ops exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Manage disruption with clear evidence and accountable human decisions for every passenger impact.
+
+◆ Anything more about it?
+Anything more worth knowing about Aotearoa Air Ops? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Aotearoa Air Ops
+Mission       Manage disruption with clear evidence and accountable human decisions for every passenger impact.
+Description   (none)
+Status        active
+Created       2026-08-01T10:08:49.152Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Aotearoa Air Ops" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Disruption Analysis
+
+◆ What should it do?
+In one sentence, what should "Disruption Analysis" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame disruption scenarios and options for accountable review.
+
+◆ Anything more about it?
+Anything more worth knowing about "Disruption Analysis"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               aotearoa-air-ops:disruption-analysis
+Name             Disruption Analysis
+Enterprise       Aotearoa Air Ops (enterprise-1)
+Objective        Frame disruption scenarios and options for accountable review.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T10:09:25.544Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Passenger Comms
+
+◆ What should it do?
+In one sentence, what should "Passenger Comms" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Prepare bounded passenger-communication outlines for human approval.
+
+◆ Anything more about it?
+Anything more worth knowing about "Passenger Comms"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               aotearoa-air-ops:passenger-comms
+Name             Passenger Comms
+Enterprise       Aotearoa Air Ops (enterprise-1)
+Objective        Prepare bounded passenger-communication outlines for human approval.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T10:10:06.248Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Duty Manager
+
+◆ What will they do?
+What should Duty Manager be able to do? Pick one
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Duty Manager's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Duty Manager is now on your team.
+Duty Manager can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Disruption Analysis"
+
+◆ Function started
+Function
+  Disruption Analysis
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Passenger Comms"
+
+◆ Function started
+Function
+  Passenger Comms
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 3 AI Workers for Aotearoa Air Ops.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 2 kinds of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 3
+Disruption Analysis Team
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Disruption Analysis
+
+For example, it could
+    · Check a piece of work for mistakes and gaps
+    · Give feedback on a draft before it goes out
+
+Add Disruption Analysis Team? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2707 session tokens
+arturo › yes
+
+◆ Worker 2 of 3
+Passenger Comms Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Passenger Comms
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Passenger Comms Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2707 session tokens
+arturo › yes
+
+◆ Worker 3 of 3
+Disruption Analysis Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Disruption Analysis
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Disruption Analysis Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2707 session tokens
+arturo › yes
+
+◆ Staffing applied
+3 AI Workers added, and put to work on 3 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Passenger Comms — Duty Manager
+  · Disruption Analysis — Duty Manager
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2707 session tokens
+arturo › /schedule add "Summarise disruptions still open and the passenger impacts awaiting a duty-manager decision, labelling assumptions." --every daily --at "05:30" --timezone "Pacific/Auckland" --function "Disruption Analysis"
+
+◆ Task schedule added
+ID            schedule-07002bea-2de8-4f4c-b032-e9f4fdc514d5
+Frequency     daily
+At            05:30
+Timezone      Pacific/Auckland
+Task          Summarise disruptions still open and the passenger impacts awaiting a duty-manager decision, labelling assumptions.
+Task ID       task-1
+Function      Disruption Analysis
+Enterprise    Aotearoa Air Ops
+Status        enabled
+Next run      2026-08-01T17:30:00.000Z
+Last run      never
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2707 session tokens
+arturo › /delegation request "Frame options for a synthetic scenario where fog closes a regional airport for the morning: rebooking and accommodation considerations, vulnerable-passenger duty of care, cost and reputation trade-offs, and the decisions a duty manager must make. Do not contact passengers or make promises." --from "Passenger Comms" --to "Disruption Analysis"
+
+◆ Delegation requested
+Delegation in progress.
+
+ID             e14c5f22-3f5e-4cde-9a8e-a5ada602bfbe
+From           Passenger Comms
+To             Disruption Analysis
+Work           Frame options for a synthetic scenario where fog closes a regional airport for the morning: rebooking and accommodation considerations, vulnerable-passenger duty of care, cost and reputation trade-offs, and the decisions a duty manager must make. Do not contact passengers or make promises.
+Answerable     Passenger Comms is still answerable for it
+Status         Being worked on
+Task           task-2
+Worker         Disruption Analysis Analyst
+Skills needed  review, analysis
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2707 session tokens
+arturo › /delegation list
+
+◆ Delegations
+1. e14c5f22-3f5e-4cde-9a8e-a5ada602bfbe · Being worked on
+   Passenger Comms → Disruption Analysis
+   Work          Frame options for a synthetic scenario where fog closes a regional airport for the morning: rebooking and accommodation considerations, vulnerable-passenger duty of care, cost and reputation trade-offs, and the decisions a duty manager must make. Do not contact passengers or make promises.
+   Task          task-2
+   Worker        Disruption Analysis Analyst
+   Inspect       /delegation inspect e14c5f22-3f5e-4cde-9a8e-a5ada602bfbe
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2707 session tokens
+arturo › /delegation inspect e14c5f22-3f5e-4cde-9a8e-a5ada602bfbe
+
+◆ Delegation
+Delegation in progress.
+
+ID             e14c5f22-3f5e-4cde-9a8e-a5ada602bfbe
+From           Passenger Comms
+To             Disruption Analysis
+Work           Frame options for a synthetic scenario where fog closes a regional airport for the morning: rebooking and accommodation considerations, vulnerable-passenger duty of care, cost and reputation trade-offs, and the decisions a duty manager must make. Do not contact passengers or make promises.
+Answerable     Passenger Comms is still answerable for it
+Status         Being worked on
+Task           task-2
+Worker         Disruption Analysis Analyst
+Skills needed  review, analysis
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2707 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-2 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-2
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-2
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2707 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect task-2
+
+◆ Task detail
+Worker                 Disruption Analysis Analyst
+ID                     task-2
+Status                 Completed
+  (Finished.)
+Evidence               Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed          review, analysis
+Why this Worker        Delegation e14c5f22-3f5e-4cde-9a8e-a5ada602bfbe: Receiving Function is staffed by Disruption Analysis Analyst
+Task                   2 / 2
+Instruction            Frame options for a synthetic scenario where fog closes a regional airport for the morning: rebooking and accommodation considerations, vulnerable-passenger duty of care, cost and reputation trade-offs, and the decisions a duty manager must make. Do not contact passengers or make promises.
+
+Where this came from   an AI model wrote it. Nobody has checked it
+Looked anything up     no
+
+Disruption Analysis: Fog Closure at Regional Airport
+
+Scenario: A fog advisory has been issued for a regional airport, resulting in a closure for the morning.
+
+Options for Duty Manager
+
+1. Rebooking and Accommodation Considerations
+–  Rebook passengers on alternative flights, prioritizing those with connecting flights or critical travel schedules.
+–  Arrange accommodation for stranded passengers, considering factors like proximity to the airport, cost, and availability.
+–  Communicate rebooking and accommodation options to affected passengers through the airline's app, website, or customer service channels.
+2. Vulnerable-Passenger Duty of Care
+–  Identify vulnerable passengers (e.g., elderly, young children, or those with disabilities) and prioritize their needs.
+–  Provide additional support for these passengers, such as meal vouchers, priority boarding, or special assistance at the airport.
+–  Ensure that these passengers are kept informed about flight updates and rebooking arrangements.
+3. Cost and Reputation Trade-Offs
+–  Weigh the costs of rebooking and accommodation against the potential reputational impact on the airline.
+–  Consider the financial implications of delaying flights, lost revenue, and potential compensation for affected passengers.
+–  Balance these factors with the need to maintain a positive reputation and ensure customer satisfaction.
+
+Decision Points
+
+1. What is the primary objective for duty manager's decision-making?
+2. How will rebooking and accommodation options be prioritized?
+3. What measures will be taken to support vulnerable passengers?
+
+Considerations
+
+–  Communication channels for updating affected passengers
+–  Potential consequences of delayed flights or lost revenue
+–  Alignment with airline policies, procedures, and industry standards
+
+This scenario is a synthetic example, and actual decisions should be made in consultation with relevant stakeholders, including airline management, customer service teams, and regulatory bodies.
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3734 session tokens
+arturo › /create-human-task "Duty manager decision" "Decide the disruption response and what passengers may be told, and identify what must be confirmed before any message goes out. Do not authorise sending."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=21205f70a9f6697a712c2e76a8ff4abdd8653054b35da1580d6eb2d8ea2eb9a6
+
+Human task          human-task-1
+Status              open
+Title               Duty manager decision
+Instructions
+Decide the disruption response and what passengers may be told, and identify what must be confirmed before any message goes out. Do not authorise sending.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3734 session tokens
+arturo › /complete-human-task human-task-1 "Approve rebooking guidance and duty-of-care steps; hold all passenger messaging until legal and operations confirm capacity and entitlements." --as "Duty Manager"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Duty Manager
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3734 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Duty manager decision
+Instructions
+Decide the disruption response and what passengers may be told, and identify what must be confirmed before any message goes out. Do not authorise sending.
+Notes
+Approve rebooking guidance and duty-of-care steps; hold all passenger messaging until legal and operations confirm capacity and entitlements.
+
+Completed by  Duty Manager
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3734 session tokens
+arturo › /timeline
+
+◆ #44 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T10:16:05.369Z
+Id             2fef0d95-3e2c-4418-9f0e-89315998245c
+
+◆ #43 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T10:15:58.616Z
+Id             6de0ef61-574a-4c20-ae15-649fc3307bc4
+
+◆ #42 · Human task completed
+Human task human-task-1 completed by Duty Manager
+Time          2026-08-01T10:15:58.614Z
+Id            57e00bd6-1967-4716-bb86-4de652763aeb
+
+◆ #41 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Approve rebooking guidance and duty-of-care steps; hold all passenger messaging until legal and operations confirm capacity and entitlements." --as "Duty Manager"
+Time           2026-08-01T10:15:29.965Z
+Id             269779db-9329-4814-8ac8-e85cfb5ab980
+
+◆ #40 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T10:15:29.963Z
+Id                  75eb7158-424d-4816-bd6c-58f7a2f90560
+
+◆ #39 · Bot typed a line
+Bot submitted  /create-human-task "Duty manager decision" "Decide the disruption response and what passengers may be told, and identify what must be confirmed before any message goes out. Do not authorise sending."
+Time           2026-08-01T10:14:53.856Z
+Id             ff0ac272-99be-49ca-a939-591b572baf3f
+
+◆ #38 · Bot typed a line
+Bot submitted  /task inspect task-2
+Time           2026-08-01T10:14:45.194Z
+Id             9a32e19c-e183-45c9-87c4-5330087fddf3
+
+◆ #37 · Result not counted
+An AI model wrote the result of Task task-2 and nobody has checked it, so Arturo has not learned from it and will not act on it by itself.
+Time          2026-08-01T10:13:57.433Z
+Id            c1d9a66b-f6fd-4c4d-bc19-706d50b4e743
+
+◆ #36 · Delegation completed
+Delegation completed  Task task-2 from Disruption Analysis returned to Passenger Comms
+Time                  2026-08-01T10:13:57.433Z
+Id                    f66ca564-f64d-43cc-b962-ced2ea32f25f
+
+◆ #35 · Task completed
+Task completed  task-2
+Time            2026-08-01T10:13:57.432Z
+Id              6345dd22-1405-47a5-b2c1-548c08fd63e4
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3734 session tokens
+arturo › 
+◆ Bot finished
+37 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3734 session tokens
+arturo › 

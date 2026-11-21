@@ -1,0 +1,49 @@
+# Scenario 026 — Hospital patient flow: three Functions, delegation chain, governance, human decision
+/reset
+yes
+/enterprise
+1
+Riverside Hospital Flow
+Move patients through care safely, with clinicians accountable for every clinical decision.
+skip
+/function
+1
+Triage Support
+Frame triage questions and evidence needs for clinical review.
+skip
+/function
+1
+Bed Management
+Frame bed-allocation options and constraints for accountable decisions.
+skip
+/function
+1
+Discharge Planning
+Frame discharge-readiness questions and route decisions to a clinician.
+skip
+/add-human-worker
+Charge Nurse
+1
+skip
+/function start "Triage Support"
+/function start "Bed Management"
+/function start "Discharge Planning"
+@timeout 300
+@staff /staff
+/governance policy add "Clinical analysis requires clinician sign-off" --effect require-approval --capability "analysis"
+/schedule add "Summarise beds likely to free today and discharges awaiting a clinician decision, labelling assumptions." --every daily --at "07:00" --timezone "Pacific/Auckland" --function "Bed Management"
+@cap DELEG_ID {ID\s+([0-9a-f-]{36})}
+/delegation request "Frame the discharge-readiness questions for a synthetic medically-stable patient awaiting a home-support package: safety checks, follow-up needs, information a clinician must confirm, and the point a human must decide. No real patient data; no clinical instructions." --from "Discharge Planning" --to "Triage Support"
+/delegation list
+@cap TASK_ID {Task\s+(task-[0-9]+)}
+/delegation inspect {{DELEG_ID}}
+@wait 8
+/approve {{TASK_ID}}
+@wait 55
+/task inspect {{TASK_ID}}
+@cap HTASK {(human-task-[0-9]+)}
+/create-human-task "Discharge decision" "Decide whether the synthetic patient is ready for discharge planning to proceed and what a clinician must confirm first. Do not discharge anyone."
+/complete-human-task {{HTASK}} "Proceed to plan only; a clinician must confirm home-support capacity, medication reconciliation, and follow-up before any discharge." --as "Charge Nurse"
+/human-task {{HTASK}}
+/functions
+/timeline

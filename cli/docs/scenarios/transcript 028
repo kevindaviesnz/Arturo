@@ -1,0 +1,898 @@
+arturo › /timeline
+
+◆ #34 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-07-31T10:00:25.793Z
+Id             73a5a39b-1818-4822-ad9a-c9b2e54ed7aa
+
+◆ #33 · Bot typed a line
+Bot submitted  /artefact inspect artefact-1
+Time           2026-07-31T10:00:15.926Z
+Id             5754f7dd-c650-4272-a6cb-bfa3250c9c37
+
+◆ #32 · Artefact review approved
+Artefact review approved  artefact-1@2 by Standards Approver
+Time                      2026-07-31T10:00:15.924Z
+Id                        9d3d972a-77bc-4a73-9ffa-98bc01e27ded
+
+◆ #31 · Bot typed a line
+Bot submitted  /artefact review artefact-1@2 --decision approve --as "Standards Approver" --notes "Isolation clause now present; approved for publication after a qualified check."
+Time           2026-07-31T09:59:53.048Z
+Id             7b2788c3-c751-4ed7-a1b4-a6f7b3750fc6
+
+◆ #30 · Artefact review requested
+Artefact review requested  artefact-1@2 from Standards Approver
+Time                       2026-07-31T09:59:53.046Z
+Id                         54f22a69-0a3d-4151-919b-0cb545954555
+
+◆ #29 · Bot typed a line
+Bot submitted  /artefact submit artefact-1@2 --reviewer "Standards Approver" --notes "Re-review corrected safety clause."
+Time           2026-07-31T09:59:36.836Z
+Id             05687dda-fbbe-4c04-b685-08005afebcec
+
+◆ #28 · Bot typed a line
+Bot submitted  /artefact verify artefact-1@2
+Time           2026-07-31T09:59:20.669Z
+Id             9fc8d288-4530-4890-b559-e9009abe2064
+
+◆ #27 · Bot typed a line
+Bot submitted  /artefact inspect artefact-1
+Time           2026-07-31T09:59:12.598Z
+Id             b8c2cb96-bf8a-47df-9d93-3c63866b7db2
+
+◆ #26 · Artefact version created
+Artefact version created  artefact-1@2
+Time                      2026-07-31T09:59:12.597Z
+Id                        36226e09-facf-462b-8b5b-9d73f06b1bac
+
+◆ #25 · Bot typed a line
+Bot submitted  /artefact version artefact-1 --file "./scenario_harness/assets/standard-v2.txt" --created-by "Standards Approver" --notes "Added isolation-before-work safety clause."
+Time           2026-07-31T09:58:46.152Z
+Id             b5508a03-25d8-4390-a2e9-6768ff6db780
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 2 · Approvals 0 · Ollama/llama3.2:latest · 1861 session tokens
+arturo › 
+◆ Bot finished
+29 lines typed, 0 turned down — the script finished.
+The bot signed nothing off — every decision in this script named a real person.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 2 · Approvals 0 · Ollama/llama3.2:latest · 1861 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear                                   
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 028 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 028 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 2 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/028.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           2
+Tasks             0
+  Human Tasks       2
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 2 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Lumen Press
+
+◆ What does it do?
+In one sentence, what does Lumen Press exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Publish carefully checked work, with an editor accountable for what runs.
+
+◆ Anything more about it?
+Anything more worth knowing about Lumen Press? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Lumen Press
+Mission       Publish carefully checked work, with an editor accountable for what runs.
+Description   (none)
+Status        active
+Created       2026-07-31T20:14:01.901Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Lumen Press" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Manuscript Assessment
+
+◆ What should it do?
+In one sentence, what should "Manuscript Assessment" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Assess submitted manuscripts and prepare an accountable editorial recommendation.
+
+◆ Anything more about it?
+Anything more worth knowing about "Manuscript Assessment"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               lumen-press:manuscript-assessment
+Name             Manuscript Assessment
+Enterprise       Lumen Press (enterprise-1)
+Objective        Assess submitted manuscripts and prepare an accountable editorial recommendation.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-31T20:14:40.722Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Production Readiness
+
+◆ What should it do?
+In one sentence, what should "Production Readiness" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Prepare production-readiness checks once a manuscript is assessed.
+
+◆ Anything more about it?
+Anything more worth knowing about "Production Readiness"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               lumen-press:production-readiness
+Name             Production Readiness
+Enterprise       Lumen Press (enterprise-1)
+Objective        Prepare production-readiness checks once a manuscript is assessed.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-31T20:15:24.580Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Commissioning Editor
+
+◆ What will they do?
+What should Commissioning Editor be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Commissioning Editor's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Commissioning Editor is now on your team.
+Commissioning Editor can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Manuscript Assessment"
+
+◆ Function started
+Function
+  Manuscript Assessment
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Production Readiness"
+
+◆ Function started
+Function
+  Production Readiness
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 3 AI Workers for Lumen Press.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 2 kinds of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 3
+Content Review Specialist
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Manuscript Assessment
+
+For example, it could
+    · Check a piece of work for mistakes and gaps
+    · Give feedback on a draft before it goes out
+
+Add Content Review Specialist? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › yes
+
+◆ Worker 2 of 3
+Production Analysis Specialist
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Production Readiness
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Production Analysis Specialist? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › yes
+
+◆ Worker 3 of 3
+Manuscript Assessment Advisor
+Role          Advisor
+Can do        General reasoning, Advice, Human Contact
+Would help    Manuscript Assessment
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Talk through options and suggest a way forward
+    · Answer a 'how should I…' question in plain terms
+
+Add Manuscript Assessment Advisor? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › yes
+
+◆ Staffing applied
+3 AI Workers added, and put to work on 3 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Manuscript Assessment — Commissioning Editor
+  · Production Readiness — Commissioning Editor
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › /event rule add --when task.completed --job "Manuscript Assessment" --publish "Manuscript assessed"
+
+◆ Event rule added
+ID                   event-rule-5517fde8-2776-4124-872c-6c456e3adb4f
+When                 task.completed
+Enterprise           Lumen Press
+Source Function      Manuscript Assessment
+Required capability  any
+Evidence gate        Completed Task
+Publishes            Manuscript assessed
+Status               enabled
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › /event rule list
+
+◆ Event rules
+1.
+   ID                   event-rule-5517fde8-2776-4124-872c-6c456e3adb4f
+   When                 task.completed
+   Enterprise           Lumen Press
+   Source Function      Manuscript Assessment
+   Required capability  any
+   Evidence gate        Completed Task
+   Publishes            Manuscript assessed
+   Status               enabled
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › Assess a synthetic non-fiction manuscript proposal: audience fit, evidence and sourcing quality, structural issues, risks (legal, factual), and the editorial decisions a human must make. Do not accept or reject; synthetic proposal only.
+
+◆ Which Function should do this?
+Which one?
+
+1. Manuscript Assessment
+2. Production Readiness
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › 1
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Manuscript Assessment
+Selected worker    Content Review Specialist
+Partial coverage   Content Review Specialist does not hold monitoring — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Assess a synthetic non-fiction manuscript proposal: audience fit, evidence and sourcing quality, structural issues, risks (legal, factual), and the editorial de...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Content Review Specialist
+   Required capabilities  monitoring, review
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2653 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                           Content Review Specialist
+ID                               task-1
+Status                           Completed
+  (Finished.)
+Evidence                         Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed                    monitoring, review
+Why this Worker                  Selected staffed Worker Content Review Specialist for Manuscript Assessment. Best-available coverage: Content Review Specialist does not hold monitoring; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business                         Lumen Press
+Task                             1 / 2
+Instruction                      Assess a synthetic non-fiction manuscript proposal: audience fit, evidence and sourcing quality, structural issues, risks (legal, factual), and the editorial decisions a human must make. Do not accept or reject; synthetic proposal only.
+
+Where this came from             an AI model wrote it. Nobody has checked it
+Looked anything up               no
+
+Overall Assessment
+
+The provided work is a synthetic non-fiction manuscript proposal, which I will evaluate based on the assigned capabilities.
+
+**Quality**                      The proposal appears to be well-structured and clear in its writing style. However, without additional context, it's challenging to assess the quality of the content itself. The lack of specific details about the topic, audience, or evidence used in the proposal makes it difficult to provide a comprehensive evaluation.
+
+**Accuracy**                     As there is no external information provided, I cannot verify the accuracy of the information presented in the proposal. Without access to Lumen Press's records or other authoritative sources, I must rely on my understanding of standard manuscript assessment guidelines.
+
+**Completeness**                 The proposal seems to cover some aspects of a typical non-fiction manuscript, such as audience fit and structural issues. However, it lacks specific details about evidence and sourcing quality, which are crucial for assessing the validity of the content.
+
+**Risks (Legal, Factual)**       Without reviewing the content, I cannot identify potential legal or factual risks associated with the proposal. However, a thorough evaluation would require access to relevant external information or context.
+
+Improvements
+
+1. Provide specific details: Include more information about the topic, target audience, and evidence used in the proposal to facilitate a comprehensive assessment.
+2. Clearly outline structural issues: Identify specific structural concerns, such as chapter organization, transitions, or coherence, which would aid in evaluating the manuscript's overall quality.
+3. Include supporting materials: Provide relevant supporting documents, such as sample chapters or references, to help assess the evidence and sourcing quality of the proposal.
+
+Recommendations for Human Review
+
+Based on my evaluation, I recommend that a human reviewer:
+
+1. Conducts an in-depth analysis of the manuscript's content, structure, and evidence.
+2. Verifies the accuracy of information presented in the proposal using external sources or authoritative records.
+3. Identifies potential risks (legal, factual) associated with the manuscript.
+4. Makes editorial decisions regarding the manuscript's suitability for publication.
+
+Signature Block
+
+This evaluation is prepared on behalf of Lumen Press as part of the Manuscript Assessment function. The following signature block will be completed by a designated human reviewer:
+
+[Name]
+[Title]
+Lumen Press
+
+Date                             [Insert Date]
+
+Please note that this evaluation is not a final recommendation, and the human reviewer should conduct a thorough assessment before making any editorial decisions.
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4292 session tokens
+arturo › /events
+
+◆ Events
+2026-07-31 20:13Z  Bot Input  · warn
+Bot submitted                 /enterprise
+Event ID                      542ba32f-f562-4be3-8cb0-f21e47dfd5d2
+
+2026-07-31 20:13Z  Bot Input  · warn
+Bot submitted                 1
+Event ID                      4bf51c16-59f6-4e1d-b990-94327b216311
+
+2026-07-31 20:13Z  Bot Input  · warn
+Bot submitted                 Lumen Press
+Event ID                      f4907440-da14-4579-b97a-ad436ca6aac5
+
+2026-07-31 20:13Z  Bot Input  · warn
+Bot submitted                 Publish carefully checked work, with an editor accountable for what runs.
+Event ID                      61e4a909-245c-4fd4-8e62-65dfab2a4e89
+
+2026-07-31 20:13Z  Bot Input  · warn
+Bot submitted                 skip
+Event ID                      0ccbee86-ade3-4e7f-9448-80a171e4597e
+
+2026-07-31 20:14Z  Bot Input  · warn
+Bot submitted                 /function
+Event ID                      541576d7-913b-4d8e-b50f-87e63589562a
+
+2026-07-31 20:14Z  Bot Input  · warn
+Bot submitted                 1
+Event ID                      8d7115c5-8dc1-4118-8447-133dab63add5
+
+2026-07-31 20:14Z  Bot Input  · warn
+Bot submitted                 Manuscript Assessment
+Event ID                      cc511e45-059f-49e6-9f24-f1696bbc82df
+
+2026-07-31 20:14Z  Bot Input  · warn
+Bot submitted                 Assess submitted manuscripts and prepare an accountable editorial recommendation.
+Event ID                      ede371c4-d2a9-4da2-afb6-214132ad40dd
+
+2026-07-31 20:14Z  Bot Input  · warn
+Bot submitted                 skip
+Event ID                      5fe165d1-f527-44f1-836f-1c7825bba1f9
+
+2026-07-31 20:14Z  Bot Input  · warn
+Bot submitted                 /function
+Event ID                      81eca6bf-4580-4214-8a17-be96e3fa5429
+
+2026-07-31 20:14Z  Bot Input  · warn
+Bot submitted                 1
+Event ID                      48da8e37-5e16-4ae8-8c39-8eb08bf9a14d
+
+2026-07-31 20:14Z  Bot Input  · warn
+Bot submitted                 Production Readiness
+Event ID                      c72043d0-6d39-4730-8c51-61ba1c277074
+
+2026-07-31 20:15Z  Bot Input  · warn
+Bot submitted                 Prepare production-readiness checks once a manuscript is assessed.
+Event ID                      41aefa1c-3275-4cc4-8be1-65bf012a7ad1
+
+2026-07-31 20:15Z  Bot Input  · warn
+Bot submitted                 skip
+Event ID                      1957dec3-26c7-4b4b-bf81-34648ab7e718
+
+2026-07-31 20:15Z  Bot Input  · warn
+Bot submitted                 /add-human-worker
+Event ID                      e73fdcdd-510f-43ff-b45a-b5e0106f8c36
+
+2026-07-31 20:15Z  Bot Input  · warn
+Bot submitted                 Commissioning Editor
+Event ID                      370875c7-ba7b-401c-961e-16a7314009aa
+
+2026-07-31 20:15Z  Bot Input  · warn
+Bot submitted                 1
+Event ID                      03976271-ccdd-41be-829a-9eb836a5e995
+
+2026-07-31 20:15Z  Bot Input  · warn
+Bot submitted                 skip
+Event ID                      d8f40c04-623f-42c5-a820-eb88e950ead6
+
+2026-07-31 20:15Z  Worker Registered  · success
+Human worker registered       Commissioning Editor
+Event ID                      3268c2d3-6f6a-4063-b455-daf5014bbb62
+
+2026-07-31 20:15Z  Bot Input  · warn
+Bot submitted                 /function start "Manuscript Assessment"
+Event ID                      f23935b9-1f1c-4ca0-a9da-981e1341e663
+
+2026-07-31 20:16Z  Function Started  · success
+Function started              Manuscript Assessment
+Event ID                      1a0c2058-76db-4ada-b8d5-cd2b57a93433
+
+2026-07-31 20:16Z  Bot Input  · warn
+Bot submitted                 /function start "Production Readiness"
+Event ID                      e84276e6-7b42-4c27-b4db-f080e3459247
+
+2026-07-31 20:16Z  Function Started  · success
+Function started              Production Readiness
+Event ID                      99dd2d6d-2d89-4ae9-bcf7-4b70ec06fc2c
+
+2026-07-31 20:16Z  Bot Input  · warn
+Bot submitted                 /staff
+Event ID                      30953e0d-f7dc-4bce-a702-30de0b7439ae
+
+2026-07-31 20:16Z  Bot Input  · warn
+Bot submitted                 /event rule add --when task.completed --task "Manuscript Assessment" --publish "Manuscript assessed"
+Event ID                      4fce2309-d952-4114-9a8a-1d3ab27e886b
+
+2026-07-31 20:17Z  Event Rule Added  · success
+Event rule added              event-rule-5517fde8-2776-4124-872c-6c456e3adb4f
+Event ID                      5c4f36c0-90cd-4a40-9551-b113c19c1dc8
+
+2026-07-31 20:17Z  Bot Input  · warn
+Bot submitted                 /event rule list
+Event ID                      0c9d3698-6714-468b-90d4-d47084f86f0a
+
+2026-07-31 20:17Z  Bot Input  · warn
+Bot submitted                 /task
+Event ID                      5718acd6-9193-4446-ad0f-83ba1bd8baf7
+
+2026-07-31 20:17Z  Bot Input  · warn
+Bot submitted                 1
+Event ID                      fc6087d4-4de4-4324-8e15-a40a82430b8d
+
+2026-07-31 20:17Z  Bot Input  · warn
+Bot submitted                 Assess a synthetic non-fiction manuscript proposal: audience fit, evidence and sourcing quality, structural issues, risks (legal, factual), and the editorial decisions a human must make. Do not accept or reject; synthetic proposal only.
+Event ID                      b7db2b05-8090-4e38-a56d-da36ff856b9d
+
+2026-07-31 20:18Z  Bot Input  · warn
+Bot submitted                 1
+Event ID                      e52a1664-fe21-46d9-a241-7201e2e9bd46
+
+2026-07-31 20:18Z  Bot Input  · warn
+Bot submitted                 1
+Event ID                      8e96269e-1f26-4cd8-9818-3b4e5f1d27e8
+
+2026-07-31 20:18Z  Job Queued  · info
+  Task queued for Content Review Specialist: task-1
+Event ID                      d8938bf9-b36a-4819-a074-24d61081c439
+
+2026-07-31 20:18Z  Bot Input  · warn
+Bot submitted                 /tasks
+Event ID                      91ba0fa8-8357-419f-ad51-f52e96cc5231
+
+2026-07-31 20:18Z  Bot Input  · warn
+Bot submitted                 /approve task-1 --as "Arturo Bot (automated, not a person)"
+Event ID                      20cc436a-4a17-446c-b603-9e1b6f378d2b
+
+2026-07-31 20:19Z  Approval Granted  · success
+  Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Event ID                      a5b8fd43-c5c3-4b60-a721-6377d8cbc5e2
+
+2026-07-31 20:19Z  Task Started  · info
+Task started                  task-1
+Event ID                      69d4a9b7-d297-4dbd-8e54-b465c391042d
+
+2026-07-31 20:19Z  Task Completed  · success
+Task completed                task-1
+Event ID                      77d3a9e2-c5ce-49f2-bd89-758210b8269a
+
+2026-07-31 20:19Z  Manuscript Assessed  · success
+Manuscript assessed — source  Manuscript Assessment — enterprise: Lumen Press
+Event ID                      4b60a37f-cd87-474e-856c-5b4639a323a0
+
+2026-07-31 20:19Z  Worker Assigned  · success
+  Worker Production Analysis Specialist assigned to Task task-2
+Event ID                      7bde20f5-b494-4811-9788-7f4c1e1fd99d
+
+2026-07-31 20:19Z  Task Created  · success
+  Function Production Readiness created Task from Manuscript assessed: Perform production-readiness checks on the assessed manuscript and report findings.
+Event ID                      5d932e2d-b1f0-4f33-a3f7-437db7883f44
+
+2026-07-31 20:19Z  Signal Evaluated  · info
+  Production Readiness evaluated Manuscript assessed: Manuscript has been fully assessed.
+Event ID                      9fdf95ce-8a52-499a-881e-1d5db0ff8ddb
+
+2026-07-31 20:19Z  Event Rule Published  · success
+  Event rule event-rule-5517fde8-2776-4124-872c-6c456e3adb4f published Manuscript assessed from completed Task task-1
+Event ID                      8b92996b-91e1-479f-a6f6-3e742335f75a
+
+2026-07-31 20:20Z  Bot Input  · warn
+Bot submitted                 /task inspect task-1
+Event ID                      af67e0ce-d8a7-486f-b82f-aa804d28531c
+
+2026-07-31 20:20Z  Bot Input  · warn
+Bot submitted                 /events
+Event ID                      760b78ca-ea22-4c02-9c6a-5300b139d31d
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4292 session tokens
+arturo › /timeline
+
+◆ #47 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-07-31T20:20:15.438Z
+Id             be2ca664-0209-4b33-aa2a-cf2ad3b37e8c
+
+◆ #46 · Bot typed a line
+Bot submitted  /events
+Time           2026-07-31T20:20:08.084Z
+Id             760b78ca-ea22-4c02-9c6a-5300b139d31d
+
+◆ #45 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-07-31T20:20:00.816Z
+Id             af67e0ce-d8a7-486f-b82f-aa804d28531c
+
+◆ #44 · Event rule published
+Event rule event-rule-5517fde8-2776-4124-872c-6c456e3adb4f published Manuscript assessed from completed Task task-1
+Time          2026-07-31T20:19:17.146Z
+Id            8b92996b-91e1-479f-a6f6-3e742335f75a
+
+◆ #43 · Runtime checked whether work was needed
+Production Readiness evaluated Manuscript assessed: Manuscript has been fully assessed.
+Time          2026-07-31T20:19:17.143Z
+Id            9fdf95ce-8a52-499a-881e-1d5db0ff8ddb
+
+◆ #42 · Task created
+Function Production Readiness created Task from Manuscript assessed: Perform production-readiness checks on the assessed manuscript and report findings.
+Time          2026-07-31T20:19:17.141Z
+Id            5d932e2d-b1f0-4f33-a3f7-437db7883f44
+
+◆ #41 · Worker assigned
+Worker Production Analysis Specialist assigned to Task task-2
+Time          2026-07-31T20:19:17.133Z
+Id            7bde20f5-b494-4811-9788-7f4c1e1fd99d
+
+◆ #40 · Business manuscript assessed
+Manuscript assessed — source  Manuscript Assessment — enterprise: Lumen Press
+Time                          2026-07-31T20:19:15.692Z
+Id                            4b60a37f-cd87-474e-856c-5b4639a323a0
+
+◆ #39 · Task completed
+Task completed  task-1
+Time            2026-07-31T20:19:15.691Z
+Id              77d3a9e2-c5ce-49f2-bd89-758210b8269a
+
+◆ #38 · Task started
+Task started  task-1
+Time          2026-07-31T20:19:05.851Z
+Id            69d4a9b7-d297-4dbd-8e54-b465c391042d
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4292 session tokens
+arturo › 
+◆ Bot finished
+39 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4292 session tokens
+arturo › 

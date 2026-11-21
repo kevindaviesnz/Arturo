@@ -1,0 +1,42 @@
+# Enter on an empty description, and handing an AI Task's result to a person.
+#
+# The blank lines below are the point: each one is Enter pressed at a
+# "Description:" or "Email address:" prompt, which must leave the field blank
+# rather than re-ask. @blank sends one, because a plan file cannot carry an
+# empty line of its own.
+/reset
+yes
+/clear
+@timeout 300
+/enterprise
+1
+Bellhaven Supplies
+Pack and ship customer orders accurately and on time.
+@blank
+/function
+1
+Order Preparation
+Turn a customer order into the exact picking and packing instructions a person on the floor can follow.
+@blank
+@staff /staff
+/add-human-worker
+Warehouse Lead
+1
+@blank
+@note the AI produces the instructions
+/task
+1
+We've just received an order for a ceramic lamp and a teapot. Give me the picking and packing instructions to send to the floor.
+1
+@wait 150
+@note now hand them to the person, without retyping them
+/create-human-task
+Follow the packing instructions, and record anything that did not match.
+2
+1
+/human-task human-task-1
+@note and the person finishes it -- the handover must not try to advance task-1
+/complete-human-task
+Packed both items, separated with card dividers. Nothing was missing.
+/human-tasks
+/tasks

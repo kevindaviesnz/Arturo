@@ -1,0 +1,58 @@
+# Blueprint 5 — The Prototyper: design, physical test, refine, mediated by Arturo.
+#
+# Two rounds, and round two exists only because the physical test failed. The
+# thing to notice is that the AI is not told "make it stronger" — it is given
+# what actually happened when a person dropped the box, and both rounds stay on
+# the record so the change can be traced to the test that caused it.
+/reset
+yes
+/clear
+@timeout 300
+/enterprise
+1
+Peartree Packaging
+Design protective packaging that survives real handling.
+@blank
+/function
+1
+Insert Design
+Design cardboard inserts that hold a product still in its box, and revise them against how they perform in physical drop tests.
+@blank
+@staff /staff
+@note the Worker /staff proposed is generic. This is what makes it a specialist.
+/refine-worker
+1
+You are an expert packaging engineer specialising in folded corrugated inserts for glassware. You state your board grade and flute assumptions explicitly, you specify fold patterns and wall thicknesses, and you revise a design from observed drop-test failures rather than from theory.
+/add-human-worker
+Packaging Technician
+1
+@blank
+@note round one: the design
+/task
+1
+Design a folded cardboard insert to hold one 300ml glass jar centred in a 120mm cube box. Give the fold pattern, the wall thicknesses, and where the jar is supported. State what the design assumes about the board.
+1
+@wait 240
+/tasks
+@note round one: the physical test, which only a person can run
+/create-human-task
+Cut and fold the insert to the design, put a filled jar in it, and drop the sealed box from one metre onto each face. Record what failed and how.
+2
+1
+/complete-human-task
+Built to the pattern in 2mm B-flute. Survived four faces. On the fifth drop, corner first, the two side walls splayed outward and the jar contacted the box corner and chipped. The base flaps also unfolded on impact — nothing holds them closed once the box is dropped.
+/human-tasks
+@note round two: the refinement, caused by what happened in the room
+/task
+1
+Revise the cardboard insert design. In a one metre corner-first drop in 2mm B-flute, the side walls splayed outward and the jar chipped against the box corner, and the base flaps unfolded because nothing holds them closed. Change the design to address both failures and say what each change is for.
+1
+@wait 240
+@note the record, end to end: both lists, both records in full, and the trail
+/tasks
+/human-tasks
+/task
+2
+2
+/human-task human-task-1
+/timeline

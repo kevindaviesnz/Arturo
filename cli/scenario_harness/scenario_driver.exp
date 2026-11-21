@@ -1,0 +1,355 @@
+#!/usr/bin/expect -f
+# Generic scenario driver.
+#
+# Usage: expect scenario_driver.exp <plan-file> <data-dir>
+#
+# Plan file syntax (one directive per line):
+#   /command ...            → sent to the UI verbatim (may contain {{VAR}})
+#   @cap VAR <tcl-regex>    → after the NEXT command, capture regex group 1 into VAR
+#   @timeout <seconds>      → change the per-command timeout for following commands
+#   @note <text>            → passthrough marker written into the transcript
+#   # comment               → ignored
+#
+# Output: cleaned transcript on stdout (caller strips ANSI/spinner further).
+
+set timeout 90
+
+# Live mode, for a run that is being watched or filmed.
+#
+# Normally log_user is 0 and this script reconstructs the session afterwards,
+# printing each result once its command has finished. That produces a correct
+# transcript and something that cannot look like a terminal: the prompt is
+# printed as part of one buffer and the typed command as part of the next, so
+# they land on separate lines and nothing appears until a command completes.
+#
+# With ARTURO_DEMO_LIVE=1 the spawned process's own output streams through
+# instead, exactly as a person would see it — prompt and keystrokes inline,
+# cursor movement intact — and this script's own markers go to stderr so they
+# stay off the screen. Transcript generation leaves it unset and is unchanged.
+set live 0
+if {[info exists env(ARTURO_DEMO_LIVE)] && $env(ARTURO_DEMO_LIVE) eq "1"} { set live 1 }
+log_user $live
+
+# Tcl block-buffers stdout whenever it is not a terminal, and in live mode it
+# never is — the session is piped so it can be teed to the screen and the file
+# at once. Buffered, the characters are typed one at a time and then delivered
+# in a four-kilobyte burst, so the run takes as long as it should while showing
+# no typing at all. Unbuffered, each keystroke reaches the screen as it lands.
+if {$live} { fconfigure stdout -buffering none }
+
+# In live mode the session is captured by expect itself rather than by piping
+# this script's stdout somewhere. That matters: a pipe is what made stdout a
+# non-terminal in the first place, and every attempt to keep the typing visible
+# through one has run into another layer of buffering — Tcl's, then tee's, then
+# whatever sits after it. With no pipe at all, stdout is the operator's terminal
+# and the characters land on it as they are sent, which is the entire point.
+if {$live && [info exists env(ARTURO_DEMO_LOG)]} {
+    log_file -noappend $env(ARTURO_DEMO_LOG)
+}
+
+# A driver marker: stdout when it belongs in the transcript, stderr when the
+# transcript is the live stream and these would be on camera.
+proc note {msg} {
+    global live
+    if {$live} { puts stderr $msg } else { puts $msg }
+}
+
+# The reconstructed output. Nothing to do in live mode: it already streamed.
+proc emit {buf} {
+    global live
+    if {!$live} { puts $buf }
+}
+
+# Human pacing, for runs that are being filmed.
+#
+# Both default to 0, so transcript generation is unchanged and stays fast. Set
+# them and the driver types a character at a time and pauses for the viewer to
+# read, which is what makes a recording look like somebody using Arturo rather
+# than a script replaying into it.
+#
+# This affects the live session only. The transcript that comes out is the same
+# either way: pacing is timing, not content.
+set type_delay 0
+if {[info exists env(ARTURO_DEMO_TYPE_DELAY)]} { set type_delay $env(ARTURO_DEMO_TYPE_DELAY) }
+set read_pause 0
+if {[info exists env(ARTURO_DEMO_READ_PAUSE)]} { set read_pause $env(ARTURO_DEMO_READ_PAUSE) }
+# One place that decides how a line is typed, so no send site can forget.
+#
+# Not `send -s`. Expect only relays the spawned process's output to the screen
+# while it is inside an `expect` command; between the characters of a `send -s`
+# it is asleep and reading nothing, so every echoed character sits in the pty
+# buffer until the next `expect` runs and then lands in one burst. The pacing
+# was right and invisible. Here each keystroke drains its own echo before the
+# pause, so the character reaches the screen when it is typed.
+#
+# The trailing Return is sent bare and left undrained: the reply starts arriving
+# the moment it lands, and draining here would swallow the front of it before
+# the caller's own `expect` could match on it.
+#
+# Each keystroke is varied by ±40%, the same as bot mode varies its own beats
+# and for the same reason: a fixed interval reads as a machine emitting
+# characters, not as somebody typing. The average over a line is the configured
+# delay, so the timing above still describes how long a run takes.
+proc type_line {text} {
+    global type_delay
+    if {$type_delay <= 0} {
+        send -- $text
+        return
+    }
+    set pause [expr {int($type_delay * 1000)}]
+    foreach ch [split $text ""] {
+        if {$ch eq "\r"} { send -- $ch; continue }
+        send -- $ch
+        expect -timeout 1 -re {.+} {} timeout {}
+        after [expr {int($pause * (0.6 + rand() * 0.8))}]
+    }
+}
+
+# A beat after a result, before the next line starts typing.
+proc reading_beat {} {
+    global read_pause
+    if {$read_pause > 0} { after [expr {int($read_pause * 1000)}] }
+}
+
+if {$argc < 2} { puts "usage: scenario_driver.exp <plan> <datadir>"; exit 2 }
+set planfile [lindex $argv 0]
+set datadir  [lindex $argv 1]
+
+set env(ARTURO_DATA_DIRECTORY) $datadir
+set env(ARTURO_RUNTIME_DATABASE_PATH) "$datadir/runtime.db"
+
+# How many Tasks are queued or running. -1 when the database cannot be read.
+#
+# The runtime persists on every status change (replaceJob calls persistJobs
+# synchronously), so the file is a faithful account of what is in flight rather
+# than a lagging copy. Read -readonly so this never takes a write lock on a
+# database the session is using.
+#
+# Only `queued` and `running` count. `scheduled` is a recurring Task lying
+# dormant until its next occurrence, and `awaiting_*` is work that has stopped
+# and is resting on a person — waiting on either would sit out the whole
+# ceiling for nothing.
+proc work_in_flight {} {
+    global datadir
+    set db "$datadir/runtime.db"
+    if {![file exists $db]} { return -1 }
+    if {[catch {exec sqlite3 -readonly $db \
+        "select count(*) from jobs where status in ('queued','running')"} out]} {
+        return -1
+    }
+    set out [string trim $out]
+    if {![string is integer -strict $out]} { return -1 }
+    return $out
+}
+
+# Waits for Arturo to finish what it is doing, up to a ceiling.
+#
+# `@wait N` used to be N seconds of a still screen whatever the runtime did.
+# The numbers had to cover the slowest case, so every run paid the worst case:
+# a filmed Blueprint 1 sat for the full 150s after a `/task` whose work, by the
+# database's own timestamps, took 5.4 seconds. On a recording that is dead air,
+# and it is why the films were being cut off by the display sleeping.
+#
+# A transient read failure counts as "still working" rather than "finished" —
+# the ceiling bounds it either way, and stopping early is the one outcome that
+# corrupts a run.
+proc wait_for_work {secs} {
+    set poll_ms 250
+    set start_ms 2000
+    set grace_ms 600
+    set ceiling_ms [expr {$secs * 1000}]
+
+    # No database to read: sleep the stated time, as this always used to. A
+    # wrong path must make the run slow, never make it type the next line into
+    # a screen that is still filling up.
+    if {[work_in_flight] < 0} {
+        note "===NOTE: cannot read the runtime database, waiting the full ${secs}s"
+        after $ceiling_ms
+        return
+    }
+
+    set spent 0
+
+    # Give the work a moment to appear. A Task is queued by the command that
+    # created it, so in practice it is already in flight; this covers the case
+    # where it is not yet.
+    while {[work_in_flight] == 0 && $spent < $start_ms && $spent < $ceiling_ms} {
+        after $poll_ms
+        incr spent $poll_ms
+    }
+
+    # The grace period is re-checked rather than trusted, because finishing one
+    # Task can queue the next — Blueprint 1 is exactly that shape, the reply
+    # queued off the back of the triage — and stopping in the gap between them
+    # would type over the second result.
+    while {1} {
+        while {[work_in_flight] != 0} {
+            if {$spent >= $ceiling_ms} {
+                note "===NOTE: still working after ${secs}s, which is as long as this step waits"
+                return
+            }
+            after $poll_ms
+            incr spent $poll_ms
+        }
+        after $grace_ms
+        incr spent $grace_ms
+        if {[work_in_flight] == 0} { return }
+        if {$spent >= $ceiling_ms} { return }
+    }
+}
+
+array set vars {}
+set pending_cap ""
+
+proc subst_vars {line} {
+    global vars
+    while {[regexp {\{\{([A-Za-z0-9_]+)\}\}} $line -> name]} {
+        if {[info exists vars($name)]} {
+            set val $vars($name)
+        } else {
+            # Fall back to the doc-style placeholder: TASK_ID -> <task-id>.
+            set val "<[string map {_ -} [string tolower $name]]>"
+        }
+        regsub -all "\\{\\{$name\\}\\}" $line $val line
+    }
+    return $line
+}
+
+proc read_prompt {cmd} {
+    global pending_cap vars
+    expect {
+        -re {arturo[^\r\n]*›} {
+            set buf $expect_out(buffer)
+            note "===> $cmd"
+            emit $buf
+            if {$pending_cap ne ""} {
+                set name [lindex $pending_cap 0]
+                set re   [lindex $pending_cap 1]
+                # Strip ANSI escapes before matching: list numbers and some ids
+                # carry colour codes in the raw pty buffer.
+                regsub -all "\x1b\\\[\[0-9;\]*\[A-Za-z\]" $buf "" clean
+                if {[regexp $re $clean -> captured]} {
+                    set vars($name) $captured
+                    note "\[driver] captured $name = $captured"
+                } else {
+                    note "\[driver] WARN: could not capture $name with /$re/"
+                }
+                set pending_cap ""
+            }
+        }
+        timeout {
+            note "===> $cmd"
+            note "\[driver] TIMEOUT waiting for prompt"
+            set pending_cap ""
+        }
+    }
+}
+
+spawn npm run ui
+read_prompt "(startup)"
+
+set fh [open $planfile r]
+while {[gets $fh line] >= 0} {
+    set t [string trim $line]
+    if {$t eq ""} { continue }
+    if {[string match "#*" $t]} { continue }
+    if {[string match "@timeout *" $t]} {
+        set timeout [lindex $t 1]
+        continue
+    }
+    if {[string match "@note *" $t]} {
+        note "===NOTE: [string range $t 6 end]"
+        continue
+    }
+    if {[string match "@cap *" $t]} {
+        set name [lindex $t 1]
+        set re   [string trim [string range $t [expr {[string first $name $t] + [string length $name] + 1}] end]]
+        # Plans wrap the regex in {} to survive plan-file word splitting; strip
+        # one surrounding pair so it is not passed to regexp as literal braces.
+        if {[string index $re 0] eq "\{" && [string index $re end] eq "\}"} {
+            set re [string range $re 1 end-1]
+        }
+        set pending_cap [list $name $re]
+        continue
+    }
+    if {$t eq "@blank"} {
+        # Enter on its own. A plan file cannot carry an empty line -- blank
+        # lines are skipped above as formatting -- so the one input that has to
+        # be tested at every optional prompt had no way to be scripted at all.
+        # That is why "Description:" shipped unable to be left blank.
+        type_line "\r"
+        read_prompt ""
+        reading_beat
+        continue
+    }
+    if {[string match "@wait *" $t]} {
+        # Give the runtime time to execute queued model work before inspecting.
+        # The number is a ceiling, not a duration — see wait_for_work.
+        set secs [lindex $t 1]
+        note "===NOTE: waiting up to ${secs}s for runtime to process work"
+        wait_for_work $secs
+        continue
+    }
+    if {[string match "@next *" $t]} {
+        # Send /next, then answer the per-Function review "yes" until Arturo
+        # stops offering them. Same shape as @staff and for the same reason:
+        # the model decides how many Functions to propose, so a plan cannot
+        # know how many times to answer. Written as a fixed count it silently
+        # abandons the review partway and creates nothing.
+        set cmd [subst_vars [string range $t 6 end]]
+        type_line "$cmd\r"
+        set buf ""
+        expect {
+            -re {arturo[^\r\n]*\u203a} { set buf $expect_out(buffer); note "===> $cmd"; emit $buf }
+            timeout { note "===> $cmd"; note "\[driver] TIMEOUT on next"; set buf "" }
+        }
+        set tries 0
+        while {![regexp {Function created|Nothing created} $buf] && $tries < 14} {
+            if {![regexp {(Reply yes|Add .*\?|Area of work [0-9]+ of)} $buf]} { break }
+            type_line "yes\r"
+            expect {
+                -re {arturo[^\r\n]*\u203a} { set buf $expect_out(buffer); emit $buf }
+                timeout { set buf ""; note "\[driver] TIMEOUT on next yes" }
+            }
+            incr tries
+        }
+        if {![regexp {Function created} $buf]} {
+            note "\[driver] WARN: /next created no Functions"
+        }
+        continue
+    }
+    if {[string match "@staff *" $t]} {
+        # Send /staff, then answer the per-Worker review "yes" until Arturo
+        # reports the plan applied/unchanged. Robust to a model-generated Worker
+        # count and to spinner/ANSI splitting the "suggests N" line.
+        set cmd [subst_vars [string range $t 7 end]]
+        type_line "$cmd\r"
+        set buf ""
+        expect {
+            -re {arturo[^\r\n]*›} { set buf $expect_out(buffer); note "===> $cmd"; emit $buf }
+            timeout { note "===> $cmd"; note "\[driver] TIMEOUT on staff"; set buf "" }
+        }
+        set tries 0
+        while {![regexp {Staffing (applied|unchanged)} $buf] && $tries < 14} {
+            if {![regexp {(Reply yes|Add .*\?|Worker [0-9]+ of|one at a time|say yes)} $buf]} { break }
+            type_line "yes\r"
+            expect {
+                -re {arturo[^\r\n]*›} { set buf $expect_out(buffer); emit $buf }
+                timeout { set buf ""; note "\[driver] TIMEOUT on staff yes" }
+            }
+            incr tries
+        }
+        if {![regexp {Staffing applied} $buf]} {
+            note "\[driver] WARN: staffing not confirmed applied (proposed 0 or unchanged)"
+        }
+        continue
+    }
+    set out [subst_vars $t]
+    type_line "$out\r"
+    read_prompt $out
+    reading_beat
+}
+close $fh
+
+type_line "/exit\r"
+expect eof

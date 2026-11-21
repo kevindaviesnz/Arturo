@@ -1,0 +1,61 @@
+# Scenario 025 — Charity safeguarding intake, driven the way the script tells an
+# operator to drive it: every command on its own, answering Arturo's questions.
+#
+# /staff proposes a model-generated plan, so the number of Workers varies; the
+# @staff directive answers the per-Worker review until the plan is applied.
+/reset
+yes
+@timeout 240
+/enterprise
+1
+Harbour Youth Trust
+Keep young people safe with careful process and accountable human decisions on every concern.
+A registered charity supporting at-risk young people. It never records real identities in Arturo.
+/function
+1
+Safeguarding Intake
+Frame safeguarding concerns into evidence needs and route referral decisions to an accountable lead.
+Process framing only. Every referral decision belongs to a trained lead.
+/add-human-worker
+Safeguarding Lead
+1
+lead@example.com
+@staff /staff
+/governance
+1
+Safeguarding analysis requires lead sign-off
+1
+8
+1
+/memory
+1
+Never name a real child or worker; frame concerns as process only; every referral decision is a human decision.
+1
+/task
+1
+Analyse, using a fully synthetic and anonymised example only, how a reported safeguarding concern should be handled as a process: what to record, the immediate questions to ask, who must be informed, and thresholds for external referral. Do not name anyone or allege wrongdoing.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+/approval-status {{TASK_ID}}
+/reject {{TASK_ID}} "Concern description mixes process with a specific allegation; reframe as process only before analysis."
+/task
+1
+Revised analysis, fully synthetic and anonymised: analyse only the process steps, the questions to ask, information-sharing thresholds, and the point at which a trained human must decide on referral. No allegations, no identities.
+1
+@wait 20
+@cap TASK2 {(task-[0-9]+)}
+/tasks
+/approve {{TASK2}}
+@wait 90
+/task inspect {{TASK2}}
+/create-human-task
+Decide whether the synthetic concern would meet the threshold for external referral, and what evidence and support must accompany it. Do not make a real referral.
+1
+1
+/human-tasks
+/complete-human-task
+On these synthetic facts the threshold is met; a trained lead would refer with a written chronology and ensure immediate safety and support. Planning only.
+/human-tasks
+/timeline

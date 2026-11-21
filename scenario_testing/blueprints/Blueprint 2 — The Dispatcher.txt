@@ -1,0 +1,456 @@
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+arturo › /enterprise
+◆ Please select an option:
+1. Set up a new business
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Name:
+
+arturo › Bellhaven Supplies
+◆ Mission:
+
+arturo › Pack and ship customer orders accurately and on time.
+◆ Description:
+
+arturo › 
+◆ Enterprise created
+ID            enterprise-1
+Name          Bellhaven Supplies
+Mission       Pack and ship customer orders accurately and on time.
+Description   (none)
+Status        active
+Created       17 August 2026
+
+Run /next "Bellhaven Supplies" to create this Enterprise's ongoing Functions, or /function to add one yourself.
+
+arturo › /function
+◆ Please select an option:
+1. Add a new Function
+2. Start one running
+3. Look at a Function you've set up
+4. Change a Function's details
+5. See all your Functions
+6. Go back
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Name (eg 'Accounts', 'Product marketing'):
+
+arturo › Order Preparation
+◆ Objective:
+
+arturo › Turn a customer order into the exact picking and packing instructions a person on the floor can follow.
+◆ Description:
+
+arturo › 
+◆ Function created
+To inspect enter /function inspect "Order Preparation"
+
+Run /staff to add Workers.
+
+arturo › /staff
+◆ Arturo suggests one AI Worker for Bellhaven Supplies.
+
+◆ Worker one of one
+Order Preparation Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Order Preparation
+
+Add Order Preparation Analyst? Reply yes to add, no to skip, or ESC to stop.
+
+arturo › yes
+◆ Staffing applied
+One AI Worker added, and put to work on Order Preparation.
+
+Before this business can do that work, Order Preparation still needs a person who can approve, or its work will block with nobody able to approve it.
+
+Add that person with /add-human-worker — it can be you. Once they're on
+the team, work waiting for sign-off shows under /approvals.
+
+Order Preparation only does the work you ask for directly. You can change this by entering:
+
+/event
+and choosing "Announce it automatically whenever work finishes"
+
+◆ What to do next:
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+arturo › /refine-worker
+◆ Refine a Worker
+Which one?
+
+1. Order Preparation Analyst
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ How should Order Preparation Analyst specialise?
+Type your instructions, or ESC to go back.
+
+For example   You are a softball coach who specialises in coaching softball for girls under 15. You have many years of experience and have played at top levels.
+
+arturo › You are an expert warehouse operations planner specialising in packing fragile goods. You produce pick lists in bin order, specify box size and how breakables must be separated, and list every check a
+arturo › You are an expert warehouse operations planner specialising in packing fragile goods. You produce pick lists in bin order, specify box size and how breakables must be separated, and list every check a  packer must complete before sealing. You never assume a stock location that was not supplied to you.
+◆ Worker refined
+Worker refined  Order Preparation Analyst
+
+Specialisation
+You are an expert warehouse operations planner specialising in packing fragile goods. You produce pick lists in bin order, specify box size and how breakables must be separated, and list every check a packer must complete before sealing. You never assume a stock location that was not supplied to you.
+
+arturo › /add-human-worker
+◆ Name (eg Warehouse Lead):
+
+arturo › Warehouse Lead
+◆ Responsibilities:
+1. Sign off sensitive work. If it's just you, this is you.
+2. Review work before it's delivered.
+3. Just do the tasks they're given.
+4. Something else — choose from the full list of roles.
+
+Reply with a number, or ESC to go back.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+
+arturo › 1
+◆ Email address:
+
+arturo › 
+◆ Human worker added
+Warehouse Lead is now on your team.
+Warehouse Lead can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+arturo › /task
+◆ Please select an option:
+1. Create a task
+2. Look at one task in full
+3. See all your tasks
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Description:
+
+arturo › An order came in for two ceramic mugs, one boxed teapot and a card. Produce a pick list in bin order, state the box size and how the fragile items must be separated, and list what the packer must chec
+arturo › An order came in for two ceramic mugs, one boxed teapot and a card. Produce a pick list in bin order, state the box size and how the fragile items must be separated, and list what the packer must check  before sealing.
+◆ Does this task need anything else?
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Task created
+Task queued        task-1
+Selected Function  Order Preparation
+Selected worker    Order Preparation Analyst
+
+arturo › /tasks
+◆ Tasks
+1. An order came in for two ceramic mugs, one boxed teapot and a card. Produce a pick list in bin order, state the box size and how the fragile items must be separ...
+   ID              task-1
+   Status          Completed
+   Worker          Order Preparation Analyst
+   Result preview  Pick List for Order I will create a pick list based on the provided information. Please note that I do not have any prior knowledge about the warehouse operations or the specific stock locations. Bin Order: The items are picked i...
+
+arturo › /task
+◆ Please select an option:
+1. Create a task
+2. Look at one task in full
+3. See all your tasks
+
+Reply with a number, or ESC to go back.
+
+arturo › 2
+◆ Task details
+Worker        Order Preparation Analyst
+ID            task-1
+Status        Completed
+  (Finished.)
+Task          1 / 1
+Instruction   An order came in for two ceramic mugs, one boxed teapot and a card. Produce a pick list in bin order, state the box size and how the fragile items must be separated, and list what the packer must check before sealing.
+
+Pick List for Order
+
+I will create a pick list based on the provided information. Please note that I do not have any prior knowledge about the warehouse operations or the specific stock locations.
+
+Bin Order
+The items are picked in the following order
+1. Ceramic mugs
+2. Boxed teapot
+3. Card
+
+Box Size and Separation Instructions
+
+–  The boxed teapot requires a 12" x 8" x 6" box to accommodate its fragile contents.
+–  The ceramic mugs should be placed on top of the teapot, separated by at least 2 inches to prevent breakage.
+–  The card can be placed in a separate bin or bag for easy access.
+
+Packing Instructions
+
+1. Ensure the boxed teapot is securely placed in the designated box size.
+2. Carefully arrange the ceramic mugs on top of the teapot, ensuring they are separated by at least 2 inches.
+3. Add the card to a separate bin or bag.
+4. Seal the boxes and bags securely.
+
+Pre-Sealing Checks
+
+1. Verify that all items are properly placed in their designated bins or bags.
+2. Ensure the boxed teapot is securely closed and the ceramic mugs are tightly arranged on top.
+3. Check that the card is separate from the other items.
+4. Confirm that the boxes and bags are sealed securely.
+
+Please note that these instructions assume a standard packing process and may need to be adjusted based on specific warehouse operations procedures or stock location information not provided.
+
+arturo › /create-human-task
+◆ Description:
+
+arturo › Follow the pick list: collect the items, separate the fragile pieces as instructed, pack them and record anything that did not match the list.
+◆ Is there finished work they should act on?
+1. No
+2. An order came in for two ceramic mugs, one boxed teapot and a card.... — task-1
+
+Reply with a number, or ESC to go back.
+
+arturo › 2
+◆ Worker:
+1. Warehouse Lead
+2. Leave it unassigned for now
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=964402384259050ba189e8d736919eb86ed39463848e3f94d41cfacd6f5c17d5
+
+Human task          human-task-1
+Status              open
+Title               Follow the pick list: collect the items, separate the fragile piece...
+Owner               Warehouse Lead
+Instructions
+Follow the pick list: collect the items, separate the fragile pieces as instructed, pack them and record anything that did not match the list.
+Commands:
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+Work to act on (from task-1, written by an AI Worker and not checked by anyone):
+**Pick List for Order**
+
+I will create a pick list based on the provided information. Please note that I do not have any prior knowledge about the warehouse operations or the specific stock locations.
+
+Bin Order
+The items are picked in the following order
+1. Ceramic mugs
+2. Boxed teapot
+3. Card
+
+Box Size and Separation Instructions
+
+–  The boxed teapot requires a 12" x 8" x 6" box to accommodate its fragile contents.
+–  The ceramic mugs should be placed on top of the teapot, separated by at least 2 inches to prevent breakage.
+–  The card can be placed in a separate bin or bag for easy access.
+
+Packing Instructions
+
+1. Ensure the boxed teapot is securely placed in the designated box size.
+2. Carefully arrange the ceramic mugs on top of the teapot, ensuring they are separated by at least 2 inches.
+3. Add the card to a separate bin or bag.
+4. Seal the boxes and bags securely.
+
+Pre-Sealing Checks
+
+1. Verify that all items are properly placed in their designated bins or bags.
+2. Ensure the boxed teapot is securely closed and the ceramic mugs are tightly arranged on top.
+3. Check that the card is separate from the other items.
+4. Confirm that the boxes and bags are sealed securely.
+
+Please note that these instructions assume a standard packing process and may need to be adjusted based on specific warehouse operations procedures or stock location information not provided.
+
+arturo › /human-tasks
+◆ human-task-1 · open
+Instructions    Follow the pick list: collect the items, separate the fragile pieces as instructed, pack them and record anything that did not match the list.
+Work to act on  task-1
+
+arturo › /complete-human-task
+◆ What was done for "Follow the pick list: collect the items, separate the fragile piece..."?
+
+arturo › Picked and packed. Both mugs and the card were in the bins listed; the teapot was in bin 12, not bin 9, so the pick list needs correcting. Fragile items separated with card dividers as instructed.
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Warehouse Lead
+
+arturo › /tasks
+◆ Tasks
+1. An order came in for two ceramic mugs, one boxed teapot and a card. Produce a pick list in bin order, state the box size and how the fragile items must be separ...
+   ID              task-1
+   Status          Completed
+   Worker          Order Preparation Analyst
+   Result preview  Pick List for Order I will create a pick list based on the provided information. Please note that I do not have any prior knowledge about the warehouse operations or the specific stock locations. Bin Order: The items are picked i...
+
+arturo › /human-tasks
+◆ human-task-1 · completed
+Instructions    Follow the pick list: collect the items, separate the fragile pieces as instructed, pack them and record anything that did not match the list.
+Work to act on  task-1
+Completed by    Warehouse Lead
+
+arturo › /task
+◆ Please select an option:
+1. Create a task
+2. Look at one task in full
+3. See all your tasks
+
+Reply with a number, or ESC to go back.
+
+arturo › 2
+◆ Task details
+Worker        Order Preparation Analyst
+ID            task-1
+Status        Completed
+  (Finished.)
+Task          1 / 1
+Instruction   An order came in for two ceramic mugs, one boxed teapot and a card. Produce a pick list in bin order, state the box size and how the fragile items must be separated, and list what the packer must check before sealing.
+
+Pick List for Order
+
+I will create a pick list based on the provided information. Please note that I do not have any prior knowledge about the warehouse operations or the specific stock locations.
+
+Bin Order
+The items are picked in the following order
+1. Ceramic mugs
+2. Boxed teapot
+3. Card
+
+Box Size and Separation Instructions
+
+–  The boxed teapot requires a 12" x 8" x 6" box to accommodate its fragile contents.
+–  The ceramic mugs should be placed on top of the teapot, separated by at least 2 inches to prevent breakage.
+–  The card can be placed in a separate bin or bag for easy access.
+
+Packing Instructions
+
+1. Ensure the boxed teapot is securely placed in the designated box size.
+2. Carefully arrange the ceramic mugs on top of the teapot, ensuring they are separated by at least 2 inches.
+3. Add the card to a separate bin or bag.
+4. Seal the boxes and bags securely.
+
+Pre-Sealing Checks
+
+1. Verify that all items are properly placed in their designated bins or bags.
+2. Ensure the boxed teapot is securely closed and the ceramic mugs are tightly arranged on top.
+3. Check that the card is separate from the other items.
+4. Confirm that the boxes and bags are sealed securely.
+
+Please note that these instructions assume a standard packing process and may need to be adjusted based on specific warehouse operations procedures or stock location information not provided.
+
+arturo › /human-task human-task-1
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Follow the pick list: collect the items, separate the fragile piece...
+Owner         Warehouse Lead
+Instructions
+Follow the pick list: collect the items, separate the fragile pieces as instructed, pack them and record anything that did not match the list.
+Notes:
+Picked and packed. Both mugs and the card were in the bins listed; the teapot was in bin 12, not bin 9, so the pick list needs correcting. Fragile items separated with card dividers as instructed.
+
+Completed by  Warehouse Lead
+Commands
+(no actions available)
+Work to act on (from task-1, written by an AI Worker and not checked by anyone):
+**Pick List for Order**
+
+I will create a pick list based on the provided information. Please note that I do not have any prior knowledge about the warehouse operations or the specific stock locations.
+
+**Bin Order:**
+The items are picked in the following order:
+1. Ceramic mugs
+2. Boxed teapot
+3. Card
+
+**Box Size and Separation Instructions:**
+
+* The boxed teapot requires a 12" x 8" x 6" box to accommodate its fragile contents.
+* The ceramic mugs should be placed on top of the teapot, separated by at least 2 inches to prevent breakage.
+* The card can be placed in a separate bin or bag for easy access.
+
+**Packing Instructions:**
+
+1. Ensure the boxed teapot is securely placed in the designated box size.
+2. Carefully arrange the ceramic mugs on top of the teapot, ensuring they are separated by at least 2 inches.
+3. Add the card to a separate bin or bag.
+4. Seal the boxes and bags securely.
+
+**Pre-Sealing Checks:**
+
+1. Verify that all items are properly placed in their designated bins or bags.
+2. Ensure the boxed teapot is securely closed and the ceramic mugs are tightly arranged on top.
+3. Check that the card is separate from the other items.
+4. Confirm that the boxes and bags are sealed securely.
+
+Please note that these instructions assume a standard packing process and may need to be adjusted based on specific warehouse operations procedures or stock location information not provided.
+
+arturo › /timeline
+◆ #9 · Human task completed
+Human task human-task-1 completed by Warehouse Lead
+Time          2026-08-17T03:50:59.987Z
+Id            e75e873d-0c71-4a4e-9e3c-0d53b935431a
+
+◆ #8 · Human task created
+Human task created  human-task-1
+Time                2026-08-17T03:50:27.727Z
+Id                  9c1b1db7-4e96-4807-8235-89d2cf3f2be5
+
+◆ #7 · Result counted towards Function health
+Order Preparation measured Task outcome: Turn a customer order into the exact picking and packing instructions a person on the floor can follow.
+Time          2026-08-17T03:49:58.546Z
+Id            b08946d7-8153-44d2-83b6-29d6420e10e9
+
+◆ #6 · Result not counted
+An AI model wrote the result of Task task-1 and nobody has checked it, so Arturo has not learned from it. It may still create follow-on work from it.
+Time          2026-08-17T03:49:55.949Z
+Id            cc1b4ea7-5b7d-484b-b57d-58953c589324
+
+◆ #5 · Task completed
+Task completed  task-1
+Time            2026-08-17T03:49:55.948Z
+Id              724906e7-72c4-4377-94f2-26cb2fb6aef4
+
+◆ #4 · Task started
+Task started  task-1
+Time          2026-08-17T03:49:50.111Z
+Id            77222533-802a-43bc-9600-d7d83249e448
+
+◆ #3 · Task queued
+Task queued for Order Preparation Analyst: task-1
+Time          2026-08-17T03:49:49.712Z
+Id            7c89585c-34ac-47e6-905c-1b1cb53ed629
+
+◆ #2 · Worker registered
+Human worker registered  Warehouse Lead
+Time                     2026-08-17T03:49:16.455Z
+Id                       91a7fb24-3088-4053-a333-953a7419034b
+
+◆ #1 · Function started
+Function started  Order Preparation
+Time              2026-08-17T03:48:25.397Z
+Id                a2e6203c-7c0e-436f-bf01-9d8ec41aec0e
+
+arturo › /exit
+
+Arturo stopped.
+⠙

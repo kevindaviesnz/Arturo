@@ -1,0 +1,30 @@
+# Switch-free edit flows.
+/reset
+yes
+@timeout 60
+/enterprise
+1
+Wexley Legal
+Review software contracts for local firms.
+skip
+/function
+1
+Contract Review
+Review supplied client contracts.
+skip
+/enterprise
+4
+1
+Review software contracts for local firms and flag risky clauses before signature.
+/enterprise
+4
+3
+Wexley Legal Ltd
+/function
+3
+1
+Review supplied client contracts and flag every clause that limits our liability.
+/function
+4
+/enterprise
+5

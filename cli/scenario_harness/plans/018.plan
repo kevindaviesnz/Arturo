@@ -1,0 +1,38 @@
+# Scenario 018 — Financial compliance monitoring: governance + schedule + scoped Memory
+/reset
+yes
+/enterprise
+1
+Kowhai Financial
+Meet compliance obligations with evidence, scheduled review, and accountable sign-off.
+skip
+/function
+1
+Compliance Monitoring
+Frame compliance-monitoring checks and route findings to an accountable compliance officer.
+skip
+/add-human-worker
+Compliance Officer
+1
+skip
+/function start "Compliance Monitoring"
+@timeout 240
+@staff /staff
+/governance policy add "Compliance analysis requires officer sign-off" --effect require-approval --capability "analysis"
+/memory add "Never assert a control is effective without naming the evidence; list untested controls explicitly." --scope "Compliance Monitoring"
+/schedule add "Review this week's compliance exceptions and list those needing officer escalation, labelling assumptions." --every friday --at "15:00" --timezone "Pacific/Auckland" --function "Compliance Monitoring"
+/schedule list
+/task
+1
+Using synthetic assumptions only, draft a monthly AML transaction-monitoring review checklist: thresholds to review, false-positive handling, escalation criteria, evidence to retain, and controls that remain untested. Do not claim access to real transactions or customer data.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK_ID}}
+@wait 55
+/tasks
+/task inspect {{TASK_ID}}
+/health "Compliance Monitoring"
+/timeline

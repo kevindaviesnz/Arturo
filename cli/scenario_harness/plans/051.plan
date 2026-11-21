@@ -1,0 +1,180 @@
+# Scenario 051 — Architecture practice artefact round trip: three Humans, exact-version review, a document out and back
+/reset
+yes
+/enterprise
+1
+Harbourstone Architects
+Turn client instructions into reviewed specification versions with a named person accountable for every decision.
+skip
+/function
+1
+Design Documentation
+Produce and keep current the reviewed specification versions a project needs.
+skip
+/add-human-worker
+Principal Architect
+1
+skip
+/add-human-worker
+Technical Lead
+4
+2
+skip
+/add-human-worker
+Client Liaison
+3
+skip
+/workers
+/function start "Design Documentation"
+@timeout 240
+@staff /staff
+@note A document arrives from outside. Arturo records its path, size and hash; it never copies the file.
+/artefact
+1
+Client brief
+3
+./scenario_harness/assets/hs-client-brief.txt
+3
+Received from the client outside Arturo.
+@note Re-checking a file against what Arturo recorded needs no id typed at all.
+/artefact
+7
+/task
+1
+Analyse the supplied client brief and list every requirement it states, every decision it leaves open, and the information still needed before a specification can be written.
+2
+1
+@cap BRIEF_TASK {(task-[0-9]+)}
+skip
+@wait 8
+/tasks
+/approve
+@wait 50
+/task inspect {{BRIEF_TASK}}
+@note The Technical Lead writes the specification outside Arturo, then attaches the file.
+/artefact
+1
+Outline specification
+3
+./scenario_harness/assets/hs-outline-spec-v1.txt
+2
+skip
+@note Sending it fixes who decides. The author cannot then decide on their own work.
+/artefact
+3
+2
+1
+Check the structure and temporary-works clauses.
+/artefact review artefact-2@1 --decision revise --as "Technical Lead" --notes "Attempting to sign off my own specification."
+/artefact
+4
+1
+3
+Clause 2 opens a wall with no temporary support stated. Add a temporary-works clause and re-issue.
+/artefact
+2
+2
+./scenario_harness/assets/hs-outline-spec-v2.txt
+2
+Added the temporary-works clause.
+/artefact
+3
+2
+1
+Re-review the temporary-works clause.
+/artefact
+4
+1
+1
+Temporary works now stated; approved to issue for structural review.
+/artefact
+6
+2
+@note The approved version leaves the practice in a person's hands. Arturo sends nothing and emails nobody.
+/create-human-task
+Send the approved outline specification to the consulting engineer and bring their written comments back.
+1
+3
+@cap ISSUE_TASK {(human-task-[0-9]+)}
+2
+/human-tasks
+@note Only the person it was assigned to can close it.
+/complete-human-task {{ISSUE_TASK}} "Sent it." --as "Principal Architect"
+@note What comes back is a new document, recorded against the very task that asked for it.
+/artefact
+1
+Structural review comments
+2
+./scenario_harness/assets/hs-structural-review.txt
+3
+1
+Returned by the consulting engineer; not produced by Arturo.
+/complete-human-task
+Issued specification v2 and returned the engineer's written comments.
+artefact-3@1
+/human-task {{ISSUE_TASK}}
+@note This Task reads both documents, and is held until the returned comments are accepted.
+/task
+1
+Analyse the returned structural review comments against the approved specification version and list every clause they contradict, every clause they confirm, and what must change.
+2
+artefact-2@2,artefact-3@1
+@cap RECONCILE {(task-[0-9]+)}
+artefact-3@1
+/tasks
+/artefact
+3
+2
+1
+Accept the engineer's comments into the record before any work is done against them.
+/artefact
+4
+1
+1
+Accepted as the engineer's comments. Arturo has not verified them.
+@wait 8
+/tasks
+/approve
+@wait 50
+/task inspect {{RECONCILE}}
+@note The pack goes to the planning authority, and their conditions come back the same way.
+/create-human-task
+Submit the approved specification and bring back the authority's written conditions.
+1
+3
+@cap CONSENT_TASK {(human-task-[0-9]+)}
+2
+/artefact
+1
+Consent conditions
+6
+./scenario_harness/assets/hs-consent-conditions.txt
+3
+1
+Issued by the authority. Arturo submitted nothing.
+/complete-human-task
+Consent conditions returned.
+artefact-4@1
+@note The conditions force a third version. Approving v2 did not approve it: it starts unreviewed.
+/artefact
+2
+2
+./scenario_harness/assets/hs-outline-spec-v3.txt
+2
+Amended for the consent conditions: tree protection, matching brickwork, rooflight not visible from the street.
+/artefact
+3
+2
+1
+Check that every consent condition is reflected.
+/artefact
+4
+1
+1
+All three conditions reflected; approved.
+/artefact
+6
+2
+/artefacts
+/workers
+/timeline

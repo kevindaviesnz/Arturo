@@ -1,0 +1,34 @@
+# Scenario 015 — HR policy drafting with a scoped house style
+/reset
+yes
+/enterprise
+1
+Meridian People Co
+Write clear, fair HR policies that a qualified person always signs off.
+skip
+/function
+1
+Policy Drafting
+Draft plain-language HR policy outlines for human review, never presented as legal advice.
+skip
+/add-human-worker
+HR Director
+1
+skip
+/function start "Policy Drafting"
+@timeout 240
+@staff /staff
+/memory add "House style: plain language, no legal advice, always list where jurisdiction-specific legal review is required." --scope "Policy Drafting"
+/memory
+/task
+1
+Draft a plain-language outline of a remote-work policy: scope, eligibility, expectations, equipment, security, and the points that need jurisdiction-specific legal review. Do not give legal advice or cite specific statutes as settled.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK_ID}}
+@wait 50
+/task inspect {{TASK_ID}}
+/timeline

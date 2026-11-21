@@ -1,0 +1,66 @@
+# Blueprint 1 — Pure Digital Pipeline: AI to Arturo to AI, no person in the line.
+#
+# The second Task is created only once the first has finished, and is told to
+# continue from it — so Arturo carries the triage across rather than the
+# operator retyping it. That is the difference between a pipeline and two
+# unrelated Tasks that happen to be about the same customer.
+#
+# It matters more than it sounds. Written as two independent Tasks, the reply
+# was drafted with no sight of the triage and invented a confirmation nobody
+# had established: "our team has confirmed that the licence key was not sent to
+# you initially". Given the triage, it asks the customer for the details the
+# triage said were still needed.
+#
+# Deliberately has no Human Worker in it at all. Nothing here needs approval,
+# because nothing here reaches outside Arturo: the reply is drafted, not sent.
+/reset
+yes
+/clear
+@timeout 300
+/enterprise
+1
+Larkfield Software
+Answer customer support enquiries quickly and honestly.
+@blank
+/function
+1
+Support Triage
+Read an incoming support enquiry and decide what kind of problem it is and what is needed to resolve it.
+@blank
+/function
+1
+Customer Replies
+Turn a triaged support enquiry into a clear, friendly reply for the customer.
+@blank
+@staff /staff
+@note the Worker /staff proposed is generic. This is what makes it a specialist.
+/refine-worker
+1
+You are an expert customer support analyst specialising in software licensing and fulfilment enquiries. You classify an enquiry by its root cause, state precisely what must be confirmed before any remedy is offered, and never assert that a payment, a dispatch or a delivery happened unless it is in the evidence you were given.
+@note step one: the enquiry goes in
+/task
+1
+A customer writes that the licence key they paid for never arrived. Classify the enquiry, state what is needed to resolve it, and list what must be confirmed before anything is sent.
+1
+1
+@wait 150
+/tasks
+@note step two: created only now, and told to continue from step one
+/task
+1
+Draft the reply to the customer, using only what the triage established. Do not claim anything that was not confirmed.
+2
+2
+1
+@wait 150
+/tasks
+@note the reply exists as a draft, built on the triage. Nothing has left Arturo.
+@note the record, end to end: the list, both records in full, and the trail
+/tasks
+/task
+2
+2
+/task
+2
+1
+/timeline

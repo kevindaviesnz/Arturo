@@ -1,0 +1,94 @@
+# Scenario 049 — Integrated health system (capstone): four Functions, governance, schedule, memory, Artefact, delegation, human
+/reset
+yes
+/enterprise
+1
+Southern Health Network
+Coordinate care safely with evidence-led analysis and clinicians accountable for every clinical decision.
+skip
+/function
+1
+Demand Monitoring
+Frame demand and capacity signals and evidence gaps for system events.
+skip
+/function
+1
+Capacity Planning
+Frame capacity-planning options for accountable decisions.
+skip
+/function
+1
+Pathway Analysis
+Analyse synthetic patient-pathway scenarios for accountable review.
+skip
+/function
+1
+Quality Review
+Review exact documents and record signed decisions before use.
+skip
+/add-human-worker
+Clinical Director
+1
+skip
+/function start "Demand Monitoring"
+/function start "Capacity Planning"
+/function start "Pathway Analysis"
+/function start "Quality Review"
+@timeout 320
+@staff /staff
+@note A rule keyed on work Arturo can recognise in a typed Task, so it acts on the analysis below.
+/governance
+1
+Pathway analysis requires clinical sign-off
+1
+analysis
+1
+/governance
+2
+@note A house rule the Workers on one Function are given as context.
+/memory
+1
+Never assert clinical outcomes or identify a real patient; frame evidence, equity, and safety questions and require a clinician for every clinical decision.
+Pathway Analysis
+/schedule
+1
+Summarise capacity pressures and the decisions awaiting the clinical director, labelling assumptions.
+1
+06:30
+Demand Monitoring
+@note A draft protocol arrives from outside. Arturo records its path, size and hash; it never copies the file.
+/artefact
+1
+Draft escalation protocol
+3
+./scenario_harness/assets/escalation-protocol.txt
+Clinical Director
+Received for clinical review; not produced by Arturo.
+/artefact
+7
+@note One Function asks another for a bounded piece of work, and keeps accountability for it.
+/delegation
+1
+Capacity Planning
+Pathway Analysis
+@cap DELEG_TASK {Task\s+(task-[0-9]+)}
+Analyse a synthetic winter-surge scenario where emergency demand exceeds inpatient capacity: evidence needed, high-level flow and escalation options, equity and safety considerations, and the decisions a clinical director must make. No real patient data; no clinical instructions.
+/delegation
+2
+@wait 8
+/tasks
+/approve
+@wait 55
+/task inspect {{DELEG_TASK}}
+@note Only a person decides what happens next, and Arturo records who.
+/create-human-task
+Decide the escalation approach and what must be confirmed before any change, and whether the draft escalation protocol is fit to review. Do not change any pathway.
+1
+Clinical Director
+artefact-1@1
+/complete-human-task
+Confirm safe staffing and equity impact before escalating; send the draft protocol for exact-version clinical review. No pathway changed.
+1
+/human-tasks
+/functions
+/timeline

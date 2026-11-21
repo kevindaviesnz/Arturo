@@ -1,0 +1,920 @@
+Hold a bridging order pending a second supplier quote; confirm cash and storage limits before committing. No order placed.
+
+Completed by  Supply Planner
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 2 · Workers 6 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3825 session tokens
+arturo › /timeline
+
+◆ #43 · bot.input
+Bot submitted  /timeline
+Time           2026-07-31T03:55:24.465Z
+Id             7611e6f7-d6a8-4ab0-9b38-99c0598d73f7
+
+◆ #42 · bot.input
+Bot submitted  /human-task human-task-1
+Time           2026-07-31T03:55:18.654Z
+Id             3c3accda-c6da-4c11-8acb-86ffd1f4fba4
+
+◆ #41 · human_task.completed
+Human task human-task-1 completed by Supply Planner
+Time          2026-07-31T03:55:18.652Z
+Id            1e60ec34-95fb-4729-ae8c-496e62add98e
+
+◆ #40 · bot.input
+Bot submitted  /complete-human-task human-task-1 "Hold a bridging order pending a second supplier quote; confirm cash and storage limits before committing. No order placed." --as "Supply Planner"
+Time           2026-07-31T03:54:51.548Z
+Id             c6862fed-6130-4259-a464-a5049841cf21
+
+◆ #39 · human_task.created
+Human task created  human-task-1
+Time                2026-07-31T03:54:51.545Z
+Id                  5c7d309a-4e5a-4d50-8738-ed1c117cff9c
+
+◆ #38 · bot.input
+Bot submitted  /create-human-task "Ordering decision" "Decide the sourcing and ordering response and what must be confirmed before any purchase order. Do not place an order."
+Time           2026-07-31T03:54:24.438Z
+Id             6c0ec533-6746-4566-8e8a-e576d88812c4
+
+◆ #37 · bot.input
+Bot submitted  /task inspect task-1
+Time           2026-07-31T03:54:17.076Z
+Id             6640b6f8-4e59-466c-b822-5107edf5c040
+
+◆ #36 · runtime.outcome.measurement_skipped
+Unverified model synthesis from Task task-1 was excluded from Function learning and autonomous follow-up work.
+Time          2026-07-31T03:53:31.644Z
+Id            26217054-3179-4eb8-99da-3c164d04f235
+
+◆ #35 · delegation.completed
+Delegation completed  Task task-1 from Supplier Analysis returned to Demand Planning
+Time                  2026-07-31T03:53:31.643Z
+Id                    8f45f657-9f5e-4098-ae44-9f382a3a62b1
+
+◆ #34 · task.completed
+Task completed  task-1
+Time            2026-07-31T03:53:31.642Z
+Id              be922c0e-6586-4a18-b0f3-cf49b8c4d55e
+
+
+  ● LIVE · Functions 2 · Workers 6 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3825 session tokens
+arturo › 
+◆ Bot finished
+38 lines typed, 1 refused — the script finished.
+1 decision in this run was signed by Arturo Bot (automated, not a person), not by a person.
+It is still registered, and shows in /workers, so those decisions still name someone.
+The terminal is yours again.
+
+  ● LIVE · Functions 2 · Workers 6 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3825 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear                                   
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 035 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 035 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 2 · Workers 6 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may approve governed work in this run.
+
+Anything it approves was signed by a script, not by a person. That is
+not human review, and the record says so: the name appears in the
+signed decision, in /approvals, in /approval-status and in /timeline.
+It is registered the moment it is first needed, not now: most runs
+open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is being driven by /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/035.plan.
+Nothing in this session was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         2
+Workers           6
+Tasks             1
+  Human Tasks       1
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 2 · Workers 6 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Application reset
+Application state has been reset.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Meridian Telecom NOC
+
+◆ What does it do?
+In one sentence, what does Meridian Telecom NOC exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+given up a lot of bad habits for you
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Keep the network up with evidence-led analysis and accountable human control of every change.
+
+◆ Anything more about it?
+Anything more worth knowing about Meridian Telecom NOC? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Meridian Telecom NOC
+Mission       Keep the network up with evidence-led analysis and accountable human control of every change.
+Description   (none)
+Status        active
+Created       2026-07-31T04:01:04.717Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Meridian Telecom NOC" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Fault Analysis
+
+◆ What should it do?
+In one sentence, what should "Fault Analysis" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Analyse synthetic network faults and prepare an accountable recommendation.
+
+◆ Anything more about it?
+Anything more worth knowing about "Fault Analysis"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               meridian-telecom-noc:fault-analysis
+Name             Fault Analysis
+Enterprise       Meridian Telecom NOC (enterprise-1)
+Objective        Analyse synthetic network faults and prepare an accountable recommendation.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-31T04:01:46.322Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Change Coordination
+
+◆ What should it do?
+In one sentence, what should "Change Coordination" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Prepare change options once a fault is analysed, for human approval.
+
+◆ Anything more about it?
+Anything more worth knowing about "Change Coordination"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               meridian-telecom-noc:change-coordination
+Name             Change Coordination
+Enterprise       Meridian Telecom NOC (enterprise-1)
+Objective        Prepare change options once a fault is analysed, for human approval.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-31T04:02:24.327Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Shift Lead
+
+◆ What will they do?
+What should Shift Lead be able to do? Pick one
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Shift Lead's email address?
+
+Arturo needs this before any governed step can email them. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Shift Lead is now on your team.
+Shift Lead can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Fault Analysis"
+
+◆ Function started
+Function
+  Fault Analysis
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Change Coordination"
+
+◆ Function started
+Function
+  Change Coordination
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout has no effect in bot mode — Arturo waits for each command to return rather than giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 3 AI Workers for Meridian Telecom NOC.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 2 kinds of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 3
+Fault Analysis Specialist
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Fault Analysis
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Fault Analysis Specialist? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › yes
+
+◆ Worker 2 of 3
+Change Coordination Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Change Coordination
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Change Coordination Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › yes
+
+◆ Worker 3 of 3
+Fault Analysis Advisor
+Role          Advisor
+Can do        General reasoning, Advice, Human Contact
+Would help    Fault Analysis
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Talk through options and suggest a way forward
+    · Answer a 'how should I…' question in plain terms
+
+Add Fault Analysis Advisor? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › yes
+
+◆ Staffing applied
+3 AI Workers added. 3 Function assignment(s) saved.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Change Coordination — Shift Lead
+  · Fault Analysis — Shift Lead
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing consequential runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › /event rule add --when task.completed --job "Fault Analysis" --publish "Fault analysed"
+
+◆ Event rule added
+ID                   event-rule-858bec8c-b125-4fdb-9012-6fd3b399fbcb
+When                 task.completed
+Enterprise           Meridian Telecom NOC
+Source Function      Fault Analysis
+Required capability  any
+Evidence gate        Completed Task
+Publishes            Fault analysed
+Status               enabled
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › /event rule list
+
+◆ Event rules
+1.
+   ID                   event-rule-858bec8c-b125-4fdb-9012-6fd3b399fbcb
+   When                 task.completed
+   Enterprise           Meridian Telecom NOC
+   Source Function      Fault Analysis
+   Required capability  any
+   Evidence gate        Completed Task
+   Publishes            Fault analysed
+   Status               enabled
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › Analyse a synthetic scenario where a regional link shows rising packet loss during peak hours: evidence needed, likely causes at a high level, customer-impact questions, and the change decisions a shift lead must make. Do not issue a network change.
+
+◆ Which Function should do this?
+Which one?
+
+1. Fault Analysis
+2. Change Coordination
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › 1
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Fault Analysis
+Selected worker    Fault Analysis Specialist
+Partial coverage   Fault Analysis Specialist does not hold research — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 20s.
+
+
+/tasks
+
+◆ Tasks
+1. Analyse a synthetic scenario where a regional link shows rising packet loss during peak hours: evidence needed, likely causes at a high level, customer-impact q...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Fault Analysis Specialist
+   Required capabilities  research, analysis
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 8s.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4539 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 55s.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                          Fault Analysis Specialist
+ID                              task-1
+Status                          Completed
+  (Finished.)
+Evidence                        Unverified model synthesis — excluded from autonomous learning
+Required capabilities           research, analysis
+Why this Worker                 Selected staffed Worker Fault Analysis Specialist for Fault Analysis. Best-available coverage: Fault Analysis Specialist does not hold research; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business                        Meridian Telecom NOC
+Task                            1 / 2
+Instruction                     Analyse a synthetic scenario where a regional link shows rising packet loss during peak hours: evidence needed, likely causes at a high level, customer-impact questions, and the change decisions a shift lead must make. Do not issue a network change.
+
+Evidence status                 UNVERIFIED MODEL SYNTHESIS
+External tools used             none
+
+Synthetic Network Fault Analysis
+
+Context: Meridian Telecom NOC, Fault Analysis function objective: Analyze synthetic network faults and prepare an accountable recommendation.
+
+Scenario
+
+Regional link shows rising packet loss during peak hours. This is causing disruptions to customer services.
+
+Evidence Needed
+
+To provide a comprehensive analysis, the following information would be required:
+
+–  Time-series data on packet loss rates
+–  Network topology diagram
+–  Device configuration details (e.g., routing tables, firewall rules)
+–  Performance monitoring metrics (e.g., latency, throughput)
+
+Likely Causes
+
+Based on general knowledge of network faults, possible causes for rising packet loss during peak hours could include:
+
+–  Congestion or oversubscription in the link
+–  Malfunctioning devices or interfaces
+–  Configuration errors or misconfigurations
+–  External interference or issues with neighboring networks
+
+Customer-Impact Questions
+
+To understand the impact on customers and make informed change decisions, the following questions should be addressed:
+
+–  Which services are affected by the packet loss?
+–  How many customers are impacted, and what is their expected level of service?
+–  Are there any specific protocols or applications experiencing issues?
+
+Change Decisions
+
+A shift lead must consider the following options to mitigate the issue:
+
+1. Perform network troubleshooting: Use tools like packet sniffers or network analyzers to identify the source of the packet loss.
+2. Adjust device configurations: Review and adjust router, switch, or firewall settings to optimize resource allocation and reduce congestion.
+3. Implement rate limiting: Apply rate limiting rules to prevent excessive traffic from entering the network during peak hours.
+4. Schedule maintenance window: Plan a scheduled maintenance window to perform necessary repairs or upgrades.
+
+Next Steps
+
+To proceed with analysis and recommendation, additional information would be required. If available, please provide:
+
+–  Time-series data on packet loss rates
+–  Network topology diagram
+–  Device configuration details
+
+Until then, this is the current state of the analysis.
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6060 session tokens
+arturo › /events
+
+◆ Events
+2026-07-31 04:00Z  Bot Input  · warn
+Bot submitted            /enterprise
+Event ID                 6bebedbb-a2cb-4bf9-8d88-e2243b1516c2
+
+2026-07-31 04:00Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 00cb8aa5-00ae-4eb3-ba73-cf58293e85de
+
+2026-07-31 04:00Z  Bot Input  · warn
+Bot submitted            Meridian Telecom NOC
+Event ID                 638fe761-1a47-44f1-965a-810f90d7f355
+
+2026-07-31 04:00Z  Bot Input  · warn
+Bot submitted            Keep the network up with evidence-led analysis and accountable human control of every change.
+Event ID                 c5f4c164-ef06-4419-ae1d-ea274b347e25
+
+2026-07-31 04:00Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 a7e2c476-bd4c-4bd8-9d71-24bca7ebc12c
+
+2026-07-31 04:01Z  Bot Input  · warn
+Bot submitted            /function
+Event ID                 d7cc15bf-6423-4ebf-b785-bd5a0d470ed0
+
+2026-07-31 04:01Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 3f62be72-e070-46f7-b12b-f19f2adc34f8
+
+2026-07-31 04:01Z  Bot Input  · warn
+Bot submitted            Fault Analysis
+Event ID                 7cea8864-ab9e-4c9e-8e29-5f8aaa015b4e
+
+2026-07-31 04:01Z  Bot Input  · warn
+Bot submitted            Analyse synthetic network faults and prepare an accountable recommendation.
+Event ID                 7b8367d8-b81e-4471-90f9-2e190afe18d8
+
+2026-07-31 04:01Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 4e3208fb-02c0-4e57-8b5b-3904e61fb00f
+
+2026-07-31 04:01Z  Bot Input  · warn
+Bot submitted            /function
+Event ID                 145a69fd-8b60-411d-a66a-c4d40b32dcb6
+
+2026-07-31 04:01Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 70e5c713-76d9-4273-a9bf-e70d755d90f6
+
+2026-07-31 04:02Z  Bot Input  · warn
+Bot submitted            Change Coordination
+Event ID                 95ccc0de-070a-40f7-a971-33544e5e7c51
+
+2026-07-31 04:02Z  Bot Input  · warn
+Bot submitted            Prepare change options once a fault is analysed, for human approval.
+Event ID                 3a5cd505-745e-4da2-b087-767ce31f26e8
+
+2026-07-31 04:02Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 f1cd3b39-5dab-45dc-bb75-ace6b36d5eb2
+
+2026-07-31 04:02Z  Bot Input  · warn
+Bot submitted            /add-human-worker
+Event ID                 f7585ccb-4f80-4343-a637-64426db55b21
+
+2026-07-31 04:02Z  Bot Input  · warn
+Bot submitted            Shift Lead
+Event ID                 0927d7ef-b112-43e8-9454-e4e5995c467a
+
+2026-07-31 04:02Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 6142f3b9-1210-449a-a6de-ff7171361b6e
+
+2026-07-31 04:02Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 93efb595-8cfc-4344-aaf4-11c683088131
+
+2026-07-31 04:02Z  Worker Registered  · success
+Human worker registered  Shift Lead
+Event ID                 732db11f-9da1-45da-bef3-dfe2f45e7c22
+
+2026-07-31 04:02Z  Bot Input  · warn
+Bot submitted            /function start "Fault Analysis"
+Event ID                 3edc748e-7562-4b38-af21-579732129671
+
+2026-07-31 04:02Z  Function Started  · success
+Function started         Fault Analysis
+Event ID                 8ddebbdc-ee52-42ed-bbbd-3e2336c4b9b6
+
+2026-07-31 04:02Z  Bot Input  · warn
+Bot submitted            /function start "Change Coordination"
+Event ID                 759f8177-48a3-4bdc-9fcd-8abdc6482252
+
+2026-07-31 04:03Z  Function Started  · success
+Function started         Change Coordination
+Event ID                 cb1f8ddc-3498-4db2-a2e4-368215179c05
+
+2026-07-31 04:03Z  Bot Input  · warn
+Bot submitted            /staff
+Event ID                 8f6e4b5d-faf8-4085-95aa-6eaea93933ad
+
+2026-07-31 04:03Z  Bot Input  · warn
+Bot submitted            /event rule add --when task.completed --task "Fault Analysis" --publish "Fault analysed"
+Event ID                 c4ca9fcd-107e-4be5-9bbc-5dbbed274c19
+
+2026-07-31 04:04Z  Event Rule Added  · success
+Event rule added         event-rule-858bec8c-b125-4fdb-9012-6fd3b399fbcb
+Event ID                 2bdcb7cc-2ae7-4938-b2d2-b1aa738e15de
+
+2026-07-31 04:04Z  Bot Input  · warn
+Bot submitted            /event rule list
+Event ID                 2224eff5-3fb7-4b17-8fe2-348d2de846c9
+
+2026-07-31 04:04Z  Bot Input  · warn
+Bot submitted            /task
+Event ID                 7db5dd53-a7f9-48bf-bdf9-087d0e571d59
+
+2026-07-31 04:04Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 d77fd51d-90c4-4779-89bc-61cab6fdeaa9
+
+2026-07-31 04:04Z  Bot Input  · warn
+Bot submitted            Analyse a synthetic scenario where a regional link shows rising packet loss during peak hours: evidence needed, likely causes at a high level, customer-impact questions, and the change decisions a shift lead must make. Do not issue a network change.
+Event ID                 f321baec-2ee0-4255-b913-71de5e6e749b
+
+2026-07-31 04:05Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 899c9489-30e0-4522-9599-dd8605212706
+
+2026-07-31 04:05Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 0509b105-b4ea-467b-ba47-f86d27a84d51
+
+2026-07-31 04:05Z  Job Queued  · info
+  Task queued for Fault Analysis Specialist: task-1
+Event ID                 73e5613b-7b6c-4754-910e-cc3bafd7d791
+
+2026-07-31 04:05Z  Bot Input  · warn
+Bot submitted            /tasks
+Event ID                 802a459e-2bad-411a-af02-da67fa1ac617
+
+2026-07-31 04:05Z  Bot Input  · warn
+Bot submitted            /approve task-1 --as "Arturo Bot (automated, not a person)"
+Event ID                 dc3fbafb-dfed-4e4e-b6dd-d59ee4c0f691
+
+2026-07-31 04:06Z  Approval Granted  · success
+  Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Event ID                 fd0d53bf-9a9b-4186-a82c-cbb6d37f3a5f
+
+2026-07-31 04:06Z  Task Started  · info
+Task started             task-1
+Event ID                 79918f24-ce34-421b-b788-91f37eec67f3
+
+2026-07-31 04:06Z  Task Completed  · success
+Task completed           task-1
+Event ID                 b073e96b-659d-4b61-873e-385369b0d233
+
+2026-07-31 04:06Z  Fault Analysed  · success
+Fault analysed — source  Fault Analysis — enterprise: Meridian Telecom NOC
+Event ID                 7a50c084-5f4d-40de-a01e-d1bf2a88e4e9
+
+2026-07-31 04:06Z  Worker Assigned  · success
+  Worker Fault Analysis Specialist assigned to Task task-2
+Event ID                 68740348-4197-4c4d-9f9d-3d4019dd4355
+
+2026-07-31 04:06Z  Task Created  · success
+  Function Change Coordination created Task from Fault analysed: Review fault analysis results for change coordination options and identify suitable alternatives.
+Event ID                 fcb72c6c-6907-4f52-ba0b-dda3bef2641d
+
+2026-07-31 04:06Z  Signal Evaluated  · info
+  Change Coordination evaluated Fault analysed: Fault analysed
+Event ID                 fca94442-d202-4282-b033-cb636dc1485e
+
+2026-07-31 04:06Z  Event Rule Published  · success
+  Event rule event-rule-858bec8c-b125-4fdb-9012-6fd3b399fbcb published Fault analysed from completed Task task-1
+Event ID                 bbed77e8-b846-40af-b1c9-2d2c3ea67c4c
+
+2026-07-31 04:07Z  Bot Input  · warn
+Bot submitted            /task inspect task-1
+Event ID                 1fb6c287-1d17-4fe3-883c-db7754552a69
+
+2026-07-31 04:07Z  Bot Input  · warn
+Bot submitted            /events
+Event ID                 92f42b1c-ac9b-401a-b490-a48d6de79a00
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6060 session tokens
+arturo › /timeline
+
+◆ #47 · bot.input
+Bot submitted  /timeline
+Time           2026-07-31T04:07:22.289Z
+Id             bee37d23-5cf2-4475-a7d9-17c54a1a8267
+
+◆ #46 · bot.input
+Bot submitted  /events
+Time           2026-07-31T04:07:13.516Z
+Id             92f42b1c-ac9b-401a-b490-a48d6de79a00
+
+◆ #45 · bot.input
+Bot submitted  /task inspect task-1
+Time           2026-07-31T04:07:04.876Z
+Id             1fb6c287-1d17-4fe3-883c-db7754552a69
+
+◆ #44 · event.rule.published
+Event rule event-rule-858bec8c-b125-4fdb-9012-6fd3b399fbcb published Fault analysed from completed Task task-1
+Time          2026-07-31T04:06:18.919Z
+Id            bbed77e8-b846-40af-b1c9-2d2c3ea67c4c
+
+◆ #43 · runtime.signal.evaluated
+Change Coordination evaluated Fault analysed: Fault analysed
+Time          2026-07-31T04:06:18.917Z
+Id            fca94442-d202-4282-b033-cb636dc1485e
+
+◆ #42 · task.created
+Function Change Coordination created Task from Fault analysed: Review fault analysis results for change coordination options and identify suitable alternatives.
+Time          2026-07-31T04:06:18.917Z
+Id            fcb72c6c-6907-4f52-ba0b-dda3bef2641d
+
+◆ #41 · worker.assigned
+Worker Fault Analysis Specialist assigned to Task task-2
+Time          2026-07-31T04:06:18.915Z
+Id            68740348-4197-4c4d-9f9d-3d4019dd4355
+
+◆ #40 · business.fault.analysed
+Fault analysed — source  Fault Analysis — enterprise: Meridian Telecom NOC
+Time                     2026-07-31T04:06:17.600Z
+Id                       7a50c084-5f4d-40de-a01e-d1bf2a88e4e9
+
+◆ #39 · task.completed
+Task completed  task-1
+Time            2026-07-31T04:06:17.599Z
+Id              b073e96b-659d-4b61-873e-385369b0d233
+
+◆ #38 · task.started
+Task started  task-1
+Time          2026-07-31T04:06:10.171Z
+Id            79918f24-ce34-421b-b788-91f37eec67f3
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6060 session tokens
+arturo › 
+◆ Bot finished
+39 lines typed, 0 refused — the script finished.
+1 decision in this run was signed by Arturo Bot (automated, not a person), not by a person.
+It is still registered, and shows in /workers, so those decisions still name someone.
+The terminal is yours again.
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6060 session tokens
+arturo › 

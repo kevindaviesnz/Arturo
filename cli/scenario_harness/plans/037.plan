@@ -1,0 +1,48 @@
+# Scenario 037 — Government benefits assessment: governance, scoped Memory, reject, human decision
+/reset
+yes
+/enterprise
+1
+Regional Support Agency
+Assess entitlements consistently and fairly, with a person accountable for every determination.
+skip
+/function
+1
+Entitlement Framing
+Frame entitlement-assessment questions and route determinations to an accountable case manager.
+skip
+/add-human-worker
+Case Manager
+1
+skip
+/function start "Entitlement Framing"
+@timeout 240
+@staff /staff
+/governance policy add "Entitlement analysis requires case-manager sign-off" --effect require-approval --capability "analysis"
+/memory add "Never determine entitlement or identify a real person; frame evidence needs, fairness checks, and appeal rights, and require a human for every determination." --scope "Entitlement Framing"
+/task
+1
+Analyse, using a fully synthetic and anonymised example only, how a hardship-grant request should be assessed as a process: evidence needed, eligibility questions, fairness and vulnerability considerations, appeal rights, and why a case manager must decide. Do not determine eligibility or identify anyone.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approval-status {{TASK_ID}}
+/reject {{TASK_ID}} "Example includes identifying details; reframe as an anonymised process before analysis."
+/task
+1
+Revised analysis, fully synthetic and anonymised: analyse only the assessment process, evidence needs, fairness checks, appeal rights, and the point a case manager must decide. No identities, no determination.
+1
+@wait 20
+@cap TASK2 {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK2}}
+@wait 55
+/task inspect {{TASK2}}
+@cap HTASK {(human-task-[0-9]+)}
+/create-human-task "Determination approach decision" "Decide what evidence and fairness checks a determination requires and how appeal rights are communicated. Do not determine entitlement."
+/complete-human-task {{HTASK}} "Require verified income and circumstances, a documented fairness check, and a written appeal path before any determination. Planning only." --as "Case Manager"
+/human-task {{HTASK}}
+/timeline

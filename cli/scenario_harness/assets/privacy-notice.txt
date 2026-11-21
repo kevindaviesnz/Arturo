@@ -1,0 +1,11 @@
+DRAFT PRIVACY NOTICE (synthetic sample for scenario testing)
+
+Who we are: Civic Trust, a community organisation.
+What we collect: name and email for our newsletter only.
+Why: to send the newsletter you asked for.
+Retention: until you unsubscribe, then deleted within 30 days.
+Your rights: access, correction, and deletion on request.
+Contact: privacy@example.org
+
+This is a synthetic sample. It is not legal advice and must be reviewed by a
+qualified person before any real use.

@@ -1,0 +1,382 @@
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+arturo › /enterprise
+◆ Please select an option:
+1. Set up a new business
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Name:
+
+arturo › Kid Edu
+◆ Mission:
+
+arturo › Publish educational articles on complex topics, written for young children.
+◆ Description:
+
+arturo › 
+◆ Enterprise created
+ID            enterprise-1
+Name          Kid Edu
+Mission       Publish educational articles on complex topics, written for young children.
+Description   (none)
+Status        active
+Created       17 August 2026
+
+Run /next "Kid Edu" to create this Enterprise's ongoing Functions, or /function to add one yourself.
+
+arturo › /function
+◆ Please select an option:
+1. Add a new Function
+2. Start one running
+3. Look at a Function you've set up
+4. Change a Function's details
+5. See all your Functions
+6. Go back
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Name (eg 'Accounts', 'Product marketing'):
+
+arturo › Article Writing
+◆ Objective:
+
+arturo › Turn a requested topic into a clear, age-appropriate article draft.
+◆ Description:
+
+arturo › 
+◆ Function created
+To inspect enter /function inspect "Article Writing"
+
+Run /staff to add Workers.
+
+arturo › /function
+◆ Please select an option:
+1. Add a new Function
+2. Start one running
+3. Look at a Function you've set up
+4. Change a Function's details
+5. See all your Functions
+6. Go back
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Name (eg 'Accounts', 'Product marketing'):
+
+arturo › Editorial Review
+◆ Objective:
+
+arturo › Whenever an article is drafted, check that draft for accuracy, reading level and tone, and record what must change before it is published.
+◆ Description:
+
+arturo › 
+◆ Function created
+To inspect enter /function inspect "Editorial Review"
+
+Run /staff to add Workers.
+
+arturo › /staff
+◆ Arturo suggests three AI Workers for Kid Edu.
+
+◆ Worker one of three
+Article Writing Creator
+Role          Creator
+Can do        General reasoning, Writing, Human Contact
+Would help    Article Writing
+
+Add Article Writing Creator? Reply yes to add, no to skip, or ESC to stop.
+
+arturo › yes
+◆ Worker two of three
+Editorial Review Reviewer
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Editorial Review
+
+Add Editorial Review Reviewer? Reply yes to add, no to skip, or ESC to stop.
+
+arturo › yes
+◆ Worker three of three
+Article Writing Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Article Writing
+Note          Arturo added this one to fill a gap — worth a look.
+
+Add Article Writing Analyst? Reply yes to add, no to skip, or ESC to stop.
+
+arturo › yes
+◆ Staffing applied
+Three AI Workers added, and put to work on two Functions.
+
+Before this business can do that work, two Functions still need a person who can approve, or their work will block with nobody able to approve it:
+  · Article Writing
+  · Editorial Review
+
+Add that person with /add-human-worker — it can be you. Once they're on
+the team, work waiting for sign-off shows under /approvals.
+
+Each Function only does the work you ask for directly. You can change this by entering:
+
+/event
+and choosing "Announce it automatically whenever work finishes"
+
+◆ What to do next:
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+arturo › /refine-worker
+◆ Refine a Worker
+Which one?
+
+1. Article Writing Creator
+2. Editorial Review Reviewer
+3. Article Writing Analyst
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ How should Article Writing Creator specialise?
+Type your instructions, or ESC to go back.
+
+For example   You are a softball coach who specialises in coaching softball for girls under 15. You have many years of experience and have played at top levels.
+
+arturo › You are an expert children's educational writer. You explain complex topics to six to eight year olds using concrete comparisons, short sentences and no jargon, and you never state as fact anything yo
+arturo › You are an expert children's educational writer. You explain complex topics to six to eight year olds using concrete comparisons, short sentences and no jargon, and you never state as fact anything you  could not source.
+◆ Worker refined
+Worker refined  Article Writing Creator
+
+Specialisation
+You are an expert children's educational writer. You explain complex topics to six to eight year olds using concrete comparisons, short sentences and no jargon, and you never state as fact anything you could not source.
+
+arturo › /add-human-worker
+◆ Name (eg Warehouse Lead):
+
+arturo › Editor in Chief
+◆ Responsibilities:
+1. Sign off sensitive work. If it's just you, this is you.
+2. Review work before it's delivered.
+3. Just do the tasks they're given.
+4. Something else — choose from the full list of roles.
+
+Reply with a number, or ESC to go back.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+
+arturo › 1
+◆ Email address:
+
+arturo › 
+◆ Human worker added
+Editor in Chief is now on your team.
+Editor in Chief can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+arturo › /functions
+◆ Functions
+1. Article Writing
+2. Editorial Review
+
+arturo › /event
+◆ Signals
+An Event is a signal that something happened, which other Functions can react to.
+
+1. Announce that something has happened
+2. Announce it automatically whenever work finishes
+3. See the automatic announcements
+4. Stop an automatic announcement
+
+Reply with a number, or ESC to go back.
+
+arturo › 2
+◆ Whose finished work should trigger it?
+Which one?
+
+1. Article Writing (Kid Edu)
+2. Editorial Review (Kid Edu)
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ What should it announce?
+When Article Writing finishes a piece of work, what should Arturo announce?
+
+For example   evidence-ready. Other Functions can then react to it.
+
+arturo › article drafted
+◆ Only for certain work?
+Should this fire for every finished task, or only some kinds?
+
+1. Every finished task
+2. Only human-contact work
+3. Only safety work
+4. Only backup work
+5. Only web-research work
+6. Only writing work
+7. Only research work
+8. Only review work
+9. Only analysis work
+10. Only conversion work
+11. Only advice work
+12. Only planning work
+13. Only coordination work
+14. Only monitoring work
+15. Only simulation work
+16. Only optimization work
+17. Only negotiation work
+18. Only coaching work
+19. Only email-draft work
+20. Only summarisation work
+21. Only human-review work
+22. Only execution work
+23. Only email-send work
+24. Only file-read work
+25. Only file-write work
+26. Only shell-read work
+27. Only shell-execute work
+28. Only web work
+29. Only llm work
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Event rule added
+ID                   event-rule-77a6fcfe-c2c4-4c73-903c-37f8cf4b2397
+When                 task.completed
+Enterprise           Kid Edu
+Source Function      Article Writing
+Required capability  any
+Evidence gate        Completed Task
+Publishes            article drafted
+Status               enabled
+
+arturo › /event
+◆ Signals
+An Event is a signal that something happened, which other Functions can react to.
+
+1. Announce that something has happened
+2. Announce it automatically whenever work finishes
+3. See the automatic announcements
+4. Stop an automatic announcement
+
+Reply with a number, or ESC to go back.
+
+arturo › 3
+◆ Event rules
+1.
+   ID                   event-rule-77a6fcfe-c2c4-4c73-903c-37f8cf4b2397
+   When                 task.completed
+   Enterprise           Kid Edu
+   Source Function      Article Writing
+   Required capability  any
+   Evidence gate        Completed Task
+   Publishes            article drafted
+   Status               enabled
+
+arturo › /task
+◆ Please select an option:
+1. Create a task
+2. Look at one task in full
+3. See all your tasks
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Description:
+
+arturo › Write a short article explaining how rainbows form, for six year olds.
+◆ Which Function should do this?
+Which one?
+
+1. Article Writing
+2. Editorial Review
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Does this task need anything else?
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Task created
+Task queued        task-1
+Selected Function  Article Writing
+Selected worker    Article Writing Analyst
+
+arturo › /tasks
+◆ Tasks
+1. Write a short article explaining how rainbows form, for six year olds.
+   ID              task-1
+   Status          Completed
+   Worker          Article Writing Analyst
+   Result preview  Hi there, young explorers! Today, we're going on an adventure to learn about something truly magical – rainbows! Do you know what happens when the sun shines through tiny drops of water in the air? It creates a beautiful rainbow that app...
+
+arturo › /timeline
+◆ #11 · Result not counted
+An AI model wrote the result of Task task-1 and nobody has checked it, so Arturo has not learned from it. It may still create follow-on work from it.
+Time          2026-08-17T04:18:26.512Z
+Id            74edfee9-2a59-46c8-bef2-d0f189af3eda
+
+◆ #10 · Event rule published
+Event rule event-rule-77a6fcfe-c2c4-4c73-903c-37f8cf4b2397 published article drafted from completed Task task-1
+Time          2026-08-17T04:18:26.512Z
+Id            f65793dc-b511-4ca2-ae73-5dafe189711d
+
+◆ #9 · Function checked whether work was needed
+Editorial Review evaluated article drafted: Signal lacks information on required changes to the draft before publication.
+Time          2026-08-17T04:18:26.511Z
+Id            88c37209-157b-4ceb-b3c5-5f8989c94420
+
+◆ #8 · Event published
+article drafted — source: Article Writing — enterprise: Kid Edu
+Time          2026-08-17T04:18:24.750Z
+Id            706e6b20-09d6-4d81-9ecf-bdc2d684e74e
+
+◆ #7 · Task completed
+Task completed  task-1
+Time            2026-08-17T04:18:24.749Z
+Id              d6a1d308-7331-4b6a-bb3e-052330c011f0
+
+◆ #6 · Task started
+Task started  task-1
+Time          2026-08-17T04:18:18.857Z
+Id            dd59dc2a-1053-49f6-8a52-f27658fbf628
+
+◆ #5 · Task queued
+Task queued for Article Writing Analyst: task-1
+Time          2026-08-17T04:18:18.562Z
+Id            3c503328-69b1-48ab-9108-7016a1cc013a
+
+◆ #4 · Event rule added
+Event rule added  event-rule-77a6fcfe-c2c4-4c73-903c-37f8cf4b2397
+Time              2026-08-17T04:17:57.444Z
+Id                31d6694e-d9cd-48c2-98ec-6f642a7f41c5
+
+◆ #3 · Worker registered
+Human worker registered  Editor in Chief
+Time                     2026-08-17T04:17:44.156Z
+Id                       b92966ad-f71a-404d-afc9-e052589380e1
+
+◆ #2 · Function started
+Function started  Editorial Review
+Time              2026-08-17T04:17:02.920Z
+Id                e198b7bf-7da3-45ef-973e-5d5f3f25dc7a
+
+arturo › /exit
+
+Arturo stopped.
+⠙

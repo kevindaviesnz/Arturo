@@ -1,0 +1,35 @@
+# Scenario 014 — SaaS support triage on a schedule
+/reset
+yes
+/enterprise
+1
+Larkfield Software
+Support customers quickly and honestly, with a person accountable for every judgement call.
+skip
+/function
+1
+Support Triage
+Turn inbound support signals into prioritised, evidence-aware triage for an accountable support lead.
+skip
+/add-human-worker
+Support Lead
+1
+skip
+/function start "Support Triage"
+@timeout 240
+@staff /staff
+/schedule add "Summarise overnight support tickets and flag those needing a same-day human reply, labelling every assumption." --every daily --at "08:30" --timezone "Pacific/Auckland" --function "Support Triage"
+/schedule list
+/task
+1
+Draft a triage rubric for inbound support tickets: severity levels, information needed from the customer, escalation criteria, and when a human must reply. Do not claim access to the ticket system or customer data.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK_ID}}
+@wait 50
+/tasks
+/task inspect {{TASK_ID}}
+/timeline

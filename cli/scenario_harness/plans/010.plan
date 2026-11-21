@@ -1,0 +1,41 @@
+# Scenario 010 — Security incident investigation (event + bounded task + human escalation)
+/reset
+yes
+/enterprise
+1
+Harbour Financial Group
+Investigate security concerns using verified evidence and controlled escalation.
+skip
+/function
+1
+Security Incident Investigation
+Triage security signals, identify evidence gaps, and prepare bounded investigation work without executing containment.
+skip
+/add-human-worker
+Incident Commander
+1
+skip
+/function start "Security Incident Investigation"
+@timeout 240
+@staff /staff
+/event publish "Customer database anomaly detected" --source "Security Incident Investigation" --enterprise "Harbour Financial Group"
+/tasks
+@note A running Function may or may not create work from an Event; create the bounded triage Task explicitly.
+/task
+1
+Using a synthetic alert only, prepare a triage plan for a suspected customer-database anomaly: known facts, hypotheses, evidence to request, severity criteria, customer-impact questions, and authorised decision points. Do not claim telemetry access or execute containment.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK_ID}}
+@wait 55
+/task inspect {{TASK_ID}}
+/events
+/health "Security Incident Investigation"
+@cap HTASK {(human-task-[0-9]+)}
+/create-human-task "Decide investigation escalation" "Review the synthetic investigation record. State what verified telemetry and authority are required before containment, notification, or customer-impact decisions."
+/complete-human-task {{HTASK}} "Escalate for authorised review; identity, endpoint, network, database, and customer-impact evidence remain required." --as "Incident Commander"
+/human-task {{HTASK}}
+/timeline

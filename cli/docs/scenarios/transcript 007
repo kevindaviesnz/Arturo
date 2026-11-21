@@ -1,0 +1,804 @@
+Policy        Automated containment is denied
+ID            policy-a25ea7f6-711f-47b0-868c-01fa025c19d8
+Effect        deny
+Match         capabilityId=execution
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3074 session tokens
+arturo › /timeline
+
+◆ #36 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-02T00:35:14.314Z
+Id             f3679a41-dfff-40fe-a645-0da92a9aa65c
+
+◆ #35 · Governance policy inspected
+Governance policy inspected  Automated containment is denied
+Time                         2026-08-02T00:35:14.312Z
+Id                           eddb2902-7226-40ee-a1df-7437f2ef0f8a
+
+◆ #34 · Bot typed a line
+Bot submitted  /governance policy inspect "Automated containment is denied"
+Time           2026-08-02T00:34:57.761Z
+Id             aa33ce29-cf33-4a73-9abe-ac77f3c56814
+
+◆ #33 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-02T00:34:44.771Z
+Id             8b0358b3-8778-49cc-b2a6-96787ceb7140
+
+◆ #32 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T00:34:39.082Z
+Id             ac1b5b4e-af7d-4687-af29-ae1a0fb1ccb8
+
+◆ #31 · Task completed
+Task completed  task-1
+Time            2026-08-02T00:22:50.522Z
+Id              85066091-28ba-4542-a225-bf35ae4433ed
+
+◆ #30 · Task started
+Task started  task-1
+Time          2026-08-02T00:22:42.616Z
+Id            9fdf030d-547a-4842-9115-c527aae1d2e7
+
+◆ #29 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-02T00:22:42.167Z
+Id            a8d0508e-4edb-4129-a588-350bf3685592
+
+◆ #28 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-02T00:22:28.216Z
+Id             407bd25c-ceff-423f-b79e-0ec0c53b6508
+
+◆ #27 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T00:22:15.576Z
+Id             2217ae40-83df-499f-83e7-7fb30b5e7a2a
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3074 session tokens
+arturo › 
+◆ Bot finished
+32 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3074 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 007 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 007 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/007.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           4
+Tasks             1
+  Human Tasks       0
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Pacific Climate Research Institute
+
+◆ What does it do?
+In one sentence, what does Pacific Climate Research Institute exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Maintain useful, transparent, and uncertainty-aware climate evidence briefings.
+
+◆ Anything more about it?
+Anything more worth knowing about Pacific Climate Research Institute? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Pacific Climate Research Institute
+Mission       Maintain useful, transparent, and uncertainty-aware climate evidence briefings.
+Description   (none)
+Status        active
+Created       2026-08-02T01:12:51.815Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Pacific Climate Research Institute" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Climate Evidence Synthesis
+
+◆ What should it do?
+In one sentence, what should "Climate Evidence Synthesis" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame coastal-risk evidence questions, distinguish supplied facts from uncertainty, and prepare work for scientific review.
+
+◆ Anything more about it?
+Anything more worth knowing about "Climate Evidence Synthesis"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               pacific-climate-research-institute:climate-evidence-synthesis
+Name             Climate Evidence Synthesis
+Enterprise       Pacific Climate Research Institute (enterprise-1)
+Objective        Frame coastal-risk evidence questions, distinguish supplied facts from uncertainty, and prepare work for scientific review.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-02T01:13:37.477Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Lead Scientist
+
+◆ What will they do?
+What should Lead Scientist be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Lead Scientist's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Lead Scientist is now on your team.
+Lead Scientist can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Climate Evidence Synthesis"
+
+◆ Function started
+Function
+  Climate Evidence Synthesis
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 4 AI Workers for Pacific Climate Research Institute.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 4
+Climate Evidence Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Climate Evidence Synthesis
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Climate Evidence Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2076 session tokens
+arturo › yes
+
+◆ Worker 2 of 4
+Research Coordinator
+Role          Coordinator
+Can do        General reasoning, Coordination, Human Contact
+Would help    Climate Evidence Synthesis
+
+For example, it could
+    · Keep the steps of a job in the right order
+    · Track several moving parts and what's next
+
+Add Research Coordinator? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2076 session tokens
+arturo › yes
+
+◆ Worker 3 of 4
+Climate Evidence Synthesis Guardian
+Role          Guardian
+Can do        General reasoning, Product Safety, Review, Human Contact
+Would help    Climate Evidence Synthesis
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Check whether something is safe to go ahead
+    · Flag risks before an action is taken
+
+Add Climate Evidence Synthesis Guardian? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2076 session tokens
+arturo › yes
+
+◆ Worker 4 of 4
+Climate Evidence Synthesis Researcher
+Role          Researcher
+Can do        General reasoning, Research, Web Research, Summarisation, Human Contact
+Would help    Climate Evidence Synthesis
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Find and summarise what's known about a topic
+    · Gather sources on a question and flag what's uncertain
+
+Add Climate Evidence Synthesis Researcher? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2076 session tokens
+arturo › yes
+
+◆ Staffing applied
+4 AI Workers added, and put to work on 4 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Climate Evidence Synthesis — Lead Scientist
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2076 session tokens
+arturo › /memory add "Briefings must distinguish observed evidence, model projections, assumptions, and unresolved uncertainty." --scope "Climate Evidence Synthesis"
+
+◆ Operational Memory added
+Briefings must distinguish observed evidence, model projections, assumptions, and unresolved uncertainty.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2076 session tokens
+arturo › /memory
+
+◆ What Arturo remembers
+Notes here are given to Workers as context on later work.
+
+1. Write something down
+2. See what is written down
+3. Remove a note
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2076 session tokens
+arturo › /event publish "Coastal flooding briefing requested" --source "Climate Evidence Synthesis" --enterprise "Pacific Climate Research Institute"
+
+◆ Event published
+Events
+
+2026-08-02 01:15Z  Coastal Flooding Briefing Requested  · success
+  Coastal flooding briefing requested — source: Climate Evidence Synthesis — enterprise: Pacific Climate Research Institute
+Event ID                    9a9857e4-96a3-4a62-b447-150be1f271b8
+
+Function evaluations
+
+Climate Evidence Synthesis  Task queued — Frame coastal-risk evidence questions based on current public information
+Reason                      New signal from Climate Evidence Synthesis regarding coastal flooding briefing
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › /tasks
+
+◆ Tasks
+1. Frame coastal-risk evidence questions based on current public information
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Required capabilities  safety, research, summarisation, review
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › 
+◆ Bot
+A running Function may or may not create work from an Event; create the bounded briefing Task explicitly.
+
+
+/task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › Frame the evidence questions for a coastal-flooding briefing for a specified New Zealand region: observed versus projected data needed, tide and storm-surge uncertainty, key assumptions, and what must be verified against primary sources. Do not invent figures or claim data access.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-2
+Selected Function  Climate Evidence Synthesis
+Selected worker    Climate Evidence Synthesis Researcher
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Frame coastal-risk evidence questions based on current public information
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Required capabilities  safety, research, summarisation, review
+
+2. Frame the evidence questions for a coastal-flooding briefing for a specified New Zealand region: observed versus projected data needed, tide and storm-surge unc...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Worker                 Climate Evidence Synthesis Researcher
+   Required capabilities  research
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 2 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker           None
+ID               task-1
+Status           Queued
+  (Waiting its turn to run.)
+Skills needed    safety, research, summarisation, review
+Why this Worker  Function Climate Evidence Synthesis is waiting for a Worker with safety, research, summarisation, review: New signal from Climate Evidence Synthesis regarding coastal flooding briefing
+Business         Pacific Climate Research Institute
+Task             1 / 2
+Instruction      Frame coastal-risk evidence questions based on current public information
+
+No output yet.
+
+
+  ● LIVE · Functions 1 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › /events
+
+◆ Events
+2026-08-02 01:12Z  Bot Input  · warn
+Bot submitted            /enterprise
+Event ID                 b6ebede1-0159-4433-87d2-e874c603d8c0
+
+2026-08-02 01:12Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 84599733-3d7d-48ea-971b-36dc9a1b5902
+
+2026-08-02 01:12Z  Bot Input  · warn
+Bot submitted            Pacific Climate Research Institute
+Event ID                 77071764-4647-430c-bab3-18ce1400df40
+
+2026-08-02 01:12Z  Bot Input  · warn
+Bot submitted            Maintain useful, transparent, and uncertainty-aware climate evidence briefings.
+Event ID                 bf6ed72c-627d-49a1-83e2-3595752e2a3d
+
+2026-08-02 01:12Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 9bb158cd-eadc-431a-b0b7-d1c81033572e
+
+2026-08-02 01:12Z  Bot Input  · warn
+Bot submitted            /function
+Event ID                 09d168eb-b22b-4642-8409-77b49bf58f82
+
+2026-08-02 01:13Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 59190e44-78b7-4cd4-8cb3-009d20a41aeb
+
+2026-08-02 01:13Z  Bot Input  · warn
+Bot submitted            Climate Evidence Synthesis
+Event ID                 c3e99433-919f-425f-9f58-3fa28c2f21c4
+
+2026-08-02 01:13Z  Bot Input  · warn
+Bot submitted            Frame coastal-risk evidence questions, distinguish supplied facts from uncertainty, and prepare work for scientific review.
+Event ID                 74d2d051-4e40-4396-b9bd-542cfedb6f0a
+
+2026-08-02 01:13Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 6173624d-6c72-4bb3-a215-d3fb85815bcc
+
+2026-08-02 01:13Z  Bot Input  · warn
+Bot submitted            /add-human-worker
+Event ID                 bc4cc5b7-70bb-4353-b402-723c30673f17
+
+2026-08-02 01:13Z  Bot Input  · warn
+Bot submitted            Lead Scientist
+Event ID                 1929be0c-c45d-4534-95dd-d7df5adb9fb6
+
+2026-08-02 01:13Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 5e9627bc-7044-48f3-a680-e6614f925df7
+
+2026-08-02 01:13Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 39a0b0f2-6ddb-4017-adf2-20bcddb051eb
+
+2026-08-02 01:14Z  Worker Registered  · success
+Human worker registered  Lead Scientist
+Event ID                 6c0abe64-c70e-481f-8dcf-b2012fe7e71c
+
+2026-08-02 01:14Z  Bot Input  · warn
+Bot submitted            /function start "Climate Evidence Synthesis"
+Event ID                 70534509-d865-4bb3-ac78-6fd2eb5197ea
+
+2026-08-02 01:14Z  Function Started  · success
+Function started         Climate Evidence Synthesis
+Event ID                 c2542ef6-908d-4328-9fe4-6ebb451f3e50
+
+2026-08-02 01:14Z  Bot Input  · warn
+Bot submitted            /staff
+Event ID                 2f2662f1-7903-4449-bf41-10d412de536c
+
+2026-08-02 01:15Z  Bot Input  · warn
+Bot submitted            /memory add "Briefings must distinguish observed evidence, model projections, assumptions, and unresolved uncertainty." --scope "Climate Evidence Synthesis"
+Event ID                 4844651f-6816-40c1-afa5-e0d01fdbcd5d
+
+2026-08-02 01:15Z  Memory Entry Added  · success
+Memory added             24d96913-082e-4a0f-b131-8ee4ac1fa3d3 · scope: pacific-climate-research-institute:climate-evidence-synthesis:runtime-1 · Briefings must distinguish observed evidence, model projections, assumptions, and unresolved uncertainty.
+Event ID                 bd175e96-9210-497d-abd8-59ebd6d9ed83
+
+2026-08-02 01:15Z  Bot Input  · warn
+Bot submitted            /memory
+Event ID                 057fb44d-ae6e-4e78-885d-9f98f051c90b
+
+2026-08-02 01:15Z  Bot Input  · warn
+Bot submitted            /event publish "Coastal flooding briefing requested" --source "Climate Evidence Synthesis" --enterprise "Pacific Climate Research Institute"
+Event ID                 e097ed26-ecda-41f8-83b7-319e8e209fb6
+
+2026-08-02 01:15Z  Coastal Flooding Briefing Requested  · success
+  Coastal flooding briefing requested — source: Climate Evidence Synthesis — enterprise: Pacific Climate Research Institute
+Event ID                 9a9857e4-96a3-4a62-b447-150be1f271b8
+
+2026-08-02 01:15Z  Task Created  · success
+  Function Climate Evidence Synthesis created Task from Coastal flooding briefing requested: Frame coastal-risk evidence questions based on current public information
+Event ID                 d0a6176c-f50b-445c-a4ee-6fb08fbac951
+
+2026-08-02 01:15Z  Signal Evaluated  · info
+  Climate Evidence Synthesis evaluated Coastal flooding briefing requested: New signal from Climate Evidence Synthesis regarding coastal flooding briefing
+Event ID                 e7f43de6-c041-4cf4-8757-bd2a53d63fa9
+
+2026-08-02 01:15Z  Bot Input  · warn
+Bot submitted            /tasks
+Event ID                 532441b4-0f6f-435f-8c3a-da12777720e8
+
+2026-08-02 01:16Z  Bot Input  · warn
+Bot submitted            /task
+Event ID                 a27c72f9-b755-4320-8485-5913c1ab6ca5
+
+2026-08-02 01:16Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 83900d75-924c-434d-bc8c-1458dcd21fe6
+
+2026-08-02 01:16Z  Bot Input  · warn
+Bot submitted            Frame the evidence questions for a coastal-flooding briefing for a specified New Zealand region: observed versus projected data needed, tide and storm-surge uncertainty, key assumptions, and what must be verified against primary sources. Do not invent figures or claim data access.
+Event ID                 1487734f-e9a7-49ac-9735-e279193497ce
+
+2026-08-02 01:16Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 d296598d-dee4-4059-ac39-7d72babe497c
+
+2026-08-02 01:17Z  Job Queued  · info
+  Task queued for Climate Evidence Synthesis Researcher: task-2
+Event ID                 3c3ac805-dc7f-400c-9a00-7a93aef2867f
+
+2026-08-02 01:17Z  Bot Input  · warn
+Bot submitted            /tasks
+Event ID                 9ba732a9-83d2-421d-a791-e56b9baa5ff8
+
+2026-08-02 01:17Z  Bot Input  · warn
+Bot submitted            /approve task-1 --as "Arturo Bot (automated, not a person)"
+Event ID                 de09f554-f512-4a90-b305-dec39f4a0ccf
+
+2026-08-02 01:17Z  Approval Granted  · success
+  Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Event ID                 c67fe866-a95e-4011-a0a7-402a4cefaeea
+
+2026-08-02 01:18Z  Bot Input  · warn
+Bot submitted            /task inspect task-1
+Event ID                 f7d5d557-27b7-4a09-93d7-1b20fcaf0fb0
+
+2026-08-02 01:18Z  Bot Input  · warn
+Bot submitted            /events
+Event ID                 cc17b79e-5f45-46a3-8535-b5cf6bdd014a
+
+
+  ● LIVE · Functions 1 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › /health "Climate Evidence Synthesis"
+
+◆ Health
+Function
+  Climate Evidence Synthesis
+
+Overall Health
+  Unknown
+
+Indicators
+  Tasks Completed          0/1 (0%)
+  Tasks Failed             0
+  Open Tasks               1
+  Outcomes Measured        0/0
+  Lessons Retained         0
+  Governed Criteria        0
+
+Trend
+  Stable
+
+
+  ● LIVE · Functions 1 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › /timeline
+
+◆ #39 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-02T01:19:14.090Z
+Id             86bc19c9-1fb3-491a-b110-b1b42c713157
+
+◆ #38 · Health updated
+Health updated  Climate Evidence Synthesis is Unknown
+Time            2026-08-02T01:19:14.087Z
+Id              d3e516e8-1aad-44c2-a94d-4feb3d65ea3f
+
+◆ #37 · Bot typed a line
+Bot submitted  /health "Climate Evidence Synthesis"
+Time           2026-08-02T01:19:02.947Z
+Id             a1933a85-c4df-4da7-a3ac-1b2967f41439
+
+◆ #36 · Bot typed a line
+Bot submitted  /events
+Time           2026-08-02T01:18:56.123Z
+Id             cc17b79e-5f45-46a3-8535-b5cf6bdd014a
+
+◆ #35 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-02T01:18:47.682Z
+Id             f7d5d557-27b7-4a09-93d7-1b20fcaf0fb0
+
+◆ #34 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-02T01:17:52.677Z
+Id            c67fe866-a95e-4011-a0a7-402a4cefaeea
+
+◆ #33 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-02T01:17:34.972Z
+Id             de09f554-f512-4a90-b305-dec39f4a0ccf
+
+◆ #32 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T01:17:21.589Z
+Id             9ba732a9-83d2-421d-a791-e56b9baa5ff8
+
+◆ #31 · Task queued
+Task queued for Climate Evidence Synthesis Researcher: task-2
+Time          2026-08-02T01:17:01.586Z
+Id            3c3ac805-dc7f-400c-9a00-7a93aef2867f
+
+◆ #30 · Bot typed a line
+Bot submitted  1
+Time           2026-08-02T01:16:55.920Z
+Id             d296598d-dee4-4059-ac39-7d72babe497c
+
+
+  ● LIVE · Functions 1 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › 
+◆ Bot finished
+36 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › 

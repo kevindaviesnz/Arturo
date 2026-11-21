@@ -1,0 +1,618 @@
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 4 · Workers 8 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may approve governed work in this run.
+
+Anything it approves was signed by a script, not by a person. That is
+not human review, and the record says so: the name appears in the
+signed decision, in /approvals, in /approval-status and in /timeline.
+It is registered the moment it is first needed, not now: most runs
+open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is being driven by /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/045.plan.
+Nothing in this session was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         4
+Workers           8
+Tasks             2
+  Human Tasks       1
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 4 · Workers 8 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Application reset
+Application state has been reset.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Rimu University Integrity
+
+◆ What does it do?
+In one sentence, what does Rimu University Integrity exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Uphold academic integrity fairly, with a person accountable for every finding.
+
+◆ Anything more about it?
+Anything more worth knowing about Rimu University Integrity? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Rimu University Integrity
+Mission       Uphold academic integrity fairly, with a person accountable for every finding.
+Description   (none)
+Status        active
+Created       2026-07-30T21:31:31.047Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Rimu University Integrity" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Integrity Review
+
+◆ What should it do?
+In one sentence, what should "Integrity Review" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame academic-integrity questions as fair process and route findings to an accountable panel chair.
+
+◆ Anything more about it?
+Anything more worth knowing about "Integrity Review"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               rimu-university-integrity:integrity-review
+Name             Integrity Review
+Enterprise       Rimu University Integrity (enterprise-1)
+Objective        Frame academic-integrity questions as fair process and route findings to an accountable panel chair.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-30T21:32:08.970Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Panel Chair
+
+◆ What will they do?
+What should Panel Chair be able to do? Pick one
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Panel Chair's email address?
+
+Arturo needs this before any governed step can email them. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Panel Chair is now on your team.
+Panel Chair can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Integrity Review"
+
+◆ Function started
+Function
+  Integrity Review
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout has no effect in bot mode — Arturo waits for each command to return rather than giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 2 AI Workers for Rimu University Integrity.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 2
+Integrity Review Team
+Role          Assistant
+Can do        General reasoning, Writing, Summarisation, Human Contact
+Would help    Integrity Review
+
+For example, it could
+    · Take a rough request and turn it into a tidy result
+    · Handle a small, well-defined task end to end
+
+Add Integrity Review Team? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › yes
+
+◆ Worker 2 of 2
+Integrity Review Guardian
+Role          Guardian
+Can do        General reasoning, Product Safety, Review, Human Contact
+Would help    Integrity Review
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Check whether something is safe to go ahead
+    · Flag risks before an action is taken
+
+Add Integrity Review Guardian? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › yes
+
+◆ Staffing applied
+2 AI Workers added. 2 Function assignment(s) saved.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Integrity Review — Panel Chair
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing consequential runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › /governance policy add "Integrity analysis requires chair sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Integrity analysis requires chair sign-off
+ID            policy-07ccb77f-c508-42da-866a-045a042e36af
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › /memory add "Never identify a real student or make a finding; frame process, evidence standards, and appeal rights, and require a human panel for every finding." --scope "Integrity Review"
+
+◆ Operational Memory added
+Never identify a real student or make a finding; frame process, evidence standards, and appeal rights, and require a human panel for every finding.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › Analyse, using a fully synthetic and anonymised example only, how a suspected-collusion case should be handled as fair process: evidence standards, the student's right to respond, proportionality, appeal rights, and why a panel must decide. Do not make a finding or identify anyone.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Integrity Review
+Selected worker    Integrity Review Guardian
+Partial coverage   Integrity Review Guardian does not hold research, analysis — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 20s.
+
+
+/tasks
+
+◆ Tasks
+1. Analyse, using a fully synthetic and anonymised example only, how a suspected-collusion case should be handled as fair process: evidence standards, the student'...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Integrity Review Guardian
+   Required capabilities  research, analysis
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 8s.
+
+
+/approval-status task-1
+
+◆ Approval status
+Task                task-1
+Status              pending
+Waiting because     Human approval required for Integrity Review, from the staffing plan you applied. (staffing-approval:rimu-university-integrity:integrity-review)
+Required approvals  1
+Current approvals   0
+
+No decisions recorded
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › /reject task-1 "Example includes identifying details; reframe as anonymised process before analysis." --as "Arturo Bot (automated, not a person)"
+
+◆ Rejection
+Rejection recorded  task-1
+Approval status     rejected
+Rejected by         Arturo Bot (automated, not a person)
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › Revised analysis, fully synthetic and anonymised: analyse only the fair-process steps, evidence standards, right to respond, proportionality, and appeal rights, and the point a panel must decide. No identities, no finding.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-2
+Selected Function  Integrity Review
+Selected worker    Integrity Review Guardian
+Partial coverage   Integrity Review Guardian does not hold research, analysis — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 20s.
+
+
+/tasks
+
+◆ Tasks
+1. Analyse, using a fully synthetic and anonymised example only, how a suspected-collusion case should be handled as fair process: evidence standards, the student'...
+   ID                     task-1
+   Status                 Failed
+   Worker                 Integrity Review Guardian
+   Required capabilities  research, analysis
+
+2. Revised analysis, fully synthetic and anonymised: analyse only the fair-process steps, evidence standards, right to respond, proportionality, and appeal rights,...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Worker                 Integrity Review Guardian
+   Required capabilities  research, analysis
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 8s.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    rejected
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 55s.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                 Integrity Review Guardian
+ID                     task-1
+Status                 Failed
+  (Didn't finish — see the error below.)
+Required capabilities  research, analysis
+Why this Worker        Inferred Function Integrity Review; selected its staffed Worker Integrity Review Guardian. Best-available coverage: Integrity Review Guardian does not hold research, analysis; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business               Rimu University Integrity
+Task                   1 / 2
+Instruction            Analyse, using a fully synthetic and anonymised example only, how a suspected-collusion case should be handled as fair process: evidence standards, the student's right to respond, proportionality, appeal rights, and why a panel must decide. Do not make a finding or identify anyone.
+
+No output yet.
+
+Error                  Approval chain rejected
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › /create-human-task "Process decision" "Decide the evidence standard and procedural safeguards a hearing requires, and how appeal rights are communicated. Do not make a finding."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=d007ef01dd0a0b1621015e5e172a113eebd763220154e9e836496eea6aea75ef
+
+Human task          human-task-1
+Status              open
+Title               Process decision
+Instructions
+Decide the evidence standard and procedural safeguards a hearing requires, and how appeal rights are communicated. Do not make a finding.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › /complete-human-task human-task-1 "Require a documented evidence standard, the student's right to respond, and a written appeal path before any hearing. Planning only." --as "Panel Chair"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Panel Chair
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Process decision
+Instructions
+Decide the evidence standard and procedural safeguards a hearing requires, and how appeal rights are communicated. Do not make a finding.
+Notes
+Require a documented evidence standard, the student's right to respond, and a written appeal path before any hearing. Planning only.
+
+Completed by  Panel Chair
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › /timeline
+
+◆ #46 · bot.input
+Bot submitted  /timeline
+Time           2026-07-30T21:39:54.338Z
+Id             5eef658a-6486-4718-994a-c185f3e52857
+
+◆ #45 · bot.input
+Bot submitted  /human-task human-task-1
+Time           2026-07-30T21:39:46.646Z
+Id             f30bb198-8e24-4418-9902-d6af9e0de36b
+
+◆ #44 · human_task.completed
+Human task human-task-1 completed by Panel Chair
+Time          2026-07-30T21:39:46.645Z
+Id            68beb182-19c2-4695-885a-3f56a3e8c90f
+
+◆ #43 · bot.input
+Bot submitted  /complete-human-task human-task-1 "Require a documented evidence standard, the student's right to respond, and a written appeal path before any hearing. Planning only." --as "Panel Chair"
+Time           2026-07-30T21:39:13.902Z
+Id             6ed0b0c8-2457-42c0-9ed3-66dd785ac255
+
+◆ #42 · human_task.created
+Human task created  human-task-1
+Time                2026-07-30T21:39:13.900Z
+Id                  14702253-566a-425f-91ab-c4a4cbd399c6
+
+◆ #41 · bot.input
+Bot submitted  /create-human-task "Process decision" "Decide the evidence standard and procedural safeguards a hearing requires, and how appeal rights are communicated. Do not make a finding."
+Time           2026-07-30T21:38:46.027Z
+Id             57e7c69c-f56f-4270-bdcb-5b7a55b7b4d5
+
+◆ #40 · bot.input
+Bot submitted  /task inspect task-1
+Time           2026-07-30T21:38:40.068Z
+Id             ab42ae0d-1c74-4b76-bd10-8b7d99934247
+
+× #39 · task.failed
+Task failed   task-1
+Time          2026-07-30T21:37:45.276Z
+Id            e0aad80c-e933-4377-b9ee-d6d684998693
+
+◆ #38 · task.approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-07-30T21:37:45.067Z
+Id            011924d8-9682-4c8b-9b07-767653d8731a
+
+◆ #37 · bot.input
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-07-30T21:37:26.919Z
+Id             f6533499-f14f-40db-bf77-780b53369b7a
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › 
+◆ Bot finished
+40 lines typed, 1 refused — the script finished.
+2 decisions in this run were signed by Arturo Bot (automated, not a person), not by a person.
+It is still registered, and shows in /workers, so those decisions still name someone.
+The terminal is yours again.
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 1976 session tokens
+arturo › 

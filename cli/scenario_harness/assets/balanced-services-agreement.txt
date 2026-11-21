@@ -1,0 +1,47 @@
+BALANCED SERVICES AGREEMENT (synthetic sample for demonstration)
+
+Parties: Tidewater Design Limited ("Supplier") and Kauri Street Bakery Limited
+("Client").
+
+1. Services. The Supplier will design and build a website for the Client as
+   described in Schedule 1, which is attached and forms part of this agreement.
+
+2. Term. This agreement starts on signing and continues until the Services are
+   complete or it is terminated under clause 9.
+
+3. Fees. The Client will pay NZ$18,000 plus GST. 50% is payable on signing and
+   50% on completion. "Completion" means the Client's written acceptance of the
+   website, which the Client must not unreasonably withhold.
+
+4. Liability. Each party's total liability to the other under this agreement is
+   limited to the fees paid or payable under it. Neither party limits its
+   liability for fraud.
+
+5. Intellectual property. On payment of the fees in full, all intellectual
+   property in the website passes to the Client. Each party keeps what it owned
+   before this agreement.
+
+6. Changes. The scope of the Services may be changed only by written agreement
+   signed by both parties, which must state any change to the fees or timing.
+
+7. Delay. Neither party is liable for delay caused by events beyond its
+   reasonable control, provided it tells the other party promptly and takes
+   reasonable steps to limit the delay.
+
+8. Payment default. Overdue amounts bear interest at 1% per month, and the
+   Supplier may suspend work on 10 working days' written notice while an amount
+   is overdue.
+
+9. Termination. Either party may terminate on 30 days' written notice. Either
+   party may terminate immediately if the other commits a material breach and
+   does not remedy it within 14 days of being asked to.
+
+10. Disputes. The parties will first try to resolve any dispute by discussion
+    between their directors, and then by mediation, before either starts court
+    proceedings.
+
+11. Governing law. This agreement is governed by New Zealand law and the New
+    Zealand courts have non-exclusive jurisdiction.
+
+This is a synthetic sample. The parties are invented. It is not legal advice
+and must be reviewed by a qualified person before any real use.

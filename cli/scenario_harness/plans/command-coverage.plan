@@ -1,0 +1,82 @@
+# The commands nothing else runs.
+#
+# An audit of /help against every plan found twelve commands no scenario ever
+# executed -- including /next and /suggest, which Arturo prints at the operator
+# the moment an Enterprise is created and the moment a Function is staffed. The
+# two commands a newcomer is most likely to type first were the two nothing
+# proved.
+#
+# This plan exists to run them, not to demonstrate a business. It is not a
+# blueprint and is not for filming.
+#
+# /start, /workflow and /run are deliberately absent: they moved to /help all
+# rather than be given coverage they had not earned.
+/reset
+yes
+/clear
+@timeout 300
+@note the reference lookups, which need nothing set up
+/archetypes
+/capabilities
+/enterprise
+1
+Halden Joinery
+Make and fit bespoke kitchen joinery.
+@blank
+@note /next: what Arturo tells you to run the moment an Enterprise exists
+@next /next
+/functions
+@note a Function of our own, so the rest does not depend on what the model proposed
+/function
+1
+Quote Preparation
+Turn a customer enquiry into a priced quote a joiner can build from.
+@blank
+@staff /staff
+@note /add-ai-worker by hand: a name, then a role by number
+/add-ai-worker
+Quote Estimator
+5
+/workers
+@note /refine-worker: narrowing what an existing Worker is for
+/refine-worker
+Quote Estimator
+Prices bespoke kitchen joinery from measurements and material choices.
+/workers
+@note /suggest: the first line of "What to do next" after /staff
+/suggest
+1
+@wait 150
+yes
+@wait 150
+/tasks
+@note /ask: the plain-English way in. It stops at a plan.
+/ask "Work out what a quote for a small galley kitchen should cover."
+@wait 150
+/tasks
+@note /web-search: governed, and fail-closed unless a provider is configured
+/web-search
+@note the human-task unhappy paths. First one, blocked.
+/add-human-worker
+Workshop Foreman
+3
+@blank
+/create-human-task
+Measure the customer's kitchen and record the wall runs, service positions and any out-of-square.
+1
+1
+/block-task
+The customer has not confirmed access. Nothing can be measured until they do.
+/human-tasks
+@note a second, sent back for revision. Two are eligible now, so it asks which.
+/create-human-task
+Photograph the existing units before they are removed.
+1
+1
+/revise-task
+2
+Say which elevations you need and whether the appliances must be in shot.
+@note the record
+/human-tasks
+/tasks
+/timeline

@@ -1,0 +1,55 @@
+# Blueprint 6 — Event driven: one Function's finished work starts another's,
+# with nobody at the keyboard.
+#
+# This is the one to film first. Everything else shows Arturo routing work an
+# operator asked for; this shows work nobody asked for, at the moment it is
+# created. The last /timeline is the payload: Task completed, Event published,
+# Function evaluated, Task created — four records, one typed command.
+/reset
+yes
+/clear
+@timeout 300
+/enterprise
+1
+Kid Edu
+Publish educational articles on complex topics, written for young children.
+@blank
+/function
+1
+Article Writing
+Turn a requested topic into a clear, age-appropriate article draft.
+@blank
+/function
+1
+Editorial Review
+Whenever an article is drafted, check that draft for accuracy, reading level and tone, and record what must change before it is published.
+@blank
+@staff /staff
+@note the Worker /staff proposed is generic. This is what makes it a specialist.
+/refine-worker
+1
+You are an expert children's educational writer. You explain complex topics to six to eight year olds using concrete comparisons, short sentences and no jargon, and you never state as fact anything you could not source.
+/add-human-worker
+Editor in Chief
+1
+@blank
+@note both Functions are staffed and running; nothing has been started by hand
+/functions
+@note now the rule: when Article Writing finishes, say so
+/event
+2
+1
+article drafted
+1
+/event
+3
+@note one typed command, and then nothing more from the operator
+/task
+1
+Write a short article explaining how rainbows form, for six year olds.
+1
+1
+@wait 150
+@note Editorial Review was never asked for this. It reacted.
+/tasks
+/timeline

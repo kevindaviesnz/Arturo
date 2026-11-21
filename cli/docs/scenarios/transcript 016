@@ -1,0 +1,684 @@
+Bot submitted  /timeline
+Time           2026-08-01T20:23:43.076Z
+Id             8c88c137-9cf1-45b2-a347-b7a2c36c6953
+
+◆ #41 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T20:23:35.744Z
+Id             b16a9614-b80d-4f80-8147-caf3b3b70eb1
+
+◆ #40 · Human task completed
+Human task human-task-1 completed by Information Officer
+Time          2026-08-01T20:23:35.742Z
+Id            05626f75-1710-4b14-b954-903d13913839
+
+◆ #39 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Scope accepted for search only. Personal data and third-party commercial terms need redaction review before any release; confirm the statutory deadline." --as "Information Officer"
+Time           2026-08-01T20:23:03.624Z
+Id             12ed4ef0-6b17-43eb-8fda-d84f37787528
+
+◆ #38 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T20:23:03.622Z
+Id                  a50a319d-fa77-464b-8c78-0671e1e3eb6b
+
+◆ #37 · Bot typed a line
+Bot submitted  /create-human-task "Decide FOI redaction approach" "Review the drafted scope. Decide which categories need redaction review, what must be withheld pending legal advice, and the statutory deadline. Do not release anything."
+Time           2026-08-01T20:22:29.738Z
+Id             92d2ed8a-f5d4-46d3-9a3e-eddfce5ac908
+
+◆ #36 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T20:22:23.411Z
+Id             58a0bca0-7a4b-4c46-8604-2659726d39fb
+
+◆ #35 · Result not counted
+An AI model wrote the result of Task task-1 and nobody has checked it, so Arturo has not learned from it and will not act on it by itself.
+Time          2026-08-01T20:21:34.732Z
+Id            8b6073e4-b886-41a7-8e06-bbfed8ca5d7b
+
+◆ #34 · Delegation completed
+Delegation completed  Task task-1 from FOI Intake returned to FOI Response
+Time                  2026-08-01T20:21:34.732Z
+Id                    04b6a0b4-6e27-4967-9837-591b970ed451
+
+◆ #33 · Task completed
+Task completed  task-1
+Time            2026-08-01T20:21:34.731Z
+Id              c7b2a463-b07e-47b7-a3cb-b496cfabe74c
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3535 session tokens
+arturo › 
+◆ Bot finished
+34 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3535 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear                                   
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 016 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 016 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/016.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         2
+Workers           3
+Tasks             1
+  Human Tasks       1
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Ironbark Manufacturing
+
+◆ What does it do?
+In one sentence, what does Ironbark Manufacturing exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Ship quality product with evidence-led checks and accountable sign-off.
+
+◆ Anything more about it?
+Anything more worth knowing about Ironbark Manufacturing? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Ironbark Manufacturing
+Mission       Ship quality product with evidence-led checks and accountable sign-off.
+Description   (none)
+Status        active
+Created       2026-08-01T20:32:20.324Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Ironbark Manufacturing" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Quality Review
+
+◆ What should it do?
+In one sentence, what should "Quality Review" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame quality-review checklists and route them to an accountable quality manager.
+
+◆ Anything more about it?
+Anything more worth knowing about "Quality Review"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               ironbark-manufacturing:quality-review
+Name             Quality Review
+Enterprise       Ironbark Manufacturing (enterprise-1)
+Objective        Frame quality-review checklists and route them to an accountable quality manager.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T20:33:01.589Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Quality Manager
+
+◆ What will they do?
+What should Quality Manager be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Quality Manager's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Quality Manager is now on your team.
+Quality Manager can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Quality Review"
+
+◆ Function started
+Function
+  Quality Review
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 3 AI Workers for Ironbark Manufacturing.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 3
+Quality Review Specialist
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Quality Review
+
+For example, it could
+    · Check a piece of work for mistakes and gaps
+    · Give feedback on a draft before it goes out
+
+Add Quality Review Specialist? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › yes
+
+◆ Worker 2 of 3
+Property Research Assistant
+Role          Researcher
+Can do        General reasoning, Research, Web Research, Summarisation, Human Contact
+Would help    Quality Review
+
+For example, it could
+    · Find and summarise what's known about a topic
+    · Gather sources on a question and flag what's uncertain
+
+Add Property Research Assistant? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › yes
+
+◆ Worker 3 of 3
+Quality Review Observer
+Role          Observer
+Can do        General reasoning, Monitoring
+Would help    Quality Review
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Watch for changes and flag anything notable
+    · Keep an eye on activity and report what's happening
+
+Add Quality Review Observer? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › yes
+
+◆ Staffing applied
+3 AI Workers added, and put to work on 3 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Quality Review — Quality Manager
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › /governance policy add "Quality analysis requires manager sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Quality analysis requires manager sign-off
+ID            policy-3f39894e-b2eb-4df0-802a-8caff4764ee5
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › /governance policy list
+
+◆ Governance policies
+1. Human approval required for Quality Review, from the staffing plan you applied.
+   ID            staffing-approval:ironbark-manufacturing:quality-review
+   Effect        require-approval · Match: businessFunctionId=ironbark-manufacturing:quality-review · Scope: organization:enterprise-1
+2. Quality analysis requires manager sign-off
+   ID            policy-3f39894e-b2eb-4df0-802a-8caff4764ee5
+   Effect        require-approval · Match: capabilityId=analysis · Scope: organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › Using synthetic assumptions only, draft an incoming-goods inspection checklist for a batch of aluminium fittings: sampling approach, dimensions to verify, surface-defect criteria, documentation needed, and reasons a human must sign off a rejection. Do not claim access to real batch data.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Quality Review
+Selected worker    Quality Review Observer
+Partial coverage   Quality Review Observer does not hold review — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Using synthetic assumptions only, draft an incoming-goods inspection checklist for a batch of aluminium fittings: sampling approach, dimensions to verify, surfa...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Quality Review Observer
+   Required capabilities  monitoring, review
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approval-status task-1
+
+◆ Approval status
+Task                task-1
+Status              pending
+Waiting because     Human approval required for Quality Review, from the staffing plan you applied. (staffing-approval:ironbark-manufacturing:quality-review)
+Required approvals  1
+Current approvals   0
+
+No decisions recorded
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › /reject task-1 "Sampling plan is not tied to a batch size or an accepted quality level." --as "Arturo Bot (automated, not a person)"
+
+◆ Rejection
+Rejection recorded  task-1
+Approval status     rejected
+Rejected by         Arturo Bot (automated, not a person)
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › Revised: draft an incoming-goods inspection checklist for a 500-unit batch of aluminium fittings at AQL 1.0, listing sample size, dimensions to verify, surface-defect criteria, documentation, and human sign-off points. Synthetic assumptions only.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-2
+Selected Function  Quality Review
+Selected worker    Quality Review Observer
+Partial coverage   Quality Review Observer does not hold review — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Using synthetic assumptions only, draft an incoming-goods inspection checklist for a batch of aluminium fittings: sampling approach, dimensions to verify, surfa...
+   ID                     task-1
+   Status                 Failed
+   Worker                 Quality Review Observer
+   Required capabilities  monitoring, review
+
+2. Revised: draft an incoming-goods inspection checklist for a 500-unit batch of aluminium fittings at AQL 1.0, listing sample size, dimensions to verify, surface-...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Worker                 Quality Review Observer
+   Required capabilities  monitoring, review
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    rejected
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 50s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Using synthetic assumptions only, draft an incoming-goods inspection checklist for a batch of aluminium fittings: sampling approach, dimensions to verify, surfa...
+   ID                     task-1
+   Status                 Failed
+   Worker                 Quality Review Observer
+   Required capabilities  monitoring, review
+
+2. Revised: draft an incoming-goods inspection checklist for a 500-unit batch of aluminium fittings at AQL 1.0, listing sample size, dimensions to verify, surface-...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Worker                 Quality Review Observer
+   Required capabilities  monitoring, review
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › /task inspect task-1
+
+◆ Task detail
+Worker           Quality Review Observer
+ID               task-1
+Status           Failed
+  (Didn't finish — see the error below.)
+Skills needed    monitoring, review
+Why this Worker  Inferred Function Quality Review; selected its staffed Worker Quality Review Observer. Best-available coverage: Quality Review Observer does not hold review; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business         Ironbark Manufacturing
+Task             1 / 2
+Instruction      Using synthetic assumptions only, draft an incoming-goods inspection checklist for a batch of aluminium fittings: sampling approach, dimensions to verify, surface-defect criteria, documentation needed, and reasons a human must sign off a rejection. Do not claim access to real batch data.
+
+No output yet.
+
+Error            Approval chain rejected
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › /timeline
+
+◆ #42 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T20:39:40.255Z
+Id             506dbc25-4b2a-4897-9e59-212edd304d12
+
+◆ #41 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T20:39:27.192Z
+Id             05fc42df-5e63-4748-8fc1-cba555ca3864
+
+◆ #40 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T20:39:21.862Z
+Id             3b9e2231-af9b-400d-abc3-65c4c160d6ba
+
+× #39 · Task failed
+Task failed   task-1
+Time          2026-08-01T20:38:32.296Z
+Id            751ff579-8a36-499b-b0f6-bb6ea21bbdab
+
+◆ #38 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-01T20:38:31.860Z
+Id            37d5c4d9-15db-44bf-8b52-b06de7236175
+
+◆ #37 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-01T20:38:18.205Z
+Id             47bf45c4-caee-4633-972f-aa01e92f32d6
+
+◆ #36 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T20:38:03.875Z
+Id             2ab50083-af39-4f84-b7d4-908cbd5c1b3f
+
+◆ #35 · Task queued
+Task queued for Quality Review Observer: task-2
+Time          2026-08-01T20:37:43.872Z
+Id            f2c3492e-1ea4-4544-a515-403039222482
+
+◆ #34 · Bot typed a line
+Bot submitted  1
+Time           2026-08-01T20:37:39.665Z
+Id             c53065cf-979e-407a-ac3b-e9d0c7e2eb55
+
+◆ #33 · Bot typed a line
+Bot submitted  Revised: draft an incoming-goods inspection checklist for a 500-unit batch of aluminium fittings at AQL 1.0, listing sample size, dimensions to verify, surface-defect criteria, documentation, and human sign-off points. Synthetic assumptions only.
+Time           2026-08-01T20:37:05.637Z
+Id             18089bb0-4423-4840-b0c5-65bf0a4d765c
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › 
+◆ Bot finished
+39 lines typed, 1 turned down — the script finished.
+2 decisions in this run were signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › 

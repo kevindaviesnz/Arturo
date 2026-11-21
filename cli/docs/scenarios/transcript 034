@@ -1,0 +1,699 @@
+Event ID                 1fb6c287-1d17-4fe3-883c-db7754552a69
+
+2026-07-31 04:07Z  Bot Input  · warn
+Bot submitted            /events
+Event ID                 92f42b1c-ac9b-401a-b490-a48d6de79a00
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6060 session tokens
+arturo › /timeline
+
+◆ #47 · bot.input
+Bot submitted  /timeline
+Time           2026-07-31T04:07:22.289Z
+Id             bee37d23-5cf2-4475-a7d9-17c54a1a8267
+
+◆ #46 · bot.input
+Bot submitted  /events
+Time           2026-07-31T04:07:13.516Z
+Id             92f42b1c-ac9b-401a-b490-a48d6de79a00
+
+◆ #45 · bot.input
+Bot submitted  /task inspect task-1
+Time           2026-07-31T04:07:04.876Z
+Id             1fb6c287-1d17-4fe3-883c-db7754552a69
+
+◆ #44 · event.rule.published
+Event rule event-rule-858bec8c-b125-4fdb-9012-6fd3b399fbcb published Fault analysed from completed Task task-1
+Time          2026-07-31T04:06:18.919Z
+Id            bbed77e8-b846-40af-b1c9-2d2c3ea67c4c
+
+◆ #43 · runtime.signal.evaluated
+Change Coordination evaluated Fault analysed: Fault analysed
+Time          2026-07-31T04:06:18.917Z
+Id            fca94442-d202-4282-b033-cb636dc1485e
+
+◆ #42 · task.created
+Function Change Coordination created Task from Fault analysed: Review fault analysis results for change coordination options and identify suitable alternatives.
+Time          2026-07-31T04:06:18.917Z
+Id            fcb72c6c-6907-4f52-ba0b-dda3bef2641d
+
+◆ #41 · worker.assigned
+Worker Fault Analysis Specialist assigned to Task task-2
+Time          2026-07-31T04:06:18.915Z
+Id            68740348-4197-4c4d-9f9d-3d4019dd4355
+
+◆ #40 · business.fault.analysed
+Fault analysed — source  Fault Analysis — enterprise: Meridian Telecom NOC
+Time                     2026-07-31T04:06:17.600Z
+Id                       7a50c084-5f4d-40de-a01e-d1bf2a88e4e9
+
+◆ #39 · task.completed
+Task completed  task-1
+Time            2026-07-31T04:06:17.599Z
+Id              b073e96b-659d-4b61-873e-385369b0d233
+
+◆ #38 · task.started
+Task started  task-1
+Time          2026-07-31T04:06:10.171Z
+Id            79918f24-ce34-421b-b788-91f37eec67f3
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6060 session tokens
+arturo › 
+◆ Bot finished
+39 lines typed, 0 refused — the script finished.
+1 decision in this run was signed by Arturo Bot (automated, not a person), not by a person.
+It is still registered, and shows in /workers, so those decisions still name someone.
+The terminal is yours again.
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6060 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 034 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 034 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may approve governed work in this run.
+
+Anything it approves was signed by a script, not by a person. That is
+not human review, and the record says so: the name appears in the
+signed decision, in /approvals, in /approval-status and in /timeline.
+It is registered the moment it is first needed, not now: most runs
+open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is being driven by /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/034.plan.
+Nothing in this session was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         2
+Workers           5
+Tasks             2
+  Human Tasks       0
+  Approvals waiting 1
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Application reset
+Application state has been reset.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Beacon Platform Trust
+
+◆ What does it do?
+In one sentence, what does Beacon Platform Trust exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Moderate consistently and fairly, with a person accountable for every enforcement decision.
+
+◆ Anything more about it?
+Anything more worth knowing about Beacon Platform Trust? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Beacon Platform Trust
+Mission       Moderate consistently and fairly, with a person accountable for every enforcement decision.
+Description   (none)
+Status        active
+Created       2026-07-31T04:17:47.048Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Beacon Platform Trust" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Policy Framing
+
+◆ What should it do?
+In one sentence, what should "Policy Framing" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame content-moderation questions into process and evidence needs for an accountable lead.
+
+◆ Anything more about it?
+Anything more worth knowing about "Policy Framing"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               beacon-platform-trust:policy-framing
+Name             Policy Framing
+Enterprise       Beacon Platform Trust (enterprise-1)
+Objective        Frame content-moderation questions into process and evidence needs for an accountable lead.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-31T04:18:34.650Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Trust & Safety Lead
+
+◆ What will they do?
+What should Trust & Safety Lead be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Trust & Safety Lead's email address?
+
+Arturo needs this before any governed step can email them. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Trust & Safety Lead is now on your team.
+Trust & Safety Lead can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Policy Framing"
+
+◆ Function started
+Function
+  Policy Framing
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout has no effect in bot mode — Arturo waits for each command to return rather than giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 2 AI Workers for Beacon Platform Trust.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 2
+Policy Research Assistant
+Role          Researcher
+Can do        General reasoning, Research, Web Research, Summarisation, Human Contact
+Would help    Policy Framing
+
+For example, it could
+    · Find and summarise what's known about a topic
+    · Gather sources on a question and flag what's uncertain
+
+Add Policy Research Assistant? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › yes
+
+◆ Worker 2 of 2
+Policy Framing Assistant
+Role          Assistant
+Can do        General reasoning, Writing, Summarisation, Human Contact
+Would help    Policy Framing
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Take a rough request and turn it into a tidy result
+    · Handle a small, well-defined task end to end
+
+Add Policy Framing Assistant? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › yes
+
+◆ Staffing applied
+2 AI Workers added. 2 Function assignment(s) saved.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Policy Framing — Trust & Safety Lead
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing consequential runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › /governance policy add "Enforcement analysis requires lead sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Enforcement analysis requires lead sign-off
+ID            policy-50ff588a-ac9b-4189-9527-31fa141ab337
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › /memory add "Never identify a real user or make an enforcement decision; frame process, thresholds, and appeal rights, and require a human for every action." --scope "Policy Framing"
+
+◆ Operational Memory added
+Never identify a real user or make an enforcement decision; frame process, thresholds, and appeal rights, and require a human for every action.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › Analyse, using a fully synthetic and anonymised example only, the moderation process for suspected coordinated inauthentic behaviour: signals to gather, false-positive risks, proportionate responses, appeal rights, and why a human must decide. Do not identify anyone or decide enforcement.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Policy Framing
+Selected worker    Policy Framing Assistant
+Partial coverage   Policy Framing Assistant does not hold analysis — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 20s.
+
+
+/tasks
+
+◆ Tasks
+1. Analyse, using a fully synthetic and anonymised example only, the moderation process for suspected coordinated inauthentic behaviour: signals to gather, false-p...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Policy Framing Assistant
+   Required capabilities  analysis
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 8s.
+
+
+/approval-status task-1
+
+◆ Approval status
+Task                task-1
+Status              pending
+Waiting because     Human approval required for Policy Framing, from the staffing plan you applied. (staffing-approval:beacon-platform-trust:policy-framing)
+Required approvals  1
+Current approvals   0
+
+No decisions recorded
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › /reject task-1 "Example names a specific account pattern; reframe as anonymised process only before analysis." --as "Arturo Bot (automated, not a person)"
+
+◆ Rejection
+Rejection recorded  task-1
+Approval status     rejected
+Rejected by         Arturo Bot (automated, not a person)
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › Revised analysis, fully synthetic and anonymised: analyse only the moderation process steps, signal thresholds, proportionality ladder, appeal rights, and the point a human must decide. No identities, no enforcement.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-2
+Selected Function  Policy Framing
+Selected worker    Policy Framing Assistant
+Partial coverage   Policy Framing Assistant does not hold analysis — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 20s.
+
+
+/tasks
+
+◆ Tasks
+1. Analyse, using a fully synthetic and anonymised example only, the moderation process for suspected coordinated inauthentic behaviour: signals to gather, false-p...
+   ID                     task-1
+   Status                 Failed
+   Worker                 Policy Framing Assistant
+   Required capabilities  analysis
+
+2. Revised analysis, fully synthetic and anonymised: analyse only the moderation process steps, signal thresholds, proportionality ladder, appeal rights, and the p...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Worker                 Policy Framing Assistant
+   Required capabilities  analysis
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 8s.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    rejected
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 55s.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                 Policy Framing Assistant
+ID                     task-1
+Status                 Failed
+  (Didn't finish — see the error below.)
+Required capabilities  analysis
+Why this Worker        Inferred Function Policy Framing; selected its staffed Worker Policy Framing Assistant. Best-available coverage: Policy Framing Assistant does not hold analysis; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business               Beacon Platform Trust
+Task                   1 / 2
+Instruction            Analyse, using a fully synthetic and anonymised example only, the moderation process for suspected coordinated inauthentic behaviour: signals to gather, false-positive risks, proportionate responses, appeal rights, and why a human must decide. Do not identify anyone or decide enforcement.
+
+No output yet.
+
+Error                  Approval chain rejected
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › /create-human-task "Enforcement approach decision" "Decide the proportionate response ladder and what evidence and human review each step requires. Do not enforce against anyone."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=b8d98baa57b4ff607620a3c379b5d414461d6504e8b8b1e92681914be73470ab
+
+Human task          human-task-1
+Status              open
+Title               Enforcement approach decision
+Instructions
+Decide the proportionate response ladder and what evidence and human review each step requires. Do not enforce against anyone.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › /complete-human-task human-task-1 "Adopt a graduated response with human review before any account-level action, and a documented appeal path. Planning only; no enforcement authorised." --as "Trust & Safety Lead"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Trust & Safety Lead
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Enforcement approach decision
+Instructions
+Decide the proportionate response ladder and what evidence and human review each step requires. Do not enforce against anyone.
+Notes
+Adopt a graduated response with human review before any account-level action, and a documented appeal path. Planning only; no enforcement authorised.
+
+Completed by  Trust & Safety Lead
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › /timeline
+
+◆ #46 · bot.input
+Bot submitted  /timeline
+Time           2026-07-31T04:26:23.315Z
+Id             2b86b606-368d-4f3b-bc0b-d2e48100f960
+
+◆ #45 · bot.input
+Bot submitted  /human-task human-task-1
+Time           2026-07-31T04:26:17.094Z
+Id             6eed5414-ceff-4cf2-86de-f873fb1cbbf5
+
+◆ #44 · human_task.completed
+Human task human-task-1 completed by Trust & Safety Lead
+Time          2026-07-31T04:26:17.092Z
+Id            d0079c9f-4a79-4d25-a4d4-73a4e7300290
+
+◆ #43 · bot.input
+Bot submitted  /complete-human-task human-task-1 "Adopt a graduated response with human review before any account-level action, and a documented appeal path. Planning only; no enforcement authorised." --as "Trust & Safety Lead"
+Time           2026-07-31T04:25:42.922Z
+Id             6b84d2b9-df1c-4b8b-94ef-38438462fab1
+
+◆ #42 · human_task.created
+Human task created  human-task-1
+Time                2026-07-31T04:25:42.919Z
+Id                  cd07f40f-eab7-45be-9d4a-32bb7fd55bde
+
+◆ #41 · bot.input
+Bot submitted  /create-human-task "Enforcement approach decision" "Decide the proportionate response ladder and what evidence and human review each step requires. Do not enforce against anyone."
+Time           2026-07-31T04:25:12.900Z
+Id             f81b57a9-6abd-428a-a34d-d2651ac1bb8d
+
+◆ #40 · bot.input
+Bot submitted  /task inspect task-1
+Time           2026-07-31T04:25:04.146Z
+Id             b03df1fb-d2d1-4f99-b935-0cb584452c35
+
+× #39 · task.failed
+Task failed   task-1
+Time          2026-07-31T04:24:09.234Z
+Id            a9a9eb80-cd06-4bd5-90e2-b3c013e16a19
+
+◆ #38 · task.approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-07-31T04:24:09.142Z
+Id            ab2b48c5-48c2-48b8-ba4a-875f5a7de4ee
+
+◆ #37 · bot.input
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-07-31T04:23:55.577Z
+Id             95d9924a-48b8-4524-aaef-b4554d917276
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › 
+◆ Bot finished
+40 lines typed, 1 refused — the script finished.
+2 decisions in this run were signed by Arturo Bot (automated, not a person), not by a person.
+It is still registered, and shows in /workers, so those decisions still name someone.
+The terminal is yours again.
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 1858 session tokens
+arturo › 

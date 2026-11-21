@@ -1,0 +1,10 @@
+# The model is chosen only with /model, and holds.
+/reset
+yes
+@timeout 60
+/model
+/add-ai-worker "Contract Analyst" --archetype analyst --model local
+/add-ai-worker "Contract Analyst" --archetype analyst
+/workers inspect "Contract Analyst"
+/models
+/help add-ai-worker

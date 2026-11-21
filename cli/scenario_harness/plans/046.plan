@@ -1,0 +1,60 @@
+# Scenario 046 — Waste management route planning: schedule, delegation, human decision
+/reset
+yes
+/enterprise
+1
+Greenline Waste
+Collect efficiently with evidence-led planning and accountable human decisions on every route change.
+skip
+/function
+1
+Route Planning
+Frame route-planning questions and route change decisions to an accountable operations lead.
+skip
+/function
+1
+Demand Analysis
+Analyse synthetic collection-demand scenarios for accountable review.
+skip
+/add-human-worker
+Operations Lead
+1
+skip
+/function start "Route Planning"
+/function start "Demand Analysis"
+@timeout 280
+@staff /staff
+@note A weekly schedule asks which day, so there is no way to leave it unsaid.
+/schedule
+1
+List the routes under pressure this week and the changes awaiting an operations decision, labelling assumptions.
+2
+monday
+06:00
+Route Planning
+@note One Function asks another for a bounded piece of work, and keeps accountability for it.
+/delegation
+1
+Route Planning
+Demand Analysis
+@cap TASK_ID {Task\s+(task-[0-9]+)}
+Analyse a synthetic scenario where a growing suburb pushes one collection route over capacity: evidence needed, high-level rebalancing options, service and cost trade-offs, and the decisions an operations lead must make. Do not commit a route change.
+/delegation
+2
+/delegation
+3
+1
+@wait 8
+/tasks
+/approve
+@wait 55
+/task inspect {{TASK_ID}}
+@note Only a person decides what happens next, and Arturo records who.
+/create-human-task
+Decide whether a route change proceeds and what must be confirmed first. Do not commit a change.
+1
+Operations Lead
+/complete-human-task
+Trial a split on the affected route after confirming crew, vehicle, and cost limits; review service impact before making it permanent. No change committed.
+/human-tasks
+/timeline

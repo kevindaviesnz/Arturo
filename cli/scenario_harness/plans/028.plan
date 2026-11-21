@@ -1,0 +1,42 @@
+# Scenario 028 — Editorial pipeline: event rule chains one completed Task to the next
+/reset
+yes
+/enterprise
+1
+Lumen Press
+Publish carefully checked work, with an editor accountable for what runs.
+skip
+/function
+1
+Manuscript Assessment
+Assess submitted manuscripts and prepare an accountable editorial recommendation.
+skip
+/function
+1
+Production Readiness
+Prepare production-readiness checks once a manuscript is assessed.
+skip
+/add-human-worker
+Commissioning Editor
+1
+skip
+/function start "Manuscript Assessment"
+/function start "Production Readiness"
+@timeout 260
+@staff /staff
+/event rule add --when task.completed --job "Manuscript Assessment" --publish "Manuscript assessed"
+/event rule list
+/task
+1
+Assess a synthetic non-fiction manuscript proposal: audience fit, evidence and sourcing quality, structural issues, risks (legal, factual), and the editorial decisions a human must make. Do not accept or reject; synthetic proposal only.
+1
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK_ID}}
+@wait 55
+/task inspect {{TASK_ID}}
+/events
+/timeline

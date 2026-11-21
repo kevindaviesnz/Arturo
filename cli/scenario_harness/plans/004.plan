@@ -1,0 +1,34 @@
+# Scenario 004 — Insurance claim triage (canonical; demonstrates /reject)
+/reset
+yes
+/enterprise
+1
+Southern Shield Insurance
+Handle claims consistently, fairly, and using sufficient evidence.
+skip
+/function
+1
+Claim Triage
+Triage reported claims into evidence needs and coverage questions for an accountable claims manager.
+skip
+/add-human-worker
+Claims Manager
+1
+skip
+/function start "Claim Triage"
+@timeout 240
+@staff /staff
+/task
+1
+Using synthetic assumptions only, triage a reported storm-damage claim involving a roof, internal ceiling water damage, and a fence. List evidence required, possible coverage questions, vulnerability and fair-treatment considerations, and reasons an authorised claims manager must decide the next step. Do not decide coverage or allege fraud.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approvals
+/approval-status {{TASK_ID}}
+/reject {{TASK_ID}} "Policy wording, loss evidence, and customer-impact information are missing."
+/approval-status {{TASK_ID}}
+/tasks
+/timeline

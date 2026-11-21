@@ -1,0 +1,650 @@
+  Lessons Retained         0
+  Governed Criteria        0
+
+Trend
+  Stable
+
+
+  ● LIVE · Functions 1 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › /timeline
+
+◆ #39 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-02T01:19:14.090Z
+Id             86bc19c9-1fb3-491a-b110-b1b42c713157
+
+◆ #38 · Health updated
+Health updated  Climate Evidence Synthesis is Unknown
+Time            2026-08-02T01:19:14.087Z
+Id              d3e516e8-1aad-44c2-a94d-4feb3d65ea3f
+
+◆ #37 · Bot typed a line
+Bot submitted  /health "Climate Evidence Synthesis"
+Time           2026-08-02T01:19:02.947Z
+Id             a1933a85-c4df-4da7-a3ac-1b2967f41439
+
+◆ #36 · Bot typed a line
+Bot submitted  /events
+Time           2026-08-02T01:18:56.123Z
+Id             cc17b79e-5f45-46a3-8535-b5cf6bdd014a
+
+◆ #35 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-02T01:18:47.682Z
+Id             f7d5d557-27b7-4a09-93d7-1b20fcaf0fb0
+
+◆ #34 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-02T01:17:52.677Z
+Id            c67fe866-a95e-4011-a0a7-402a4cefaeea
+
+◆ #33 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-02T01:17:34.972Z
+Id             de09f554-f512-4a90-b305-dec39f4a0ccf
+
+◆ #32 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T01:17:21.589Z
+Id             9ba732a9-83d2-421d-a791-e56b9baa5ff8
+
+◆ #31 · Task queued
+Task queued for Climate Evidence Synthesis Researcher: task-2
+Time          2026-08-02T01:17:01.586Z
+Id            3c3ac805-dc7f-400c-9a00-7a93aef2867f
+
+◆ #30 · Bot typed a line
+Bot submitted  1
+Time           2026-08-02T01:16:55.920Z
+Id             d296598d-dee4-4059-ac39-7d72babe497c
+
+
+  ● LIVE · Functions 1 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › 
+◆ Bot finished
+36 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 2441 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear                                   
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 006 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 006 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/006.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           6
+Tasks             2
+  Human Tasks       0
+  Approvals waiting 1
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /model-routing
+
+◆ Model routing
+Mode                  local-first
+Local tier            ollama/llama3.2:latest
+External escalation   enabled
+External tier         gemini/gemini-2.5-flash
+External call budget  9
+External calls used   0
+External calls left   9
+Configuration ready   yes
+Approved aliases      local-default=ollama/llama3.2:latest, premium-default=gemini/gemini-2.5-flash (external), premium-reasoning=gemini/gemini-2.5-flash (external)
+Automatic trigger     repeated structured-output validation failure only.
+Human-authorized /next and /staff model choices may use approved routes.
+Ordinary successful local responses do not escalate.
+Provider quota and availability are checked only when a request is made.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Harbour Capital Partners
+
+◆ What does it do?
+In one sentence, what does Harbour Capital Partners exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Make evidence-based investment decisions within mandate and risk appetite.
+
+◆ Anything more about it?
+Anything more worth knowing about Harbour Capital Partners? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Harbour Capital Partners
+Mission       Make evidence-based investment decisions within mandate and risk appetite.
+Description   (none)
+Status        active
+Created       2026-08-02T01:21:40.345Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Harbour Capital Partners" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Investment Assessment
+
+◆ What should it do?
+In one sentence, what should "Investment Assessment" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Build bounded diligence frameworks for candidate investments and route them to committee approval.
+
+◆ Anything more about it?
+Anything more worth knowing about "Investment Assessment"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               harbour-capital-partners:investment-assessment
+Name             Investment Assessment
+Enterprise       Harbour Capital Partners (enterprise-1)
+Objective        Build bounded diligence frameworks for candidate investments and route them to committee approval.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-02T01:22:19.795Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Investment Committee Chair
+
+◆ What will they do?
+What should Investment Committee Chair be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Investment Committee Chair's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Investment Committee Chair is now on your team.
+Investment Committee Chair can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Investment Assessment"
+
+◆ Function started
+Function
+  Investment Assessment
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 1 AI Worker for Harbour Capital Partners.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 1
+Investment Assessment Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Investment Assessment
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Investment Assessment Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › yes
+
+◆ Staffing applied
+1 AI Worker added, and put to work on 1 Function.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Investment Assessment — Investment Committee Chair
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › Using hypothetical inputs only, assess a software company described as fast-growing and currently unprofitable. Build a decision framework covering evidence needed, unit economics, cash runway, concentration, governance, downside cases, valuation uncertainty, mandate fit, and reasons not to invest. Do not recommend a trade.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Investment Assessment
+Selected worker    Investment Assessment Analyst
+Partial coverage   Investment Assessment Analyst does not hold review, advice — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Using hypothetical inputs only, assess a software company described as fast-growing and currently unprofitable. Build a decision framework covering evidence nee...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Investment Assessment Analyst
+   Required capabilities  review, advice
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approval-status task-1
+
+◆ Approval status
+Task                task-1
+Status              pending
+Waiting because     Human approval required for Investment Assessment, from the staffing plan you applied. (staffing-approval:harbour-capital-partners:investment-assessment)
+Required approvals  1
+Current approvals   0
+
+No decisions recorded
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › /approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 45s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Using hypothetical inputs only, assess a software company described as fast-growing and currently unprofitable. Build a decision framework covering evidence nee...
+   ID                     task-1
+   Status                 Completed
+   Worker                 Investment Assessment Analyst
+   Required capabilities  review, advice
+   Evidence               An AI model wrote it; nobody has checked it
+   Result preview         Evidence status: UNVERIFIED MODEL SYNTHESIS External tools used: none I. Executive Summary This report assesses the feasibility of investing in a fast-growing software company that is currently unprofitable. The framework outlines key ev...
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3190 session tokens
+arturo › /task inspect task-1
+
+◆ Task detail
+Worker                            Investment Assessment Analyst
+ID                                task-1
+Status                            Completed
+  (Finished.)
+Evidence                          Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed                     review, advice
+Why this Worker                   Inferred Function Investment Assessment; selected its staffed Worker Investment Assessment Analyst. Best-available coverage: Investment Assessment Analyst does not hold review, advice; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business                          Harbour Capital Partners
+Task                              1 / 1
+Instruction                       Using hypothetical inputs only, assess a software company described as fast-growing and currently unprofitable. Build a decision framework covering evidence needed, unit economics, cash runway, concentration, governance, downside cases, valuation uncertainty, mandate fit, and reasons not to invest. Do not recommend a trade.
+
+Where this came from              an AI model wrote it. Nobody has checked it
+Looked anything up                no
+
+I. Executive Summary
+
+This report assesses the feasibility of investing in a fast-growing software company that is currently unprofitable. The framework outlines key evidence needed, unit economics, cash runway, concentration, governance, downside cases, valuation uncertainty, mandate fit, and reasons not to invest.
+
+II. Decision Framework
+
+A. Evidence Needed
+
+1. Revenue growth rate: Historical revenue data to demonstrate consistent growth.
+2. Customer acquisition costs (CAC): Costs associated with acquiring new customers.
+3. Customer lifetime value (CLV): Estimated average revenue generated by a customer over their lifetime.
+4. Operating expenses: Breakdown of fixed and variable costs.
+5. Cash flow statements: Historical cash flow data to assess liquidity.
+
+B. Unit Economics
+
+1. Gross margin percentage: Revenue minus cost of goods sold, divided by revenue.
+2. Customer retention rate: Percentage of customers retained over time.
+3. Average deal size: Total revenue generated from individual deals.
+
+C. Cash Runway
+
+1. Current cash balance: Liquid assets available to the company.
+2. Projected burn rate: Estimated monthly expenses.
+3. Funding requirements: Amounts needed to sustain operations for a specific period.
+
+D. Concentration
+
+1. Customer dependence: Percentage of customers accounting for more than 50% of revenue.
+2. Product dependence: Percentage of products accounting for more than 50% of revenue.
+3. Geographic concentration: Percentage of revenue generated from a single region or country.
+
+E. Governance
+
+1. Board composition: Number and diversity of directors.
+2. Executive compensation structure: Alignment between executive pay and company performance.
+3. Shareholder structure: Ownership percentage by individual investors, institutions, or employees.
+
+F. Downside Cases
+
+1. Market saturation: Potential for market oversaturation.
+2. Competition: Strengths and weaknesses of competitors.
+3. Regulatory risks: Compliance requirements and potential regulatory changes.
+
+G. Valuation Uncertainty
+
+1. Comparable companies analysis: Comparison to similar publicly traded companies.
+2. Financial projections: Assumptions about future revenue growth and expenses.
+3. Industry trends: Impacts of industry-specific trends on the company's valuation.
+
+H. Mandate Fit
+
+I. Reasons Not to Invest
+
+Please complete the following sections with actual data and assumptions as necessary:
+
+1. Current cash balance: $____________
+2. Projected burn rate (monthly): $____________
+3. Funding requirements (duration in months): ___________
+4. Revenue growth rate (year-over-year): ____________________
+5. Customer acquisition costs (average deal size): $_________
+6. Customer lifetime value (estimated): $____________
+7. Gross margin percentage: _________%
+8. Average deal size: $_________
+9. Customer retention rate (percentage): __________%
+10. Operating expenses (breakdown of fixed and variable): ____________________
+
+Please fill in the missing data points with actual values or assumptions. This framework will be used to assess the feasibility of investing in this software company.
+
+Signature Block
+
+This report was prepared by [Your Name] on behalf of Harbour Capital Partners. Please sign below to indicate completion.
+
+[Insert Signature]
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3190 session tokens
+arturo › /timeline
+
+◆ #33 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-02T01:26:17.170Z
+Id             70dbab1c-9266-4241-9eea-cb2879875d30
+
+◆ #32 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-02T01:26:08.450Z
+Id             d037c5ff-5fd6-4708-a429-d52bbd046f08
+
+◆ #31 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T01:26:03.721Z
+Id             2f63d345-c465-4917-a406-45d4f59b01bd
+
+◆ #30 · Task completed
+Task completed  task-1
+Time            2026-08-02T01:25:29.740Z
+Id              5e6ad7a3-0482-4339-a528-e7e6a7bee199
+
+◆ #29 · Task started
+Task started  task-1
+Time          2026-08-02T01:25:18.990Z
+Id            6abe4e55-df3f-44d5-8aba-85966e34c3bf
+
+◆ #28 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-02T01:25:18.717Z
+Id            16168721-f00f-4b2a-b285-f3a9718daba9
+
+◆ #27 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-02T01:25:05.945Z
+Id             36a2b43a-0e56-429c-99f4-7353dc1e7a32
+
+◆ #26 · Bot typed a line
+Bot submitted  /approval-status task-1
+Time           2026-08-02T01:24:55.878Z
+Id             2574034f-ba9e-427f-b1c1-b64784fa7ada
+
+◆ #25 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T01:24:42.500Z
+Id             649a8b33-bab4-4e94-9338-3c7b13bbe0c4
+
+◆ #24 · Task queued
+Task queued for Investment Assessment Analyst: task-1
+Time          2026-08-02T01:24:22.496Z
+Id            7f873df3-0a72-4092-8d8a-d033af60f84e
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3190 session tokens
+arturo › 
+◆ Bot finished
+30 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3190 session tokens
+arturo › 

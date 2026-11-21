@@ -1,0 +1,42 @@
+# Scenario 038 — Pharmaceutical manufacturing deviation review: governance, delegation, human sign-off
+/reset
+yes
+/enterprise
+1
+Amberton Pharma
+Make medicines to specification, with a quality person accountable for every deviation decision.
+skip
+/function
+1
+Deviation Management
+Frame manufacturing-deviation questions and route disposition decisions to an accountable quality lead.
+skip
+/function
+1
+Quality Analysis
+Analyse synthetic deviation scenarios for accountable review.
+skip
+/add-human-worker
+Quality Lead
+1
+skip
+/function start "Deviation Management"
+/function start "Quality Analysis"
+@timeout 280
+@staff /staff
+/governance policy add "Deviation analysis requires quality sign-off" --effect require-approval --capability "analysis"
+/memory add "Never assert a batch is fit for release; frame the investigation, impact, and CAPA questions and require a qualified quality decision." --scope "Deviation Management"
+@cap DELEG_ID {ID\s+([0-9a-f-]{36})}
+/delegation request "Analyse a synthetic deviation where a tablet-compression batch shows an out-of-trend weight variation: evidence and investigation steps needed, batch-impact questions, CAPA considerations, and the disposition decisions a quality lead must make. Do not release or reject the batch." --from "Deviation Management" --to "Quality Analysis"
+/delegation list
+@cap TASK_ID {Task\s+(task-[0-9]+)}
+/delegation inspect {{DELEG_ID}}
+@wait 8
+/approve {{TASK_ID}}
+@wait 55
+/task inspect {{TASK_ID}}
+@cap HTASK {(human-task-[0-9]+)}
+/create-human-task "Batch disposition decision" "Decide what the investigation must confirm before disposition and what CAPA is required. Do not release or reject the batch."
+/complete-human-task {{HTASK}} "Quarantine the batch pending a full investigation; confirm root cause and product impact before any disposition. No release authorised." --as "Quality Lead"
+/human-task {{HTASK}}
+/timeline

@@ -1,0 +1,11 @@
+SYNTHETIC BILL OF MATERIALS (fictional; for scenario testing only)
+
+Product: display stand (sample)
+1. Steel tube, 25mm, 6 lengths
+2. Base plate, 300x300mm, 1
+3. Fasteners, M6, 24
+4. Powder-coat finish, 1 unit area
+5. Flat-pack carton, 1
+
+No supplier prices, quantities-per-pack, or freight are included. All prices are
+missing and must be supplied separately. This is a synthetic sample, not a quote.

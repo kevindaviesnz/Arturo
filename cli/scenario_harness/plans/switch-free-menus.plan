@@ -1,0 +1,63 @@
+# Switch-free walkthrough of the guided menus.
+/reset
+yes
+@timeout 90
+/enterprise
+1
+Wexley Legal
+Review software contracts for local firms and flag risky clauses.
+skip
+/function
+1
+Contract Review
+Review supplied client contracts and flag risky clauses.
+skip
+/add-human-worker
+Kevin Davies
+1
+skip
+/memory
+1
+Our house style is short sentences and no legalese.
+1
+/memory
+2
+/governance
+1
+Anything that sends email needs my approval first.
+1
+1
+1
+/governance
+2
+/create-human-task
+Read the supplied contract and list every clause that limits our liability.
+1
+/human-tasks
+/complete-human-task
+Read it end to end; clauses 7 and 12 cap liability at one month of fees.
+/human-tasks
+/event
+2
+evidence-ready
+1
+/event
+3
+/artefact
+1
+Wexley master agreement
+2
+https://example.com/wexley.pdf
+/artefact
+2
+1
+/artefact
+3
+1
+1
+Checked against our standard terms; clauses 7 and 12 are acceptable.
+/artefacts
+/delegation
+/start-functions
+1
+/timeline

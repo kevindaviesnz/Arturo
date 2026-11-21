@@ -1,0 +1,36 @@
+# Scenario 009 — Therapeutic target assessment (delegation between staffed Functions)
+/reset
+yes
+/enterprise
+1
+NovaCure Therapeutics
+Evaluate therapeutic research directions with scientific caution and accountable oversight.
+skip
+/function
+1
+Evidence Synthesis
+Frame evidence requirements and uncertainty for nominated therapeutic targets.
+skip
+/function
+1
+Translational Assessment
+Integrate bounded scientific inputs into traceable research-option briefings.
+skip
+/add-human-worker
+Research Lead
+1
+skip
+/function start "Evidence Synthesis"
+/function start "Translational Assessment"
+@timeout 240
+@staff /staff
+@cap DELEG_ID {ID\s+([0-9a-f-]{36})}
+/delegation request "Prepare a non-operational evidence-gap map for hypothetical Target X, including mechanism uncertainty, contradictory evidence, safety unknowns, and sources that require verification" --from "Translational Assessment" --to "Evidence Synthesis"
+/delegation list
+@cap TASK_ID {Task\s+(task-[0-9]+)}
+/delegation inspect {{DELEG_ID}}
+@wait 8
+/approve {{TASK_ID}}
+@wait 55
+/task inspect {{TASK_ID}}
+/timeline

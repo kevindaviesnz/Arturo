@@ -1,0 +1,37 @@
+# Scenario 019 — Newsroom fact-check desk: draft, reject, approve, human editor sign-off
+/reset
+yes
+/enterprise
+1
+Meridian Newsroom
+Publish only what has been checked, with an editor accountable for every claim.
+skip
+/function
+1
+Fact Check Desk
+Turn draft claims into checkable questions and evidence gaps for an accountable editor.
+skip
+/add-human-worker
+Managing Editor
+1
+skip
+/function start "Fact Check Desk"
+@timeout 240
+@staff /staff
+/memory add "Separate what a source says from what is established; never present an unverified claim as fact." --scope "Fact Check Desk"
+/task
+1
+For a hypothetical local story claiming a new cycleway cut commute times by 30 percent, list the specific claims to verify, the primary sources and data needed, the caveats, and which statements must not run until checked. Do not assert any figure as verified.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK_ID}}
+@wait 55
+/task inspect {{TASK_ID}}
+@cap HTASK {(human-task-[0-9]+)}
+/create-human-task "Editor decision on publication readiness" "Decide whether the piece can proceed to editing, what must be independently verified first, and which claims are held. Do not authorise publication."
+/complete-human-task {{HTASK}} "Hold the 30 percent figure until the traffic dataset and methodology are verified; proceed to edit the rest with caveats." --as "Managing Editor"
+/human-task {{HTASK}}
+/timeline

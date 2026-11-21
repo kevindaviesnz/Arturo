@@ -1,0 +1,405 @@
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+arturo › /enterprise
+◆ Please select an option:
+1. Set up a new business
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Name:
+
+arturo › Larkfield Software
+◆ Mission:
+
+arturo › Answer customer support enquiries quickly and honestly.
+◆ Description:
+
+arturo › 
+◆ Enterprise created
+ID            enterprise-1
+Name          Larkfield Software
+Mission       Answer customer support enquiries quickly and honestly.
+Description   (none)
+Status        active
+Created       17 August 2026
+
+Run /next "Larkfield Software" to create this Enterprise's ongoing Functions, or /function to add one yourself.
+
+arturo › /function
+◆ Please select an option:
+1. Add a new Function
+2. Start one running
+3. Look at a Function you've set up
+4. Change a Function's details
+5. See all your Functions
+6. Go back
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Name (eg 'Accounts', 'Product marketing'):
+
+arturo › Support Triage
+◆ Objective:
+
+arturo › Read an incoming support enquiry and decide what kind of problem it is and what is needed to resolve it.
+◆ Description:
+
+arturo › 
+◆ Function created
+To inspect enter /function inspect "Support Triage"
+
+Run /staff to add Workers.
+
+arturo › /function
+◆ Please select an option:
+1. Add a new Function
+2. Start one running
+3. Look at a Function you've set up
+4. Change a Function's details
+5. See all your Functions
+6. Go back
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Name (eg 'Accounts', 'Product marketing'):
+
+arturo › Customer Replies
+◆ Objective:
+
+arturo › Turn a triaged support enquiry into a clear, friendly reply for the customer.
+◆ Description:
+
+arturo › 
+◆ Function created
+To inspect enter /function inspect "Customer Replies"
+
+Run /staff to add Workers.
+
+arturo › /staff
+◆ Arturo suggests two AI Workers for Larkfield Software.
+
+◆ Worker one of two
+support-triage-analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Customer Replies
+
+Add support-triage-analyst? Reply yes to add, no to skip, or ESC to stop.
+
+arturo › yes
+◆ Worker two of two
+customer-replies-analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Support Triage
+
+Add customer-replies-analyst? Reply yes to add, no to skip, or ESC to stop.
+
+arturo › yes
+◆ Staffing applied
+Two AI Workers added, and put to work on two Functions.
+
+Before this business can do that work, two Functions still need a person who can approve, or their work will block with nobody able to approve it:
+  · Support Triage
+  · Customer Replies
+
+Add that person with /add-human-worker — it can be you. Once they're on
+the team, work waiting for sign-off shows under /approvals.
+
+Each Function only does the work you ask for directly. You can change this by entering:
+
+/event
+and choosing "Announce it automatically whenever work finishes"
+
+◆ What to do next:
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+arturo › /refine-worker
+◆ Refine a Worker
+Which one?
+
+1. support-triage-analyst
+2. customer-replies-analyst
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ How should support-triage-analyst specialise?
+Type your instructions, or ESC to go back.
+
+For example   You are a softball coach who specialises in coaching softball for girls under 15. You have many years of experience and have played at top levels.
+
+arturo › You are an expert customer support analyst specialising in software licensing and fulfilment enquiries. You classify an enquiry by its root cause, state precisely what must be confirmed before any rem
+arturo › You are an expert customer support analyst specialising in software licensing and fulfilment enquiries. You classify an enquiry by its root cause, state precisely what must be confirmed before any reme dy is offered, and never assert that a payment, a dispatch or a delivery happened unless it is in the evidence you were given.
+◆ Worker refined
+Worker refined  support-triage-analyst
+
+Specialisation
+You are an expert customer support analyst specialising in software licensing and fulfilment enquiries. You classify an enquiry by its root cause, state precisely what must be confirmed before any remedy is offered, and never assert that a payment, a dispatch or a delivery happened unless it is in the evidence you were given.
+
+arturo › /task
+◆ Please select an option:
+1. Create a task
+2. Look at one task in full
+3. See all your tasks
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Description:
+
+arturo › A customer writes that the licence key they paid for never arrived. Classify the enquiry, state what is needed to resolve it, and list what must be confirmed before anything is sent.
+◆ Which Function should do this?
+Which one?
+
+1. Support Triage
+2. Customer Replies
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Does this task need anything else?
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Task created
+Task queued        task-1
+Selected Function  Support Triage
+Selected worker    customer-replies-analyst
+
+arturo › /tasks
+◆ Tasks
+1. A customer writes that the licence key they paid for never arrived. Classify the enquiry, state what is needed to resolve it, and list what must be confirmed be...
+   ID              task-1
+   Status          Completed
+   Worker          customer-replies-analyst
+   Result preview  Based on the incoming support enquiry, I classify this as a "Missing Delivery" issue. To resolve this issue, the following steps are needed: 1. The licence key's shipping status needs to be confirmed. 2. Confirmation of the payment detai...
+
+arturo › /task
+◆ Please select an option:
+1. Create a task
+2. Look at one task in full
+3. See all your tasks
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Description:
+
+arturo › Draft the reply to the customer, using only what the triage established. Do not claim anything that was not confirmed.
+◆ Which Function should do this?
+Which one?
+
+1. Support Triage
+2. Customer Replies
+
+Reply with a number, or ESC to go back.
+
+arturo › 2
+◆ Does this task need anything else?
+1. No, it has everything it needs
+2. Continue from work that's already finished
+3. Search the public web first
+
+Reply with a number, or ESC to go back.
+
+arturo › 2
+◆ Which finished work should it continue from?
+Which one?
+
+1. A customer writes that the licence key they paid for never arrived.... — task-1
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Task created
+Task queued        task-2
+Selected Function  Customer Replies
+Selected worker    support-triage-analyst
+
+arturo › /tasks
+◆ Tasks
+1. A customer writes that the licence key they paid for never arrived. Classify the enquiry, state what is needed to resolve it, and list what must be confirmed be...
+   ID              task-1
+   Status          Completed
+   Worker          customer-replies-analyst
+   Result preview  Based on the incoming support enquiry, I classify this as a "Missing Delivery" issue. To resolve this issue, the following steps are needed: 1. The licence key's shipping status needs to be confirmed. 2. Confirmation of the payment detai...
+
+2. Draft the reply to the customer, using only what the triage established. Do not claim anything that was not confirmed.
+   ID              task-2
+   Status          Completed
+   Worker          support-triage-analyst
+   Result preview  I'd like to start by thanking you for reaching out to Larkfield Software regarding the missing licence key. I've reviewed your enquiry and classified it as a "Missing Delivery" issue. To assist you further, we require some information fr...
+
+arturo › /tasks
+◆ Tasks
+1. A customer writes that the licence key they paid for never arrived. Classify the enquiry, state what is needed to resolve it, and list what must be confirmed be...
+   ID              task-1
+   Status          Completed
+   Worker          customer-replies-analyst
+   Result preview  Based on the incoming support enquiry, I classify this as a "Missing Delivery" issue. To resolve this issue, the following steps are needed: 1. The licence key's shipping status needs to be confirmed. 2. Confirmation of the payment detai...
+
+2. Draft the reply to the customer, using only what the triage established. Do not claim anything that was not confirmed.
+   ID              task-2
+   Status          Completed
+   Worker          support-triage-analyst
+   Result preview  I'd like to start by thanking you for reaching out to Larkfield Software regarding the missing licence key. I've reviewed your enquiry and classified it as a "Missing Delivery" issue. To assist you further, we require some information fr...
+
+arturo › /task
+◆ Please select an option:
+1. Create a task
+2. Look at one task in full
+3. See all your tasks
+
+Reply with a number, or ESC to go back.
+
+arturo › 2
+◆ Which task?
+Which one?
+
+1. A customer writes that the licence key they paid for never a… — completed
+2. Draft the reply to the customer, using only what the triage… — completed
+
+Reply with a number, or ESC to go back.
+
+arturo › 2
+◆ Task details
+Worker          Support-triage-analyst
+ID              task-2
+Status          Completed
+  (Finished.)
+Continues from  task-1
+Task            2 / 2
+Instruction     Draft the reply to the customer, using only what the triage established. Do not claim anything that was not confirmed.
+
+I'd like to start by thanking you for reaching out to Larkfield Software regarding the missing licence key. I've reviewed your enquiry and classified it as a "Missing Delivery" issue.
+
+To assist you further, we require some information from you to help resolve this matter. Please confirm the following:
+
+–  The date and time of the payment
+–  The shipping carrier used for the licence key
+–  The tracking number or order reference for the licence key
+–  The customer's full name and contact details (email, phone number, etc.)
+
+Once we receive this information, we'll be happy to investigate the delay or loss of the licence key and provide a suitable resolution.
+
+If you have any questions or concerns in the meantime, please don't hesitate to ask. I'm here to help.
+
+Best regards,
+[Your Name]
+
+arturo › /task
+◆ Please select an option:
+1. Create a task
+2. Look at one task in full
+3. See all your tasks
+
+Reply with a number, or ESC to go back.
+
+arturo › 2
+◆ Which task?
+Which one?
+
+1. A customer writes that the licence key they paid for never a… — completed
+2. Draft the reply to the customer, using only what the triage… — completed
+
+Reply with a number, or ESC to go back.
+
+arturo › 1
+◆ Task details
+Worker        Customer-replies-analyst
+ID            task-1
+Status        Completed
+  (Finished.)
+Task          1 / 2
+Instruction   A customer writes that the licence key they paid for never arrived. Classify the enquiry, state what is needed to resolve it, and list what must be confirmed before anything is sent.
+
+Based on the incoming support enquiry, I classify this as a "Missing Delivery" issue.
+
+To resolve this issue, the following steps are needed:
+
+1. The licence key's shipping status needs to be confirmed.
+2. Confirmation of the payment details (date, amount, and method) is required.
+3. Verification of the customer's address and contact information must be ensured.
+4. An investigation into the delay or loss of the licence key is necessary.
+
+Before proceeding with a resolution, the following information must be confirmed:
+
+–  The date and time of the payment
+–  The shipping carrier used for the licence key
+–  The tracking number or order reference for the licence key
+–  The customer's full name and contact details (email, phone number, etc.)
+
+Once this information is confirmed, I can assist with further actions to resolve the issue.
+
+arturo › /timeline
+◆ #12 · Result counted towards Function health
+Customer Replies measured Task outcome: Turn a triaged support enquiry into a clear, friendly reply for the customer.
+Time          2026-08-17T03:44:07.803Z
+Id            bc456d9e-98f4-4698-a6f5-a8c5846c5fed
+
+◆ #11 · Result not counted
+An AI model wrote the result of Task task-2 and nobody has checked it, so Arturo has not learned from it. It may still create follow-on work from it.
+Time          2026-08-17T03:44:05.220Z
+Id            d4a4e139-4b06-46f4-a614-fc988ef00200
+
+◆ #10 · Task completed
+Task completed  task-2
+Time            2026-08-17T03:44:05.220Z
+Id              699bc08c-3707-4f86-b39d-1efae1afe45b
+
+◆ #9 · Task started
+Task started  task-2
+Time          2026-08-17T03:44:01.197Z
+Id            ac7c8670-6ef5-4902-8840-46f0f6109d30
+
+◆ #8 · Task queued
+Task queued for support-triage-analyst: task-2
+Time          2026-08-17T03:44:00.697Z
+Id            e0b57ffc-9e3e-4e6b-bed6-23651b418c18
+
+◆ #7 · Result counted towards Function health
+Support Triage measured Task outcome: Completed task, but no progress declared.
+Time          2026-08-17T03:43:36.400Z
+Id            873c4dba-d75e-4609-9606-55ce42189a4e
+
+◆ #6 · Result not counted
+An AI model wrote the result of Task task-1 and nobody has checked it, so Arturo has not learned from it. It may still create follow-on work from it.
+Time          2026-08-17T03:43:34.207Z
+Id            784992f2-60dd-4002-8dae-0ba2023cb6f5
+
+◆ #5 · Task completed
+Task completed  task-1
+Time            2026-08-17T03:43:34.206Z
+Id              af720059-1e99-4dbe-8aec-f679d9dec41d
+
+◆ #4 · Task started
+Task started  task-1
+Time          2026-08-17T03:43:30.645Z
+Id            a961f150-ed57-48ff-a92b-858106882c3f
+
+◆ #3 · Task queued
+Task queued for customer-replies-analyst: task-1
+Time          2026-08-17T03:43:30.251Z
+Id            0e829a51-5215-43e6-8709-7b9246c1c2df
+
+arturo › /exit
+
+Arturo stopped.
+⠙

@@ -1,0 +1,13 @@
+OUTLINE SPECIFICATION (synthetic sample v2, for scenario testing only)
+
+1. Scope: single-storey rear extension, outline specification for review.
+2. Structure: new opening in the existing rear wall; span to be confirmed.
+3. Temporary works: provide and verify temporary support to the wall above before
+   any masonry is removed; do not remove support until the new beam is bearing.
+4. Roof: flat roof with a rooflight over the kitchen.
+5. Access: level threshold to the garden.
+6. Drainage: existing rear gully to be reused.
+7. Trees: the mature tree near the rear fence is noted.
+
+This is a synthetic sample specification. It is not a real construction document
+and must be checked by a qualified person before any use.

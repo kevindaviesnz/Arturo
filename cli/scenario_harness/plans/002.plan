@@ -1,0 +1,40 @@
+# Scenario 002 — Retail feature assessment (canonical working flow)
+/reset
+yes
+/enterprise
+1
+Northstar Outfitters
+Recommend the right outdoor gear using evidence, not guesswork, with a person accountable for every launch decision.
+skip
+/function
+1
+Product Assessment
+Produce bounded assessments of proposed product features and prepare an accountable launch decision.
+skip
+/add-human-worker
+Product Owner
+1
+skip
+/function start "Product Assessment"
+@timeout 240
+@staff /staff
+/task
+1
+Assess a proposed hiking-gear recommendation feature. Identify user value, required inputs, privacy risks, failure modes, accessibility concerns, evidence gaps, and a smallest testable version. Do not claim access to catalogue, weather, customer, or repository data.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK_ID}}
+@wait 45
+/tasks
+/task inspect {{TASK_ID}}
+@note Create an accountable product decision as a Human Task
+@cap HTASK {(human-task-[0-9]+)}
+/create-human-task "Decide whether to prototype gear recommendations" "Review the Arturo assessment. Decide whether to prototype, return for revision, or stop. Record required evidence, privacy constraints, accessibility requirements, and the next authorised action."
+/human-tasks
+/complete-human-task {{HTASK}} "Proceed only to a synthetic prototype after catalogue coverage, privacy, accessibility, and weather-data requirements are documented." --as "Product Owner"
+/human-task {{HTASK}}
+/timeline
+/overview

@@ -1,0 +1,594 @@
+ ✓ src/kernel/restoreKernelState.test.ts (1)
+ ✓ src/task/engine.test.ts (3)
+ ✓ src/runtime/workerRuntimeState.test.ts (4)
+ ✓ src/storage/runtimeEventRepository.test.ts (3)
+ ✓ src/integrations/httpAuthenticatedRuntimeRetry.test.ts (1)
+ ✓ src/runtime/runtimeReplayHash.test.ts (6)
+ ✓ src/integrations/apiRetryPolicy.test.ts (6)
+ ✓ src/control/humanWorkerMode.test.ts (3)
+ ✓ src/kernel/kernelSnapshotSyscall.test.ts (1)
+ ✓ src/kernel/callDispatcher.test.ts (3)
+ ✓ src/integrations/apiSecret.test.ts (6)
+ ✓ src/storage/delegationRepository.test.ts (1)
+ ✓ src/kernel/kernelSnapshot.test.ts (1)
+ ✓ src/policy/policyInheritance.test.ts (1)
+ ✓ src/integrations/capabilityDispatcher.test.ts (2)
+ ✓ src/llm/ollamaClient.test.ts (2)
+ ✓ src/integrations/apiSecretInjection.test.ts (3)
+ ✓ src/business/businessFunction.test.ts (3)
+ ✓ src/kernel/autoDispatch.test.ts (3)
+ ✓ src/runtime/cronJobScheduling.test.ts (2)
+ ✓ src/integrations/webhookCapabilityE2E.test.ts (1)
+ ✓ src/integrations/webhookCapabilityExecution.test.ts (1)
+ ✓ src/business/businessFunctionDefinitionStore.test.ts (1)
+ ✓ src/runtime/cronJobRecoveryRuntime.test.ts (2)
+ ✓ src/risk/riskRuntime.test.ts (2)
+ ✓ src/control/workflows.test.ts (3)
+ ✓ src/ui/uiShortReply.test.ts (17)
+ ✓ src/kernel/capabilityDefinition.test.ts (1)
+ ✓ src/control/runStore.test.ts (3)
+ ✓ src/ui/uiWebSearchEntries.test.ts (1)
+ ✓ src/repl/artefactCommands.test.ts (3)
+ ✓ src/llm/geminiClient.test.ts (1)
+ ✓ src/kernel/workflowDefinition.test.ts (1)
+ ✓ src/storage/settingsRepository.test.ts (4)
+ ✓ src/policy/policyAuditLog.test.ts (2)
+ ✓ src/agents/reviewLoopInference.test.ts (2)
+ ✓ src/kernel/capabilityRegistry.test.ts (1)
+ ✓ src/core/commandParser.test.ts (5)
+ ✓ src/integrations/capabilityExecutionAdapter.test.ts (2)
+ ✓ src/storage/approvalSigningSecret.test.ts (1)
+ ✓ src/kernel/capabilityCall.test.ts (1)
+ ✓ src/kernel/kernelWorkflowPrototype.test.ts (1)
+ ✓ src/storage/runtimeStoragePaths.test.ts (2)
+ ✓ src/storage/policyAuditLogRepository.test.ts (1)
+ ✓ src/runtime/scheduledJobRetry.test.ts (2)
+ ✓ src/ui/uiEnterpriseAdvise.test.ts (1)
+ ✓ src/kernel/builtInCapabilities.test.ts (1)
+ ✓ src/core/workerCore.test.ts (3)
+ ✓ src/control/eventStore.test.ts (2)
+ ✓ src/ui/lineInterfaceStartupHint.test.ts (2)
+ ✓ src/integrations/httpCapabilityEndToEnd.test.ts (1)
+ ✓ src/storage/policyRepository.test.ts (1)
+ ✓ src/llm/llmUsage.test.ts (2)
+ ✓ src/integrations/httpPostCapabilityDefinition.test.ts (1)
+ ✓ src/ui/uiClipboard.test.ts (2)
+ ✓ src/kernel/httpCapabilityRegistration.test.ts (1)
+ ✓ src/integrations/webhookCapabilityDefinition.test.ts (1)
+ ✓ src/integrations/httpCapabilityDefinition.test.ts (1)
+
+ Test Files  325 passed (325)
+      Tests  2308 passed (2308)
+   Start at  21:40:42
+   Duration  85.63s (transform 1.64s, setup 596ms, collect 10.55s, tests 23.46s, environment 25ms, prepare 9.61s)
+
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 031 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 031 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/031.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           1
+Tasks             0
+  Human Tasks       0
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Farmwise Advisory
+
+◆ What does it do?
+In one sentence, what does Farmwise Advisory exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Give farmers sound, evidence-aware guidance that a qualified adviser always signs off.
+
+◆ Anything more about it?
+Anything more worth knowing about Farmwise Advisory? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Farmwise Advisory
+Mission       Give farmers sound, evidence-aware guidance that a qualified adviser always signs off.
+Description   (none)
+Status        active
+Created       2026-07-31T09:46:44.083Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Farmwise Advisory" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Seasonal Advisory
+
+◆ What should it do?
+In one sentence, what should "Seasonal Advisory" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame seasonal farm-management questions and route recommendations to an accountable adviser.
+
+◆ Anything more about it?
+Anything more worth knowing about "Seasonal Advisory"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               farmwise-advisory:seasonal-advisory
+Name             Seasonal Advisory
+Enterprise       Farmwise Advisory (enterprise-1)
+Objective        Frame seasonal farm-management questions and route recommendations to an accountable adviser.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-31T09:47:23.227Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Lead Adviser
+
+◆ What will they do?
+What should Lead Adviser be able to do? Pick one
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Lead Adviser's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Lead Adviser is now on your team.
+Lead Adviser can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Seasonal Advisory"
+
+◆ Function started
+Function
+  Seasonal Advisory
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 1 AI Worker for Farmwise Advisory.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 1
+Seasonal Advisory Specialist
+Role          Advisor
+Can do        General reasoning, Advice, Human Contact
+Would help    Seasonal Advisory
+
+For example, it could
+    · Talk through options and suggest a way forward
+    · Answer a 'how should I…' question in plain terms
+
+Add Seasonal Advisory Specialist? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3778 session tokens
+arturo › yes
+
+◆ Staffing applied
+1 AI Worker added, and put to work on 1 Function.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Seasonal Advisory — Lead Adviser
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3778 session tokens
+arturo › /governance policy add "Advisory analysis requires adviser sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Advisory analysis requires adviser sign-off
+ID            policy-b5788945-5980-4531-a85b-0faee8f0cc70
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3778 session tokens
+arturo › /memory add "Never recommend agrichemical rates or animal-health treatments; frame options and always require a qualified adviser and label local-regulation checks." --scope "Seasonal Advisory"
+
+◆ Operational Memory added
+Never recommend agrichemical rates or animal-health treatments; frame options and always require a qualified adviser and label local-regulation checks.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3778 session tokens
+arturo › /schedule add "List the seasonal decisions coming up and the evidence still needed, labelling assumptions." --every weekly --at "07:30" --timezone "Pacific/Auckland" --function "Seasonal Advisory"
+
+◆ Task schedule not changed
+Arturo cannot repeat something "weekly". Use daily, or a day of the week such as friday.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3778 session tokens
+arturo › /schedule list
+
+◆ Task schedules
+No Task schedules found.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3778 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3778 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3778 session tokens
+arturo › Analyse, using synthetic assumptions only, the considerations for planning a pasture-renewal programme on a temperate dairy farm: soil and climate evidence needed, timing trade-offs, cost factors, agronomic uncertainties, and the decisions a qualified adviser must make. Do not specify agrichemical rates or guarantee outcomes.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3778 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Seasonal Advisory
+Selected worker    Seasonal Advisory Specialist
+Partial coverage   Seasonal Advisory Specialist does not hold research, analysis, optimization, planning — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3778 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Analyse, using synthetic assumptions only, the considerations for planning a pasture-renewal programme on a temperate dairy farm: soil and climate evidence need...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Seasonal Advisory Specialist
+   Required capabilities  research, analysis, optimization, planning, advice
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3778 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3778 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                Seasonal Advisory Specialist
+ID                    task-1
+Status                Completed
+  (Finished.)
+Evidence              Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed         research, analysis, optimization, planning, advice
+Why this Worker       Inferred Function Seasonal Advisory; selected its staffed Worker Seasonal Advisory Specialist. Best-available coverage: Seasonal Advisory Specialist does not hold research, analysis, optimization, planning; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business              Farmwise Advisory
+Task                  1 / 1
+Instruction           Analyse, using synthetic assumptions only, the considerations for planning a pasture-renewal programme on a temperate dairy farm: soil and climate evidence needed, timing trade-offs, cost factors, agronomic uncertainties, and the decisions a qualified adviser must make. Do not specify agrichemical rates or guarantee outcomes.
+
+Where this came from  an AI model wrote it. Nobody has checked it
+Looked anything up    no
+
+Seasonal Advisory: Pasture-Renewal Programme for Temperate Dairy Farm
+
+As we embark on planning a pasture-renewal programme for your temperate dairy farm, I'd like to highlight the key considerations that a qualified adviser must take into account.
+
+Soil and Climate Evidence Needed
+To create an effective pasture-renewal plan, it's essential to gather soil and climate evidence. This may include:
+
+1. Conducting a soil test to determine pH levels, nutrient content, and moisture retention capacity.
+2. Analyzing climate data to understand temperature fluctuations, rainfall patterns, and sunlight exposure.
+
+Timing Trade-offs
+The timing of the pasture-renewal programme can significantly impact its success. A qualified adviser must consider:
+
+1. Optimal planting times based on soil temperature, frost dates, and weather conditions.
+2. The need to balance early establishment with delayed maturity to avoid extreme weather events.
+
+Cost Factors
+While cost is an essential consideration, it's crucial to recognize that this is a complex area where assumptions should be avoided. A qualified adviser must:
+
+1. Estimate costs associated with land preparation, seed or sod procurement, and any necessary infrastructure modifications.
+2. Consider long-term financial implications, such as potential yield increases or decreased maintenance requirements.
+
+Agronomic Uncertainties
+Pasture management is inherently subject to uncertainties due to factors like weather conditions, pest and disease prevalence, and animal behavior. A qualified adviser must:
+
+1. Develop contingency plans for potential setbacks.
+2. Balance short-term gains with long-term sustainability goals.
+
+Decisions a Qualified Adviser Must Make
+
+1. Determine the most suitable pasture type or mix based on climate, soil, and farm management practices.
+2. Establish a rotation plan that balances livestock stocking rates, rest periods, and fertilization schedules.
+3. Develop strategies for managing weeds, pests, and diseases in the newly renewed pastures.
+
+Next Steps
+
+1. Conduct a site visit to gather specific data and observations about your farm's unique conditions.
+2. Work with a qualified agronomist or pasture expert to develop a tailored plan that addresses your specific needs and goals.
+
+Please note that this advisory is general in nature and should not be considered as bespoke advice for your farm. A qualified adviser will need to review your specific situation and provide personalized guidance.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4925 session tokens
+arturo › /timeline
+
+◆ #35 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-07-31T09:52:48.314Z
+Id             b67a6365-f5bb-49aa-848d-7f45325b8844
+
+◆ #34 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-07-31T09:52:39.976Z
+Id             f906984e-8776-40d7-ba62-521a9d2df48a
+
+◆ #33 · Task completed
+Task completed  task-1
+Time            2026-07-31T09:51:53.654Z
+Id              8f207926-02f9-45eb-a8c4-dc5c6da1465e
+
+◆ #32 · Task started
+Task started  task-1
+Time          2026-07-31T09:51:45.067Z
+Id            39185a2c-6fa9-4b2b-b0c8-c8529afda504
+
+◆ #31 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-07-31T09:51:44.973Z
+Id            81fb0d79-fcde-4def-ad97-ef0c5cb963db
+
+◆ #30 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-07-31T09:51:33.521Z
+Id             46e4f4a8-6672-4182-ac25-c3e5bdd61cfe
+
+◆ #29 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-07-31T09:51:17.678Z
+Id             8f83afcd-1792-470b-9e99-656318d6742d
+
+◆ #28 · Task queued
+Task queued for Seasonal Advisory Specialist: task-1
+Time          2026-07-31T09:50:57.676Z
+Id            f0d26b56-cdcf-4d4e-8e32-1a42c3ad3abf
+
+◆ #27 · Bot typed a line
+Bot submitted  1
+Time           2026-07-31T09:50:53.748Z
+Id             2cb7b3f7-106e-4f99-89bf-5535b134b53d
+
+◆ #26 · Bot typed a line
+Bot submitted  Analyse, using synthetic assumptions only, the considerations for planning a pasture-renewal programme on a temperate dairy farm: soil and climate evidence needed, timing trade-offs, cost factors, agronomic uncertainties, and the decisions a qualified adviser must make. Do not specify agrichemical rates or guarantee outcomes.
+Time           2026-07-31T09:50:09.870Z
+Id             26907486-275a-4e91-bdfb-1e0a2e9b2834
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4925 session tokens
+arturo › 
+◆ Bot finished
+31 lines typed, 1 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4925 session tokens
+arturo › 

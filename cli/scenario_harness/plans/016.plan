@@ -1,0 +1,53 @@
+# Scenario 016 — Manufacturing QA: reject, then approve a corrected task
+# Driven by menus: the governance rule is chosen from lists rather than typed as switches.
+/reset
+yes
+/clear
+/enterprise
+1
+Ironbark Manufacturing
+Ship quality product with evidence-led checks and accountable sign-off.
+skip
+/function
+1
+Quality Review
+Frame quality-review checklists and route them to an accountable quality manager.
+skip
+/add-human-worker
+Quality Manager
+1
+skip
+/function start "Quality Review"
+@timeout 240
+@staff /staff
+/governance
+1
+Quality analysis requires manager sign-off
+1
+analysis
+1
+/governance
+2
+/task
+1
+Using synthetic assumptions only, draft an incoming-goods inspection checklist for a batch of aluminium fittings: sampling approach, dimensions to verify, surface-defect criteria, documentation needed, and reasons a human must sign off a rejection. Do not claim access to real batch data.
+@cap TASK_ID {(task-[0-9]+)}
+1
+@wait 20
+/tasks
+@wait 8
+/approval-status {{TASK_ID}}
+/reject {{TASK_ID}} "Sampling plan is not tied to a batch size or an accepted quality level."
+/task
+1
+Revised: draft an incoming-goods inspection checklist for a 500-unit batch of aluminium fittings at AQL 1.0, listing sample size, dimensions to verify, surface-defect criteria, documentation, and human sign-off points. Synthetic assumptions only.
+@cap TASK2 {(task-[0-9]+)}
+1
+@wait 20
+/tasks
+@wait 8
+/approve {{TASK2}}
+@wait 50
+/tasks
+/task inspect {{TASK2}}
+/timeline

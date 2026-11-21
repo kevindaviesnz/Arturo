@@ -1,0 +1,30 @@
+/reset
+yes
+/clear
+@timeout 240
+/enterprise
+1
+Koru Toys
+Create inclusive physical learning toys that support imaginative play.
+skip
+/function
+1
+Product Development
+Turn supplied product concepts into bounded physical-toy development requirements.
+skip
+/function
+1
+Learning Design
+Assess supplied physical-toy concepts for play-based learning opportunities and limitations.
+skip
+/functions
+@staff /staff
+/workers
+/function start "Product Development"
+/function start "Learning Design"
+/event
+1
+New tactile storytelling kit submitted for concept review
+1
+@wait 90
+/tasks

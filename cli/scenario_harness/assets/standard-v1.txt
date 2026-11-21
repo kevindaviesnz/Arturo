@@ -1,0 +1,10 @@
+CABLING STANDARD (synthetic sample v1, for scenario testing only)
+
+1. Scope: internal low-voltage data cabling for office fit-outs.
+2. Materials: use only listed, fit-for-purpose cable and fixings.
+3. Routing: keep data separated from power per clearance guidance.
+4. Testing: certify every run before handover.
+5. Safety: wear appropriate PPE.
+
+This is a synthetic sample. It is not a real standard and must be reviewed by a
+qualified person before any use.

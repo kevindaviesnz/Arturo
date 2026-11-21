@@ -1,0 +1,29 @@
+# Scenario 023 — Document review with an exact-version Artefact
+/reset
+yes
+/enterprise
+1
+Civic Trust
+Handle personal information carefully, with a person accountable for every published notice.
+skip
+/function
+1
+Document Review
+Review exact document versions and record accountable decisions before use.
+skip
+/add-human-worker
+Document Reviewer
+2
+skip
+/function start "Document Review"
+@timeout 200
+@staff /staff
+/artefact add "Draft privacy notice" --enterprise "Civic Trust" --kind specification --file "./scenario_harness/assets/privacy-notice.txt" --created-by "Document Reviewer"
+/artefacts
+/artefact inspect artefact-1
+/artefact verify artefact-1@1
+/artefact submit artefact-1@1 --reviewer "Document Reviewer" --notes "Check scope, retention, and rights statement."
+/human-tasks
+/artefact review artefact-1@1 --decision approve --as "Document Reviewer" --notes "Approved for use after a qualified legal check."
+/artefact inspect artefact-1
+/timeline

@@ -1,0 +1,48 @@
+# Scenario 042 — Real-estate development feasibility: three Functions, delegation, schedule, human decision
+/reset
+yes
+/enterprise
+1
+Cityline Developments
+Develop responsibly with evidence-led feasibility and accountable human decisions on every commitment.
+skip
+/function
+1
+Site Feasibility
+Frame feasibility questions and route go/no-go decisions to an accountable director.
+skip
+/function
+1
+Planning Analysis
+Analyse synthetic planning and consent scenarios for accountable review.
+skip
+/function
+1
+Financial Modelling
+Frame financial-feasibility questions for accountable review.
+skip
+/add-human-worker
+Development Director
+1
+skip
+/function start "Site Feasibility"
+/function start "Planning Analysis"
+/function start "Financial Modelling"
+@timeout 300
+@staff /staff
+/schedule add "List the feasibility decisions coming up and the evidence still outstanding, labelling assumptions." --every weekly --at "09:00" --timezone "Pacific/Auckland" --function "Site Feasibility"
+@cap DELEG_ID {ID\s+([0-9a-f-]{36})}
+/delegation request "Analyse a synthetic mixed-use site: planning and consent uncertainties, infrastructure and access constraints, community and environmental considerations, and the decisions a director must make. Do not commit to a purchase or design." --from "Site Feasibility" --to "Planning Analysis"
+/delegation list
+@cap TASK_ID {Task\s+(task-[0-9]+)}
+/delegation inspect {{DELEG_ID}}
+@wait 8
+/approve {{TASK_ID}}
+@wait 55
+/task inspect {{TASK_ID}}
+@cap HTASK {(human-task-[0-9]+)}
+/create-human-task "Feasibility go/no-go" "Decide whether the site proceeds to detailed feasibility and what evidence must be confirmed first. Do not commit to a purchase."
+/complete-human-task {{HTASK}} "Proceed to detailed feasibility only after consent risk, ground conditions, and a financial sensitivity are confirmed. No commitment made." --as "Development Director"
+/human-task {{HTASK}}
+/functions
+/timeline

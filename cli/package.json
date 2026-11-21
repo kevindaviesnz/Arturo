@@ -1,0 +1,47 @@
+{
+  "name": "arturo-cli",
+  "version": "0.5.0",
+  "description": "Open-source CLI runtime for governed AI agents",
+  "private": false,
+  "license": "Apache-2.0",
+  "main": "dist/cli.js",
+  "bin": {
+    "arturo": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prompts:export": "ts-node scripts/exportPrompts.ts",
+    "start": "node dist/cli.js",
+    "dev": "ts-node src/cli.ts",
+    "repl": "ts-node src/cli.ts",
+    "test": "vitest",
+    "test:run": "APPROVAL_SIGNING_SECRET=test-approval-secret-000000000000 HUMAN_TASK_TOKEN_SECRET=test-human-task-secret-000000000000 RUNTIME_REPLAY_ATTESTATION_SECRET=test-replay-secret-000000000000000 API_SECRET_ENCRYPTION_KEY=test-api-secret-encryption-key-00000000 ARTURO_HTTP_ALLOWED_HOSTS=example.com vitest run --fileParallelism=false --pool=forks",
+    "kernel:test": "ts-node src/kernel/testKernel.ts",
+    "test-email": "ts-node scripts/testEmail.ts",
+    "ui": "ts-node src/ui/lineInterface.ts",
+    "ui:bot": "ts-node src/ui/lineInterface.ts bot",
+    "ui:bot:isolated": "ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes",
+    "demo": "npx tsx src/demo/seedDemo.ts",
+    "try": "ts-node src/demo/tryArturo.ts",
+    "eval:clauses": "ts-node src/evaluation/runClauseBenchmark.ts",
+    "identity": "ts-node src/identity/identityAdmin.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.113.0",
+    "@google/genai": "^2.9.0",
+    "better-sqlite3": "^12.10.0",
+    "dotenv": "^17.4.2",
+    "fs-extra": "^11.3.4",
+    "nodemailer": "^9.1.1",
+    "openai": "^6.48.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.0.0",
+    "@types/nodemailer": "^8.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.6.1"
+  }
+}

@@ -1,0 +1,579 @@
+Next Steps
+
+–  Review and revise the policy outline in consultation with management, HR, and other relevant stakeholders.
+–  Conduct further research on jurisdiction-specific legal requirements and incorporate findings into the policy.
+–  Finalize the policy and obtain approval from management before implementation.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6832 session tokens
+arturo › /timeline
+
+◆ #33 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T20:53:45.550Z
+Id             e8d390a2-f425-419f-a997-572a854603c4
+
+◆ #32 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T20:53:37.559Z
+Id             52b75fc4-ea39-4c17-918b-40873f9b6a3f
+
+◆ #31 · Task completed
+Task completed  task-1
+Time            2026-08-01T20:52:57.653Z
+Id              e871a517-38c2-44bc-95b5-ba62c4a4641d
+
+◆ #30 · Task started
+Task started  task-1
+Time          2026-08-01T20:52:47.639Z
+Id            3b01c6b1-8660-4a62-b0a9-4d11bf41fd23
+
+◆ #29 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-01T20:52:47.556Z
+Id            f042826e-4f7a-43b0-ae95-a952b2c6fa4a
+
+◆ #28 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-01T20:52:35.444Z
+Id             d992bd10-bdf5-424e-aca8-6c4f2e00da82
+
+◆ #27 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T20:52:21.429Z
+Id             a8f8595d-acd5-4613-a3aa-385d4814c17d
+
+◆ #26 · Task queued
+Task queued for Policy Drafting Advisor: task-1
+Time          2026-08-01T20:52:01.426Z
+Id            5cd3718e-1262-4f00-8a0f-f119702f203d
+
+◆ #25 · Bot typed a line
+Bot submitted  1
+Time           2026-08-01T20:51:55.660Z
+Id             4b4cd28f-2ccc-43ad-afa7-a56c75768c61
+
+◆ #24 · Bot typed a line
+Bot submitted  Draft a plain-language outline of a remote-work policy: scope, eligibility, expectations, equipment, security, and the points that need jurisdiction-specific legal review. Do not give legal advice or cite specific statutes as settled.
+Time           2026-08-01T20:51:23.029Z
+Id             fd95db04-e8b1-408b-87ef-5b5548f1bb3c
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6832 session tokens
+arturo › 
+◆ Bot finished
+31 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6832 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear                                   
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 014 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 014 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/014.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           5
+Tasks             1
+  Human Tasks       0
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Larkfield Software
+
+◆ What does it do?
+In one sentence, what does Larkfield Software exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Support customers quickly and honestly, with a person accountable for every judgement call.
+
+◆ Anything more about it?
+Anything more worth knowing about Larkfield Software? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Larkfield Software
+Mission       Support customers quickly and honestly, with a person accountable for every judgement call.
+Description   (none)
+Status        active
+Created       2026-08-01T20:58:09.422Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Larkfield Software" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Support Triage
+
+◆ What should it do?
+In one sentence, what should "Support Triage" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Turn inbound support signals into prioritised, evidence-aware triage for an accountable support lead.
+
+◆ Anything more about it?
+Anything more worth knowing about "Support Triage"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               larkfield-software:support-triage
+Name             Support Triage
+Enterprise       Larkfield Software (enterprise-1)
+Objective        Turn inbound support signals into prioritised, evidence-aware triage for an accountable support lead.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T20:58:53.148Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Support Lead
+
+◆ What will they do?
+What should Support Lead be able to do? Pick one
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Support Lead's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Support Lead is now on your team.
+Support Lead can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Support Triage"
+
+◆ Function started
+Function
+  Support Triage
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 1 AI Worker for Larkfield Software.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 1
+Research Support Lead
+Role          Researcher
+Can do        General reasoning, Research, Web Research, Summarisation, Human Contact
+Would help    Support Triage
+
+For example, it could
+    · Find and summarise what's known about a topic
+    · Gather sources on a question and flag what's uncertain
+
+Add Research Support Lead? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › yes
+
+◆ Staffing applied
+1 AI Worker added, and put to work on 1 Function.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Support Triage — Support Lead
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › /schedule add "Summarise overnight support tickets and flag those needing a same-day human reply, labelling every assumption." --every daily --at "08:30" --timezone "Pacific/Auckland" --function "Support Triage"
+
+◆ Task schedule added
+ID            schedule-1aeb0688-c32d-4174-b162-c314171ad492
+Frequency     daily
+At            08:30
+Timezone      Pacific/Auckland
+Task          Summarise overnight support tickets and flag those needing a same-day human reply, labelling every assumption.
+Task ID       task-1
+Function      Support Triage
+Enterprise    Larkfield Software
+Status        enabled
+Next run      2026-08-02T20:30:00.000Z
+Last run      never
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › /schedule list
+
+◆ Task schedules
+1.
+ID            schedule-1aeb0688-c32d-4174-b162-c314171ad492
+Frequency     daily
+At            08:30
+Timezone      Pacific/Auckland
+Task          Summarise overnight support tickets and flag those needing a same-day human reply, labelling every assumption.
+Task ID       task-1
+Function      Support Triage
+Enterprise    Larkfield Software
+Status        enabled
+Next run      2026-08-02T20:30:00.000Z
+Last run      never
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › Draft a triage rubric for inbound support tickets: severity levels, information needed from the customer, escalation criteria, and when a human must reply. Do not claim access to the ticket system or customer data.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-2
+Selected Function  Support Triage
+Selected worker    Research Support Lead
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Summarise overnight support tickets and flag those needing a same-day human reply, labelling every assumption.
+   ID                     task-1
+   Status                 Scheduled
+   Required capabilities  summarisation
+
+2. Draft a triage rubric for inbound support tickets: severity levels, information needed from the customer, escalation criteria, and when a human must reply. Do n...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Worker                 Research Support Lead
+   Required capabilities  research
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval chain not found  task-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 50s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Summarise overnight support tickets and flag those needing a same-day human reply, labelling every assumption.
+   ID                     task-1
+   Status                 Scheduled
+   Required capabilities  summarisation
+
+2. Draft a triage rubric for inbound support tickets: severity levels, information needed from the customer, escalation criteria, and when a human must reply. Do n...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Worker                 Research Support Lead
+   Required capabilities  research
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › /task inspect task-1
+
+◆ Task detail
+Worker           None
+ID               task-1
+Status           Scheduled
+Skills needed    summarisation
+Why this Worker  Scheduled Task belongs to Support Triage.
+Business         Larkfield Software
+Task             1 / 2
+Instruction      Summarise overnight support tickets and flag those needing a same-day human reply, labelling every assumption.
+
+No output yet.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › /timeline
+
+◆ #31 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T21:03:12.366Z
+Id             887aeaa2-6e63-4f96-82af-d9348150d39b
+
+◆ #30 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T21:03:01.086Z
+Id             b4450fb6-591a-4b04-b4d8-a5dd4c2c8eef
+
+◆ #29 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T21:02:55.956Z
+Id             2450304b-8150-422f-b0d4-68219ed71b4e
+
+◆ #28 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-01T21:01:53.064Z
+Id             c097ac39-8a82-4d8a-8564-407077ad50b9
+
+◆ #27 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T21:01:40.826Z
+Id             c678d711-5910-43cc-954c-bbf6f536ca80
+
+◆ #26 · Task queued
+Task queued for Research Support Lead: task-2
+Time          2026-08-01T21:01:20.822Z
+Id            e50c28f9-3994-4ac2-9b48-0eb81ee61916
+
+◆ #25 · Bot typed a line
+Bot submitted  1
+Time           2026-08-01T21:01:16.894Z
+Id             a2c59ac2-b5df-4514-a09e-cffadb7d2c37
+
+◆ #24 · Bot typed a line
+Bot submitted  Draft a triage rubric for inbound support tickets: severity levels, information needed from the customer, escalation criteria, and when a human must reply. Do not claim access to the ticket system or customer data.
+Time           2026-08-01T21:00:46.471Z
+Id             3601ecc5-8603-4170-874b-ae17096ebd97
+
+◆ #23 · Bot typed a line
+Bot submitted  1
+Time           2026-08-01T21:00:42.391Z
+Id             bf3b7939-6bb5-4aa0-b0fb-c85b9788ca55
+
+◆ #22 · Bot typed a line
+Bot submitted  /task
+Time           2026-08-01T21:00:32.250Z
+Id             4a48c0ef-e418-4f4a-8925-c82e4bfe4710
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 
+◆ Bot finished
+30 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 

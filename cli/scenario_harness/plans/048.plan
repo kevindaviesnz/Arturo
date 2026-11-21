@@ -1,0 +1,91 @@
+# Scenario 048 — Smart port operations (capstone): four Functions, deny, governance, schedule, memory, delegation, human
+/reset
+yes
+/enterprise
+1
+Meridian Smart Port
+Run the port safely and efficiently with evidence-led analysis and accountable human control of every physical action.
+skip
+/function
+1
+Vessel Monitoring
+Frame vessel and weather signals and evidence gaps for port events.
+skip
+/function
+1
+Berth Planning
+Frame berth-allocation options for accountable decisions.
+skip
+/function
+1
+Cargo Analysis
+Analyse synthetic cargo and yard scenarios for accountable review.
+skip
+/function
+1
+Response Coordination
+Prepare bounded response options and route physical-action decisions to a duty manager.
+skip
+/add-human-worker
+Port Duty Manager
+1
+skip
+/function start "Vessel Monitoring"
+/function start "Berth Planning"
+/function start "Cargo Analysis"
+/function start "Response Coordination"
+@timeout 320
+@staff /staff
+@note A rule on work Arturo recognises in a typed Task, so it acts on the analysis below.
+/governance
+1
+Response analysis requires duty-manager sign-off
+1
+analysis
+1
+@note And one on work no typed Task can ask for. The menu says which is which.
+/governance
+1
+Autonomous crane and gate control is denied
+2
+execution
+1
+/governance
+2
+/memory
+1
+Never propose a physical action without naming the evidence and the safety controls; every crane, gate, or vessel-movement decision is a human decision.
+Response Coordination
+/schedule
+1
+Summarise overnight vessel and weather signals and the decisions awaiting the duty manager, labelling assumptions.
+1
+05:00
+Vessel Monitoring
+@note One Function asks another for a bounded piece of work, and keeps accountability for it.
+/delegation
+1
+Response Coordination
+Cargo Analysis
+@cap TASK_ID {Task\s+(task-[0-9]+)}
+Analyse a synthetic scenario where a storm forecast coincides with two priority vessels arriving and a congested yard: evidence needed, high-level sequencing and safety options, cargo and access constraints, and the decisions a duty manager must make. Do not issue any physical instruction.
+/delegation
+2
+/delegation
+3
+1
+@wait 8
+/tasks
+/approve
+@wait 55
+/task inspect {{TASK_ID}}
+/create-human-task
+Decide the sequencing and safety response and what must be confirmed before any physical action. Do not authorise crane, gate, or vessel movement.
+1
+Port Duty Manager
+/complete-human-task
+Hold non-essential moves ahead of the storm, confirm mooring and yard capacity, and stage a safe sequence for manual execution. No autonomous action authorised.
+/human-tasks
+/functions
+/health "Response Coordination"
+/timeline

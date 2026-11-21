@@ -1,0 +1,526 @@
+===> (startup)
+
+> worker-cli@0.5.0 ui
+> ts-node src/ui/lineInterface.ts
+
+]0;Arturo · Native Terminal
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+Tip: to get started, enter /enterprise
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /reset
+ /reset
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         0
+Workers           0
+Tasks             0
+  Human Tasks       0
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> yes
+ yes
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /overview
+ /overview
+◆ Welcome
+Build and operate an AI-native company from one place.
+Each step below is a command you type. Start at the top:
+
+1  Set up your business
+/enterprise    Arturo asks about your business and sets it up
+
+2  Add the ongoing areas of work (Arturo calls these Functions)
+/next          Arturo recommends the Functions to create
+
+3  Put a team behind them (AI Workers, and you for sign-off)
+/staff         Arturo proposes who does the work
+
+4  Give it work
+/suggest       Arturo proposes the first tasks to do
+
+In a hurry? Just describe what you want in plain English with
+/ask "<what you want done>", and Arturo plans it, routes it to the
+right Workers, applies your sign-off rules, and keeps a full history.
+Nothing runs until you say so.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /enterprise
+ /enterprise
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — a name, then one sentence
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> 1
+ 1
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> BrightPath Studio
+ BrightPath Studio
+◆ What does it do?
+In one sentence, what does BrightPath Studio exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> Help independent professionals explain their services clearly to prospective customers.
+ Help independent professionals explain their services clearly to prospective customers.
+◆ Anything more about it?
+Anything more worth knowing about BrightPath Studio? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> skip
+ skip
+◆ Enterprise created
+ID            enterprise-1
+Name          BrightPath Studio
+Mission       Help independent professionals explain their services clearly to prospective customers.
+Description   (none)
+Status        active
+Created       2026-08-03T02:15:03.119Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "BrightPath Studio" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /enterprise
+ /enterprise
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — a name, then one sentence
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> 3
+ 3
+◆ Enterprise detail
+Enterprise    BrightPath Studio
+ID            enterprise-1
+Status        active
+Mission       Help independent professionals explain their services clearly to prospective customers.
+Description   (none)
+Functions (0)
+    (none)
+
+Workers (0)
+    (none)
+
+Policies (0)
+    (none)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /function
+ /function
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> 1
+ 1
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> Customer Insight
+ Customer Insight
+◆ What should it do?
+In one sentence, what should "Customer Insight" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> Turn supplied customer questions into clear, bounded service insights without inventing market evidence.
+ Turn supplied customer questions into clear, bounded service insights without inventing market evidence.
+◆ Anything more about it?
+Anything more worth knowing about "Customer Insight"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> skip
+ skip
+◆ Function created
+ID               brightpath-studio:customer-insight
+Name             Customer Insight
+Enterprise       BrightPath Studio (enterprise-1)
+Objective        Turn supplied customer questions into clear, bounded service insights without inventing market evidence.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-03T02:15:03.123Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /add-human-worker
+ /add-human-worker
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> Alex Reed
+ Alex Reed
+◆ What will they do?
+What should Alex Reed be able to do? Pick one
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> 1
+ 1
+◆ How would you reach them?
+What is Alex Reed's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> skip
+ skip
+◆ Person added
+Alex Reed is now on your team.
+Alex Reed can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo ›
+===> /staff
+ffing proposal…  6s⠇  Preparing a staffing proposal…  6s⠏  Preparing a staffing proposal…  6s⠋  Preparing a staffing proposal…  6s⠙  Preparing a staffing proposal…  6s⠹  Preparing a staffing proposal…  6s⠸  Preparing a staffing proposal…  6s⠼  Preparing a staffing proposal…  6s⠴  Preparing a staffing proposal…  6s⠦  Preparing a staffing proposal…  6s⠧  Preparing a staffing proposal…  7s⠇  Preparing a staffing proposal…  7s⠏  Preparing a staffing proposal…  7s⠋  Preparing a staffing proposal…  7s⠙  Preparing a staffing proposal…  7s⠹  Preparing a staffing proposal…  7s⠸  Preparing a staffing proposal…  7s⠼  Preparing a staffing proposal…  7s⠴  Preparing a staffing proposal…  7s⠦  Preparing a staffing proposal…  7s⠧  Preparing a staffing proposal…  7s⠇  Preparing a staffing proposal…  8s⠏  Preparing a staffing proposal…  8s⠋  Preparing a staffing proposal…  8s⠙  Preparing a staffing proposal…  8s⠹  Preparing a staffing proposal…  8s⠸  Preparing a staffing proposal…  8s⠼  Preparing a staffing proposal…  8s⠴  Preparing a staffing proposal…  8s⠦  Preparing a staffing proposal…  8s⠧  Preparing a staffing proposal…  8s⠇  Preparing a staffing proposal…  8s⠏  Preparing a staffing proposal…  9s⠋  Preparing a staffing proposal…  9s⠙  Preparing a staffing proposal…  9s⠹  Preparing a staffing proposal…  9s
+◆ Let's set up your team
+Arturo suggests 3 AI Workers for BrightPath Studio.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 3
+Customer Insight Researcher
+Role          Researcher
+Can do        General reasoning, Research, Web Research, Summarisation, Human Contact
+Would help    Customer Insight
+
+For example, it could
+    · Find and summarise what's known about a topic
+    · Gather sources on a question and flag what's uncertain
+
+Add Customer Insight Researcher? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+ yes
+◆ Worker 2 of 3
+Human Review Specialist
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Customer Insight
+
+For example, it could
+    · Check a piece of work for mistakes and gaps
+    · Give feedback on a draft before it goes out
+
+Add Human Review Specialist? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+ yes
+◆ Worker 3 of 3
+Client Communication Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Customer Insight
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Client Communication Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+ yes
+◆ Staffing applied
+3 AI Workers added, and put to work on 3 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Customer Insight — Alex Reed
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+===> /workers
+ /workers
+◆ Workers
+1. Alex Reed
+Type           Human
+Archetype      guardian
+Participation  approval
+Email          none
+Availability   available
+Status         Available
+Current Tasks  0
+
+2. Customer Insight Researcher
+Type           AI
+Archetype      researcher
+Availability   available
+Status         Available
+Current Tasks  0
+
+3. Human Review Specialist
+Type           AI
+Archetype      reviewer
+Availability   available
+Status         Available
+Current Tasks  0
+
+4. Client Communication Analyst
+Type           AI
+Archetype      analyst
+Availability   available
+Status         Available
+Current Tasks  0
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+===> /functions
+ /functions
+◆ Functions
+1. Customer Insight
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+===> /task
+ /task
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+===> 1
+ 1
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+===> BrightPath Studio helps independent professionals write clear service-page content. Its standard package includes a 45-minute discovery call, a first draft, and one revision. It does not include website design, technical setup, or publishing. Using only these supplied facts, identify the three most important points the service page should make clear. Do not claim customer research.
+ BrightPath Studio helps independent professionals write clear service-page content. Its standard package includes a 45-minute discovery call, a first draft, and one revision. It does not include website design, technical setup, or publishing. Using only these supplied facts, identify the three most important points the service page should make clear. Do not claim customer research.
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+===> 1
+ 1
+◆ Task created
+Task queued        task-1
+Selected Function  Customer Insight
+Selected worker    Customer Insight Researcher
+Partial coverage   Customer Insight Researcher does not hold writing — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+===NOTE: waiting 25s for runtime to process work
+===> /tasks
+ /tasks
+◆ Tasks
+1. BrightPath Studio helps independent professionals write clear service-page content. Its standard package includes a 45-minute discovery call, a first draft, and...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Customer Insight Researcher
+   Required capabilities  research, writing
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+[driver] captured TASK_ID = task-1
+===> /approvals
+ /approvals
+◆ task-1 · pending
+What               BrightPath Studio helps independent professionals write clear service-page content. Its standard package includes a 45-minute discovery call, a first draft, and one revision. It does not include website design, technical setup, or publishing. Using only these supplied facts, identify the three most important points the service page should make clear. Do not claim customer research.
+Why it needs you   Human approval required for Customer Insight, from the staffing plan you applied.
+Signed off so far  0 of 1
+Who can approve    Alex Reed
+
+To approve         /approve task-1 --as "Alex Reed"
+To turn down       /reject task-1 "<reason>"
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+===> /approve task-1
+ /approve task-1
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Alex Reed
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1978 session tokens
+arturo ›
+===NOTE: waiting 120s for runtime to process work
+===> /task inspect task-1
+ /task inspect task-1
+◆ Task detail
+Worker                   Customer Insight Researcher
+ID                       task-1
+Status                   Completed
+  (Finished.)
+Evidence                 Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed            research, writing
+Why this Worker          Inferred Function Customer Insight; selected its staffed Worker Customer Insight Researcher. Best-available coverage: Customer Insight Researcher does not hold writing; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business                 BrightPath Studio
+Task                     1 / 1
+Instruction              BrightPath Studio helps independent professionals write clear service-page content. Its standard package includes a 45-minute discovery call, a first draft, and one revision. It does not include website design, technical setup, or publishing. Using only these supplied facts, identify the three most important points the service page should make clear. Do not claim customer research.
+
+Where this came from     an AI model wrote it. Nobody has checked it
+Looked anything up       no
+
+Based on the provided information, I have identified the following three key points that the service page should make clear:
+
+1. Service Coverage: The service page should clearly outline what is included in the standard package, specifically mentioning the 45-minute discovery call, first draft, and one revision.
+2. Scope of Work: It should explicitly state what is not included in the standard package, such as website design, technical setup, and publishing.
+3. Service Details: The page should provide a brief description of the service, its objectives, and what customers can expect from the process, without claiming any market research or evidence.
+
+These points aim to clearly communicate the scope, limitations, and expectations of BrightPath Studio's service package to prospective customers, aligning with the Customer Insight function's objective.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2891 session tokens
+arturo ›

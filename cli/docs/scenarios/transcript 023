@@ -1,0 +1,556 @@
+
+◆ #44 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T10:16:05.369Z
+Id             2fef0d95-3e2c-4418-9f0e-89315998245c
+
+◆ #43 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T10:15:58.616Z
+Id             6de0ef61-574a-4c20-ae15-649fc3307bc4
+
+◆ #42 · Human task completed
+Human task human-task-1 completed by Duty Manager
+Time          2026-08-01T10:15:58.614Z
+Id            57e00bd6-1967-4716-bb86-4de652763aeb
+
+◆ #41 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Approve rebooking guidance and duty-of-care steps; hold all passenger messaging until legal and operations confirm capacity and entitlements." --as "Duty Manager"
+Time           2026-08-01T10:15:29.965Z
+Id             269779db-9329-4814-8ac8-e85cfb5ab980
+
+◆ #40 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T10:15:29.963Z
+Id                  75eb7158-424d-4816-bd6c-58f7a2f90560
+
+◆ #39 · Bot typed a line
+Bot submitted  /create-human-task "Duty manager decision" "Decide the disruption response and what passengers may be told, and identify what must be confirmed before any message goes out. Do not authorise sending."
+Time           2026-08-01T10:14:53.856Z
+Id             ff0ac272-99be-49ca-a939-591b572baf3f
+
+◆ #38 · Bot typed a line
+Bot submitted  /task inspect task-2
+Time           2026-08-01T10:14:45.194Z
+Id             9a32e19c-e183-45c9-87c4-5330087fddf3
+
+◆ #37 · Result not counted
+An AI model wrote the result of Task task-2 and nobody has checked it, so Arturo has not learned from it and will not act on it by itself.
+Time          2026-08-01T10:13:57.433Z
+Id            c1d9a66b-f6fd-4c4d-bc19-706d50b4e743
+
+◆ #36 · Delegation completed
+Delegation completed  Task task-2 from Disruption Analysis returned to Passenger Comms
+Time                  2026-08-01T10:13:57.433Z
+Id                    f66ca564-f64d-43cc-b962-ced2ea32f25f
+
+◆ #35 · Task completed
+Task completed  task-2
+Time            2026-08-01T10:13:57.432Z
+Id              6345dd22-1405-47a5-b2c1-548c08fd63e4
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3734 session tokens
+arturo › 
+◆ Bot finished
+37 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3734 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 023 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 023 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/023.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         2
+Workers           5
+Tasks             2
+  Human Tasks       1
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 2 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Civic Trust
+
+◆ What does it do?
+In one sentence, what does Civic Trust exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Handle personal information carefully, with a person accountable for every published notice.
+
+◆ Anything more about it?
+Anything more worth knowing about Civic Trust? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Civic Trust
+Mission       Handle personal information carefully, with a person accountable for every published notice.
+Description   (none)
+Status        active
+Created       2026-08-01T10:28:59.216Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Civic Trust" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Document Review
+
+◆ What should it do?
+In one sentence, what should "Document Review" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Review exact document versions and record accountable decisions before use.
+
+◆ Anything more about it?
+Anything more worth knowing about "Document Review"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               civic-trust:document-review
+Name             Document Review
+Enterprise       Civic Trust (enterprise-1)
+Objective        Review exact document versions and record accountable decisions before use.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T10:29:39.455Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Document Reviewer
+
+◆ What will they do?
+What should Document Reviewer be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 2
+
+◆ How would you reach them?
+What is Document Reviewer's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Document Reviewer is now on your team.
+Document Reviewer can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Document Review"
+
+◆ Function started
+Function
+  Document Review
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 2 AI Workers for Civic Trust.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 2
+Client Communication Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Document Review
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Client Communication Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › yes
+
+◆ Worker 2 of 2
+Document Review Guardian
+Role          Guardian
+Can do        General reasoning, Product Safety, Review, Human Contact
+Would help    Document Review
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Check whether something is safe to go ahead
+    · Flag risks before an action is taken
+
+Add Document Review Guardian? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › yes
+
+◆ Staffing applied
+2 AI Workers added, and put to work on 2 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Document Review — Document Reviewer
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › /artefact add "Draft privacy notice" --enterprise "Civic Trust" --kind specification --file "./scenario_harness/assets/privacy-notice.txt" --created-by "Document Reviewer"
+
+◆ Artefact
+Artefact added.
+ID            artefact-1
+Version       artefact-1@1
+SHA-256       03a22f8de5d4e555cdbfecc44ca94e8ace864e6791b8fa083cfa72923395e62e
+Review        draft
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › /artefacts
+
+◆ Artefacts
+1. Draft privacy notice
+   ID            artefact-1
+   Kind          specification
+   Enterprise    enterprise-1
+   Latest        artefact-1@1
+   Review        draft
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › /artefact inspect artefact-1
+
+◆ Artefact
+Artefact           Draft privacy notice
+ID                 artefact-1
+Enterprise         enterprise-1
+Kind               specification
+Versions           1
+
+Version            artefact-1@1
+URI                file:///Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/assets/privacy-notice.txt
+Media type         text/plain
+Size               479
+SHA-256            03a22f8de5d4e555cdbfecc44ca94e8ace864e6791b8fa083cfa72923395e62e
+Integrity          verified — The local file matches the recorded SHA-256 hash.
+Created by         Document Reviewer
+Source Task        none
+Source Human Task  none
+Created            2026-08-01T10:31:18.728Z
+Review             draft
+Review task        none
+Reviewer           none
+Review signature   none
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › /artefact verify artefact-1@1
+
+◆ Artefact
+Version       artefact-1@1
+Integrity     verified
+The local file matches the recorded SHA-256 hash.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › /artefact submit artefact-1@1 --reviewer "Document Reviewer" --notes "Check scope, retention, and rights statement."
+
+◆ Artefact
+Artefacts submitted for review.
+Human task    human-task-1
+Reviewer      Document Reviewer
+Versions      artefact-1@1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › /human-tasks
+
+◆ human-task-1 · open
+Title         Review Artefacts: artefact-1@1
+Purpose       Make a post-output Human decision about exact, hashed Artefact versions.
+Instructions  Check scope, retention, and rights statement.
+Source Task   none
+Completed by  none
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › /artefact review artefact-1@1 --decision approve --as "Document Reviewer" --notes "Approved for use after a qualified legal check."
+
+◆ Artefact
+Artefact review recorded.
+Decision           approved
+Reviewer           Document Reviewer
+Versions           artefact-1@1
+Review signatures  valid
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › /artefact inspect artefact-1
+
+◆ Artefact
+Artefact           Draft privacy notice
+ID                 artefact-1
+Enterprise         enterprise-1
+Kind               specification
+Versions           1
+
+Version            artefact-1@1
+URI                file:///Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/assets/privacy-notice.txt
+Media type         text/plain
+Size               479
+SHA-256            03a22f8de5d4e555cdbfecc44ca94e8ace864e6791b8fa083cfa72923395e62e
+Integrity          verified — The local file matches the recorded SHA-256 hash.
+Created by         Document Reviewer
+Source Task        none
+Source Human Task  none
+Created            2026-08-01T10:31:18.728Z
+Review             approved
+Review task        human-task-1
+Reviewer           Document Reviewer
+Review signature   valid
+Review notes       Approved for use after a qualified legal check.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › /timeline
+
+◆ #30 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T10:32:48.222Z
+Id             e6a9e155-530e-4298-a9d5-69e53a2d5580
+
+◆ #29 · Bot typed a line
+Bot submitted  /artefact inspect artefact-1
+Time           2026-08-01T10:32:40.803Z
+Id             d87f302b-c115-4d9f-b542-8930485abc1e
+
+◆ #28 · Artefact review approved
+Artefact review approved  artefact-1@1 by Document Reviewer
+Time                      2026-08-01T10:32:40.802Z
+Id                        cacc234a-e052-4bf2-81ee-81a21ff69657
+
+◆ #27 · Bot typed a line
+Bot submitted  /artefact review artefact-1@1 --decision approve --as "Document Reviewer" --notes "Approved for use after a qualified legal check."
+Time           2026-08-01T10:32:16.980Z
+Id             8f06476d-9987-4ed8-917f-2e8caa536893
+
+◆ #26 · Bot typed a line
+Bot submitted  /human-tasks
+Time           2026-08-01T10:32:09.237Z
+Id             52990bf4-6582-4ef5-9362-a50637385547
+
+◆ #25 · Artefact review requested
+Artefact review requested  artefact-1@1 from Document Reviewer
+Time                       2026-08-01T10:32:09.235Z
+Id                         532fa190-0fba-466f-b41e-24f7abbee56a
+
+◆ #24 · Bot typed a line
+Bot submitted  /artefact submit artefact-1@1 --reviewer "Document Reviewer" --notes "Check scope, retention, and rights statement."
+Time           2026-08-01T10:31:50.384Z
+Id             a6a13d9d-79fd-4299-8a49-76ec394dfc44
+
+◆ #23 · Bot typed a line
+Bot submitted  /artefact verify artefact-1@1
+Time           2026-08-01T10:31:34.406Z
+Id             f8c7ab1e-1a6d-477b-ac0e-4330ff6f56c8
+
+◆ #22 · Bot typed a line
+Bot submitted  /artefact inspect artefact-1
+Time           2026-08-01T10:31:24.788Z
+Id             dfa72f67-e4eb-41ba-9c47-77c095857160
+
+◆ #21 · Bot typed a line
+Bot submitted  /artefacts
+Time           2026-08-01T10:31:18.736Z
+Id             6a10058c-0811-4eac-b7d8-bcf8dff49120
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › 
+◆ Bot finished
+29 lines typed, 0 turned down — the script finished.
+The bot signed nothing off — every decision in this script named a real person.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3292 session tokens
+arturo › 

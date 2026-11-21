@@ -1,0 +1,11 @@
+SYNTHETIC LOAN SUMMARY (fictional; for scenario testing only)
+
+Applicant: Sample Applicant (fictional)
+Purpose: home renovation
+Amount requested: 40,000
+Term: 5 years
+Stated income: 85,000 per year (self-reported; not verified here)
+Existing debts: car loan 12,000; credit card 3,000
+Notes: No payslips, bank statements, or credit report are attached. All figures
+are self-reported and unverified. This is a synthetic sample, not a real
+application, and is not a lending decision.

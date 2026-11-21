@@ -1,0 +1,60 @@
+# Blueprint 4 — The Orchestrator: digital and physical work open at the same time.
+#
+# The point to film is the pair of lists: /tasks showing the AI's work and
+# /human-tasks showing the person's, both open at once, neither waiting on the
+# other. Then a third Task that can only be written once both have reported.
+/reset
+yes
+/clear
+@timeout 300
+/enterprise
+1
+Northgate Studio
+Bring new designers onto the team with everything they need on day one.
+@blank
+/function
+1
+Onboarding
+Get a new starter set up: the accounts and documents they need, and the desk and equipment waiting for them.
+@blank
+@staff /staff
+@note the Worker /staff proposed is generic. This is what makes it a specialist.
+/refine-worker
+1
+You are an expert onboarding coordinator for a design studio. You sequence accounts, access and reading by what blocks what, you name who is accountable for each step, and you keep what is confirmed complete separate from what is still outstanding.
+/add-human-worker
+Office Manager
+1
+@blank
+@note both paths dispatched together. First the physical one.
+/create-human-task
+Put the laptop and second monitor on desk 4, connect the network cable, leave the ID badge and welcome pack on the desk, and note anything missing.
+1
+@note and at the same time, the digital one
+/task
+1
+A new designer starts on Monday. Write the first-week plan: which accounts and tools they need, in what order, what to read before day three, and who they should meet in week one.
+1
+@note two kinds of work, open at once, neither blocking the other
+/tasks
+/human-tasks
+@wait 120
+@note the person finishes their half
+/complete-human-task
+Laptop and second monitor on desk 4 and connected. Network cable in and tested. Welcome pack out. The ID badge has not been cut yet — reception needs a photo before Monday.
+/human-tasks
+/tasks
+@note only now can this be written, because it needs both halves
+/task
+1
+Write the Monday morning briefing for the new designer's manager. The first-week plan is ready. The desk, laptop, monitor and network are set up, but the ID badge is not cut and reception needs a photo before Monday. Say what is ready, what is outstanding, and who has to act before Monday.
+1
+@wait 120
+@note the record, end to end: both lists, both records in full, and the trail
+/tasks
+/human-tasks
+/task
+2
+2
+/human-task human-task-1
+/timeline

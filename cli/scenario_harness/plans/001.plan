@@ -1,0 +1,36 @@
+# Scenario 001 — Solar customer education (canonical working flow)
+/reset
+yes
+/enterprise
+1
+BrightSky Solar
+Help residential solar customers make good decisions with honest, uncertainty-aware information.
+skip
+/function
+1
+Customer Education
+Produce bounded homeowner guides that separate general guidance from claims needing current local evidence.
+skip
+/add-human-worker
+Publication Reviewer
+1
+skip
+/function start "Customer Education"
+@timeout 240
+@staff /staff
+/task
+1
+Prepare a concise homeowner guide to evaluating residential solar in Auckland. Separate general considerations from claims that require current local evidence, identify the evidence still needed, and finish with a pre-publication fact-check checklist. Do not invent current prices, incentives, payback periods, regulations, or performance figures.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+/approve {{TASK_ID}}
+@wait 50
+@cap WORKER {Worker\s+([A-Za-z][A-Za-z ]+[a-z])}
+/tasks
+/task inspect {{TASK_ID}}
+/workers
+/chat "{{WORKER}}" "Which statements in the completed guide need external verification before publication?"
+/chat history "{{WORKER}}"
+/timeline

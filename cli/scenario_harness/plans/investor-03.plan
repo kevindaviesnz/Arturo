@@ -1,0 +1,39 @@
+/reset
+yes
+/clear
+@timeout 240
+/enterprise
+1
+SafePlay Labs
+Review supplied toy concepts for safety questions while keeping release authority with accountable humans.
+skip
+/function
+1
+Safety Review
+Identify safety questions in supplied toy concepts without claiming certification or regulatory compliance.
+skip
+/add-human-worker
+Safety Lead
+1
+skip
+@staff /staff
+/workers
+/governance
+1
+Toy safety analysis requires Human approval
+1
+3
+1
+/governance
+2
+/task
+1
+Review this supplied concept for questions requiring specialist evidence: a fabric storytelling cube intended for children aged three and over. Do not claim testing, certification, or regulatory compliance.
+1
+@wait 25
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+/approvals
+/approve {{TASK_ID}}
+@wait 120
+/task inspect {{TASK_ID}}

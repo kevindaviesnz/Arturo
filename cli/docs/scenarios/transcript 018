@@ -1,0 +1,626 @@
+◆ #37 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T20:01:51.043Z
+Id             efd1f1e0-9099-4d03-aa6e-85cfcef4cd7d
+
+◆ #36 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-01T20:01:44.609Z
+Id             1f8f6ba9-5523-40e4-a816-b40a77047816
+
+◆ #35 · Human task completed
+Human task human-task-1 completed by Managing Editor
+Time          2026-08-01T20:01:44.606Z
+Id            514fc5ce-77a8-4a5b-92c6-45d79561017d
+
+◆ #34 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Hold the 30 percent figure until the traffic dataset and methodology are verified; proceed to edit the rest with caveats." --as "Managing Editor"
+Time           2026-08-01T20:01:16.365Z
+Id             8c0e860a-ed54-4ca9-9369-179e63a5de98
+
+◆ #33 · Human task created
+Human task created  human-task-1
+Time                2026-08-01T20:01:16.364Z
+Id                  77234a88-2752-43dd-b9c6-518beb1876a8
+
+◆ #32 · Bot typed a line
+Bot submitted  /create-human-task "Editor decision on publication readiness" "Decide whether the piece can proceed to editing, what must be independently verified first, and which claims are held. Do not authorise publication."
+Time           2026-08-01T20:00:42.810Z
+Id             b6aa27f7-7c97-488a-8ef5-20f9a8236c5f
+
+◆ #31 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T20:00:33.905Z
+Id             9df578fe-eb36-4f20-85b8-e5bd325db30b
+
+◆ #30 · Task completed
+Task completed  task-1
+Time            2026-08-01T19:59:50.304Z
+Id              14f7a778-b792-46ff-9e2b-b38d7de5a0bd
+
+◆ #29 · Task started
+Task started  task-1
+Time          2026-08-01T19:59:39.368Z
+Id            45b85912-f76f-46c5-9456-91e86a6dbfca
+
+◆ #28 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-01T19:59:38.902Z
+Id            abdf0883-b7d1-49cd-84f3-887fd6e43f5d
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3058 session tokens
+arturo › 
+◆ Bot finished
+31 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3058 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear                                   
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 018 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 018 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/018.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           3
+Tasks             1
+  Human Tasks       1
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Kowhai Financial
+
+◆ What does it do?
+In one sentence, what does Kowhai Financial exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Meet compliance obligations with evidence, scheduled review, and accountable sign-off.
+
+◆ Anything more about it?
+Anything more worth knowing about Kowhai Financial? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Kowhai Financial
+Mission       Meet compliance obligations with evidence, scheduled review, and accountable sign-off.
+Description   (none)
+Status        active
+Created       2026-08-01T20:05:22.337Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Kowhai Financial" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Compliance Monitoring
+
+◆ What should it do?
+In one sentence, what should "Compliance Monitoring" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame compliance-monitoring checks and route findings to an accountable compliance officer.
+
+◆ Anything more about it?
+Anything more worth knowing about "Compliance Monitoring"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               kowhai-financial:compliance-monitoring
+Name             Compliance Monitoring
+Enterprise       Kowhai Financial (enterprise-1)
+Objective        Frame compliance-monitoring checks and route findings to an accountable compliance officer.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T20:06:03.996Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Compliance Officer
+
+◆ What will they do?
+What should Compliance Officer be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Compliance Officer's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Compliance Officer is now on your team.
+Compliance Officer can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Compliance Monitoring"
+
+◆ Function started
+Function
+  Compliance Monitoring
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 2 AI Workers for Kowhai Financial.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 2
+Compliance Monitor
+Role          Guardian
+Can do        General reasoning, Product Safety, Review, Human Contact
+Would help    Compliance Monitoring
+
+For example, it could
+    · Check whether something is safe to go ahead
+    · Flag risks before an action is taken
+
+Add Compliance Monitor? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › yes
+
+◆ Worker 2 of 2
+Compliance Monitoring Observer
+Role          Observer
+Can do        General reasoning, Monitoring
+Would help    Compliance Monitoring
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Watch for changes and flag anything notable
+    · Keep an eye on activity and report what's happening
+
+Add Compliance Monitoring Observer? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › yes
+
+◆ Staffing applied
+2 AI Workers added, and put to work on 2 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Compliance Monitoring — Compliance Officer
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › /governance policy add "Compliance analysis requires officer sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Compliance analysis requires officer sign-off
+ID            policy-f8969c91-3c4a-4b15-9bbb-33bc8174a20c
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › /memory add "Never assert a control is effective without naming the evidence; list untested controls explicitly." --scope "Compliance Monitoring"
+
+◆ Operational Memory added
+Never assert a control is effective without naming the evidence; list untested controls explicitly.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › /schedule add "Review this week's compliance exceptions and list those needing officer escalation, labelling assumptions." --every friday --at "15:00" --timezone "Pacific/Auckland" --function "Compliance Monitoring"
+
+◆ Task schedule added
+ID            schedule-13a745cf-0754-41c2-a890-ef7727aa23f4
+Frequency     weekly · Friday
+At            15:00
+Timezone      Pacific/Auckland
+Task          Review this week's compliance exceptions and list those needing officer escalation, labelling assumptions.
+Task ID       task-1
+Function      Compliance Monitoring
+Enterprise    Kowhai Financial
+Status        enabled
+Next run      2026-08-07T03:00:00.000Z
+Last run      never
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › /schedule list
+
+◆ Task schedules
+1.
+ID            schedule-13a745cf-0754-41c2-a890-ef7727aa23f4
+Frequency     weekly · Friday
+At            15:00
+Timezone      Pacific/Auckland
+Task          Review this week's compliance exceptions and list those needing officer escalation, labelling assumptions.
+Task ID       task-1
+Function      Compliance Monitoring
+Enterprise    Kowhai Financial
+Status        enabled
+Next run      2026-08-07T03:00:00.000Z
+Last run      never
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › Using synthetic assumptions only, draft a monthly AML transaction-monitoring review checklist: thresholds to review, false-positive handling, escalation criteria, evidence to retain, and controls that remain untested. Do not claim access to real transactions or customer data.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-2
+Selected Function  Compliance Monitoring
+Selected worker    Compliance Monitor
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Review this week's compliance exceptions and list those needing officer escalation, labelling assumptions.
+   ID                     task-1
+   Status                 Scheduled
+   Required capabilities  monitoring, review
+
+2. Using synthetic assumptions only, draft a monthly AML transaction-monitoring review checklist: thresholds to review, false-positive handling, escalation criteri...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Worker                 Compliance Monitor
+   Required capabilities  review
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval chain not found  task-1
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Review this week's compliance exceptions and list those needing officer escalation, labelling assumptions.
+   ID                     task-1
+   Status                 Scheduled
+   Required capabilities  monitoring, review
+
+2. Using synthetic assumptions only, draft a monthly AML transaction-monitoring review checklist: thresholds to review, false-positive handling, escalation criteri...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Worker                 Compliance Monitor
+   Required capabilities  review
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › /task inspect task-1
+
+◆ Task detail
+Worker           None
+ID               task-1
+Status           Scheduled
+Skills needed    monitoring, review
+Why this Worker  Scheduled Task belongs to Compliance Monitoring.
+Business         Kowhai Financial
+Task             1 / 2
+Instruction      Review this week's compliance exceptions and list those needing officer escalation, labelling assumptions.
+
+No output yet.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › /health "Compliance Monitoring"
+
+◆ Health
+Function
+  Compliance Monitoring
+
+Overall Health
+  Unknown
+
+Indicators
+  Tasks Completed          0/0 (0%)
+  Tasks Failed             0
+  Open Tasks               0
+  Outcomes Measured        0/0
+  Lessons Retained         0
+  Governed Criteria        0
+
+Trend
+  Stable
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › /timeline
+
+◆ #36 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T20:11:42.277Z
+Id             553dff2e-418f-40f1-9a07-92f68de3ef8a
+
+◆ #35 · Health updated
+Health updated  Compliance Monitoring is Unknown
+Time            2026-08-01T20:11:42.273Z
+Id              10d24d87-fb74-433f-bf6b-c020e18cc777
+
+◆ #34 · Bot typed a line
+Bot submitted  /health "Compliance Monitoring"
+Time           2026-08-01T20:11:33.060Z
+Id             2d05fc4b-3b44-4fb8-9a5d-c0155b543ac8
+
+◆ #33 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T20:11:21.054Z
+Id             1f8c9915-1803-41f5-9ee7-351316dd89e9
+
+◆ #32 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T20:11:17.416Z
+Id             738bbe65-0022-4c22-83a9-076150bf90e0
+
+◆ #31 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-01T20:10:09.973Z
+Id             009b9c0a-e822-4b01-ae4e-b6c78c73c9e1
+
+◆ #30 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T20:09:57.567Z
+Id             3a77a3e2-1c4b-4a7a-8bd7-e7edf39c61f8
+
+◆ #29 · Task queued
+Task queued for Compliance Monitor: task-2
+Time          2026-08-01T20:09:37.563Z
+Id            6f12baea-4d5b-48a1-a6e7-01f7bba51ab6
+
+◆ #28 · Bot typed a line
+Bot submitted  1
+Time           2026-08-01T20:09:31.364Z
+Id             bb095d04-9a5a-47af-8a79-8cea01557a91
+
+◆ #27 · Bot typed a line
+Bot submitted  Using synthetic assumptions only, draft a monthly AML transaction-monitoring review checklist: thresholds to review, false-positive handling, escalation criteria, evidence to retain, and controls that remain untested. Do not claim access to real transactions or customer data.
+Time           2026-08-01T20:08:54.211Z
+Id             ce673ce0-718b-40d8-ba80-5505dc8c0824
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › 
+◆ Bot finished
+34 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 6721 session tokens
+arturo › 

@@ -1,0 +1,634 @@
+◆ #42 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T20:39:40.255Z
+Id             506dbc25-4b2a-4897-9e59-212edd304d12
+
+◆ #41 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T20:39:27.192Z
+Id             05fc42df-5e63-4748-8fc1-cba555ca3864
+
+◆ #40 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T20:39:21.862Z
+Id             3b9e2231-af9b-400d-abc3-65c4c160d6ba
+
+× #39 · Task failed
+Task failed   task-1
+Time          2026-08-01T20:38:32.296Z
+Id            751ff579-8a36-499b-b0f6-bb6ea21bbdab
+
+◆ #38 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-01T20:38:31.860Z
+Id            37d5c4d9-15db-44bf-8b52-b06de7236175
+
+◆ #37 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-01T20:38:18.205Z
+Id             47bf45c4-caee-4633-972f-aa01e92f32d6
+
+◆ #36 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T20:38:03.875Z
+Id             2ab50083-af39-4f84-b7d4-908cbd5c1b3f
+
+◆ #35 · Task queued
+Task queued for Quality Review Observer: task-2
+Time          2026-08-01T20:37:43.872Z
+Id            f2c3492e-1ea4-4544-a515-403039222482
+
+◆ #34 · Bot typed a line
+Bot submitted  1
+Time           2026-08-01T20:37:39.665Z
+Id             c53065cf-979e-407a-ac3b-e9d0c7e2eb55
+
+◆ #33 · Bot typed a line
+Bot submitted  Revised: draft an incoming-goods inspection checklist for a 500-unit batch of aluminium fittings at AQL 1.0, listing sample size, dimensions to verify, surface-defect criteria, documentation, and human sign-off points. Synthetic assumptions only.
+Time           2026-08-01T20:37:05.637Z
+Id             18089bb0-4423-4840-b0c5-65bf0a4d765c
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › 
+◆ Bot finished
+39 lines typed, 1 turned down — the script finished.
+2 decisions in this run were signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3855 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear                                   
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 015 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 015 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/015.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           5
+Tasks             2
+  Human Tasks       0
+  Approvals waiting 1
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Meridian People Co
+
+◆ What does it do?
+In one sentence, what does Meridian People Co exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Write clear, fair HR policies that a qualified person always signs off.
+
+◆ Anything more about it?
+Anything more worth knowing about Meridian People Co? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Meridian People Co
+Mission       Write clear, fair HR policies that a qualified person always signs off.
+Description   (none)
+Status        active
+Created       2026-08-01T20:48:30.296Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Meridian People Co" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Policy Drafting
+
+◆ What should it do?
+In one sentence, what should "Policy Drafting" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Draft plain-language HR policy outlines for human review, never presented as legal advice.
+
+◆ Anything more about it?
+Anything more worth knowing about "Policy Drafting"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               meridian-people-co:policy-drafting
+Name             Policy Drafting
+Enterprise       Meridian People Co (enterprise-1)
+Objective        Draft plain-language HR policy outlines for human review, never presented as legal advice.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-01T20:49:15.091Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › HR Director
+
+◆ What will they do?
+What should HR Director be able to do? Pick one
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is HR Director's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+HR Director is now on your team.
+HR Director can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Policy Drafting"
+
+◆ Function started
+Function
+  Policy Drafting
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 3 AI Workers for Meridian People Co.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 3
+Policy Reviewer
+Role          Reviewer
+Can do        General reasoning, Review, Human Contact
+Would help    Policy Drafting
+
+For example, it could
+    · Check a piece of work for mistakes and gaps
+    · Give feedback on a draft before it goes out
+
+Add Policy Reviewer? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5590 session tokens
+arturo › yes
+
+◆ Worker 2 of 3
+HR Policy Coordinator
+Role          Planner
+Can do        General reasoning, Planning, Human Contact
+Would help    Policy Drafting
+
+For example, it could
+    · Break a goal into clear, ordered steps
+    · Draft a schedule or plan for a piece of work
+
+Add HR Policy Coordinator? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5590 session tokens
+arturo › yes
+
+◆ Worker 3 of 3
+Policy Drafting Advisor
+Role          Advisor
+Can do        General reasoning, Advice, Human Contact
+Would help    Policy Drafting
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Talk through options and suggest a way forward
+    · Answer a 'how should I…' question in plain terms
+
+Add Policy Drafting Advisor? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5590 session tokens
+arturo › yes
+
+◆ Staffing applied
+3 AI Workers added, and put to work on 3 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Policy Drafting — HR Director
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5590 session tokens
+arturo › /memory add "House style: plain language, no legal advice, always list where jurisdiction-specific legal review is required." --scope "Policy Drafting"
+
+◆ Operational Memory added
+House style   plain language, no legal advice, always list where jurisdiction-specific legal review is required.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5590 session tokens
+arturo › /memory
+
+◆ What Arturo remembers
+Notes here are given to Workers as context on later work.
+
+1. Write something down
+2. See what is written down
+3. Remove a note
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5590 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5590 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5590 session tokens
+arturo › Draft a plain-language outline of a remote-work policy: scope, eligibility, expectations, equipment, security, and the points that need jurisdiction-specific legal review. Do not give legal advice or cite specific statutes as settled.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5590 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Policy Drafting
+Selected worker    Policy Drafting Advisor
+Partial coverage   Policy Drafting Advisor does not hold review — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5590 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Draft a plain-language outline of a remote-work policy: scope, eligibility, expectations, equipment, security, and the points that need jurisdiction-specific le...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Policy Drafting Advisor
+   Required capabilities  review, advice
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 5590 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 5590 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 50s to get on with the work.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                Policy Drafting Advisor
+ID                    task-1
+Status                Completed
+  (Finished.)
+Evidence              Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed         review, advice
+Why this Worker       Inferred Function Policy Drafting; selected its staffed Worker Policy Drafting Advisor. Best-available coverage: Policy Drafting Advisor does not hold review; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business              Meridian People Co
+Task                  1 / 1
+Instruction           Draft a plain-language outline of a remote-work policy: scope, eligibility, expectations, equipment, security, and the points that need jurisdiction-specific legal review. Do not give legal advice or cite specific statutes as settled.
+
+Where this came from  an AI model wrote it. Nobody has checked it
+Looked anything up    no
+
+I'd be happy to help draft a plain-language outline for a remote-work policy for Meridian People Co. Please note that this is not intended to provide legal advice, but rather a starting point for human review and revision.
+
+Remote Work Policy Outline
+
+I. Scope
+
+–  Remote work allows employees to work from anywhere, provided they meet the company's requirements and expectations.
+–  This policy applies to all Meridian People Co. employees, except those explicitly exempted by management.
+
+II. Eligibility
+
+–  All regular full-time and part-time employees are eligible for remote work, subject to management approval.
+–  Remote work is not available to contract or temporary workers.
+
+III. Expectations
+
+–  Employees working remotely must maintain the same level of productivity, efficiency, and quality as they would in an office setting.
+–  Employees are expected to be:
+	+ Available and accessible during core hours (e.g., 10am-4pm EST)
+	+ Compliant with company policies and procedures
+	+ Secure and protect company data and systems
+
+IV. Equipment
+
+–  Employees are responsible for providing their own equipment, including:
+	+ A reliable computer or laptop
+	+ Internet access (either through personal or company-provided connections)
+	+ Headset or earbuds for video calls
+–  The company may provide a laptop or device for remote workers who do not have one.
+
+V. Security
+
+–  Remote workers must follow the same security protocols as office-based employees, including:
+	+ Using strong passwords and 2FA (if available)
+	+ Keeping software and operating systems up-to-date
+	+ Avoiding public Wi-Fi networks for sensitive work
+
+VI. Jurisdiction-Specific Legal Review Points
+
+–  These points require further review and consultation with a lawyer or relevant authorities to ensure compliance with local laws and regulations:
+	+ Data protection and privacy laws (e.g., GDPR, CCPA)
+	+ Tax laws and regulations (e.g., income tax, sales tax)
+	+ Employment laws and regulations (e.g., minimum wage, workers' compensation)
+
+VII. Monitoring and Evaluation
+
+–  The company may monitor remote work productivity and performance to ensure employees meet expectations.
+–  Regular check-ins with management and team leads are expected.
+
+VIII. Termination of Remote Work Arrangement
+
+–  The company reserves the right to terminate or modify an employee's remote work arrangement at any time, with or without cause.
+
+Please note that this is a basic outline and may require further refinement and review by human stakeholders. It is essential to consult with relevant authorities and lawyers to ensure compliance with local laws and regulations.
+
+Next Steps
+
+–  Review and revise the policy outline in consultation with management, HR, and other relevant stakeholders.
+–  Conduct further research on jurisdiction-specific legal requirements and incorporate findings into the policy.
+–  Finalize the policy and obtain approval from management before implementation.
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6832 session tokens
+arturo › /timeline
+
+◆ #33 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T20:53:45.550Z
+Id             e8d390a2-f425-419f-a997-572a854603c4
+
+◆ #32 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T20:53:37.559Z
+Id             52b75fc4-ea39-4c17-918b-40873f9b6a3f
+
+◆ #31 · Task completed
+Task completed  task-1
+Time            2026-08-01T20:52:57.653Z
+Id              e871a517-38c2-44bc-95b5-ba62c4a4641d
+
+◆ #30 · Task started
+Task started  task-1
+Time          2026-08-01T20:52:47.639Z
+Id            3b01c6b1-8660-4a62-b0a9-4d11bf41fd23
+
+◆ #29 · Task approved
+Approval recorded for Task task-1 by Arturo Bot (automated, not a person)
+Time          2026-08-01T20:52:47.556Z
+Id            f042826e-4f7a-43b0-ae95-a952b2c6fa4a
+
+◆ #28 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-01T20:52:35.444Z
+Id             d992bd10-bdf5-424e-aca8-6c4f2e00da82
+
+◆ #27 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T20:52:21.429Z
+Id             a8f8595d-acd5-4613-a3aa-385d4814c17d
+
+◆ #26 · Task queued
+Task queued for Policy Drafting Advisor: task-1
+Time          2026-08-01T20:52:01.426Z
+Id            5cd3718e-1262-4f00-8a0f-f119702f203d
+
+◆ #25 · Bot typed a line
+Bot submitted  1
+Time           2026-08-01T20:51:55.660Z
+Id             4b4cd28f-2ccc-43ad-afa7-a56c75768c61
+
+◆ #24 · Bot typed a line
+Bot submitted  Draft a plain-language outline of a remote-work policy: scope, eligibility, expectations, equipment, security, and the points that need jurisdiction-specific legal review. Do not give legal advice or cite specific statutes as settled.
+Time           2026-08-01T20:51:23.029Z
+Id             fd95db04-e8b1-408b-87ef-5b5548f1bb3c
+
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6832 session tokens
+arturo › 
+◆ Bot finished
+31 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 6832 session tokens
+arturo › 

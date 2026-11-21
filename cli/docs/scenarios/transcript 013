@@ -1,0 +1,707 @@
+Business         Larkfield Software
+Task             1 / 2
+Instruction      Summarise overnight support tickets and flag those needing a same-day human reply, labelling every assumption.
+
+No output yet.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › /timeline
+
+◆ #31 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T21:03:12.366Z
+Id             887aeaa2-6e63-4f96-82af-d9348150d39b
+
+◆ #30 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-01T21:03:01.086Z
+Id             b4450fb6-591a-4b04-b4d8-a5dd4c2c8eef
+
+◆ #29 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T21:02:55.956Z
+Id             2450304b-8150-422f-b0d4-68219ed71b4e
+
+◆ #28 · Bot typed a line
+Bot submitted  /approve task-1 --as "Arturo Bot (automated, not a person)"
+Time           2026-08-01T21:01:53.064Z
+Id             c097ac39-8a82-4d8a-8564-407077ad50b9
+
+◆ #27 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T21:01:40.826Z
+Id             c678d711-5910-43cc-954c-bbf6f536ca80
+
+◆ #26 · Task queued
+Task queued for Research Support Lead: task-2
+Time          2026-08-01T21:01:20.822Z
+Id            e50c28f9-3994-4ac2-9b48-0eb81ee61916
+
+◆ #25 · Bot typed a line
+Bot submitted  1
+Time           2026-08-01T21:01:16.894Z
+Id             a2c59ac2-b5df-4514-a09e-cffadb7d2c37
+
+◆ #24 · Bot typed a line
+Bot submitted  Draft a triage rubric for inbound support tickets: severity levels, information needed from the customer, escalation criteria, and when a human must reply. Do not claim access to the ticket system or customer data.
+Time           2026-08-01T21:00:46.471Z
+Id             3601ecc5-8603-4170-874b-ae17096ebd97
+
+◆ #23 · Bot typed a line
+Bot submitted  1
+Time           2026-08-01T21:00:42.391Z
+Id             bf3b7939-6bb5-4aa0-b0fb-c85b9788ca55
+
+◆ #22 · Bot typed a line
+Bot submitted  /task
+Time           2026-08-01T21:00:32.250Z
+Id             4a48c0ef-e418-4f4a-8925-c82e4bfe4710
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › 
+◆ Bot finished
+30 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1902 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear                                   
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 013 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 013 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/013.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/overview
+
+◆ Enterprise overview
+1 enterprise  ·  1 ongoing Functions  ·  1/1 Functions running
+
+Larkfield Software
+  Support customers quickly and honestly, with a person accountable for every judgement call.
+  1 Functions · active
+
+◆ Execution pulse
+Tasks completed      0/2 (0%)
+Workflow runs        0
+Workers available    3/3
+Human tasks          0
+Approvals waiting    1
+
+◆ Trust layer
+34 durable operational events
+0 retained operational lessons
+1 governed decision chain
+
+Every action remains inspectable through /events, /timeline, /tasks, /memory, and /governance.
+
+◆ Next move
+A human decision is waiting. Use /approvals to inspect the governance gate.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /functions
+
+◆ Functions
+1. Support Triage
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /workers
+
+◆ Workers
+1. Arturo Bot (automated, not a person)
+Type           Human
+Archetype      guardian
+Participation  approval
+Email          none
+Availability   available
+Status         Available
+Current Tasks  0
+
+2. Research Support Lead
+Type           AI
+Archetype      researcher
+Availability   available
+Status         Available
+Current Tasks  1
+
+3. Support Lead
+Type           Human
+Archetype      guardian
+Participation  approval
+Email          none
+Availability   available
+Status         Available
+Current Tasks  0
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+Monday — put recurring work on a clock
+
+
+/schedule add "Review the overnight client enquiries and list which need a same-day reply, labelling every assumption." --every daily --at "08:30" --timezone "Pacific/Auckland" --function "Client Intake"
+
+◆ Task schedule not changed
+Function not found  Client Intake
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /schedule add "Summarise the matters that moved this week and list what is waiting on the principal." --every friday --at "16:00" --timezone "Pacific/Auckland" --function "Practice Administration"
+
+◆ Task schedule not changed
+Function not found  Practice Administration
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /schedule list
+
+◆ Task schedules
+1.
+ID            schedule-1aeb0688-c32d-4174-b162-c314171ad492
+Frequency     daily
+At            08:30
+Timezone      Pacific/Auckland
+Task          Summarise overnight support tickets and flag those needing a same-day human reply, labelling every assumption.
+Task ID       task-1
+Function      Support Triage
+Enterprise    Larkfield Software
+Status        enabled
+Next run      2026-08-02T20:30:00.000Z
+Last run      never
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+Tuesday — the decision only the lawyer can make
+
+
+/governance policy list
+
+◆ Governance policies
+1. Human approval required for Support Triage, from the staffing plan you applied.
+   ID            staffing-approval:larkfield-software:support-triage
+   Effect        require-approval · Match: businessFunctionId=larkfield-software:support-triage · Scope: organization:enterprise-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Client Advice"
+
+× Function not found
+Function not found  Client Advice
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/task create "Review a synthetic draft advice note for a small business on a commercial contract question, and list what the principal must check before it goes to the client. Do not send anything." --job "Client Advice"
+
+◆ Task not created
+Function not found  Client Advice
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approvals
+
+◆ task-2 · pending
+What               Draft a triage rubric for inbound support tickets: severity levels, information needed from the customer, escalation criteria, and when a human must reply. Do not claim access to the ticket system or customer data.
+Why it needs you   Human approval required for Support Triage, from the staffing plan you applied.
+Signed off so far  0 of 1
+Who can approve    Arturo Bot (automated, not a person), Support Lead
+
+To approve         /approve task-2 --as "Arturo Bot (automated, not a person)"
+To turn down       /reject task-2 "<reason>"
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /approval-status <task-id>
+
+◆ Approval status
+Approval chain not found  <task-id>
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /approve <task-id> --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+No Task found with id <task-id>. Check /tasks for the exact id.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect <task-id>
+
+× Task not found
+No task found with id or title  <task-id>
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+Wednesday — one thing finishing starts the next
+
+
+/event rule add --when task.completed --job "Client Advice" --publish "Advice ready for filing"
+
+◆ Event rule not changed
+Function not found in Larkfield Software: Client Advice
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /event rule list
+
+◆ Event rules
+No Event rules configured.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Practice Administration"
+
+× Function not found
+Function not found  Practice Administration
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /events
+
+◆ Events
+2026-08-01 20:57Z  Bot Input  · warn
+Bot submitted            /enterprise
+Event ID                 e8bf3219-1eaa-40b7-8e75-0bd9a786da96
+
+2026-08-01 20:57Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 c032911c-aa15-45dc-a501-5f6ad1b63951
+
+2026-08-01 20:57Z  Bot Input  · warn
+Bot submitted            Larkfield Software
+Event ID                 cfad2058-376d-4d85-a9ad-c69961b01ee5
+
+2026-08-01 20:57Z  Bot Input  · warn
+Bot submitted            Support customers quickly and honestly, with a person accountable for every judgement call.
+Event ID                 825c4124-03ca-45d4-8330-e41efd8117ca
+
+2026-08-01 20:58Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 4fbc2d4b-bca9-48e0-bc6f-14916329d5c5
+
+2026-08-01 20:58Z  Bot Input  · warn
+Bot submitted            /function
+Event ID                 1e02e798-37df-45f6-99ef-17fdffbfe307
+
+2026-08-01 20:58Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 38f65970-a5af-4f24-a867-d7e04140269b
+
+2026-08-01 20:58Z  Bot Input  · warn
+Bot submitted            Support Triage
+Event ID                 ff8d0345-9c5b-4d4a-882f-52bedccb5594
+
+2026-08-01 20:58Z  Bot Input  · warn
+Bot submitted            Turn inbound support signals into prioritised, evidence-aware triage for an accountable support lead.
+Event ID                 8456d3e7-f7c1-45ac-ab1f-1916ab0ee8b5
+
+2026-08-01 20:58Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 a1938e7d-180d-4cbe-b0e6-453964bee830
+
+2026-08-01 20:58Z  Bot Input  · warn
+Bot submitted            /add-human-worker
+Event ID                 5d287137-8004-4265-8785-30714fd624a6
+
+2026-08-01 20:59Z  Bot Input  · warn
+Bot submitted            Support Lead
+Event ID                 40cbd6cf-df66-482b-a220-d34a85eca5d7
+
+2026-08-01 20:59Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 bb07f47a-3298-4ff2-b7d3-e91064354deb
+
+2026-08-01 20:59Z  Bot Input  · warn
+Bot submitted            skip
+Event ID                 4903c42c-f484-48c8-ad29-cc23cfb3063a
+
+2026-08-01 20:59Z  Worker Registered  · success
+Human worker registered  Support Lead
+Event ID                 eaa353b6-b75d-473a-82b6-adb76761d500
+
+2026-08-01 20:59Z  Bot Input  · warn
+Bot submitted            /function start "Support Triage"
+Event ID                 d0d087e7-7a7a-4192-b399-11c4095cdb75
+
+2026-08-01 20:59Z  Function Started  · success
+Function started         Support Triage
+Event ID                 d96c97fd-045e-498f-b734-789bec730cb2
+
+2026-08-01 20:59Z  Bot Input  · warn
+Bot submitted            /staff
+Event ID                 7845a6d9-ad39-4454-970e-63953176fdce
+
+2026-08-01 20:59Z  Bot Input  · warn
+Bot submitted            /schedule add "Summarise overnight support tickets and flag those needing a same-day human reply, labelling every assumption." --every daily --at "08:30" --timezone "Pacific/Auckland" --function "Support Triage"
+Event ID                 56e3f40e-b478-4519-adf3-fb9181bbccff
+
+2026-08-01 21:00Z  Schedule Added  · success
+Task schedule added      schedule-1aeb0688-c32d-4174-b162-c314171ad492 for Task task-1
+Event ID                 0fd57f1d-b5d2-45a6-900e-678920d0a859
+
+2026-08-01 21:00Z  Bot Input  · warn
+Bot submitted            /schedule list
+Event ID                 bf904aec-81f1-47a2-91f6-104228f52cf4
+
+2026-08-01 21:00Z  Bot Input  · warn
+Bot submitted            /task
+Event ID                 4a48c0ef-e418-4f4a-8925-c82e4bfe4710
+
+2026-08-01 21:00Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 bf3b7939-6bb5-4aa0-b0fb-c85b9788ca55
+
+2026-08-01 21:00Z  Bot Input  · warn
+Bot submitted            Draft a triage rubric for inbound support tickets: severity levels, information needed from the customer, escalation criteria, and when a human must reply. Do not claim access to the ticket system or customer data.
+Event ID                 3601ecc5-8603-4170-874b-ae17096ebd97
+
+2026-08-01 21:01Z  Bot Input  · warn
+Bot submitted            1
+Event ID                 a2c59ac2-b5df-4514-a09e-cffadb7d2c37
+
+2026-08-01 21:01Z  Job Queued  · info
+  Task queued for Research Support Lead: task-2
+Event ID                 e50c28f9-3994-4ac2-9b48-0eb81ee61916
+
+2026-08-01 21:01Z  Bot Input  · warn
+Bot submitted            /tasks
+Event ID                 c678d711-5910-43cc-954c-bbf6f536ca80
+
+2026-08-01 21:01Z  Bot Input  · warn
+Bot submitted            /approve task-1 --as "Arturo Bot (automated, not a person)"
+Event ID                 c097ac39-8a82-4d8a-8564-407077ad50b9
+
+2026-08-01 21:02Z  Bot Input  · warn
+Bot submitted            /tasks
+Event ID                 2450304b-8150-422f-b0d4-68219ed71b4e
+
+2026-08-01 21:03Z  Bot Input  · warn
+Bot submitted            /task inspect task-1
+Event ID                 b4450fb6-591a-4b04-b4d8-a5dd4c2c8eef
+
+2026-08-01 21:03Z  Bot Input  · warn
+Bot submitted            /timeline
+Event ID                 887aeaa2-6e63-4f96-82af-d9348150d39b
+
+2026-08-01 21:03Z  Bot Session_finished  · warn
+  Bot session finished after 30 turns — the script finished.
+Event ID                 a2d1a1db-fb96-42ae-adb8-28816eac5294
+
+2026-08-01 21:28Z  Bot Session_started  · warn
+  Bot session started — /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/013.plan. Nothing in this session was typed by a person.
+Event ID                 95d7dc14-9e1a-4162-89ea-be2b6b184faa
+
+2026-08-01 21:28Z  Bot Input  · warn
+Bot submitted            /overview
+Event ID                 96c08e71-7db1-46e3-aaf8-2f898511df16
+
+2026-08-01 21:28Z  Bot Input  · warn
+Bot submitted            /functions
+Event ID                 0c3a439f-840b-40fb-9f59-4c5d0391b4f9
+
+2026-08-01 21:28Z  Bot Input  · warn
+Bot submitted            /workers
+Event ID                 5cda9c07-0cb8-4b57-8cdb-41764b673ea5
+
+2026-08-01 21:28Z  Bot Input  · warn
+Bot submitted            /schedule add "Review the overnight client enquiries and list which need a same-day reply, labelling every assumption." --every daily --at "08:30" --timezone "Pacific/Auckland" --function "Client Intake"
+Event ID                 f4099b32-15f9-4922-8b1a-be9414bf49ed
+
+2026-08-01 21:28Z  Bot Input  · warn
+Bot submitted            /schedule add "Summarise the matters that moved this week and list what is waiting on the principal." --every friday --at "16:00" --timezone "Pacific/Auckland" --function "Practice Administration"
+Event ID                 58506bf7-8ec9-4f02-8655-285247570f3e
+
+2026-08-01 21:29Z  Bot Input  · warn
+Bot submitted            /schedule list
+Event ID                 74511f14-7b86-4fdf-bec3-f25fd2e5c6a6
+
+2026-08-01 21:29Z  Bot Input  · warn
+Bot submitted            /governance policy list
+Event ID                 694df4a6-c5cb-4684-9f09-6b5d7fd6dc15
+
+2026-08-01 21:29Z  Governance Inspected  · success
+  Governance policies inspected.
+Event ID                 332dfbf2-1f42-4c13-9a86-00e25ea15e19
+
+2026-08-01 21:29Z  Bot Input  · warn
+Bot submitted            /function start "Client Advice"
+Event ID                 d2dfe05f-6e68-41fb-9d99-766e408cc464
+
+2026-08-01 21:29Z  Bot Input  · warn
+Bot submitted            /task create "Review a synthetic draft advice note for a small business on a commercial contract question, and list what the principal must check before it goes to the client. Do not send anything." --task "Client Advice"
+Event ID                 28b85553-8745-4fe1-b250-aef2a848a721
+
+2026-08-01 21:30Z  Bot Input  · warn
+Bot submitted            /approvals
+Event ID                 9c2b7dc2-173d-4683-b706-ebfe2c54bb21
+
+2026-08-01 21:30Z  Bot Input  · warn
+Bot submitted            /approval-status <task-id>
+Event ID                 0fec51e7-8e57-46d8-ad23-2c385553413a
+
+2026-08-01 21:30Z  Bot Input  · warn
+Bot submitted            /approve <task-id> --as "Arturo Bot (automated, not a person)"
+Event ID                 85390d5d-e895-47e2-bb1b-ea721f3559f4
+
+2026-08-01 21:31Z  Bot Input  · warn
+Bot submitted            /task inspect <task-id>
+Event ID                 8732154f-b5ec-430d-b323-659776b1be78
+
+2026-08-01 21:31Z  Bot Input  · warn
+Bot submitted            /event rule add --when task.completed --task "Client Advice" --publish "Advice ready for filing"
+Event ID                 72cc7ec1-18b2-48c9-a78a-373ea2444b45
+
+2026-08-01 21:32Z  Bot Input  · warn
+Bot submitted            /event rule list
+Event ID                 a9f59d1a-82ad-4d1b-bb24-c7b16c9dfc5e
+
+2026-08-01 21:32Z  Bot Input  · warn
+Bot submitted            /function start "Practice Administration"
+Event ID                 d6a6da48-d50c-4167-a574-b2e42e1d2e91
+
+2026-08-01 21:32Z  Bot Input  · warn
+Bot submitted            /events
+Event ID                 cd6e7479-57cf-447b-bede-28b6f8cae51f
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /tasks
+
+◆ Tasks
+1. Summarise overnight support tickets and flag those needing a same-day human reply, labelling every assumption.
+   ID                     task-1
+   Status                 Scheduled
+   Required capabilities  summarisation
+
+2. Draft a triage rubric for inbound support tickets: severity levels, information needed from the customer, escalation criteria, and when a human must reply. Do n...
+   ID                     task-2
+   Status                 Blocked — awaiting approval
+   Worker                 Research Support Lead
+   Required capabilities  research
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+Thursday — handing work between responsibilities
+
+
+/function start "Client Intake"
+
+× Function not found
+Function not found  Client Intake
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /delegation request "Prepare a plain-English summary of the supplied clauses for a client who is not a lawyer." --from "Client Advice" --to "Client Intake"
+
+◆ Delegation not created
+Delegating Function not found  Client Advice
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /delegation list
+
+◆ Delegations
+No delegations found.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /memory add "Clients consistently misread the settlement-date clause; explain it in plain English every time." --scope "Harbour Legal"
+
+× Memory scope not found
+No Enterprise or Function found for scope: Harbour Legal
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /memory
+
+◆ What Arturo remembers
+Notes here are given to Workers as context on later work.
+
+1. Write something down
+2. See what is written down
+3. Remove a note
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+Friday — what actually happened
+
+
+/overview
+
+◆ Enterprise overview
+1 enterprise  ·  1 ongoing Functions  ·  1/1 Functions running
+
+Larkfield Software
+  Support customers quickly and honestly, with a person accountable for every judgement call.
+  1 Functions · active
+
+◆ Execution pulse
+Tasks completed      0/2 (0%)
+Workflow runs        0
+Workers available    3/3
+Human tasks          0
+Approvals waiting    1
+
+◆ Trust layer
+58 durable operational events
+0 retained operational lessons
+1 governed decision chain
+
+Every action remains inspectable through /events, /timeline, /tasks, /memory, and /governance.
+
+◆ Next move
+A human decision is waiting. Use /approvals to inspect the governance gate.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /health "Client Advice"
+
+× Function not found
+Function not found  Client Advice
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /timeline
+
+◆ #60 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-01T21:34:04.576Z
+Id             82ddfd07-d35b-47c4-b13f-8ff9b4d60b8b
+
+◆ #59 · Bot typed a line
+Bot submitted  /health "Client Advice"
+Time           2026-08-01T21:33:52.470Z
+Id             c6233afe-8357-44df-bd04-0242deff1708
+
+◆ #58 · Bot typed a line
+Bot submitted  /overview
+Time           2026-08-01T21:33:45.745Z
+Id             afef1bd0-59ad-48c4-9c3c-95aefd0dd1fb
+
+◆ #57 · Bot typed a line
+Bot submitted  /memory
+Time           2026-08-01T21:33:41.024Z
+Id             d11c53c4-9bf0-4e15-89e4-64f3352243bc
+
+◆ #56 · Bot typed a line
+Bot submitted  /memory add "Clients consistently misread the settlement-date clause; explain it in plain English every time." --scope "Harbour Legal"
+Time           2026-08-01T21:33:20.528Z
+Id             cead3ed8-e3f4-4512-ac73-651b9df354f0
+
+◆ #55 · Bot typed a line
+Bot submitted  /delegation list
+Time           2026-08-01T21:33:15.027Z
+Id             eb81e1ba-cd77-4106-b6e8-e150caf4fb14
+
+◆ #54 · Bot typed a line
+Bot submitted  /delegation request "Prepare a plain-English summary of the supplied clauses for a client who is not a lawyer." --from "Client Advice" --to "Client Intake"
+Time           2026-08-01T21:32:52.483Z
+Id             030c415b-85bb-47af-ac29-04e150856a48
+
+◆ #53 · Bot typed a line
+Bot submitted  /function start "Client Intake"
+Time           2026-08-01T21:32:41.698Z
+Id             533c8ed5-d282-4cd7-9036-bf6eefd72661
+
+◆ #52 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-01T21:32:30.078Z
+Id             fd9af3b0-9828-470b-93a7-4b7456b12784
+
+◆ #51 · Bot typed a line
+Bot submitted  /events
+Time           2026-08-01T21:32:25.184Z
+Id             cd6e7479-57cf-447b-bede-28b6f8cae51f
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /approvals
+
+◆ task-2 · pending
+What               Draft a triage rubric for inbound support tickets: severity levels, information needed from the customer, escalation criteria, and when a human must reply. Do not claim access to the ticket system or customer data.
+Why it needs you   Human approval required for Support Triage, from the staffing plan you applied.
+Signed off so far  0 of 1
+Who can approve    Arturo Bot (automated, not a person), Support Lead
+
+To approve         /approve task-2 --as "Arturo Bot (automated, not a person)"
+To turn down       /reject task-2 "<reason>"
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › cancel
+
+◆ Cancelled
+No problem — nothing was changed.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot finished
+27 lines typed, 11 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 

@@ -1,0 +1,842 @@
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Kahurangi Conservation
+
+◆ What does it do?
+In one sentence, what does Kahurangi Conservation exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Left a question open
+Arturo is still waiting for an answer, and "cancel" did not get rid of the question.
+The terminal is yours, mid-question. Answer it, or type cancel.
+
+
+
+◆ Bot finished
+6 lines typed, 0 turned down — you stopped it.
+The bot signed nothing off — every decision in this script named a real person.
+The keyboard is yours again.
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 030 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 030 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+Tip: to get started, enter /enterprise
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/030.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         0
+Workers           0
+Tasks             0
+  Human Tasks       0
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Kahurangi Conservation
+
+◆ What does it do?
+In one sentence, what does Kahurangi Conservation exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Protect the estate with evidence-led planning and accountable human control of every field action.
+
+◆ Anything more about it?
+Anything more worth knowing about Kahurangi Conservation? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Kahurangi Conservation
+Mission       Protect the estate with evidence-led planning and accountable human control of every field action.
+Description   (none)
+Status        active
+Created       2026-07-31T08:43:06.481Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Kahurangi Conservation" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Field Monitoring
+
+◆ What should it do?
+In one sentence, what should "Field Monitoring" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame monitoring signals and evidence gaps for conservation events.
+
+◆ Anything more about it?
+Anything more worth knowing about "Field Monitoring"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               kahurangi-conservation:field-monitoring
+Name             Field Monitoring
+Enterprise       Kahurangi Conservation (enterprise-1)
+Objective        Frame monitoring signals and evidence gaps for conservation events.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-31T08:43:39.236Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Threat Analysis
+
+◆ What should it do?
+In one sentence, what should "Threat Analysis" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Analyse synthetic pest and fire-risk scenarios for accountable review.
+
+◆ Anything more about it?
+Anything more worth knowing about "Threat Analysis"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               kahurangi-conservation:threat-analysis
+Name             Threat Analysis
+Enterprise       Kahurangi Conservation (enterprise-1)
+Objective        Analyse synthetic pest and fire-risk scenarios for accountable review.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-31T08:44:19.582Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Operations Planning
+
+◆ What should it do?
+In one sentence, what should "Operations Planning" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Prepare bounded response options and route field decisions to a ranger.
+
+◆ Anything more about it?
+Anything more worth knowing about "Operations Planning"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               kahurangi-conservation:operations-planning
+Name             Operations Planning
+Enterprise       Kahurangi Conservation (enterprise-1)
+Objective        Prepare bounded response options and route field decisions to a ranger.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-31T08:44:59.166Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Head Ranger
+
+◆ What will they do?
+What should Head Ranger be able to do? Pick one
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Head Ranger's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 3 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Head Ranger is now on your team.
+Head Ranger can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Field Monitoring"
+
+◆ Function started
+Function
+  Field Monitoring
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Threat Analysis"
+
+◆ Function started
+Function
+  Threat Analysis
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Operations Planning"
+
+◆ Function started
+Function
+  Operations Planning
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 4 AI Workers for Kahurangi Conservation.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 3 kinds of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 4
+Field Researcher
+Role          Researcher
+Can do        General reasoning, Research, Web Research, Summarisation, Human Contact
+Would help    Field Monitoring
+
+For example, it could
+    · Find and summarise what's known about a topic
+    · Gather sources on a question and flag what's uncertain
+
+Add Field Researcher? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › yes
+
+◆ Worker 2 of 4
+Threat Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Threat Analysis
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Threat Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › yes
+
+◆ Worker 3 of 4
+Operations Planner
+Role          Planner
+Can do        General reasoning, Planning, Human Contact
+Would help    Operations Planning
+
+For example, it could
+    · Break a goal into clear, ordered steps
+    · Draft a schedule or plan for a piece of work
+
+Add Operations Planner? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › yes
+
+◆ Worker 4 of 4
+Threat Analysis Guardian
+Role          Guardian
+Can do        General reasoning, Product Safety, Review, Human Contact
+Would help    Threat Analysis
+Note          Arturo added this one to fill a gap — worth a look.
+
+For example, it could
+    · Check whether something is safe to go ahead
+    · Flag risks before an action is taken
+
+Add Threat Analysis Guardian? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 3 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › yes
+
+◆ Staffing applied
+4 AI Workers added, and put to work on 4 Functions.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Field Monitoring — Head Ranger
+  · Threat Analysis — Head Ranger
+  · Operations Planning — Head Ranger
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › /governance policy add "Response analysis requires ranger sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Response analysis requires ranger sign-off
+ID            policy-62b90770-0aa2-4f7d-8c48-4c732b07d16e
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › /governance policy add "Autonomous field action is denied" --effect deny --capability "execution"
+
+◆ Governance policy added
+Policy        Autonomous field action is denied
+ID            policy-1aeace05-7acc-4840-8669-72baa6742604
+Effect        deny
+Match         capabilityId=execution
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › /memory add "Never propose an intervention without naming the evidence and the non-target risks; every field action is a human decision." --scope "Operations Planning"
+
+◆ Operational Memory added
+Never propose an intervention without naming the evidence and the non-target risks; every field action is a human decision.
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › /schedule add "Summarise overnight sensor alerts and the threats awaiting a ranger decision, labelling assumptions." --every daily --at "06:30" --timezone "Pacific/Auckland" --function "Field Monitoring"
+
+◆ Task schedule added
+ID            schedule-7056c78b-92b0-4989-b7a5-1d7d74b62193
+Frequency     daily
+At            06:30
+Timezone      Pacific/Auckland
+Task          Summarise overnight sensor alerts and the threats awaiting a ranger decision, labelling assumptions.
+Task ID       task-1
+Function      Field Monitoring
+Enterprise    Kahurangi Conservation
+Status        enabled
+Next run      2026-07-31T18:30:00.000Z
+Last run      never
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › /delegation request "Analyse a synthetic scenario where trap-line data suggests a rising predator population near a nesting site: evidence needed, high-level response options, non-target risks, and the field decisions a ranger must make. Do not issue field instructions." --from "Operations Planning" --to "Threat Analysis"
+
+◆ Delegation requested
+Delegation in progress.
+
+ID             7b12edd8-1a56-452b-866c-726d80c1ae48
+From           Operations Planning
+To             Threat Analysis
+Work           Analyse a synthetic scenario where trap-line data suggests a rising predator population near a nesting site: evidence needed, high-level response options, non-target risks, and the field decisions a ranger must make. Do not issue field instructions.
+Answerable     Operations Planning is still answerable for it
+Status         Being worked on
+Task           task-2
+Worker         Threat Analysis Guardian
+Skills needed  safety, review, analysis
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › /delegation list
+
+◆ Delegations
+1. 7b12edd8-1a56-452b-866c-726d80c1ae48 · Being worked on
+   Operations Planning → Threat Analysis
+   Work          Analyse a synthetic scenario where trap-line data suggests a rising predator population near a nesting site: evidence needed, high-level response options, non-target risks, and the field decisions a ranger must make. Do not issue field instructions.
+   Task          task-2
+   Worker        Threat Analysis Guardian
+   Inspect       /delegation inspect 7b12edd8-1a56-452b-866c-726d80c1ae48
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › /delegation inspect 7b12edd8-1a56-452b-866c-726d80c1ae48
+
+◆ Delegation
+Delegation in progress.
+
+ID             7b12edd8-1a56-452b-866c-726d80c1ae48
+From           Operations Planning
+To             Threat Analysis
+Work           Analyse a synthetic scenario where trap-line data suggests a rising predator population near a nesting site: evidence needed, high-level response options, non-target risks, and the field decisions a ranger must make. Do not issue field instructions.
+Answerable     Operations Planning is still answerable for it
+Status         Being worked on
+Task           task-2
+Worker         Threat Analysis Guardian
+Skills needed  safety, review, analysis
+
+
+  ● LIVE · Functions 3 · Workers 5 · Tasks 2 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-2 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-2
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-2
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3336 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 55s to get on with the work.
+
+
+/task inspect task-2
+
+◆ Task detail
+Worker                            Threat Analysis Guardian
+ID                                task-2
+Status                            Completed
+  (Finished.)
+Evidence                          Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed                     safety, review, analysis
+Why this Worker                   Delegation 7b12edd8-1a56-452b-866c-726d80c1ae48: Receiving Function is staffed by Threat Analysis Guardian
+Task                              2 / 2
+Instruction                       Analyse a synthetic scenario where trap-line data suggests a rising predator population near a nesting site: evidence needed, high-level response options, non-target risks, and the field decisions a ranger must make. Do not issue field instructions.
+
+Where this came from              an AI model wrote it. Nobody has checked it
+Looked anything up                no
+
+Threat Analysis: Rising Predator Population near Nesting Site
+
+Based on trap-line data indicating a rise in predator population near a nesting site, I have analyzed the situation to provide high-level response options and potential non-target risks for a ranger's consideration.
+
+Scenario Overview
+
+The trapping data suggests an increase in predator activity near the nesting site, which may pose a risk to the conservation efforts. The exact species of predators is unknown, but their presence could impact the local ecosystem.
+
+High-Level Response Options
+
+1. Monitoring and Surveillance: Continue trap-line monitoring to gather more data on the predator population's size, behavior, and movement patterns.
+2. Habitat Modification: Modify the surrounding habitat to make it less attractive to predators, such as removing food sources or altering vegetation.
+3. Nesting Site Protection: Implement measures to protect the nesting site from predation, such as installing fencing or using repellents.
+4. Predator Control Measures: Consider implementing control measures to reduce the predator population, but this option should be explored only after consulting with relevant authorities and considering non-lethal alternatives.
+
+Non-Target Risks
+
+1. Unintended Consequences of Habitat Modification: Altering the habitat could have unforeseen effects on other species or ecosystems.
+2. Ranger Safety: Working in close proximity to predators increases the risk of ranger safety, particularly if control measures are implemented without proper training and equipment.
+3. Human-Predator Conflict: If predation attempts are made against a nesting site, there is a risk of human-predator conflict, which could lead to attacks on humans.
+
+Field Decisions for a Ranger
+
+The ranger should
+
+1. Consult with relevant authorities and conservation experts before making any decisions.
+2. Assess the risks associated with each response option and non-target risks.
+3. Prioritize measures that minimize harm to both predators and conserved species.
+4. Ensure all control measures are implemented in accordance with established protocols and guidelines.
+
+Please provide the necessary data (e.g., predator species, trap-line location, habitat characteristics) to further inform this analysis.
+
+Illustrative Example
+
+This scenario is presented as an illustrative example only. The actual response options, non-target risks, and field decisions may vary depending on the specific circumstances of the situation.
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 4463 session tokens
+arturo › /create-human-task "Field response decision" "Decide whether a response is warranted, what evidence must be confirmed, and the non-target safeguards required. Do not authorise any field action."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=45b9fe87b76487f47e9ff512f00f36ed4cc58be71a602cbab85c88e0dda42a53
+
+Human task          human-task-1
+Status              open
+Title               Field response decision
+Instructions
+Decide whether a response is warranted, what evidence must be confirmed, and the non-target safeguards required. Do not authorise any field action.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 4463 session tokens
+arturo › /complete-human-task human-task-1 "Confirm the trap-line trend against a second data source first; if confirmed, plan a targeted response with non-target safeguards and iwi consultation. No field action authorised yet." --as "Head Ranger"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Head Ranger
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 4463 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Field response decision
+Instructions
+Decide whether a response is warranted, what evidence must be confirmed, and the non-target safeguards required. Do not authorise any field action.
+Notes
+Confirm the trap-line trend against a second data source first; if confirmed, plan a targeted response with non-target safeguards and iwi consultation. No field action authorised yet.
+
+Completed by  Head Ranger
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 4463 session tokens
+arturo › /functions
+
+◆ Functions
+1. Field Monitoring
+2. Threat Analysis
+3. Operations Planning
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 4463 session tokens
+arturo › /timeline
+
+◆ #56 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-07-31T08:58:34.716Z
+Id             7bab8f6c-e7e2-4178-90f4-b1133927abac
+
+◆ #55 · Bot typed a line
+Bot submitted  /functions
+Time           2026-07-31T08:58:28.247Z
+Id             7943a135-b4da-434e-a473-31be66f0e2be
+
+◆ #54 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-07-31T08:58:21.482Z
+Id             1581f3e8-9a8f-478c-bc0a-9c1e1ca3dc32
+
+◆ #53 · Human task completed
+Human task human-task-1 completed by Head Ranger
+Time          2026-07-31T08:58:21.481Z
+Id            a0cb8efd-db62-4d61-8677-013fe0b7c4ab
+
+◆ #52 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Confirm the trap-line trend against a second data source first; if confirmed, plan a targeted response with non-target safeguards and iwi consultation. No field action authorised yet." --as "Head Ranger"
+Time           2026-07-31T08:57:45.089Z
+Id             e6866344-0668-44da-bfd2-ff220960688e
+
+◆ #51 · Human task created
+Human task created  human-task-1
+Time                2026-07-31T08:57:45.087Z
+Id                  122056b6-5dff-4a24-9a7a-3e10357b3262
+
+◆ #50 · Bot typed a line
+Bot submitted  /create-human-task "Field response decision" "Decide whether a response is warranted, what evidence must be confirmed, and the non-target safeguards required. Do not authorise any field action."
+Time           2026-07-31T08:57:10.566Z
+Id             6ec92a7c-69be-4b08-b50c-b3f3dceb7084
+
+◆ #49 · Bot typed a line
+Bot submitted  /task inspect task-2
+Time           2026-07-31T08:57:03.968Z
+Id             e9c8250e-9b4c-4382-85d6-5050abb837c0
+
+◆ #48 · Result not counted
+An AI model wrote the result of Task task-2 and nobody has checked it, so Arturo has not learned from it and will not act on it by itself.
+Time          2026-07-31T08:56:17.375Z
+Id            f022901d-4707-4162-ac97-be84dfa5895b
+
+◆ #47 · Delegation completed
+Delegation completed  Task task-2 from Threat Analysis returned to Operations Planning
+Time                  2026-07-31T08:56:17.375Z
+Id                    3d4c1b55-f580-4bac-b0a0-838099266d97
+
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 4463 session tokens
+arturo › 
+◆ Bot finished
+48 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 3 · Workers 6 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 4463 session tokens
+arturo › 

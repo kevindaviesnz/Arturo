@@ -1,0 +1,48 @@
+# Scenario 045 — Academic integrity review: governance, memory, reject, human decision
+/reset
+yes
+/enterprise
+1
+Rimu University Integrity
+Uphold academic integrity fairly, with a person accountable for every finding.
+skip
+/function
+1
+Integrity Review
+Frame academic-integrity questions as fair process and route findings to an accountable panel chair.
+skip
+/add-human-worker
+Panel Chair
+1
+skip
+/function start "Integrity Review"
+@timeout 240
+@staff /staff
+/governance policy add "Integrity analysis requires chair sign-off" --effect require-approval --capability "analysis"
+/memory add "Never identify a real student or make a finding; frame process, evidence standards, and appeal rights, and require a human panel for every finding." --scope "Integrity Review"
+/task
+1
+Analyse, using a fully synthetic and anonymised example only, how a suspected-collusion case should be handled as fair process: evidence standards, the student's right to respond, proportionality, appeal rights, and why a panel must decide. Do not make a finding or identify anyone.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approval-status {{TASK_ID}}
+/reject {{TASK_ID}} "Example includes identifying details; reframe as anonymised process before analysis."
+/task
+1
+Revised analysis, fully synthetic and anonymised: analyse only the fair-process steps, evidence standards, right to respond, proportionality, and appeal rights, and the point a panel must decide. No identities, no finding.
+1
+@wait 20
+@cap TASK2 {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK2}}
+@wait 55
+/task inspect {{TASK2}}
+@cap HTASK {(human-task-[0-9]+)}
+/create-human-task "Process decision" "Decide the evidence standard and procedural safeguards a hearing requires, and how appeal rights are communicated. Do not make a finding."
+/complete-human-task {{HTASK}} "Require a documented evidence standard, the student's right to respond, and a written appeal path before any hearing. Planning only." --as "Panel Chair"
+/human-task {{HTASK}}
+/timeline

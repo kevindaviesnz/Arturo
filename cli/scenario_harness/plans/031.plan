@@ -1,0 +1,36 @@
+# Scenario 031 — Agricultural advisory: schedule, scoped Memory, governance, human sign-off
+/reset
+yes
+/enterprise
+1
+Farmwise Advisory
+Give farmers sound, evidence-aware guidance that a qualified adviser always signs off.
+skip
+/function
+1
+Seasonal Advisory
+Frame seasonal farm-management questions and route recommendations to an accountable adviser.
+skip
+/add-human-worker
+Lead Adviser
+1
+skip
+/function start "Seasonal Advisory"
+@timeout 240
+@staff /staff
+/governance policy add "Advisory analysis requires adviser sign-off" --effect require-approval --capability "analysis"
+/memory add "Never recommend agrichemical rates or animal-health treatments; frame options and always require a qualified adviser and label local-regulation checks." --scope "Seasonal Advisory"
+/schedule add "List the seasonal decisions coming up and the evidence still needed, labelling assumptions." --every weekly --at "07:30" --timezone "Pacific/Auckland" --function "Seasonal Advisory"
+/schedule list
+/task
+1
+Analyse, using synthetic assumptions only, the considerations for planning a pasture-renewal programme on a temperate dairy farm: soil and climate evidence needed, timing trade-offs, cost factors, agronomic uncertainties, and the decisions a qualified adviser must make. Do not specify agrichemical rates or guarantee outcomes.
+1
+@wait 20
+@cap TASK_ID {(task-[0-9]+)}
+/tasks
+@wait 8
+/approve {{TASK_ID}}
+@wait 55
+/task inspect {{TASK_ID}}
+/timeline

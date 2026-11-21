@@ -1,0 +1,193 @@
+import { test, expect } from "@playwright/test";
+
+test("owner completes the customer, job, invoice and payment workflow", async ({ page }, testInfo) => {
+  const errors: string[] = [];
+  page.on("pageerror", error => errors.push(error.message));
+  await page.goto("/");
+  await page.getByLabel("Access code").fill("office-browser-test-key");
+  await page.getByRole("button", { name: "Sign in", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Today", exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
+  await page.getByRole("button", { name: "Edit business details" }).click();
+  await page.getByLabel("Business name", { exact: true }).fill("Harbour Piling");
+  await page.getByLabel("Business address", { exact: true }).fill("10 Test Street, Example City");
+  await page.getByLabel("Business timezone", { exact: true }).fill("Pacific/Auckland");
+  await page.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  await page.getByRole("button", { name: "Customers", exact: true }).click();
+  await page.getByRole("button", { name: "New customer", exact: true }).click();
+  await page.getByLabel("Customer or payer").fill(`Smith ${testInfo.project.name}`);
+  await page.getByLabel("Email", { exact: true }).fill("smith@example.com");
+  await page.getByLabel("Billing address").fill("20 Fictional Street");
+  await page.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  await page.getByRole("button", { name: "Jobs", exact: true }).click();
+  await page.getByRole("button", { name: "New job", exact: true }).click();
+  await page.getByLabel("Job name", { exact: true }).fill(`Smith repile ${testInfo.project.name}`);
+  await page.getByLabel("Customer or payer").selectOption({ label: `Smith ${testInfo.project.name}` });
+  await page.getByLabel("Site address", { exact: true }).fill("20 Fictional Street");
+  await page.getByLabel("Agreed scope").fill("Replace agreed piles. No structural certification implied.");
+  await page.getByLabel("Status", { exact: true }).selectOption("completed");
+  await page.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  await page.getByRole("button", { name: "Documents", exact: true }).click();
+  await page.getByRole("button", { name: "New document", exact: true }).click();
+  await page.getByLabel("Job", { exact: true }).selectOption({ label: `Smith repile ${testInfo.project.name} - 20 Fictional Street` });
+  await page.getByLabel("Description", { exact: true }).fill("Repiling stage one");
+  await page.getByLabel("Unit price, before tax", { exact: true }).fill("1000.00");
+  await page.getByLabel("Tax %", { exact: true }).fill("15");
+  await page.getByRole("button", { name: "Save draft", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  const row = page.getByRole("row").filter({ hasText: `Smith repile ${testInfo.project.name}` });
+  await row.getByRole("button", { name: "Open", exact: true }).click();
+  await page.getByRole("button", { name: "Review and issue" }).click();
+  await page.getByRole("button", { name: "Confirm", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  await row.getByRole("button", { name: "Open", exact: true }).click();
+  const download = page.waitForEvent("download");
+  await page.getByRole("link", { name: "Download PDF" }).click();
+  expect((await download).suggestedFilename()).toBe("arturo-document.pdf");
+  await page.getByRole("button", { name: "Record payment", exact: true }).click();
+  await page.getByLabel("Amount received").fill("1150.00");
+  await page.getByLabel("Unique bank transaction reference").fill(`test-bank-${testInfo.project.name}`);
+  await page.getByRole("button", { name: "Record payment", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  await page.getByRole("button", { name: "Today", exact: true }).click();
+  await expect(page.locator(".metric").first()).toContainText("0.00");
+  await expect(page.locator("#notice")).toBeHidden({ timeout: 10_000 });
+  await page.screenshot({ path: `office-tests/results/${testInfo.project.name}.png`, fullPage: true });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  expect(errors).toEqual([]);
+});
+
+test("field capture survives a failed connection and syncs once", async ({ page }, testInfo) => {
+  await page.goto("/");
+  await page.getByLabel("Access code").fill("office-browser-test-key");
+  await page.getByRole("button", { name: "Sign in", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Today", exact: true })).toBeVisible();
+  const customer = await page.request.post("/api/command", { data: { action: "customer.save", input: { name: "Field customer", billingAddress: "Example" }, requestId: crypto.randomUUID() } });
+  const job = await page.request.post("/api/command", { data: { action: "job.save", input: { customerId: (await customer.json()).id, title: "Field job", address: "Example site", scope: "Approved scope", status: "active" }, requestId: crypto.randomUUID() } });
+  expect(job.ok()).toBe(true);
+  await page.getByRole("button", { name: "Refresh", exact: true }).click();
+  await page.getByRole("button", { name: "Add note", exact: true }).click();
+  await page.getByLabel("Notes", { exact: true }).fill(`Finished on site ${testInfo.project.name}`);
+  await page.getByRole("checkbox").check();
+  await page.route("**/api/command", route => route.abort());
+  await page.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  await page.unroute("**/api/command");
+  await page.getByRole("button", { name: "Field notes", exact: true }).click();
+  await page.getByRole("button", { name: "Pending drafts (1)" }).click();
+  await page.getByRole("button", { name: "Sync", exact: true }).click();
+  await expect(page.getByRole("dialog")).toContainText("No pending drafts");
+  await page.getByRole("button", { name: "Close", exact: true }).click();
+  await expect(page.getByRole("row").filter({ hasText: `Finished on site ${testInfo.project.name}` })).toHaveCount(1);
+});
+
+test("crew access cannot download financial data and revocation ends its session", async ({ request, playwright }) => {
+  await request.post("/api/login", { data: { key: "office-browser-test-key" } });
+  const response = await request.post("/api/command", { data: { action: "user.add", input: { name: "Field worker", role: "crew" }, requestId: crypto.randomUUID() } });
+  const user = await response.json();
+  const crewRequest = await playwright.request.newContext({ baseURL: "http://127.0.0.1:4331" });
+  try {
+    expect((await crewRequest.post("/api/login", { data: { key: user.key } })).ok()).toBe(true);
+    expect((await crewRequest.get("/api/export")).status()).toBe(403);
+    expect((await crewRequest.post("/api/command", { data: { action: "settings.save", input: {}, requestId: crypto.randomUUID() } })).status()).toBe(403);
+    await request.post("/api/command", { data: { action: "user.disable", input: { id: user.actor.id }, requestId: crypto.randomUUID() } });
+    expect((await crewRequest.get("/api/state")).status()).toBe(401);
+  } finally { await crewRequest.dispose(); }
+});
+
+test("offline field access reopens without the server and syncs an uploaded photo", async ({ page, context }, testInfo) => {
+  await page.goto("/");
+  await page.getByLabel("Access code").fill("office-browser-test-key");
+  await page.getByRole("button", { name: "Sign in", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Today", exact: true })).toBeVisible();
+  const customer = await page.request.post("/api/command", { data: { action: "customer.save", input: { name: "Offline customer", billingAddress: "Example" }, requestId: crypto.randomUUID() } });
+  const title = `Offline job ${testInfo.project.name}`;
+  const job = await page.request.post("/api/command", { data: { action: "job.save", input: { customerId: (await customer.json()).id, title, address: "Example site", scope: "Approved scope", status: "active" }, requestId: crypto.randomUUID() } });
+  const jobId = (await job.json()).id;
+  await page.getByRole("button", { name: "Refresh", exact: true }).click();
+  await page.getByRole("button", { name: "Field notes", exact: true }).click();
+  await page.getByRole("button", { name: "Offline access", exact: true }).click();
+  await page.getByRole("button", { name: "Confirm", exact: true }).click();
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+  await page.waitForFunction(() => navigator.serviceWorker.controller !== null);
+  await context.setOffline(true);
+  await page.reload({ waitUntil: "domcontentloaded" });
+  await expect(page.getByText("Offline field access", { exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Documents", exact: true })).toHaveCount(0);
+  await page.getByRole("button", { name: "Upload photo or file" }).click();
+  await page.getByLabel("Job", { exact: true }).selectOption(jobId);
+  await page.locator('input[type="file"]').setInputFiles({ name: `site-${testInfo.project.name}.png`, mimeType: "image/png", buffer: Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIHWP4z8DwHwAFgAI/ScLbtAAAAABJRU5ErkJggg==", "base64") });
+  await page.getByRole("button", { name: "Upload", exact: true }).click();
+  await expect(page.getByRole("button", { name: "Pending drafts (1)" })).toBeVisible();
+  await page.reload({ waitUntil: "domcontentloaded" });
+  await expect(page.getByRole("button", { name: "Pending drafts (1)" })).toBeVisible();
+  await context.setOffline(false);
+  await expect(page.getByRole("button", { name: "Pending drafts (0)" })).toBeVisible({ timeout: 15000 });
+  const saved = await (await page.request.get("/api/state")).json();
+  expect(saved.records.filter((row: any) => row.kind === "file" && row.data.jobId === jobId)).toHaveLength(1);
+  expect(await page.evaluate(async () => {
+    const offline = await (window as any).OfficeOffline.read();
+    return offline.records.every((row: any) => !["document","customer","payment","deposit"].includes(row.kind));
+  })).toBe(true);
+  expect(await page.evaluate(async () => {
+    const cache = await caches.open("arturo-office-shell-v1");
+    return (await cache.keys()).every(request => !new URL(request.url).pathname.startsWith("/api/"));
+  })).toBe(true);
+});
+
+test("owner configures and pauses reminder drafts", async ({ page }, testInfo) => {
+  await page.goto("/");
+  await page.getByLabel("Access code").fill("office-browser-test-key");
+  await page.getByRole("button", { name: "Sign in", exact: true }).click();
+  await page.getByRole("button", { name: "Messages", exact: true }).click();
+  await page.getByRole("button", { name: "Edit schedule", exact: true }).click();
+  await page.getByLabel("Prepare reminder drafts automatically").check();
+  await page.getByLabel("Days after due date").fill("7");
+  await page.getByLabel("Days between reminders").fill("14");
+  await page.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(page.getByText("Drafts enabled: 7 days overdue, then every 14 days", { exact: true })).toBeVisible();
+  await page.screenshot({ path: `office-tests/results/reminders-${testInfo.project.name}.png`, fullPage: true });
+  await page.getByRole("button", { name: "Prepare due drafts", exact: true }).click();
+  await page.getByRole("button", { name: "Edit schedule", exact: true }).click();
+  await page.getByLabel("Prepare reminder drafts automatically").uncheck();
+  await page.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(page.getByText("Off", { exact: true })).toBeVisible();
+});
+
+test("function links open the selected workspace without crossing Enterprise boundaries", async ({ page }, testInfo) => {
+  await page.goto("/");
+  await page.getByLabel("Access code").fill("office-browser-test-key");
+  await page.getByRole("button", { name: "Sign in", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Today", exact: true })).toBeVisible();
+  const { workspaceId } = await (await page.request.get("/api/state")).json();
+  await page.goto(`/#function=accounts&enterprise=office-test&workspace=${workspaceId}`);
+  await expect(page.getByRole("heading", { name: "Documents", exact: true })).toBeVisible();
+  await expect(page.getByRole("combobox", { name: "Function", exact: true })).toHaveValue("accounts");
+  await expect(page.getByRole("button", { name: "Jobs", exact: true })).toHaveCount(0);
+  await page.getByRole("combobox", { name: "Function", exact: true }).selectOption("customers");
+  await expect(page.getByRole("heading", { name: "Customers", exact: true })).toBeVisible();
+  await page.getByRole("combobox", { name: "Function", exact: true }).selectOption("operations");
+  await expect(page.getByRole("heading", { name: "Jobs", exact: true })).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole("combobox", { name: "Function", exact: true })).toHaveValue("operations");
+  await expect(page.getByRole("heading", { name: "Jobs", exact: true })).toBeVisible();
+  await page.screenshot({ path: `office-tests/results/functions-${testInfo.project.name}.png`, fullPage: true });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  const wrongDatabase = await page.request.get("/api/state", { headers: { "X-Arturo-Enterprise": "office-test", "X-Arturo-Workspace": "different-database" } });
+  expect(wrongDatabase.status()).toBe(403);
+  expect((await wrongDatabase.json()).records).toBeUndefined();
+  const denied = await page.request.get("/api/state", { headers: { "X-Arturo-Enterprise": "another-business", "X-Arturo-Workspace": workspaceId } });
+  expect(denied.status()).toBe(403);
+  expect((await denied.json()).records).toBeUndefined();
+  await page.goto(`/#function=accounts&enterprise=another-business&workspace=${workspaceId}`);
+  await expect(page.getByLabel("Access code")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Documents", exact: true })).toHaveCount(0);
+});
+
+test("rejects unauthenticated and cross-origin requests", async ({ request }) => {
+  expect((await request.get("/api/state")).status()).toBe(401);
+  expect((await request.post("/api/login", { headers: { Origin: "https://evil.example" }, data: { key: "office-browser-test-key" } })).status()).toBe(403);
+});

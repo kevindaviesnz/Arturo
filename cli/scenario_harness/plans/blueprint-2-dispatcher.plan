@@ -1,0 +1,53 @@
+# Blueprint 2 — The Dispatcher: AI does the thinking, a person moves the atoms.
+#
+# The AI Worker never claims to have picked anything off a shelf. It produces
+# directives; the physical work is a Human Task assigned to a named person, and
+# it stays open until that person records what they actually did.
+/reset
+yes
+/clear
+@timeout 300
+/enterprise
+1
+Bellhaven Supplies
+Pack and ship customer orders accurately and on time.
+@blank
+/function
+1
+Order Preparation
+Turn a customer order into the exact picking and packing instructions a person on the floor can follow.
+@blank
+@staff /staff
+@note the Worker /staff proposed is generic. This is what makes it a specialist.
+/refine-worker
+1
+You are an expert warehouse operations planner specialising in packing fragile goods. You produce pick lists in bin order, specify box size and how breakables must be separated, and list every check a packer must complete before sealing. You never assume a stock location that was not supplied to you.
+/add-human-worker
+Warehouse Lead
+1
+@blank
+@note the AI works out what has to happen
+/task
+1
+An order came in for two ceramic mugs, one boxed teapot and a card. Produce a pick list in bin order, state the box size and how the fragile items must be separated, and list what the packer must check before sealing.
+1
+@wait 120
+/tasks
+/task
+2
+@note now the part no model can do: a person moves the goods
+/create-human-task
+Follow the pick list: collect the items, separate the fragile pieces as instructed, pack them and record anything that did not match the list.
+2
+1
+/human-tasks
+@note the person reports back what actually happened
+/complete-human-task
+Picked and packed. Both mugs and the card were in the bins listed; the teapot was in bin 12, not bin 9, so the pick list needs correcting. Fragile items separated with card dividers as instructed.
+@note the record, end to end: both lists, both records in full, and the trail
+/tasks
+/human-tasks
+/task
+2
+/human-task human-task-1
+/timeline

@@ -1,0 +1,13 @@
+STRUCTURAL REVIEW COMMENTS (synthetic sample, for scenario testing only)
+
+Reviewed: outline specification v2, received as a file reference.
+Reviewer: Sample Consulting Engineers (fictional)
+
+1. Clause 2 leaves the span unstated. A beam cannot be sized from this document.
+2. Clause 3 is accepted as written.
+3. Clause 6 assumes the existing gully has capacity. That is not established here.
+4. The foundation depth near the tree is not addressed and will govern the design.
+
+No calculation has been carried out and no beam has been sized. This is a
+synthetic sample comment sheet, not a real engineer's certificate, and a
+qualified person must carry out the design.

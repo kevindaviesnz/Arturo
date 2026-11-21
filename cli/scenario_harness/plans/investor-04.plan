@@ -1,0 +1,33 @@
+/reset
+yes
+/clear
+@timeout 240
+/enterprise
+1
+Harbour Learning
+Create accessible community learning workshops from supplied local needs.
+skip
+/function
+1
+Programme Design
+Own workshop goals, audience needs, and final programme decisions.
+skip
+/function
+1
+Learning Resources
+Prepare bounded learning-resource options requested by Programme Design.
+skip
+/add-human-worker
+Programme Lead
+1
+skip
+@staff /staff
+/function start "Programme Design"
+/function start "Learning Resources"
+/delegation
+1
+1
+1
+Prepare three low-cost physical activity-card formats for an adult community workshop; identify assumptions and do not claim user testing.
+/delegation
+2

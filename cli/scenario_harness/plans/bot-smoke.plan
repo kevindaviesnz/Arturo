@@ -1,0 +1,21 @@
+# Bot smoke — checks bot mode itself, not a scenario.
+#
+# Safe to run anywhere: no /reset, nothing created, no model calls, so it
+# finishes in seconds and leaves the installation as it found it. Use it to
+# check that the driver types, waits, captures and hands the terminal back
+# before trusting a real scenario to it. On an empty installation the reads
+# say so and the capture falls back to its placeholder, which is itself the
+# behaviour worth seeing.
+#
+#   npm run ui bot bot-smoke
+@note Reading the installation. Nothing here creates or changes anything.
+/overview
+/functions
+@cap WORKER {Worker\s+([A-Za-z][A-Za-z ]+[a-z])}
+/tasks
+@note The line below carries whatever the capture found, or <worker> if it found nothing.
+/chat history "{{WORKER}}"
+@wait 2
+/workers
+/timeline
+@note Bot mode reached the end of a plan. The terminal is about to be yours again.

@@ -1,0 +1,141 @@
+ARTURO THROUGH THE EYES OF A SOLE-PRACTICE LAWYER
+Chapters 1–10 companion walkthrough
+
+STATUS
+------
+
+This is a synthetic teaching example. It is not legal advice.
+
+Alex Morgan and Harbour Legal are fictional. Never use real client information
+in an Arturo evaluation.
+
+The maintained chapter guide is docs/README.md. Exact command help is available
+inside Arturo with /help <command>.
+
+
+THE SCENARIO
+------------
+
+Alex is starting a small legal practice called Harbour Legal.
+
+Alex remains responsible for:
+
+* client confidentiality;
+* conflicts;
+* legal competence;
+* Human review; and
+* professional judgement.
+
+Arturo does not become a lawyer. An AI Worker has no legal qualification or
+authority.
+
+
+CHAPTER 3 — CREATE THE ENTERPRISE
+---------------------------------
+
+/enterprise create "Harbour Legal" --mission "Provide careful and accessible legal services to individuals and small businesses."
+
+/enterprise update "Harbour Legal" --description "A fictional sole-practice example used with synthetic data."
+
+/enterprise inspect "Harbour Legal"
+
+Alex may ask Arturo for suggestions:
+
+/next "Harbour Legal"
+
+The suggestions are not changes until Alex accepts them. Alex should review
+each suggestion and may answer no.
+
+
+CHAPTER 4 — CREATE ONE BUSINESS FUNCTION
+-----------------------------------------
+
+/function create "Matter Intake and Acceptance" --enterprise "Harbour Legal" --objective "Decide whether a synthetic prospective matter is suitable for review."
+
+/function update "Matter Intake and Acceptance" --description "Uses synthetic intake details to demonstrate suitability and conflict questions."
+
+/function inspect "Matter Intake and Acceptance"
+
+This Function describes an enduring ability. It is not one client matter.
+
+
+CHAPTER 5 — START THE RUNTIME
+-----------------------------
+
+/function start "Matter Intake and Acceptance"
+
+/function inspect "Matter Intake and Acceptance"
+
+Starting a Runtime does not give it access to email, files, or real client
+systems.
+
+
+CHAPTER 6 — ADD WORKERS
+------------------------
+
+/add-ai-worker "Legal Intake Analyst" --archetype analyst
+
+/add-human-worker "Alex Morgan" --archetype guardian --availability available
+
+/workers
+
+/workers inspect "Legal Intake Analyst"
+
+These records describe roles in the fictional exercise. Registration does not
+prove identity, employment, or professional qualifications.
+
+
+CHAPTER 7 — CREATE AND INSPECT WORK
+------------------------------------
+
+/task-cap --capability analysis --bounded-task "Using only the supplied fictional intake note, list missing information and assumptions. Do not give legal advice or claim a conflict check was completed."
+
+/jobs
+
+Copy the Job ID:
+
+/job <job-id>
+
+A completed Job means the Worker returned output. It does not mean the output is
+correct, complete, or safe to use.
+
+
+CHAPTER 8 — USE MEMORY CAREFULLY
+---------------------------------
+
+/memory add "Synthetic intake exercises must request all relevant party names before demonstrating a conflict-review step." --scope "Matter Intake and Acceptance"
+
+/memory
+
+Do not store client names, case facts, privileged material, or personal data.
+A Human-entered Memory entry is still an assertion, not independent proof.
+
+
+CHAPTER 9 — INSPECT EVENTS
+---------------------------
+
+/events
+
+/timeline
+
+Events and Timeline records help Alex understand what Arturo did. They are not
+a complete legal file or professional audit.
+
+
+CHAPTER 10 — READ HEALTH HONESTLY
+----------------------------------
+
+/health "Matter Intake and Acceptance"
+
+/function inspect "Matter Intake and Acceptance"
+
+Unknown Health may mean there is not enough measured evidence. Completed Jobs
+alone do not prove good legal outcomes.
+
+
+FINAL SAFETY CHECK
+------------------
+
+Before any real legal use, Alex would need legal, privacy, security, identity,
+data-separation, supervision, and professional-rule review. This private
+evaluation example does not provide those controls.

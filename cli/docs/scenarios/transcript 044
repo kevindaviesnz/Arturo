@@ -1,0 +1,698 @@
+ ✓ src/ui/uiTable.test.ts (5)
+ ✓ src/agents/createWorkflowPlan.test.ts (1)
+ ✓ src/core/interactivity.test.ts (6)
+ ✓ src/integrations/httpAuth.test.ts (4)
+ ✓ src/llm/effectiveModel.test.ts (3)
+ ✓ src/events/jobCompletionEventRule.test.ts (2)
+ ✓ src/runtime/scheduledJobDispatchEvents.test.ts (2)
+ ✓ src/integrations/httpAuthenticatedRuntime.test.ts (1)
+ ✓ src/kernel/scheduler.test.ts (1)
+ ✓ src/kernel/restoreKernelState.test.ts (1)
+ ✓ src/task/engine.test.ts (3)
+ ✓ src/runtime/workerRuntimeState.test.ts (4)
+ ✓ src/storage/runtimeEventRepository.test.ts (3)
+ ✓ src/integrations/httpAuthenticatedRuntimeRetry.test.ts (1)
+ ✓ src/runtime/runtimeReplayHash.test.ts (6)
+ ✓ src/integrations/apiRetryPolicy.test.ts (6)
+ ✓ src/control/humanWorkerMode.test.ts (3)
+ ✓ src/kernel/kernelSnapshotSyscall.test.ts (1)
+ ✓ src/kernel/callDispatcher.test.ts (3)
+ ✓ src/integrations/apiSecret.test.ts (6)
+ ✓ src/storage/delegationRepository.test.ts (1)
+ ✓ src/kernel/kernelSnapshot.test.ts (1)
+ ✓ src/policy/policyInheritance.test.ts (1)
+ ✓ src/integrations/capabilityDispatcher.test.ts (2)
+ ✓ src/llm/ollamaClient.test.ts (2)
+ ✓ src/integrations/apiSecretInjection.test.ts (3)
+ ✓ src/business/businessFunction.test.ts (3)
+ ✓ src/kernel/autoDispatch.test.ts (3)
+ ✓ src/runtime/cronJobScheduling.test.ts (2)
+ ✓ src/integrations/webhookCapabilityE2E.test.ts (1)
+ ✓ src/integrations/webhookCapabilityExecution.test.ts (1)
+ ✓ src/business/businessFunctionDefinitionStore.test.ts (1)
+ ✓ src/runtime/cronJobRecoveryRuntime.test.ts (2)
+ ✓ src/risk/riskRuntime.test.ts (2)
+ ✓ src/control/workflows.test.ts (3)
+ ✓ src/ui/uiShortReply.test.ts (17)
+ ✓ src/kernel/capabilityDefinition.test.ts (1)
+ ✓ src/control/runStore.test.ts (3)
+ ✓ src/ui/uiWebSearchEntries.test.ts (1)
+ ✓ src/repl/artefactCommands.test.ts (3)
+ ✓ src/llm/geminiClient.test.ts (1)
+ ✓ src/kernel/workflowDefinition.test.ts (1)
+ ✓ src/storage/settingsRepository.test.ts (4)
+ ✓ src/policy/policyAuditLog.test.ts (2)
+ ✓ src/agents/reviewLoopInference.test.ts (2)
+ ✓ src/kernel/capabilityRegistry.test.ts (1)
+ ✓ src/core/commandParser.test.ts (5)
+ ✓ src/integrations/capabilityExecutionAdapter.test.ts (2)
+ ✓ src/storage/approvalSigningSecret.test.ts (1)
+ ✓ src/kernel/capabilityCall.test.ts (1)
+ ✓ src/kernel/kernelWorkflowPrototype.test.ts (1)
+ ✓ src/storage/runtimeStoragePaths.test.ts (2)
+ ✓ src/storage/policyAuditLogRepository.test.ts (1)
+ ✓ src/runtime/scheduledJobRetry.test.ts (2)
+ ✓ src/ui/uiEnterpriseAdvise.test.ts (1)
+ ✓ src/kernel/builtInCapabilities.test.ts (1)
+ ✓ src/core/workerCore.test.ts (3)
+ ✓ src/control/eventStore.test.ts (2)
+ ✓ src/ui/lineInterfaceStartupHint.test.ts (2)
+ ✓ src/integrations/httpCapabilityEndToEnd.test.ts (1)
+ ✓ src/storage/policyRepository.test.ts (1)
+ ✓ src/llm/llmUsage.test.ts (2)
+ ✓ src/integrations/httpPostCapabilityDefinition.test.ts (1)
+ ✓ src/ui/uiClipboard.test.ts (2)
+ ✓ src/kernel/httpCapabilityRegistration.test.ts (1)
+ ✓ src/integrations/webhookCapabilityDefinition.test.ts (1)
+ ✓ src/integrations/httpCapabilityDefinition.test.ts (1)
+
+ Test Files  323 passed (323)
+      Tests  2294 passed (2294)
+   Start at  11:57:22
+   Duration  84.61s (transform 1.56s, setup 682ms, collect 10.32s, tests 22.98s, environment 25ms, prepare 9.57s)
+
+kevindavies@Kevins-MacBook-Pro cli % clear 
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 044 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 044 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may approve governed work in this run.
+
+Anything it approves was signed by a script, not by a person. That is
+not human review, and the record says so: the name appears in the
+signed decision, in /approvals, in /approval-status and in /timeline.
+It is registered the moment it is first needed, not now: most runs
+open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is being driven by /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/044.plan.
+Nothing in this session was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           4
+Tasks             2
+  Human Tasks       1
+  Approvals waiting 1
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 4 · Tasks 2 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 1 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Application reset
+Application state has been reset.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Harvest Foods
+
+◆ What does it do?
+In one sentence, what does Harvest Foods exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Protect consumers with evidence-led assessment and a person accountable for every recall decision.
+
+◆ Anything more about it?
+Anything more worth knowing about Harvest Foods? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Harvest Foods
+Mission       Protect consumers with evidence-led assessment and a person accountable for every recall decision.
+Description   (none)
+Status        active
+Created       2026-07-31T00:00:25.154Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Harvest Foods" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Incident Assessment
+
+◆ What should it do?
+In one sentence, what should "Incident Assessment" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Frame food-safety incident questions and route recall decisions to an accountable safety manager.
+
+◆ Anything more about it?
+Anything more worth knowing about "Incident Assessment"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               harvest-foods:incident-assessment
+Name             Incident Assessment
+Enterprise       Harvest Foods (enterprise-1)
+Objective        Frame food-safety incident questions and route recall decisions to an accountable safety manager.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-31T00:01:12.259Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Traceability Analysis
+
+◆ What should it do?
+In one sentence, what should "Traceability Analysis" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Analyse synthetic traceability scenarios for accountable review.
+
+◆ Anything more about it?
+Anything more worth knowing about "Traceability Analysis"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               harvest-foods:traceability-analysis
+Name             Traceability Analysis
+Enterprise       Harvest Foods (enterprise-1)
+Objective        Analyse synthetic traceability scenarios for accountable review.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-07-31T00:01:46.715Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Food Safety Manager
+
+◆ What will they do?
+What should Food Safety Manager be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Food Safety Manager's email address?
+
+Arturo needs this before any governed step can email them. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 2 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Food Safety Manager is now on your team.
+Food Safety Manager can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Incident Assessment"
+
+◆ Function started
+Function
+  Incident Assessment
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Traceability Analysis"
+
+◆ Function started
+Function
+  Traceability Analysis
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout has no effect in bot mode — Arturo waits for each command to return rather than giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 2 AI Workers for Harvest Foods.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 2 kinds of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 2
+Food Safety Operations AI
+Role          Guardian
+Can do        General reasoning, Product Safety, Review, Human Contact
+Would help    Incident Assessment, Traceability Analysis
+
+For example, it could
+    · Check whether something is safe to go ahead
+    · Flag risks before an action is taken
+
+Add Food Safety Operations AI? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 16515 session tokens
+arturo › yes
+
+◆ Worker 2 of 2
+Traceability Analysis AI
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Traceability Analysis
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Traceability Analysis AI? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 2 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 16515 session tokens
+arturo › yes
+
+◆ Staffing applied
+2 AI Workers added. 3 Function assignment(s) saved.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Incident Assessment — Food Safety Manager
+  · Traceability Analysis — Food Safety Manager
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing consequential runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 16515 session tokens
+arturo › /governance policy add "Recall analysis requires manager sign-off" --effect require-approval --capability "analysis"
+
+◆ Governance policy added
+Policy        Recall analysis requires manager sign-off
+ID            policy-74c502f4-d243-4896-a29c-dc720a59484c
+Effect        require-approval
+Match         capabilityId=analysis
+Scope         organization:enterprise-1
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 16515 session tokens
+arturo › /memory add "Never declare a product safe or unsafe; frame the evidence, traceability, and consumer-risk questions and require a qualified recall decision." --scope "Incident Assessment"
+
+◆ Operational Memory added
+Never declare a product safe or unsafe; frame the evidence, traceability, and consumer-risk questions and require a qualified recall decision.
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 16515 session tokens
+arturo › /delegation request "Analyse a synthetic scenario where a supplier reports a possible allergen mislabel affecting one production run: evidence and traceability needed, consumer-risk questions, notification considerations, and the decisions a safety manager must make. Do not declare a recall or clear the product." --from "Incident Assessment" --to "Traceability Analysis"
+
+◆ Delegation requested
+Delegation in progress.
+
+ID            dfb9b878-9463-40a2-94ec-cdb19bf7fd65
+From          Incident Assessment
+To            Traceability Analysis
+Work          Analyse a synthetic scenario where a supplier reports a possible allergen mislabel affecting one production run: evidence and traceability needed, consumer-risk questions, notification considerations, and the decisions a safety manager must make. Do not declare a recall or clear the product.
+Ownership     Incident Assessment retains accountability
+Status        in_progress
+Task          task-1
+Worker        Food Safety Operations AI
+Capabilities  review, analysis
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 16515 session tokens
+arturo › /delegation list
+
+◆ Delegations
+1. dfb9b878-9463-40a2-94ec-cdb19bf7fd65 · in_progress
+   Incident Assessment → Traceability Analysis
+   Work          Analyse a synthetic scenario where a supplier reports a possible allergen mislabel affecting one production run: evidence and traceability needed, consumer-risk questions, notification considerations, and the decisions a safety manager must make. Do not declare a recall or clear the product.
+   Task          task-1
+   Worker        Food Safety Operations AI
+   Inspect       /delegation inspect dfb9b878-9463-40a2-94ec-cdb19bf7fd65
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 16515 session tokens
+arturo › /delegation inspect dfb9b878-9463-40a2-94ec-cdb19bf7fd65
+
+◆ Delegation
+Delegation in progress.
+
+ID            dfb9b878-9463-40a2-94ec-cdb19bf7fd65
+From          Incident Assessment
+To            Traceability Analysis
+Work          Analyse a synthetic scenario where a supplier reports a possible allergen mislabel affecting one production run: evidence and traceability needed, consumer-risk questions, notification considerations, and the decisions a safety manager must make. Do not declare a recall or clear the product.
+Ownership     Incident Assessment retains accountability
+Status        in_progress
+Task          task-1
+Worker        Food Safety Operations AI
+Capabilities  review, analysis
+
+
+  ● LIVE · Functions 2 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 16515 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 8s.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 16515 session tokens
+arturo › 
+◆ Waiting
+Letting the runtime work for 55s.
+
+
+/task inspect task-1
+
+◆ Task detail
+Worker                 Food Safety Operations AI
+ID                     task-1
+Status                 Completed
+  (Finished.)
+Evidence               Unverified model synthesis — excluded from autonomous learning
+Required capabilities  review, analysis
+Why this Worker        Delegation dfb9b878-9463-40a2-94ec-cdb19bf7fd65: Receiving Function is staffed by Food Safety Operations AI
+Task                   1 / 1
+Instruction            Analyse a synthetic scenario where a supplier reports a possible allergen mislabel affecting one production run: evidence and traceability needed, consumer-risk questions, notification considerations, and the decisions a safety manager must make. Do not declare a recall or clear the product.
+
+Evidence status        UNVERIFIED MODEL SYNTHESIS
+External tools used    none
+
+I will analyze the given synthetic scenario as a safety and policy guardian.
+
+Scenario
+
+A supplier of Harvest Foods reports a possible allergen mislabeling in one production run. The supplier suspects that a batch of [insert type of food product] may have been contaminated with an undeclared allergen, such as peanuts or tree nuts.
+
+Risk Assessment
+
+1. Consumer Risk: The presence of an undeclared allergen can cause severe allergic reactions, including anaphylaxis, in consumers who are unaware of the potential risk.
+2. Traceability: To investigate the issue, we need to analyze the production run's records, including batch numbers, ingredient lists, and quality control data.
+3. Notification Considerations:
+–  Notify affected consumers through Harvest Foods' recall procedures.
+–  Inform suppliers, manufacturing staff, and Quality Assurance teams involved in the production process.
+
+Decision Points for Safety Manager
+
+1. Investigation: Conduct a thorough investigation into the alleged allergen mislabeling, including:
+–  Reviewing production records, ingredient lists, and quality control data.
+–  Interviewing suppliers, manufacturing staff, and other relevant personnel.
+–  Inspecting manufacturing facilities and equipment.
+2. Risk Assessment: Evaluate the severity of the potential risk to consumers and determine whether a recall is necessary.
+3. Notification: Decide on the notification strategy for affected consumers, suppliers, and stakeholders.
+
+Next Steps
+
+1. Request evidence and documentation from the supplier, including production records and quality control data.
+2. Collaborate with Quality Assurance teams to verify the investigation findings and assess the risk to consumers.
+3. Develop a plan for notifying affected consumers and suppliers, while considering the need for transparency and compliance with regulatory requirements.
+
+Please provide any necessary information or evidence to support the investigation and decision-making process.
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 17550 session tokens
+arturo › /create-human-task "Recall decision" "Decide what traceability and testing must confirm before any recall or clearance, and how consumers would be notified. Do not declare a recall."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=05b8c42904c123c9ae4bd13e2c0abd3085e5a810c0f9b32fd319c3401485ec7e
+
+Human task          human-task-1
+Status              open
+Title               Recall decision
+Instructions
+Decide what traceability and testing must confirm before any recall or clearance, and how consumers would be notified. Do not declare a recall.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 17550 session tokens
+arturo › /complete-human-task human-task-1 "Hold and quarantine the affected run; confirm distribution and allergen testing before any recall or clearance, and prepare consumer notification for sign-off. No decision made yet." --as "Food Safety Manager"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Food Safety Manager
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 17550 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Recall decision
+Instructions
+Decide what traceability and testing must confirm before any recall or clearance, and how consumers would be notified. Do not declare a recall.
+Notes
+Hold and quarantine the affected run; confirm distribution and allergen testing before any recall or clearance, and prepare consumer notification for sign-off. No decision made yet.
+
+Completed by  Food Safety Manager
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 17550 session tokens
+arturo › /timeline
+
+◆ #45 · bot.input
+Bot submitted  /timeline
+Time           2026-07-31T00:08:49.635Z
+Id             0467d0d3-2848-4e08-baef-b8e26fbfdd48
+
+◆ #44 · bot.input
+Bot submitted  /human-task human-task-1
+Time           2026-07-31T00:08:41.538Z
+Id             b4ca99a7-6771-4246-b16a-d80d99cc59f1
+
+◆ #43 · human_task.completed
+Human task human-task-1 completed by Food Safety Manager
+Time          2026-07-31T00:08:41.536Z
+Id            c80b2e59-e812-4cb5-a69a-8fda81e733f0
+
+◆ #42 · bot.input
+Bot submitted  /complete-human-task human-task-1 "Hold and quarantine the affected run; confirm distribution and allergen testing before any recall or clearance, and prepare consumer notification for sign-off. No decision made yet." --as "Food Safety Manager"
+Time           2026-07-31T00:08:05.756Z
+Id             148a4523-235d-4e08-a3c5-8df32b6948fb
+
+◆ #41 · human_task.created
+Human task created  human-task-1
+Time                2026-07-31T00:08:05.753Z
+Id                  aa1051b0-fa76-449b-9b34-80e832879c72
+
+◆ #40 · bot.input
+Bot submitted  /create-human-task "Recall decision" "Decide what traceability and testing must confirm before any recall or clearance, and how consumers would be notified. Do not declare a recall."
+Time           2026-07-31T00:07:37.744Z
+Id             5e8b6ffe-0ff3-4f3d-b3cf-c8c37b385f23
+
+◆ #39 · bot.input
+Bot submitted  /task inspect task-1
+Time           2026-07-31T00:07:28.881Z
+Id             9021f2bb-9d06-4857-93e7-569c27554e28
+
+◆ #38 · runtime.outcome.measurement_skipped
+Unverified model synthesis from Task task-1 was excluded from Function learning and autonomous follow-up work.
+Time          2026-07-31T00:06:41.035Z
+Id            e1bcaf04-de67-4558-a28b-dd4cc8da2805
+
+◆ #37 · delegation.completed
+Delegation completed  Task task-1 from Traceability Analysis returned to Incident Assessment
+Time                  2026-07-31T00:06:41.035Z
+Id                    1f7f0cc2-d144-435f-a147-572d55ae97a3
+
+◆ #36 · task.completed
+Task completed  task-1
+Time            2026-07-31T00:06:41.033Z
+Id              012e95fe-3c9e-491e-ab65-93c80b264bc4
+
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 17550 session tokens
+arturo › 
+◆ Bot finished
+37 lines typed, 0 refused — the script finished.
+1 decision in this run was signed by Arturo Bot (automated, not a person), not by a person.
+It is still registered, and shows in /workers, so those decisions still name someone.
+The terminal is yours again.
+
+  ● LIVE · Functions 2 · Workers 4 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 17550 session tokens
+arturo › 

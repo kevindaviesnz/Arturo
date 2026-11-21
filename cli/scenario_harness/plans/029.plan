@@ -1,0 +1,62 @@
+# Scenario 029 — Standards document versioning: reject v1, register v2, approve the exact new version
+# Driven by menus: every file step is chosen from a list rather than typed as switches.
+/reset
+yes
+/clear
+/enterprise
+1
+Standards Office
+Publish only exactly-reviewed document versions, with a named approver on the record.
+skip
+/function
+1
+Standards Review
+Review exact document versions and record signed decisions before publication.
+skip
+/add-human-worker
+Standards Approver
+2
+skip
+/function start "Standards Review"
+@timeout 200
+@staff /staff
+/artefact
+1
+Cabling standard
+3
+./scenario_harness/assets/standard-v1.txt
+Standards Approver
+skip
+skip
+/artefact
+3
+1
+Check scope and safety clauses.
+/artefact
+4
+1
+2
+Safety clause omits isolation before work.
+/artefact
+2
+1
+./scenario_harness/assets/standard-v2.txt
+Standards Approver
+Added isolation-before-work safety clause.
+/artefact
+6
+/artefact
+7
+2
+/artefact
+3
+1
+Re-review corrected safety clause.
+/artefact
+4
+1
+1
+Isolation clause now present; approved for publication after a qualified check.
+/artefact
+6
+/timeline

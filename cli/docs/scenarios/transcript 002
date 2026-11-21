@@ -1,0 +1,693 @@
+Time           2026-08-02T03:49:04.065Z
+Id             1a8e708e-5280-480f-8778-32921ea0ff6d
+
+◆ #28 · Bot typed a line
+Bot submitted  /approval-status task-1
+Time           2026-08-02T03:48:55.800Z
+Id             e0869c86-1522-4835-8a0d-9ae7c48c01a9
+
+◆ #27 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T03:48:40.842Z
+Id             4ac4b779-fb90-4752-b35c-890667cfa111
+
+◆ #26 · Task queued
+Task queued for Contract Review Specialist: task-1
+Time          2026-08-02T03:48:20.840Z
+Id            080eca41-b7b2-4be2-8d1b-d2d772937822
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2946 session tokens
+arturo › /health "Commercial Contract Review"
+
+◆ Health
+Function
+  Commercial Contract Review
+
+Overall Health
+  Unknown
+
+Indicators
+  Tasks Completed          0/0 (0%)
+  Tasks Failed             0
+  Open Tasks               0
+  Outcomes Measured        0/0
+  Lessons Retained         0
+  Governed Criteria        0
+
+Trend
+  Stable
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2946 session tokens
+arturo › /memory
+
+◆ What Arturo remembers
+Notes here are given to Workers as context on later work.
+
+1. Write something down
+2. See what is written down
+3. Remove a note
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2946 session tokens
+arturo › cancel
+
+◆ Cancelled
+No problem — nothing was changed.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2946 session tokens
+arturo › 
+◆ Bot finished
+33 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 2946 session tokens
+arturo › /exit
+
+Arturo stopped.
+kevindavies@Kevins-MacBook-Pro cli % clear
+
+kevindavies@Kevins-MacBook-Pro cli % npm run ui:bot:isolated -- 002 --approve
+
+> worker-cli@0.5.0 ui:bot:isolated
+> ARTURO_DATA_DIRECTORY=.data/bot ARTURO_RUNTIME_DATABASE_PATH=.data/bot/runtime.db ts-node src/ui/lineInterface.ts bot --yes 002 --approve
+
+
+  ◆  A  R  T  U  R  O
+  THE OPERATING SYSTEM FOR AI-NATIVE COMPANIES
+
+  ────────────────────────────────────────────────
+  READY · /overview to begin · /help for commands
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ This run may approve its own work
+Arturo Bot (automated, not a person) may sign off work in this run.
+
+Normally a person has to approve that work. Here a script does it
+instead, so nobody has actually checked it. The record says so: this
+name — not a person's — is the one saved with the decision, and it is
+what you will see in /approvals, /approval-status and /timeline.
+It is added to your team the moment it is first needed, not now: most
+runs open with /reset, which would delete it again.
+
+
+
+◆ Bot mode — scripted
+Arturo is following the script in /Users/kevindavies/Development/AI/Arturo/cli/scenario_harness/plans/002.plan.
+Nothing you see typed here was typed by a person.
+Press any key to pause, Ctrl+C to stop.
+
+
+/reset
+
+◆ Reset requested
+This permanently deletes everything in this Arturo installation:
+
+Functions         1
+Workers           3
+Tasks             1
+  Human Tasks       0
+  Approvals waiting 0
+
+Enterprises, Governance policies, Events, Schedules, Memory, Artefacts,
+chat history, and the Timeline all go with them. There is no undo.
+
+Reply "yes" to delete everything, or "no" to keep it.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › yes
+
+◆ Everything deleted
+Arturo is now empty, as though you had just installed it.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /enterprise
+
+◆ Your businesses
+What would you like to do?
+
+1. Set up a new business — two questions, done
+2. Talk it through with Arturo first
+3. Look at a business you've set up
+4. Change a business's details
+5. See all your businesses
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Set up a business
+What is the business called?
+
+For example   BrightSky Solar.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Northstar Outfitters
+
+◆ What does it do?
+In one sentence, what does Northstar Outfitters exist to do?
+
+This is the context Arturo gives Workers, so plain and specific beats polished.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Recommend the right outdoor gear using evidence, not guesswork, with a person accountable for every launch decision.
+
+◆ Anything more about it?
+Anything more worth knowing about Northstar Outfitters? Who it serves, how it works, what it avoids.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Enterprise created
+ID            enterprise-1
+Name          Northstar Outfitters
+Mission       Recommend the right outdoor gear using evidence, not guesswork, with a person accountable for every launch decision.
+Description   (none)
+Status        active
+Created       2026-08-02T04:05:59.705Z
+Functions     0
+Workers       0
+Policies      0
+
+Next
+  Run /next "Northstar Outfitters" to create this Enterprise's ongoing Functions.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function
+
+◆ Your Functions
+A Function is an ongoing responsibility your business needs handled.
+What would you like to do?
+
+1. Add a new Function
+2. Look at a Function you've set up
+3. Change a Function's details
+4. See all your Functions
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ Add a Function
+What should the new Function be called? (For example: Customer Enquiries)
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Product Assessment
+
+◆ What should it do?
+In one sentence, what should "Product Assessment" keep doing? (its objective)
+
+Or type skip to leave that blank for now.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Produce bounded assessments of proposed product features and prepare an accountable launch decision.
+
+◆ Anything more about it?
+Anything more worth knowing about "Product Assessment"? How it should work, or what it should avoid.
+
+This is extra context for people and for Workers. Or type skip.
+
+
+  ● LIVE · Functions 0 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Function created
+ID               northstar-outfitters:product-assessment
+Name             Product Assessment
+Enterprise       Northstar Outfitters (enterprise-1)
+Objective        Produce bounded assessments of proposed product features and prepare an accountable launch decision.
+Description      (none)
+Status           declared
+Operating state  Not started
+Created          2026-08-02T04:06:45.492Z
+
+Next
+  Run /staff to add Workers.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /add-human-worker
+
+◆ Add a person
+Let's add a person to your team.
+
+What is their name? (Type it and press enter, or type cancel to stop.)
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › Product Owner
+
+◆ What will they do?
+What should Product Owner be able to do? Pick one:
+
+1. Sign off sensitive work — the approver. If it's just you, this is you.
+2. Review work before it's delivered — a second pair of eyes on results.
+3. Just do the tasks they're given — no sign-off role.
+4. Something else — choose from the full list of roles.
+
+Most solo owners pick 1. You can add more people later, each with their own role.
+Reply with a number.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 1
+
+◆ How would you reach them?
+What is Product Owner's email address?
+
+Arturo needs this before it can email them about anything. It does not
+verify the address and never emails anyone on its own.
+
+Or type skip.
+
+
+  ● LIVE · Functions 1 · Workers 0 · Tasks 0 · Workflow runs 0 · Humans 0 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › skip
+
+◆ Person added
+Product Owner is now on your team.
+Product Owner can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › /function start "Product Assessment"
+
+◆ Function started
+Function
+  Product Assessment
+
+State
+  Running
+
+Tasks
+  0
+
+Health
+  Unknown
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 0 session tokens
+arturo › 
+◆ Bot
+@timeout does nothing in bot mode — Arturo waits for each command to finish instead of giving up on it.
+
+
+/staff
+
+◆ Let's set up your team
+Arturo suggests 1 AI Worker for Northstar Outfitters.
+AI Workers do the routine work; you sign off anything sensitive.
+I'll show them one at a time. 1 kind of work will also need your sign-off — I'll note that at the end.
+Nothing is created until you answer.
+
+◆ Worker 1 of 1
+Product Owner Analyst
+Role          Analyst
+Can do        General reasoning, Analysis, Human Contact
+Would help    Product Assessment
+
+For example, it could
+    · Pull the key points out of a pile of information
+    · Compare a few options and explain the trade-offs
+
+Add Product Owner Analyst? Reply yes to add, skip to leave it out, or cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 1 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1920 session tokens
+arturo › yes
+
+◆ Staffing applied
+1 AI Worker added, and put to work on 1 Function.
+
+Work that needs a person's sign-off, and who Arturo will ask:
+  · Product Assessment — Product Owner
+
+Tasks in those Functions wait under /approvals until that person
+approves them. Nothing there runs on its own.
+
+Your team is in place. Here's how to give it work — each one is a command
+you type on its own, and Arturo walks you through the rest:
+
+/suggest    Arturo proposes the first tasks; you pick which to create
+/task       Describe one thing you want done, in plain words
+/schedule   Have the same task happen on a regular day and time
+
+If a task needs a file to work from (a contract, a brief), add it with
+/artefact first, and Arturo will offer to attach it.
+
+See work in progress with /tasks, and read a finished result with
+/task inspect. Anything that needs your sign-off waits under /approvals
+until you approve it — nothing that matters runs on its own.
+
+Changed your mind? /function remove and /workers remove undo parts of the
+plan. Both refuse while live work still depends on them, and neither erases
+the record of what already happened.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1920 session tokens
+arturo › /task
+
+◆ Your tasks
+A task is one thing you want done.
+What would you like to do?
+
+1. Create a task
+2. Look at your tasks
+3. See all your tasks
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1920 session tokens
+arturo › 1
+
+◆ Create a task
+In one sentence, what do you want done? (For example: Draft a welcome email for a new customer.)
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1920 session tokens
+arturo › Assess a proposed hiking-gear recommendation feature. Identify user value, required inputs, privacy risks, failure modes, accessibility concerns, evidence gaps, and a smallest testable version. Do not claim access to catalogue, weather, customer, or repository data.
+
+◆ What should it work from?
+Does this task need anything to work from?
+
+1. No, it has everything it needs
+2. Search the public web first
+
+Reply with a number, or type cancel to stop.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 0 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1920 session tokens
+arturo › 1
+
+◆ Task created
+Task queued        task-1
+Selected Function  Product Assessment
+Selected worker    Product Owner Analyst
+Partial coverage   Product Owner Analyst does not hold review, advice — this Function is team-staffed and no single Worker covers everything the Task needs.
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1920 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 20s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Assess a proposed hiking-gear recommendation feature. Identify user value, required inputs, privacy risks, failure modes, accessibility concerns, evidence gaps,...
+   ID                     task-1
+   Status                 Blocked — awaiting approval
+   Worker                 Product Owner Analyst
+   Required capabilities  review, advice
+
+
+  ● LIVE · Functions 1 · Workers 2 · Tasks 1 · Workflow runs 0 · Humans 1 · Human tasks 0 · Approvals 1 · Ollama/llama3.2:latest · 1920 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 8s to get on with the work.
+
+
+/approve task-1 --as "Arturo Bot (automated, not a person)"
+
+◆ Approval
+Approval recorded  task-1
+Approval status    approved
+Approved by        Arturo Bot (automated, not a person)
+The work will run now. See how it goes with /task inspect task-1
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 1920 session tokens
+arturo › 
+◆ Waiting
+Giving Arturo 45s to get on with the work.
+
+
+/tasks
+
+◆ Tasks
+1. Assess a proposed hiking-gear recommendation feature. Identify user value, required inputs, privacy risks, failure modes, accessibility concerns, evidence gaps,...
+   ID                     task-1
+   Status                 Completed
+   Worker                 Product Owner Analyst
+   Required capabilities  review, advice
+   Evidence               An AI model wrote it; nobody has checked it
+   Result preview         Evidence status: UNVERIFIED MODEL SYNTHESIS External tools used: none Product Assessment: Proposed Hiking-Gear Recommendation Feature As part of Northstar Outfitters' ongoing Product Assessment function, I will provide an unbiased an...
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3137 session tokens
+arturo › /task inspect task-1
+
+◆ Task detail
+Worker                Product Owner Analyst
+ID                    task-1
+Status                Completed
+  (Finished.)
+Evidence              Written by an AI model. Nothing in it has been checked, so Arturo will not learn from it
+Skills needed         review, advice
+Why this Worker       Inferred Function Product Assessment; selected its staffed Worker Product Owner Analyst. Best-available coverage: Product Owner Analyst does not hold review, advice; that Worker archetype is staffed on this Function by a team. Add a Worker whose archetype covers it if the Task depends on it.
+Business              Northstar Outfitters
+Task                  1 / 1
+Instruction           Assess a proposed hiking-gear recommendation feature. Identify user value, required inputs, privacy risks, failure modes, accessibility concerns, evidence gaps, and a smallest testable version. Do not claim access to catalogue, weather, customer, or repository data.
+
+Where this came from  an AI model wrote it. Nobody has checked it
+Looked anything up    no
+
+Product Assessment: Proposed Hiking-Gear Recommendation Feature
+
+As part of Northstar Outfitters' ongoing Product Assessment function, I will provide an unbiased analysis of the proposed hiking-gear recommendation feature.
+
+User Value
+The proposed feature aims to recommend suitable hiking gear based on user input. The primary value lies in providing customers with personalized recommendations, increasing the likelihood of them purchasing the right equipment for their needs. This could lead to improved customer satisfaction, reduced returns, and increased sales.
+
+Required Inputs
+
+1. User demographics (age, skill level, preferred terrain)
+2. Hiking plans and itineraries
+3. Personal preferences (e.g., budget, gear type)
+4. Environmental conditions (weather, elevation)
+
+Privacy Risks
+The feature may collect sensitive user data, including personal preferences and hiking plans. To mitigate this risk, the following measures could be implemented:
+
+1. Data anonymization
+2. User consent for data collection
+3. Secure storage of user data
+
+Failure Modes
+
+1. Inaccurate recommendations: If the algorithm relies too heavily on incomplete or incorrect user input, it may lead to poor product suggestions.
+2. Lack of personalization: Failure to consider individual preferences and needs might result in inadequate recommendations.
+
+Accessibility Concerns
+The feature should be designed to accommodate users with disabilities, ensuring:
+
+1. Clear and concise language
+2. Easy navigation and interface design
+3. Compatibility with assistive technologies
+
+Evidence Gaps
+To support the feature's effectiveness, more data on user behavior and preferences would be needed. This could include:
+
+1. User feedback surveys
+2. Analytics on customer purchasing decisions
+3. Expert insights from outdoor gear experts
+
+Smallest Testable Version
+
+A minimal viable product (MVP) for this feature could include:
+
+1. A simplified algorithm that recommends gear based on basic user input (e.g., age, preferred terrain)
+2. Integration with a limited dataset of hiking trails and environmental conditions
+3. Basic analytics to track user feedback and adjust the algorithm accordingly
+
+Please note that this MVP would require further development and refinement to achieve optimal results.
+
+Next Steps
+
+To move forward with the proposed feature, Northstar Outfitters should:
+
+1. Conduct user testing to gather feedback and refine the algorithm
+2. Collect more data on user behavior and preferences
+3. Collaborate with outdoor gear experts to ensure accurate recommendations
+
+Please provide any additional information or clarification necessary for further development.
+
+Human Contact
+To discuss this assessment and next steps, I recommend scheduling a meeting with the Product Assessment team and relevant stakeholders to review the proposed feature's feasibility and potential impact on Northstar Outfitters' operations.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3137 session tokens
+arturo › 
+◆ Bot
+Create an accountable product decision as a Human Task
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 0 · Approvals 0 · Ollama/llama3.2:latest · 3137 session tokens
+arturo › /create-human-task "Decide whether to prototype gear recommendations" "Review the Arturo assessment. Decide whether to prototype, return for revision, or stop. Record required evidence, privacy constraints, accessibility requirements, and the next authorised action."
+
+◆ Human task created
+Human task created  human-task-1
+Open                http://127.0.0.1:8788/human-tasks/human-task-1?token=6fe9359fb27447c1d0540d417c320ff6d37e644f79cfbc9b67c5412c602f1b04
+
+Human task          human-task-1
+Status              open
+Title               Decide whether to prototype gear recommendations
+Instructions
+Review the Arturo assessment. Decide whether to prototype, return for revision, or stop. Record required evidence, privacy constraints, accessibility requirements, and the next authorised action.
+Commands
+/complete-human-task human-task-1 "<notes>"
+/block-task human-task-1 "<reason>"
+/revise-task human-task-1 "<revision instructions>"
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3137 session tokens
+arturo › /human-tasks
+
+◆ human-task-1 · open
+Title         Decide whether to prototype gear recommendations
+Purpose       none
+Instructions  Review the Arturo assessment. Decide whether to prototype, return for revision, or stop. Record required evidence, privacy constraints, accessibility requirements, and the next authorised action.
+Source Task   none
+Completed by  none
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3137 session tokens
+arturo › /complete-human-task human-task-1 "Proceed only to a synthetic prototype after catalogue coverage, privacy, accessibility, and weather-data requirements are documented." --as "Product Owner"
+
+◆ Human task completed
+Human task completed  human-task-1
+Completed by          Product Owner
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3137 session tokens
+arturo › /human-task human-task-1
+
+◆ Human task
+Human task    human-task-1
+Status        completed
+Title         Decide whether to prototype gear recommendations
+Instructions
+Review the Arturo assessment. Decide whether to prototype, return for revision, or stop. Record required evidence, privacy constraints, accessibility requirements, and the next authorised action.
+Notes
+Proceed only to a synthetic prototype after catalogue coverage, privacy, accessibility, and weather-data requirements are documented.
+
+Completed by  Product Owner
+Commands
+(no actions available)
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3137 session tokens
+arturo › /timeline
+
+◆ #37 · Bot typed a line
+Bot submitted  /timeline
+Time           2026-08-02T04:12:02.855Z
+Id             2c9b79aa-b439-4c65-8772-32657215289b
+
+◆ #36 · Bot typed a line
+Bot submitted  /human-task human-task-1
+Time           2026-08-02T04:11:57.532Z
+Id             f4b9cb31-f943-4c23-b2bc-2c1609bc93e5
+
+◆ #35 · Human task completed
+Human task human-task-1 completed by Product Owner
+Time          2026-08-02T04:11:57.529Z
+Id            dd5a7c09-ec25-4cf2-9808-7869cc4180c4
+
+◆ #34 · Bot typed a line
+Bot submitted  /complete-human-task human-task-1 "Proceed only to a synthetic prototype after catalogue coverage, privacy, accessibility, and weather-data requirements are documented." --as "Product Owner"
+Time           2026-08-02T04:11:27.306Z
+Id             115ba517-4753-4b3a-a6dd-58066a90c0d1
+
+◆ #33 · Bot typed a line
+Bot submitted  /human-tasks
+Time           2026-08-02T04:11:16.230Z
+Id             8815410b-3221-49d8-b962-c796bf70fd0a
+
+◆ #32 · Human task created
+Human task created  human-task-1
+Time                2026-08-02T04:11:16.227Z
+Id                  8879e73d-cafd-46ea-a736-32bef3daa0b9
+
+◆ #31 · Bot typed a line
+Bot submitted  /create-human-task "Decide whether to prototype gear recommendations" "Review the Arturo assessment. Decide whether to prototype, return for revision, or stop. Record required evidence, privacy constraints, accessibility requirements, and the next authorised action."
+Time           2026-08-02T04:10:35.531Z
+Id             9a451ded-503d-4b06-b7ab-7a3049e6948a
+
+◆ #30 · Bot typed a line
+Bot submitted  /task inspect task-1
+Time           2026-08-02T04:10:21.464Z
+Id             194f3692-f4f5-45c8-af0b-9091daf7de46
+
+◆ #29 · Bot typed a line
+Bot submitted  /tasks
+Time           2026-08-02T04:10:17.454Z
+Id             8bfe45fb-e87e-4109-9f45-5a57641b72d5
+
+◆ #28 · Task completed
+Task completed  task-1
+Time            2026-08-02T04:09:42.205Z
+Id              75bb5fcb-72ad-4e56-95fc-fe088cb57afa
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3137 session tokens
+arturo › /overview
+
+◆ Enterprise overview
+1 enterprise  ·  1 ongoing Functions  ·  1/1 Functions running
+
+Northstar Outfitters
+  Recommend the right outdoor gear using evidence, not guesswork, with a person accountable for every launch decision.
+  1 Functions · active
+
+◆ Execution pulse
+Tasks completed      1/1 (100%)
+Workflow runs        0
+Workers available    3/3
+Human tasks          1
+Approvals waiting    0
+
+◆ Trust layer
+38 durable operational events
+0 retained operational lessons
+1 governed decision chain
+
+Every action remains inspectable through /events, /timeline, /tasks, /memory, and /governance.
+
+◆ Next move
+The operating model is live. Enter a plain-English objective or inspect /timeline for execution evidence.
+
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3137 session tokens
+arturo › 
+◆ Bot finished
+33 lines typed, 0 turned down — the script finished.
+1 decision in this run was signed off by Arturo Bot (automated, not a person), not by a person.
+It is still on your team, and shows up in /workers, so those decisions still say who made them.
+The keyboard is yours again.
+
+  ● LIVE · Functions 1 · Workers 3 · Tasks 1 · Workflow runs 0 · Humans 2 · Human tasks 1 · Approvals 0 · Ollama/llama3.2:latest · 3137 session tokens
+arturo › 

@@ -1,0 +1,30 @@
+# Scenario 900 — verification only: the two fixes made from the transcripts
+# 1. "--every weekly" asks which day instead of refusing the line
+# 2. a Function name that matches nothing offers the ones that do
+/reset
+yes
+/enterprise
+1
+Greenline Waste
+Collect efficiently with accountable human decisions on every route change.
+skip
+/function
+1
+Route Planning
+Frame route-planning questions for an accountable operations lead.
+skip
+/function
+1
+Demand Analysis
+Analyse synthetic collection-demand scenarios for accountable review.
+skip
+@note A weekly schedule used to be refused outright. It should now ask for the day.
+/schedule add "List the routes under pressure this week, labelling assumptions." --every weekly --at "06:00" --timezone "Pacific/Auckland" --function "Route Planning"
+friday
+/schedule list
+@note A cadence Arturo cannot keep must still be refused, not quietly downgraded.
+/schedule add "Summarise the month." --every monthly --at "09:00" --timezone "Pacific/Auckland" --function "Route Planning"
+@note A misspelled Function used to dead-end. It should now offer the real ones.
+/function start "Ruot Planning"
+1
+/functions

@@ -1,0 +1,37 @@
+# Scenario 013 — A week in a sole legal practice (runs on the seeded demo Enterprise; no /reset)
+/overview
+/functions
+/workers
+@note Monday — put recurring work on a clock
+/schedule add "Review the overnight client enquiries and list which need a same-day reply, labelling every assumption." --every daily --at "08:30" --timezone "Pacific/Auckland" --function "Client Intake"
+/schedule add "Summarise the matters that moved this week and list what is waiting on the principal." --every friday --at "16:00" --timezone "Pacific/Auckland" --function "Practice Administration"
+/schedule list
+@note Tuesday — the decision only the lawyer can make
+/governance policy list
+/function start "Client Advice"
+@timeout 200
+@cap TASK_ID {(task-[0-9]+)}
+/task create "Review a synthetic draft advice note for a small business on a commercial contract question, and list what the principal must check before it goes to the client. Do not send anything." --job "Client Advice"
+@wait 8
+/approvals
+/approval-status {{TASK_ID}}
+/approve {{TASK_ID}}
+@wait 55
+/task inspect {{TASK_ID}}
+@note Wednesday — one thing finishing starts the next
+/event rule add --when task.completed --job "Client Advice" --publish "Advice ready for filing"
+/event rule list
+/function start "Practice Administration"
+/events
+/tasks
+@note Thursday — handing work between responsibilities
+/function start "Client Intake"
+/delegation request "Prepare a plain-English summary of the supplied clauses for a client who is not a lawyer." --from "Client Advice" --to "Client Intake"
+/delegation list
+/memory add "Clients consistently misread the settlement-date clause; explain it in plain English every time." --scope "Harbour Legal"
+/memory
+@note Friday — what actually happened
+/overview
+/health "Client Advice"
+/timeline
+/approvals

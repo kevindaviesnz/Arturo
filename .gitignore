@@ -1,0 +1,73 @@
+# Dependencies
+node_modules
+
+# Build output
+dist/
+cli/dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.*
+cli/.env
+cli/.env.*
+!cli/.env.example
+
+# Local AI editor / agent worktrees
+.claude/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# OS files
+.DS_Store
+**/.DS_Store
+
+# Runtime state
+.data/
+cli/.data/
+*.db
+cli/*.db
+*.jsonl
+cli/*.jsonl
+*.db-wal
+*.db-shm
+office-*.access
+office-backups/
+cli/test-results/
+cli/playwright-report/
+cli/office-tests/results/
+
+# Local audit/output files
+audit.txt
+files.txt
+cli/audit.txt
+cli/files.txt
+
+# Local notes
+cli/DEVELOPER_NOTES.txt
+
+# Local cleanup / unused-file staging
+unused/
+cli/unused/
+cli/src/unused/
+cli/copy-unused.sh
+
+# Legacy prototype
+worker-ui/
+cli/worker-ui/
+cli/src/legacy/
+
+
+# Diagnostic captures the scenario harness writes beside a transcript. Kept on
+# disk for diagnosing a bad run, never part of the record.
+*.txt.raw
+*.txt.driver.raw
+*.txt.driver.log
+
+# Python packaging tool cache
+__pycache__/
