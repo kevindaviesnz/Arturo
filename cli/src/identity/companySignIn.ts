@@ -67,6 +67,7 @@ import {
   setEnterpriseMembership,
   type EnterpriseMembership,
 } from "./organisationIdentity";
+import { revokeOffTerminalLinksForPerson } from "../offterminal/offTerminalLinks";
 
 export type Role = EnterpriseMembership["role"];
 
@@ -569,6 +570,7 @@ export function setRole(input: { readonly enterpriseId: string; readonly person:
   if (!person || !membership) return { refused: "Invite them first." };
   if (membership.role === "owner" && input.role !== "owner" && ownerCount(input.enterpriseId) <= 1) return { refused: "A business needs an owner. Make someone else the owner first." };
   setEnterpriseMembership({ ...membership, role: input.role as Role });
+  revokeOffTerminalLinksForPerson(input.enterpriseId, person, input.now ?? Date.now());
   logAuthorityChange({ enterpriseId: input.enterpriseId, what: `role is now ${input.role}`, person, by: input.actor?.workerName ?? "the terminal", ...(input.actor ? { byUserId: input.actor.userId } : {}), at: input.now ?? Date.now() });
   return { message: `${person} is now ${ROLE_WORDS[input.role as Role]}.` };
 }
@@ -598,7 +600,8 @@ export function setSuspended(input: { readonly enterpriseId: string; readonly pe
   setEnterpriseMembership({ ...membership, status: input.suspended ? "suspended" : "active" });
   if (input.suspended) {
     endSessions(membership.userId);
-    }
+    revokeOffTerminalLinksForPerson(input.enterpriseId, person, input.now ?? Date.now());
+  }
   logAuthorityChange({ enterpriseId: input.enterpriseId, what: input.suspended ? "access suspended" : "access restored", person, by: input.actor?.workerName ?? "the terminal", ...(input.actor ? { byUserId: input.actor.userId } : {}), at: input.now ?? Date.now() });
   return { message: input.suspended ? `${person} can no longer sign in. What they did stays on file under their name.` : `${person} can sign in again.` };
 }
@@ -627,6 +630,7 @@ export function setSignOffRight(input: { readonly enterpriseId: string; readonly
     const role = existing?.role ?? (ownerCount(input.enterpriseId) > 0 ? "member" : "owner");
     ensureUser(input.enterpriseId, person, role);
   } else {
+    revokeOffTerminalLinksForPerson(input.enterpriseId, person, now);
     const waiting = waitingDraftsForPerson(input.enterpriseId, person);
     endDraftsForInvolving(input.enterpriseId, person, by, now);
     openHandBacksForLostRight({

@@ -27,6 +27,7 @@ import {
   refuseEmailAcceptance,
   type EmailAcceptanceInput,
 } from "../staffing/emailAcceptance";
+import { revokeOffTerminalLinksForJob } from "../offterminal/offTerminalLinks";
 
 export type TaskSignOffOutcome = {
   readonly signedOff: boolean;
@@ -224,6 +225,7 @@ export function signOffTaskResult(
   let acceptanceLine: string | undefined;
   runtimeDb.transaction(() => {
     recordResultSignOff(job, identity.workerName, signedAt, signOffAlongside(job));
+    revokeOffTerminalLinksForJob(job.id, signedAt);
     recordNextAction("after-sign-off", job.id, signedAt, identity.workerName);
     if (acceptanceInput) {
       const recorded = recordEmailAcceptance({ ...acceptanceInput, now: signedAt }, job);

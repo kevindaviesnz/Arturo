@@ -9,6 +9,7 @@ import {
 import { readResultSignOffStanding, refuseResultSignOff } from "../runtime/resultSignOff";
 import { broadcastEvent } from "../runtime/runtimeEventPublisher";
 import { designatedApproversForFunction, mayDecideForFunction } from "../staffing/functionApprovers";
+import { revokeOffTerminalLinksForJob } from "../offterminal/offTerminalLinks";
 
 export type TaskSetAsideOutcome = {
   readonly setAside: boolean;
@@ -85,6 +86,7 @@ export function setAsideTaskResult(args: readonly string[]): TaskSetAsideOutcome
   }
 
   recordResultSetAside(job, worker, reason);
+  revokeOffTerminalLinksForJob(job.id);
   broadcastEvent("job.result_set_aside", "info", `Result of Task ${job.id} set aside by ${worker}: ${reason.replace(/\s+/g, " ").trim()}`);
   return {
     setAside: true,

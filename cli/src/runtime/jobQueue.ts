@@ -31,6 +31,7 @@ import {
 import { runtimeDb } from "../storage/runtimeDatabase";
 
 import { clearNextActions, recordNextAction } from "./nextActions";
+import { revokeOffTerminalLinksForJob } from "../offterminal/offTerminalLinks";
 
 export type JobStatus =
   | "scheduled"
@@ -773,6 +774,10 @@ export function replaceJob(
 
   persistJobs();
 
+  if (previous && previous.output !== normalizedUpdated.output) {
+    revokeOffTerminalLinksForJob(normalizedUpdated.id);
+  }
+
   return normalizedUpdated;
 }
 
@@ -1111,6 +1116,7 @@ export function startJob(
     refuseWorkUnderLocks({
       workId: job.workId,
       enterpriseId: job.enterpriseId,
+      functionId: job.businessFunctionId,
       when: "start",
       taskCreatedAt: job.createdAt,
     });
