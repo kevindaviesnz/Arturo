@@ -10,9 +10,9 @@ authoritative and report the discrepancy.
 
 Arturo currently runs as a **single-tenant, single-operator process on a trusted host**.
 Persistence is a local SQLite database and local data files. The operator, and any
-process running as the operator, is inside the trust boundary. Once a business turns sign-in
-on, the company page may also serve several people of that one business over an office
-network (item 25); the host, the terminal and the data directory stay the operator's.
+process running as the operator, is inside the trust boundary. The company page and the
+HTTP servers that served it (`companyServer`, `officeServer`) are gone (item 25); the
+host, the terminal and the data directory stay the operator's.
 
 ## What the controls defend against
 
@@ -64,7 +64,11 @@ deployment, and the product should not be represented as such.
    (non-networked) mode, is auto-provisioned into that same directory. An attacker with
    local file-write can read the key and re-sign anything. A valid external environment
    secret or `APPROVAL_SIGNING_SECRET_FILE` outside `ARTURO_DATA_DIRECTORY` raises this
-   bar; local auto-provisioning does not.
+   bar; local auto-provisioning does not. The off-terminal sign-off listener will not
+   start on that auto-provisioned local key; it requires a networked
+   `APPROVAL_SIGNING_SECRET` (or `APPROVAL_SIGNING_SECRET_FILE` outside the data
+   directory). An attacker who can write the location of that secret can still re-sign
+   approvals and off-terminal events.
 2. **Policy-rule integrity still shares local-key and migration caveats.** Governance
    rules are now HMAC-signed, including their evaluation order. That closes the previous
    "edit the SQLite row from deny to allow" gap for an attacker who can alter only the
@@ -80,30 +84,32 @@ deployment, and the product should not be represented as such.
    inside the trusted-host boundary, and any malicious code already running inside the
    Arturo process can still reach process memory, local services, and locally readable
    files.
-4. **Human identity depends on trusted provisioning.** Public HTTP review and Human Task
-   mutations now require both the signed per-Task review credential and a separate,
-   authenticated User session. The User must be bound to the assigned Human Worker in
-   the resolved Enterprise and hold active owner, admin or reviewer membership. Missing
-   or conflicting organisation scope fails closed. Worker names alone confer no network
-   decision authority. Authenticated User ids are included in approval decision HMACs;
-   successful Human Task actions have a durable HMAC-bound identity audit.
+4. **Human identity depends on trusted provisioning.** With the company page gone (item 25)
+   there is no public HTTP account or review surface, and no federated identity provider.
+   People and the sign-off right are still created at the terminal by the owner, after the
+   owner has independently verified the person. Off-terminal sign-off and set-aside always
+   require a device check (`userVerification` required). Enrolment is started only by the
+   owner, as a 30-minute single-use link to a person who already has an account, a verified
+   email address, and the sign-off right; after they enrol there is a 12-hour wait, and the
+   owner confirms at the terminal only with a typed confirmation that names them, not only
+   "yes", after checking with them through another channel. The public-key hash is written
+   into the hash-chained authority log. Possession of a link is not enough: links are
+   stored only as a hash, are bound to one result, one person and the content hash, and are
+   revoked on sign-off, set-aside, a role change, loss of the sign-off right, or a change
+   to the result. A sign-off email is not sent until the address has been verified with a
+   one-time code and a usable device check is in place. Naming stand-ins, starting
+   enrolment, confirming a credential, and switching the path on stay at the terminal.
+   HMACs attest runtime records, not legal signatures or proof against a compromised host.
 
-   Accounts and short-lived sessions are provisioned by a trusted host administrator
-   after independently verifying the person; there is no public account-provisioning
-   endpoint or federated identity provider yet. The browser exchanges a session credential
-   at `/session` for an HttpOnly, SameSite=Strict cookie without extending its expiry.
-   Configure an HTTPS `PUBLIC_BASE_URL` behind TLS termination to enable Secure cookies
-   and the correct same-origin checks. Disabling a User revokes existing sessions.
-   Exported in-process handlers and local CLI flows remain inside the trusted-host
-   boundary and may produce legacy decisions without a User id. HMACs attest runtime
-   records, not legal signatures or proof against a compromised host. Review links still
-   allow viewing their scoped content; possession alone can no longer submit decisions.
-5. **Loopback network surface.** Agent-supplied capability URLs may reach `http://localhost`
-   services, and the development control-panel server, review server, and WebSocket runtime
-   server are reachable on loopback. The Runtime WebSocket and control panel require strong
-   bearer tokens before binding to a non-loopback host, and the review server uses signed
-   per-Task credentials plus User sessions for decisions, but loopback access is still inside the trusted-host
-   boundary. Do not run Arturo on a shared or multi-user host.
+5. **Loopback network surface.** Agent-supplied capability URLs may still reach
+   `http://localhost` services. The off-terminal sign-off listener binds only `127.0.0.1`
+   and serves only pairing and the sign-off or set-aside of one result. Behind a tunnel
+   every request arrives from loopback, so the socket address is used only to reject
+   anything that is not loopback; it is never treated as proof that the person is at the
+   host computer. Origin must match the `https://` public hostname. TLS must end at the
+   host computer; a hosted relay that can decrypt the draft is not used. Rate limits apply
+   globally and per token. Do not run Arturo on a shared or multi-user host.
+
 6. **Multi-tenant isolation, tamper-proof audit, backup/retention/recovery.** Not provided.
    "Persistent records" are durable, not compliance-grade tamper-evident audit.
 7. **Bot mode can satisfy the human-approval gate.** `npm run ui bot -- --approve`
@@ -157,7 +163,7 @@ deployment, and the product should not be represented as such.
    signing is named on the page, not authenticated, exactly as at the terminal. The page used
    to say so in its menu ("Anyone using this computer can make decisions on these pages"); that
    line was removed for brevity at the owner's request, and the exposure is unchanged.
-   With sign-in on (item 25) every page decision is made as the signed-in person instead.
+   The company page that served this endpoint is gone (item 25), so the endpoint is no longer exposed.
 
 11. **A sign-off can now create work for a person.** When a Function has a hand-off
    (`/function update --hand-off-to --hand-off-task`), signing one of its results off creates
@@ -168,7 +174,7 @@ deployment, and the product should not be represented as such.
    Arturo. The consequence of a forged sign-off (item 1, item 10) is therefore one extra
    Human Task on a person's list, which they can see came from that sign-off. The person must
    work at the Function's own business: `refuseHandOff` checks it whenever it is given the
-   business, and `setHandOff` always gives it, so neither the terminal nor the page can send
+   business, and `setHandOff` always gives it, so the terminal cannot send
    one business's signed-off results to another business's person (until this check, the
    terminal's `/function update --hand-off-to` accepted anyone registered anywhere). The
    terminal checks this before it changes anything else the same command asked for.
@@ -237,7 +243,7 @@ deployment, and the product should not be represented as such.
    not failed), so a double click cannot start it twice. The pages show failure reasons in
    plain words; the recorded error is unchanged and shown as technical detail.
 
-17. **A business can be set up, and clients taken down by an assistant, from the overview.**
+17. **A business is set up at the terminal, and clients can be taken down by an assistant.** The company page and its `/api/setup` and `/api/assistant/*` routes are gone (item 25). The same functions are used from the terminal:
    `POST /api/setup` calls `setUpBusiness` (behind `/setup`) and is offered only while no business
    exists. Clients are added by talking to an assistant (`POST /api/assistant/talk`, behind `/talk`),
    and no assistant exists until a named person agrees to the one Arturo proposes
@@ -277,37 +283,40 @@ deployment, and the product should not be represented as such.
    read-back and `addClient`, and closes the oldest such Task through `completeHumanTaskAs`
    (item 12).
 
-18. **A finished result can be passed on from the overview, as a new task, and finished work is
-    listed.** The page no longer has a "Pass this on" control on a result. Instead, **+ New task
-    from this result** opens New task with the result attached (`followsTaskId`), and the task
-    goes either to a person, as a Human Task created only through `createHumanTaskFromArgs` (the
-    function `/create-human-task` prints from, with `--assign-to`, `--follows` and `--artefact`),
-    or to an AI worker through `createTask` with `--follows` (item 15). `startWorkFromPage`
-    refuses, before anything is written, a result of another business, one that has not
-    finished, one that was set aside, and one written by an AI model that nobody has signed off
-    (`refuseUnacceptedHandOver`; item 11 states why); `createHumanTaskFromArgs` refuses the last
-    again itself. The person must be someone who can be passed work at this business
-    (`peopleWhoCanBePassedWork`). `POST /api/task/passon` (`company/passOn.ts`) still exists
-    behind the same guards and the same function, but the page no longer calls it. "Asked by"
-    and the person given the task are names chosen on a page that trusts whoever is at the
-    computer (item 10), not proven identities. The finished-work
-    list (`GET /api/finished`) is a read: it shows what was asked, who did it, whether anyone signed
-    it off, and who it was passed to, from the same sign-off and Human Task records the Task page
-    uses; it records and decides nothing.
-    The terminal is now held to the same rule. `createTask` with `--follows` used to accept an
-    AI result nobody had signed off, and a set-aside one, so work typed at the terminal went from
-    one AI Worker to another unchecked (a comment called it running "freely"). It now refuses
-    both before anything is queued, with one exception: a result Arturo itself is passing on to be
-    checked, under a business function's rule or a task's choice (item 23), which it may create
-    once, under a claim only that delivery holds. The earlier result a Task works from is given to
-    its Worker marked off as data, between fixed start and end lines (`taskExecutor.ts`), with
-    any copy of the end line inside the result rewritten, so text in a draft cannot close the
-    fence and speak as the instruction. A Function's automatic follow-on (`--follow-on on`, off by
-    default) still sends unsigned AI work to another Task, as a model decides; it is now checked
-    before it is queued, like any new task, against what the Function's AI workers can do and the
-    Function's own checks (`refuseFollowUpWork`), and is refused otherwise.
+18. **Passing work on, and the finished-work list, are terminal actions.** The company
+    overview is gone (item 25), so a finished result is not passed on from a page. At the
+    terminal, **+ New task from this result** is the same as `createTask` or
+    `createHumanTaskFromArgs` with `--follows`: a Human Task is created only through
+    `createHumanTaskFromArgs` (the function `/create-human-task` prints from, with
+    `--assign-to`, `--follows` and `--artefact`), and an AI task through `createTask` with
+    `--follows`. `startWorkFromPage` is no longer a network route; the same refusals run
+    before anything is written: a result of another business, one that has not finished,
+    one that was set aside, and one written by an AI model that nobody has signed off
+    (`refuseUnacceptedHandOver`; item 11 states why); `createHumanTaskFromArgs` refuses
+    the last again itself. The person must be someone who can be passed work at this
+    business (`peopleWhoCanBePassedWork`). The off-terminal path cannot pass work on,
+    start work, or give a go-ahead; it only signs off or sets aside one already-finished
+    result, always with a device check, through `signOffTaskResult` and
+    `setAsideTaskResult`. "Asked by" and the person given the task are names chosen at
+    the terminal, which trusts whoever can type there (item 1), not proven identities.
+    Finished work shown in the CLI is a read: it shows what was asked, who did it,
+    whether anyone signed it off, and who it was passed to, from the same sign-off and
+    Human Task records; it records and decides nothing.
+    `createTask` with `--follows` used to accept an AI result nobody had signed off, and a
+    set-aside one, so work typed at the terminal went from one AI Worker to another
+    unchecked (a comment called it running "freely"). It now refuses both before anything
+    is queued, with one exception: a result Arturo itself is passing on to be checked,
+    under a business function's rule or a task's choice (item 23), which it may create
+    once, under a claim only that delivery holds. The earlier result a Task works from is
+    given to its Worker marked off as data, between fixed start and end lines
+    (`taskExecutor.ts`), with any copy of the end line inside the result rewritten, so
+    text in a draft cannot close the fence and speak as the instruction. A Function's
+    automatic follow-on (`--follow-on on`, off by default) still sends unsigned AI work
+    to another Task, as a model decides; it is now checked before it is queued, like any
+    new task, against what the Function's AI workers can do and the Function's own checks
+    (`refuseFollowUpWork`), and is refused otherwise.
 
-19. **Workers and business functions can be set up from the overview.** `POST /api/person/add`,
+19. **Workers and business functions are set up at the terminal.** The company page and its `/api/person/add`, `/api/worker/add` and `/api/area/create` routes are gone (item 25). The same functions are used from the terminal: `POST /api/person/add`,
     `POST /api/worker/add` and `POST /api/area/create` (`company/areaSetup.ts`) take the decision
     routes' guards (item 10). Nothing is saved on a model's say-so: the form's own fields become
     the same calls the terminal makes. A person is registered by `registerWorkerFromArgs` (`/worker add`), an area by
@@ -450,14 +459,14 @@ deployment, and the product should not be represented as such.
     each area of work, `business/functionChecks.ts` can hold two checks: work needs a document,
     and a document may not exceed a word limit. They are made inside `createTask`
     (`repl/taskRoutingCommands.ts`), the function behind `/task create`, after the document is
-    stored and before any Task exists, so the terminal and the page refuse identically and a
+    stored and before any Task exists, so the terminal refuses identically and a
     refusal starts nothing. Arturo counts the words itself from the verified document version
     (`readTextOfVerifiedArtefactVersion`), and fails closed: a document it cannot read, whose
     file no longer matches its recorded fingerprint, or which is too large to read in full is
     refused, not passed. The settings are set with the area (`POST /api/area/create`), changed
     from the page (`POST /api/area/checks`, `company/areaSetup.ts`) or at the terminal
     (`/function update --needs-document --max-words`), all through `setFunctionChecks`; only
-    someone who can approve work may change them from the page, and an invalid limit is refused
+    someone who can sign off work and give go-aheads may change them at the terminal, and an invalid limit is refused
     before anything is written. Known limits: the checks bind work somebody asks for, not Tasks
     a running Function creates from an event; follow-on work is exempt from "needs a document"
     because it carries the first Task's document; a refusal is a refusal, not a decision
@@ -490,7 +499,7 @@ deployment, and the product should not be represented as such.
     an AI Worker's capabilities still come only from its archetype (`normalizeWorkerCapabilities`),
     and whether an ability waits for a go-ahead is computed from the catalogue
     (`requiresDefaultJobApproval`), never written in the table; a test fails if the table and the
-    catalogue disagree. The company page's labels, the go-ahead card's "what it could do outside
+    catalogue disagree. The terminal's labels, the go-ahead card's "what it could do outside
     Arturo" and the worker suggestion's "It can / Asks you first / It cannot" are all generated
     from it, so they no longer drift: the page used to label a worker holding `human-contact` as
     working only inside Arturo, although Arturo emails a registered person a review link for it
@@ -598,50 +607,26 @@ deployment, and the product should not be represented as such.
     a law practice), which remains the business's duty.
 
 
-25. **The company page can serve several people of one business, each signed in.** A business
-    set up on the page has sign-in on from the start: first-day setup (`POST /api/setup`) takes the
-    owner's email and password, checked before anything is created, and signs them in
-    (`startWithOwner`). An owner who never chose a password may choose one without a code, but only
-    from the computer Arturo runs on (`POST /api/signin/owner`, loopback only, `claimOwnerAccount`),
-    the same trust as the terminal. Until a business turns sign-in on, the page trusts whoever is
-    at the computer (item 10). Turning it on
-    (`Your business` → "Turn on sign-in", `POST /api/signin/turn-on` while still local, where the
-    owner also chooses their password and is signed in at once, or `npm run identity -- signin-on`,
-    which prints an invite code) is done once, names an owner who can sign off, and is signed;
-    from then on the page answers only a signed-in person (`company/companyServer.ts`), and only
-    for their own business (`company/companyAccess.ts`). It reuses the review server's Users,
-    memberships (owner, admin, member, reviewer) and hashed sessions (item 4), binding each User to
-    the person's Human Worker.
-    - **Sign-in** (`identity/companySignIn.ts`): the owner issues an invite code (100 bits,
-      single use, three days, replacing any earlier one); the person chooses a password (scrypt,
-      at least 10 characters); a session is a 12-hour HttpOnly, SameSite=Strict cookie, Secure
-      behind HTTPS. Wrong passwords are limited per name and per address (eight in fifteen
-      minutes, held in memory, so a restart resets them). There is no self-service recovery: a
-      lost password is a new code from the owner.
-    - **Every decision is the signed-in person's.** The "You are", "Who is asking?" and "Sign off
-      as" choices are gone: a name sent that is not theirs is refused, theirs is used, and the
-      decision runs inside `withAuthenticatedUser`, so the account's id is signed into sign-offs,
-      set-asides and approvals beside the name. Lists of who may act show only them.
-    - **Authority.** With sign-in on, a person signs off, sets aside, gives or refuses a
-      go-ahead, or stops a route on the page only under a grant to sign off that the owner gave
-      and whose HMAC verifies (`maySignOff`); changing a person's mode in the data directory is
-      not enough. Only the owner gives or takes away that right, invites people, changes roles or
-      suspends access; setting the business up (business functions, workers, checks, where
-      results go, what an AI worker is told) needs the owner or an admin; a reviewer starts no
-      work. Each change is appended to a signed, hash-chained log (`authority_changes`,
-      `npm run identity -- authority-log`), so an edit or removal in the middle shows; an entry
-      cut from the end does not.
-    - **Network.** The page still listens on this computer only. `ARTURO_COMPANY_BIND` opens it to
-      the office network only if sign-in is on and `ARTURO_COMPANY_ORIGIN` names the address
-      people use; requests for any other host are refused, and writes must carry that origin.
-      Over plain `http` (warned at start), passwords and work cross the network unencrypted.
-    Known limits: everyone signed in sees all of their business (no per-client or per-matter
-    walls yet, and `otherClientsNamed` is not one); the terminal, `npm run identity` and a
-    person's work-page link (item 12) remain trusted-host or link-based paths and record no
-    signed-in account; decisions made before sign-in was turned on keep their chosen names; one
-    signing key serves every business and sits beside the data (items 1 and 8), so hosting many
-    businesses on one Arturo still waits on per-business keys, isolated storage and a worker
-    sandbox; and a signed-in person who can sign off can still sign off without reading (item 24).
+25. **The company page, and the HTTP servers that served it, are gone.** `cli/src/company`
+    (including `companyServer`) and `officeServer` are not in this tree. Nothing from
+    `cli/dist/company/` is served. Arturo is still a single-operator process on a trusted
+    host for setup, go-aheads, enrolment confirmation and switching the off-terminal path
+    on or off: those decisions are made at the terminal, with the same trust as anyone
+    who can type there or write the data directory (item 1). A new, small sign-off
+    listener may be started on that host. It binds only `127.0.0.1` and serves only
+    pairing and the sign-off or set-aside of one result (items 4 and 5). No link is
+    issued unless `PUBLIC_BASE_URL` is `https://` plus a hostname. The path starts off;
+    switching on is owner-only loosening (typed reason, 12-hour wait, claim-once email
+    notice) and switching off is immediate. The sign-in, invite, session-cookie and
+    `ARTURO_COMPANY_BIND` controls in earlier revisions applied only to the company page
+    and are not in force. Leftover identity code (`identity/companySignIn.ts`,
+    `npm run identity`) can still issue invites and record a signed-in actor, but it
+    does not expose a network service. Known limits: decisions at the terminal are not
+    bound to a signed-in account; one signing key still serves every business (items 1
+    and 8); a person who can sign off can still sign off without reading (item 24);
+    behind a tunnel, loopback is not proof of presence at the host (item 5); the
+    real-person test gate must be passed on the business's own tunnel before a hosted
+    relay is considered.
 
 ## Direction of travel
 
