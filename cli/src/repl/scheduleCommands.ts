@@ -1,3 +1,4 @@
+import { refuseStartIfNotReady } from "../business/staffCheck";
 import {
   getBusinessFunctionDefinition,
 } from "../business/businessFunctionDefinitionStore";
@@ -19,6 +20,7 @@ import {
 
 import {
   refuseTaskWithoutWork,
+  refuseTypedWorkSettingCommand,
 } from "../work/workLocks";
 
 import {
@@ -236,10 +238,19 @@ export function addEventScheduleFromArgs(
     options.timezone as string
   );
 
-  // A scheduled Task carries no named piece of work, so one that would need
-  // a matter on a law practice, or names a client with "no AI" work, is
-  // refused here, before anything is written. Each occurrence is checked
-  // again as it fires (scheduling/eventScheduleRuntime.ts).
+  // A scheduled Task carries no named piece of work. When the typed-work
+  // setting is on, recurring and scheduled AI work is refused here, before
+  // anything is written, drafts included. A Task that would need a typed
+  // piece of work, or names a client with "no AI" work, is also refused.
+  // Each occurrence is checked again as it fires (scheduling/eventScheduleRuntime.ts).
+  const recurringBlocked =
+    refuseTypedWorkSettingCommand(
+      jobResolution.job.enterpriseId,
+      "recurring"
+    );
+  if (recurringBlocked) {
+    throw new Error(recurringBlocked);
+  }
   const needsWork =
     refuseTaskWithoutWork({
       enterpriseId:
@@ -251,7 +262,7 @@ export function addEventScheduleFromArgs(
     });
   if (needsWork) {
     throw new Error(
-      `${needsWork} A scheduled Task can't belong to a matter, so this can't be scheduled. Nothing was scheduled.`
+      `${needsWork} A scheduled Task can't belong to a typed piece of work, so this can't be scheduled. Nothing was scheduled.`
     );
   }
 
@@ -285,6 +296,17 @@ export function addEventScheduleFromArgs(
       : inferBusinessFunctionCapabilities(
           jobResolution.job
         );
+  const startBlocked =
+    refuseStartIfNotReady({
+      enterpriseId:
+        jobResolution.job.enterpriseId,
+      functionId:
+        jobResolution.job.id,
+    });
+  if (startBlocked) {
+    throw new Error(startBlocked);
+  }
+
   const scheduledTask =
     enqueueScheduledJob(
       options.request,

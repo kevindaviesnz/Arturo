@@ -2635,6 +2635,7 @@ export async function processNextQueuedJob(
     refuseWorkUnderLocks({
       workId: queued.workId,
       enterpriseId: queued.enterpriseId,
+      functionId: queued.businessFunctionId,
       when: "start",
       taskCreatedAt: queued.createdAt,
     });
@@ -2720,6 +2721,7 @@ export async function processNextQueuedJob(
       ? refuseWorkUnderLocks({
           workId: finished.workId,
           enterpriseId: finished.enterpriseId,
+          functionId: finished.businessFunctionId,
           when: "finish",
           taskCreatedAt: finished.createdAt,
         })

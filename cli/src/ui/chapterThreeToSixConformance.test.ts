@@ -34,6 +34,9 @@ import {
 import {
   handleUiCommand,
 } from "./uiCommandHandlers";
+import {
+  ensureTestSigner,
+} from "../testing/cliTestSetup";
 
 function clearChapterState(): void {
   clearJobs();
@@ -62,6 +65,7 @@ describe("Chapters 3–6 conformance", () => {
       mission: "Allow parents to buy ethical toys for young children",
       businessFunctionIds: [],
     });
+    ensureTestSigner({ enterpriseId: enterprise!.id });
 
     await handleUiCommand("/function", [
       "create",

@@ -25,8 +25,9 @@ import {
 } from "../business/businessFunctionRuntimeStore";
 import {
   clearEnterprises,
-  createAndSaveEnterprise,
+  createAndSaveEnterprise as persistEnterprise,
 } from "../enterprise/enterpriseStore";
+
 import {
   addWorker,
   clearWorkers,
@@ -55,6 +56,18 @@ import { clearStaffingAssignments, saveStaffingAssignment } from "../staffing/st
 import { clearNextActions } from "./nextActions";
 import { createOutcomeFollowOn } from "./businessFunctionRuntimeOutcome";
 import { addClientRecord, clearClients } from "../clients/clientStore";
+
+import { ensureTestSigner } from "../testing/cliTestSetup";
+
+function createAndSaveEnterprise(
+  input: Parameters<typeof persistEnterprise>[0]
+): ReturnType<typeof persistEnterprise> {
+  const enterprise = persistEnterprise(input);
+  ensureTestSigner({ enterpriseId: enterprise.id });
+  return enterprise;
+}
+
+
 
 const staffCreator = (functionId: string) => {
   saveStaffingAssignment({ businessFunctionId: functionId, workerName: "creator", role: "ai", rationale: "test" });

@@ -229,6 +229,8 @@ export async function runDueEventSchedules(
             task.workId,
           enterpriseId:
             task.enterpriseId,
+          functionId:
+            task.businessFunctionId,
           when:
             "start",
         });

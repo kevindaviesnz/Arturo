@@ -4,7 +4,8 @@ import { join } from "node:path";
 import type { AgentArchetype } from "../agents/agentArchetype";
 import { createArtefact } from "../artefacts/artefactStore";
 import { createEnterpriseFunction } from "../business/businessFunctionCreation";
-import { addWorker, createHumanWorker, registerAiWorker } from "../control/workers";
+import { addWorker, createHumanWorker, getWorker, registerAiWorker } from "../control/workers";
+import { listPeople, setSignOffRight } from "../identity/companySignIn";
 import { getEnterprise } from "../enterprise/enterpriseStore";
 import { assignWorkerOwnership } from "../identity/organisationIdentity";
 import { saveStaffingAssignment } from "../staffing/staffingStore";
@@ -23,6 +24,44 @@ export function addEnterprisePerson(input: TestPersonInput): { readonly added: t
   assignWorkerOwnership({ workerName: input.name, enterpriseId: input.enterpriseId });
   return { added: true, name: input.name };
 }
+
+/**
+ * Adds a person who may sign off, if the business does not already have one,
+ * and grants the right the normal way: setSignOffRight records a signed grant
+ * (trusted host / no actor). Not a backdoor into the grant table.
+ *
+ * SIDE EFFECT: May register a human worker, assign ownership, write a grant.
+ */
+export function ensureTestSigner(input: {
+  readonly enterpriseId: string;
+  readonly name?: string;
+}): { readonly name: string } {
+  if (!input.name) {
+    const existing = listPeople(input.enterpriseId).find(
+      (person) => person.canSignOff && person.status !== "suspended"
+    );
+    if (existing) return { name: existing.name };
+  }
+  const name = input.name ?? "Test Signer";
+  if (!listPeople(input.enterpriseId).some((person) => person.name === name)) {
+    if (getWorker(name) === undefined) {
+      addEnterprisePerson({ enterpriseId: input.enterpriseId, name, role: "approver" });
+    } else {
+      assignWorkerOwnership({ workerName: name, enterpriseId: input.enterpriseId });
+    }
+  }
+  const outcome = setSignOffRight({
+    enterpriseId: input.enterpriseId,
+    person: name,
+    canSignOff: true,
+    actor: undefined,
+  });
+  if ("refused" in outcome) {
+    throw new Error(`ensureTestSigner: ${outcome.refused}`);
+  }
+  return { name };
+}
+
 
 export type TestAreaInput = {
   readonly enterpriseId: string;

@@ -39,8 +39,9 @@ import {
 } from "../control/workers";
 import {
   clearEnterprises,
-  createAndSaveEnterprise,
+  createAndSaveEnterprise as persistEnterprise,
 } from "../enterprise/enterpriseStore";
+
 import {
   publishOrganisationalEventToRuntimes,
 } from "../events/organisationalEventBus";
@@ -72,6 +73,18 @@ import {
 import {
   readOperationalMemoryEntry,
 } from "./uiMemoryEntries";
+
+import { ensureTestSigner } from "../testing/cliTestSetup";
+
+function createAndSaveEnterprise(
+  input: Parameters<typeof persistEnterprise>[0]
+): ReturnType<typeof persistEnterprise> {
+  const enterprise = persistEnterprise(input);
+  ensureTestSigner({ enterpriseId: enterprise.id });
+  return enterprise;
+}
+
+
 
 function clearChapterState(): void {
   clearJobs();

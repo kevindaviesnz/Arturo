@@ -18,6 +18,9 @@ import {
 } from "../enterprise/enterpriseStore";
 
 import { clearEventSchedules, listEventSchedules } from "../scheduling/eventScheduleStore";
+import { addWorker, clearWorkers } from "../control/workers";
+import { clearStaffingAssignments, saveStaffingAssignment } from "../staffing/staffingStore";
+import { ensureTestSigner } from "../testing/cliTestSetup";
 
 /**
  * "--every weekly" is what five separate scenarios typed unprompted. It names a
@@ -30,16 +33,33 @@ describe("a weekly schedule typed with no day", () => {
     clearEnterprises();
     clearBusinessFunctionDefinitions();
     clearEventSchedules();
+    clearWorkers();
+    clearStaffingAssignments();
     process.stdin.isTTY = true;
     const enterprise = createAndSaveEnterprise({
       name: "Greenline Waste",
       mission: "Collect waste.",
     });
-    createAndSaveBusinessFunctionDefinition({
+    ensureTestSigner({ enterpriseId: enterprise.id });
+    const definition = createAndSaveBusinessFunctionDefinition({
       id: `${enterprise.id}:route-planning`,
       enterpriseId: enterprise.id,
       label: "Route Planning",
       objective: "Plan collection routes.",
+    });
+    addWorker({
+      name: "Route Planner",
+      kind: "ai",
+      capabilities: ["llm", "planning"],
+      run: function* (input: unknown) {
+        return input;
+      },
+    });
+    saveStaffingAssignment({
+      businessFunctionId: definition.id,
+      workerName: "Route Planner",
+      role: "ai",
+      rationale: "For this test.",
     });
   });
 
@@ -48,6 +68,8 @@ describe("a weekly schedule typed with no day", () => {
     clearEnterprises();
     clearBusinessFunctionDefinitions();
     clearEventSchedules();
+    clearWorkers();
+    clearStaffingAssignments();
     process.stdin.isTTY = false;
   });
 

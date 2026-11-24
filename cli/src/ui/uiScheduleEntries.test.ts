@@ -36,6 +36,8 @@ import {
 
 import { vi } from "vitest";
 import { addWorker, clearWorkers, createHumanWorker } from "../control/workers";
+import { ensureTestSigner } from "../testing/cliTestSetup";
+import { saveStaffingAssignment } from "../staffing/staffingStore";
 import { runtimeDb } from "../storage/runtimeDatabase";
 import { clearWebSearchSwitches, turnWebSearchOn } from "../runtime/webSearchSwitch";
 
@@ -83,6 +85,21 @@ describe(
             objective:
               "Retrieve current public science evidence from the internet.",
           });
+        ensureTestSigner({ enterpriseId: enterprise.id });
+        addWorker({
+          name: "Science Discovery Worker",
+          kind: "ai",
+          capabilities: ["web-research", "research"],
+          run: function* (input: unknown) {
+            return input;
+          },
+        });
+        saveStaffingAssignment({
+          businessFunctionId: job.id,
+          workerName: "Science Discovery Worker",
+          role: "ai",
+          rationale: "For this test.",
+        });
 
         const addSchedule = () =>
           handleUiScheduleCommand([

@@ -5,6 +5,7 @@ import { recordPassOnChoice, refusePassOnChoice } from "../runtime/passOnRules";
 import { readResultSetAsideStanding } from "../runtime/resultSetAside";
 import { describeMissingAbility, findMissingAbility, inferTaskAbilities, type AbilityId } from "../capabilities/abilities";
 import { refuseWorkUnderChecks } from "../business/functionChecks";
+import { refuseStaffNotReady } from "../business/staffCheck";
 import { refuseTaskWithoutWork, refuseWorkUnderLocks, type DraftKind } from "../work/workLocks";
 import { getWork } from "../work/workStore";
 import { UNVERIFIED_WORK, type WorkRecord } from "../work/workRecord";
@@ -1081,6 +1082,12 @@ export function createTask(
   // with --work, or inherited from the Task it follows, which it can neither
   // drop nor change. Nothing is written here.
   const enterpriseOfFunction = jobResolution.job.enterpriseId ?? "";
+  // One refuse-before-write staff check, per business, before anything is
+  // written and before any model is called. Old /setup businesses are not exempt.
+  const staffNotReady = refuseStaffNotReady(enterpriseOfFunction);
+  if (staffNotReady) {
+    return refuse(staffNotReady);
+  }
   let work: WorkRecord | undefined;
   if (parsed.options.workReference !== undefined) {
     const reference = parsed.options.workReference.trim();
@@ -1159,6 +1166,13 @@ export function createTask(
     }
   }
 
+  // Function marks and work-type locks, before looking for an AI worker, so
+  // a locked or people-only Function is not told to run /staff for an AI worker.
+  const lockedEarly = refuseWorkUnderLocks({ workId: work?.id, enterpriseId: enterpriseOfFunction, functionId: jobResolution.job.id, when: "create" });
+  if (lockedEarly) {
+    return refuse(`${lockedEarly} Nothing was started.`);
+  }
+
   const inferredCapabilities =
     inferTaskCapabilities(
       parsed.options.request
@@ -1211,7 +1225,7 @@ export function createTask(
   // terminal, the page, a watched folder and every caller refuse alike
   // (work/workLocks.ts). Checked again when the Task starts, before each model
   // call, when it finishes and at sign-off.
-  const lockedWork = refuseWorkUnderLocks({ workId: work?.id, enterpriseId: enterpriseOfFunction, when: "create" });
+  const lockedWork = refuseWorkUnderLocks({ workId: work?.id, enterpriseId: enterpriseOfFunction, functionId: jobResolution.job.id, when: "create" });
   if (lockedWork) {
     return refuse(`${lockedWork} Nothing was started.`);
   }
