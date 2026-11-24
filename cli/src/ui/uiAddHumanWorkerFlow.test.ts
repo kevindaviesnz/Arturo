@@ -87,7 +87,7 @@ describe("guided add-person flow", () => {
     handleAddHumanWorkerReply("3");
     const done = handleAddHumanWorkerReply("skip");
 
-    expect(done?.[0].body).toContain("cannot approve");
+    expect(done?.[0].body).toContain("cannot sign off work or give go-aheads");
     expect(getWorker("Alex")?.humanMode).toBe("task");
   });
 

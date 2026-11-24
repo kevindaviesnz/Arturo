@@ -49,6 +49,11 @@ import {
   getEnterpriseByIdOrName,
 } from "../enterprise/enterpriseStore";
 
+import {
+  refuseTypedWorkSettingCommand,
+  resolveEnterpriseIdForTypedWorkCheck,
+} from "../work/workLocks";
+
 export type PlannedWorkflowRunOptions = {
   readonly autoWorkers: boolean;
   readonly workflowName: string | undefined;
@@ -372,6 +377,14 @@ export function runPlannedWorkflowFromArgs(
     parsePlannedWorkflowRunOptions(
       args
     );
+
+  const blocked = refuseTypedWorkSettingCommand(
+    options.enterpriseId ?? resolveEnterpriseIdForTypedWorkCheck(),
+    "run",
+  );
+  if (blocked) {
+    throw new Error(blocked);
+  }
 
   if (!options.workflowName) {
     throw new Error(

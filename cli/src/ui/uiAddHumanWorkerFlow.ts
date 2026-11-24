@@ -64,7 +64,7 @@ const ROLE_OPTIONS: readonly RoleOption[] = [
     archetype: "reviewer",
   },
   {
-    summary: "Just do the tasks they're given (cannot approve or sign off).",
+    summary: "Just do the tasks they're given (cannot sign off work or give go-aheads).",
     archetype: undefined,
   },
   {
@@ -233,7 +233,7 @@ function createPerson(
         `${name} is now on your team.`,
         canApprove
           ? `${name} can now approve sensitive work. Anything waiting is under /approvals — approve it with /approve <task-id>.`
-          : `${name} can be given tasks, but cannot approve sensitive work. Add someone who can with /add-human-worker if you need an approver.`,
+          : `${name} can be given tasks, but cannot sign off work or give go-aheads. Add someone who can with /add-human-worker if you need an approver.`,
       ].join("\n"),
     },
   ];

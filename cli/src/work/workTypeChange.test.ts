@@ -115,9 +115,9 @@ describe("changing a matter's type (Grace's ruling, addendum 1)", () => {
       expect(changeMatterType({ workId: will.id, matterType: "commercial", reason: "Opened wrongly.", actor, as: "Amy Wise" })).toMatchObject({ refusal: { code: "type_locked_to_unlocked" } });
     }
     expect(changeMatterType({ workId: will.id, matterType: "commercial", reason: "Opened wrongly.", actor: amy })).toMatchObject({
-      refused: "Will matters can't be changed to an unlocked type. If it was opened with the wrong type, cancel it with a reason and open a new matter.",
+      refused: "Will work can't be changed to an unlocked type. If it was opened with the wrong type, cancel it with a reason and open a new matter.",
     });
-    expect(handleWorkCommand(["type", will.id, "commercial", "--as", "Amy Wise", "--reason", "Opened wrongly."])).toBe("A locked matter type can't be changed to an unlocked one. Cancel the matter with a reason and open a new one.");
+    expect(handleWorkCommand(["type", will.id, "commercial", "--as", "Amy Wise", "--reason", "Opened wrongly."])).toBe("A locked work type can't be changed to an unlocked one. Cancel the matter with a reason and open a new one.");
     expect(rowCounts()).toEqual(before);
     expect(getWork(will.id)).toMatchObject({ work: { matterType: "will" } });
   });
@@ -131,7 +131,7 @@ describe("changing a matter's type (Grace's ruling, addendum 1)", () => {
     expect(rowCounts()).toEqual(before);
     expect(changeMatterType({ workId: dispute.id, matterType: "court", reason: "Filed in court.", actor: undefined, as: "Amy Wise" })).toMatchObject({ rule: "signer", reasonSaved: true });
     expect(getWork(dispute.id)).toMatchObject({ work: { matterType: "court", typeChangedAt: expect.any(Number) } });
-    expect(lastChange(dispute.id)).toMatchObject({ what: "matter type changed from dispute to court", by: "Amy Wise", reason: "Filed in court." });
+    expect(lastChange(dispute.id)).toMatchObject({ what: "work type changed from dispute to court", by: "Amy Wise", reason: "Filed in court." });
     expect(refuseWorkUnderLocks({ workId: dispute.id, when: "create" })).toContain("never goes to an AI worker");
   });
 
@@ -151,7 +151,7 @@ describe("changing a matter's type (Grace's ruling, addendum 1)", () => {
     expect(lastChange(other.id)).toMatchObject({ reason: NO_REASON_GIVEN });
     expect(addTypeChangeReason({ workId: other.id, reason: "", actor: undefined, as: "Sam Paralegal" })).toMatchObject({ refusal: { code: "reason_missing" } });
     expect(addTypeChangeReason({ workId: other.id, reason: "Client said it's a will.", actor: undefined, as: "Sam Paralegal" })).not.toHaveProperty("refused");
-    expect(lastChange(other.id)).toMatchObject({ what: `reason added for the matter type change at ${changedAt}`, by: "Sam Paralegal", reason: "Client said it's a will." });
+    expect(lastChange(other.id)).toMatchObject({ what: `reason added for the work type change at ${changedAt}`, by: "Sam Paralegal", reason: "Client said it's a will." });
     expect(verifyWorkChangeLog()).toBe(-1);
     // Somebody from elsewhere can't.
     expect(changeMatterType({ workId: matter("commercial").id, matterType: "will", actor: undefined, as: "Zed Other" })).toMatchObject({ refusal: { code: "not_at_business" } });
@@ -185,7 +185,7 @@ describe("changing a matter's type (Grace's ruling, addendum 1)", () => {
     expect(getJob(queued)?.status).toBe("cancelled");
     expect(readResultSignOffStanding(getJob(done)!)).toMatchObject({ state: "superseded", workChanged: true });
     // The running Task goes no further: its result is set aside at the finish check.
-    expect(refuseWorkUnderLocks({ workId: lease.id, when: "finish", taskCreatedAt: getJob(running)!.createdAt })).toContain("matter type changed after this Task was created");
+    expect(refuseWorkUnderLocks({ workId: lease.id, when: "finish", taskCreatedAt: getJob(running)!.createdAt })).toContain("work type changed after this Task was created");
     // A Task asked for after the change goes on, and the result can be signed off again under the new type.
     expect(refuseWorkUnderLocks({ workId: lease.id, when: "start", taskCreatedAt: Date.now() + 1_000 })).toBeUndefined();
     recordResultSignOff(getJob(done)!, "Amy Wise");

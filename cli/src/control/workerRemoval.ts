@@ -27,6 +27,7 @@ import {
 import {
   removeStaffingAssignmentsForWorker,
 } from "../staffing/staffingStore";
+import { recordStaffChangeEvent, refuseRemoveLastAiAnywhere } from "../staffing/staffChanges";
 
 const ACTIVE_JOB_STATUSES =
   new Set<Job["status"]>([
@@ -242,6 +243,11 @@ export function safelyRemoveWorker(
     );
   }
 
+  const lastAi = refuseRemoveLastAiAnywhere(worker.name);
+  if (lastAi) {
+    throw new Error(lastAi);
+  }
+
   const historicalJobsRetained =
     listJobs().filter(
       (job) =>
@@ -279,6 +285,11 @@ export function safelyRemoveWorker(
       `worker not found: ${name}`
     );
   }
+
+  recordStaffChangeEvent({
+    what: `removed ${removed.displayName ?? removed.name} from the staff list`,
+    by: "the terminal",
+  });
 
   return {
     worker:

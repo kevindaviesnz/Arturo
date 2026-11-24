@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
-  FIXED_LOCKED_MATTER_TYPES,
+  FIXED_LOCKED_WORK_TYPES,
   isKnownMatterType,
   isLockedMatterType,
   LAW_PRACTICE_MATTER_ONLY,
@@ -9,7 +9,8 @@ import {
   refuseParentChain,
   refuseWorkRecord,
   signWorkRecord,
-  UNLOCKED_MATTER_TYPES,
+  UNLOCKED_WORK_TYPES,
+  WORK_TYPE_LABELS,
   verifyWorkRecordSignature,
   type UnsignedWorkRecord,
   type WorkRecord,
@@ -75,7 +76,7 @@ describe("work records", () => {
     expect(say(refuseWorkRecord({ enterpriseId: "ent-1", name: "Lease", kind: "matter", matterNumber: "-bad", matterType: "property" }, ctx))).toContain("A matter number is");
     expect(say(refuseWorkRecord({ enterpriseId: "ent-1", name: "Lease", kind: "matter", matterNumber: "hl-1", matterType: "property" }, ctx))).toContain("already used");
     expect(say(refuseWorkRecord({ enterpriseId: "ent-1", name: "Lease", kind: "matter", matterNumber: "HL-2" }, ctx))).toBe(LAW_PRACTICE_MATTER_ONLY);
-    expect(say(refuseWorkRecord({ enterpriseId: "ent-1", name: "Lease", kind: "matter", matterNumber: "HL-2", matterType: "other" }, ctx))).toContain("Choose one of this business's matter types");
+    expect(say(refuseWorkRecord({ enterpriseId: "ent-1", name: "Lease", kind: "matter", matterNumber: "HL-2", matterType: "other" }, ctx))).toContain("Choose one of this business's work types");
     expect(say(refuseWorkRecord({ enterpriseId: "ent-1", name: "Lease", kind: "matter", matterNumber: "HL-2", matterType: "property" }, ctx))).toBeUndefined();
   });
 
@@ -103,14 +104,18 @@ describe("work records", () => {
     expect(verifyWorkRecordSignature(signed, "another-secret-entirely-000000000")).toBe(false);
   });
 
-  it("locks the fixed types, leaves the four unlocked, locks any other or unknown type, and lists precedents", () => {
-    for (const type of FIXED_LOCKED_MATTER_TYPES) expect(isLockedMatterType(type, [{ id: type, label: type, locked: false }])).toBe(true);
-    for (const type of UNLOCKED_MATTER_TYPES) expect(isLockedMatterType(type)).toBe(false);
+  it("locks the fixed types, leaves the built-in unlocked types open including general, locks any other or unknown type, and lists precedents", () => {
+    for (const type of FIXED_LOCKED_WORK_TYPES) expect(isLockedMatterType(type, [{ id: type, label: type, locked: false }])).toBe(true);
+    for (const type of UNLOCKED_WORK_TYPES) expect(isLockedMatterType(type)).toBe(false);
+    expect(UNLOCKED_WORK_TYPES).toContain("general");
+    expect(WORK_TYPE_LABELS.general).toBe("General work");
+    expect(isLockedMatterType("general")).toBe(false);
     expect(isLockedMatterType("other")).toBe(true);
     expect(isKnownMatterType("other")).toBe(false);
     expect(isLockedMatterType("trusts")).toBe(true);
     expect(isLockedMatterType("trusts", [{ id: "trusts", label: "Trusts", locked: false }])).toBe(false);
     expect(precedentsForMatterType("commercial")).toContain("mutual-nda");
     expect(precedentsForMatterType("property")).toEqual([]);
+    expect(precedentsForMatterType("general")).toEqual([]);
   });
 });

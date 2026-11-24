@@ -104,8 +104,8 @@ describe("fixed refusal codes (Mia's Q6)", () => {
     expect(say("parent_cancelled", { name: "Mole's Big Day" })).toEqual(["A new deal can't be opened under a cancelled book.", "Mole's Big Day was cancelled, so no new deal can be opened in it."]);
     expect(say("owner_only")).toEqual(["Make this change on the company page, signed in as the owner.", "Only the owner can change this, signed in, with a reason."]);
     expect(say("type_locked_to_unlocked", { type: "Will" })).toEqual([
-      "A locked matter type can't be changed to an unlocked one. Cancel the matter with a reason and open a new one.",
-      "Will matters can't be changed to an unlocked type. If it was opened with the wrong type, cancel it with a reason and open a new matter.",
+      "A locked work type can't be changed to an unlocked one. Cancel the matter with a reason and open a new one.",
+      "Will work can't be changed to an unlocked type. If it was opened with the wrong type, cancel it with a reason and open a new matter.",
     ]);
     expect(say("name_required")[1]).toBe("Give it a name.");
     expect(say("kind_unknown")[1]).toBe("Choose what kind of work it is.");

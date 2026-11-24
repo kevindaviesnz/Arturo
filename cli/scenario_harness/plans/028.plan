@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Lumen Press
 Publish carefully checked work, with an editor accountable for what runs.
-skip
+q
 /function
 1
 Manuscript Assessment
@@ -29,6 +28,9 @@ skip
 /task
 1
 Assess a synthetic non-fiction manuscript proposal: audience fit, evidence and sourcing quality, structural issues, risks (legal, factual), and the editorial decisions a human must make. Do not accept or reject; synthetic proposal only.
+1
+1
+@note Work type, then go-ahead.
 1
 1
 @wait 20

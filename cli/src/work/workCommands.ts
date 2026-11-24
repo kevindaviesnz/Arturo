@@ -4,10 +4,9 @@
  *
  * Changes only the owner may make (turning "no AI" off, changing a matter
  * from one unlocked type to another, the law-practice setting, paid
- * escalation, adding or unlocking a matter type, reopening a cancelled locked
- * matter's number as an unlocked type) are refused here by the same rule the
- * company page follows: the terminal has no signed-in owner, so
- * refuseUnlessOwner refuses it (work/workChanges.ts). Changing a matter's
+ * escalation, adding or unlocking a work type, reopening a cancelled locked
+ * matter's number as an unlocked type) are refused at the terminal:
+ * refuseUnlessOwner has no signed-in owner (work/workChanges.ts). Changing a work
  * type goes through changeMatterType, which decides the rule: locked to
  * locked for someone who can sign off (--as, --reason), unlocked to locked
  * for anyone at the business (--as, optional --reason), locked to unlocked
@@ -22,7 +21,7 @@ import { flagValue, resolveEnterprise } from "../clients/clientCommands";
 import { formatNzDay, formatNzTime } from "../core/nzTime";
 import { getPracticeSetting } from "./practiceSetting";
 import {
-  BUILT_IN_MATTER_TYPES,
+  BUILT_IN_WORK_TYPES,
   isLockedMatterType,
   matterTypeLabel,
   precedentsForMatterType,
@@ -46,15 +45,15 @@ import {
 } from "./workChanges";
 
 export const WORK_USAGE = [
-  'Usage: /work create "<name>" --kind matter|book|deal|work [--client <client-id>] [--number <matter-number>] [--type <matter-type>] [--parent <work-id>] [--no-ai] [--replaces <cancelled-work-id> | --separate [--leave-ai-off]] [--as "<name>"] [--enterprise <business>]',
+  'Usage: /work create "<name>" --kind matter|book|deal|work [--client <client-id>] [--number <matter-number>] [--type <work-type>] [--parent <work-id>] [--no-ai] [--replaces <cancelled-work-id> | --separate [--leave-ai-off]] [--as "<name>"] [--enterprise <business>]',
   "       /work list [--enterprise <business>]",
   "       /work types [--enterprise <business>]",
   "       /work inspect <work-id>",
   '       /work no-ai <work-id> on [--confirm] --as "<your name>"',
   '       /work cancel <work-id> --as "<your name>" --reason "<why>" [--confirm]   (someone who can sign off; for good, nothing is deleted)',
-  '       /work type <work-id> <matter-type> --as "<your name>" [--reason "<why>"]   (locked to locked: someone who can sign off, with a reason; unlocked to locked: anyone, reason optional; locked to unlocked: never)',
+  '       /work type <work-id> <work-type> --as "<your name>" [--reason "<why>"]   (locked to locked: someone who can sign off, with a reason; unlocked to locked: anyone, reason optional; locked to unlocked: never)',
   '       /work type-reason <work-id> --as "<your name>" --reason "<why>"   (adds a reason to the last type change, in its own signed entry)',
-  "Owner only, on the company page, each with a typed reason where it loosens a lock: /work no-ai <work-id> off, /work type between unlocked types, /work practice, /work escalation, /work matter-type add|unlock, and reopening a cancelled locked matter's number as an unlocked type.",
+  "Owner only, each with a typed reason where it loosens a lock (these are refused at the terminal): /work no-ai <work-id> off, /work type between unlocked types, /work practice, /work escalation, /work matter-type add|unlock, and reopening a cancelled locked matter's number as an unlocked type.",
   "On a law-practice account, only a matter with --number and --type can be opened.",
 ].join("\n");
 
@@ -158,7 +157,7 @@ function workCommandText(args: readonly string[], now: number, no: (text: string
       `Opened: ${describeWork(outcome.work)}`,
       ...(carried && !carried.checked ? ["No AI is on and the type is locked because Arturo couldn't confirm the record this replaces."] : []),
       ...(carried?.checked && carried.noAi ? [`No AI: on, as it was on ${carried.from}. Only the owner can turn it off, with a reason.`] : []),
-      ...(carried?.checked && carried.lockedType && !carried.reopenedAs ? [`Matter type: ${carried.lockedType}, locked, as it was on ${carried.from}. It can only change to another locked type.`] : []),
+      ...(carried?.checked && carried.lockedType && !carried.reopenedAs ? [`Work type: ${carried.lockedType}, locked, as it was on ${carried.from}. It can only change to another locked type.`] : []),
       ...(carried?.reopenedAs ? [`Reopened as ${carried.reopenedAs}, an unlocked type, by the owner. It was ${carried.lockedType} on ${carried.from}.`] : []),
       `Give a Task to it with /task create "<instruction>" --work ${outcome.work.id}`,
     ].join("\n");
@@ -185,7 +184,7 @@ function workCommandText(args: readonly string[], now: number, no: (text: string
       const precedents = precedentsForMatterType(id);
       return `  ${id}  ${matterTypeLabel(id, custom)}${isLockedMatterType(id, custom) ? " (locked: no AI)" : ""}${precedents.length ? `, precedents: ${precedents.join(", ")}` : ""}`;
     };
-    return [`Matter types at ${enterprise.name}:`, ...BUILT_IN_MATTER_TYPES.map(describe), ...custom.map((one) => describe(one.id))].join("\n");
+    return [`Work types at ${enterprise.name}:`, ...BUILT_IN_WORK_TYPES.map(describe), ...custom.map((one) => describe(one.id))].join("\n");
   }
 
   if (sub === "inspect") {

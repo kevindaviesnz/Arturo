@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Kowhai Financial
 Meet compliance obligations with evidence, scheduled review, and accountable sign-off.
-skip
+q
 /function
 1
 Compliance Monitoring
@@ -25,6 +24,9 @@ skip
 /task
 1
 Using synthetic assumptions only, draft a monthly AML transaction-monitoring review checklist: thresholds to review, false-positive handling, escalation criteria, evidence to retain, and controls that remain untested. Do not claim access to real transactions or customer data.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

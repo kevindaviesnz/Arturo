@@ -94,7 +94,7 @@ describe("seeded demonstration approval beat", () => {
     // Only someone who could approve may sign, and a refusal records nothing.
     const [stranger] = await handleUiCommand("/task", ["signoff", taskId, "--as", "Contract Reviewer"]);
     expect(stranger.label).toBe("Result not signed off");
-    expect(stranger.body).toContain("only a Human can approve");
+    expect(stranger.body).toContain("only a Human can sign off work and give go-aheads");
     expect(readResultSignOffStanding(getJob(taskId)!).state).toBe("none");
 
     const [signed] = await handleUiCommand("/task", ["signoff", taskId, "--as", "Principal Lawyer"]);

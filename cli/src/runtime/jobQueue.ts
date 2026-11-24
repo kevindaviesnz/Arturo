@@ -31,6 +31,8 @@ import {
 import { runtimeDb } from "../storage/runtimeDatabase";
 
 import { clearNextActions, recordNextAction } from "./nextActions";
+import { revokeOffTerminalLinksForJob } from "../offterminal/offTerminalLinks";
+import { notifyOffTerminalResultReady } from "../offterminal/signOffEmail";
 
 export type JobStatus =
   | "scheduled"
@@ -773,6 +775,18 @@ export function replaceJob(
 
   persistJobs();
 
+  if (previous && previous.output !== normalizedUpdated.output) {
+    revokeOffTerminalLinksForJob(normalizedUpdated.id);
+  }
+
+  if (
+    normalizedUpdated.status === "completed" &&
+    normalizedUpdated.output !== undefined &&
+    (previous?.status !== "completed" || previous.output !== normalizedUpdated.output)
+  ) {
+    notifyOffTerminalResultReady(normalizedUpdated);
+  }
+
   return normalizedUpdated;
 }
 
@@ -1111,6 +1125,7 @@ export function startJob(
     refuseWorkUnderLocks({
       workId: job.workId,
       enterpriseId: job.enterpriseId,
+      functionId: job.businessFunctionId,
       when: "start",
       taskCreatedAt: job.createdAt,
     });

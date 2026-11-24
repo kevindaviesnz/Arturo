@@ -61,6 +61,10 @@ import {
 } from "../staffing/staffingStore";
 
 import {
+  ensureTestSigner,
+} from "../testing/cliTestSetup";
+
+import {
   addWorker,
   clearWorkers,
 } from "../control/workers";
@@ -84,6 +88,13 @@ describe("interactive /enterprise and /function menus", () => {
   });
 
   /** Sets up an Enterprise + Function staffed by one capable AI Worker. */
+
+  function seedStaffedFunctionWithSigner(): { enterpriseId: string; functionId: string } {
+    const seeded = seedStaffedFunction();
+    ensureTestSigner({ enterpriseId: seeded.enterpriseId });
+    return seeded;
+  }
+
   function seedStaffedFunction(): { enterpriseId: string; functionId: string } {
     const enterprise = createAndSaveEnterprise({ name: "Solo Co", mission: "Solo." });
     const definition = createAndSaveBusinessFunctionDefinition({
@@ -396,7 +407,7 @@ describe("interactive /enterprise and /function menus", () => {
    * and invisible.
    */
   it("offers a completed Human Task as work to continue from", async () => {
-    seedStaffedFunction();
+    seedStaffedFunctionWithSigner();
     clearHumanTasks();
     const inspection = createHumanTask({
       title: "Inspect the violin",
@@ -463,7 +474,7 @@ describe("interactive /enterprise and /function menus", () => {
   });
 
   it("creates a task from a plain description, no switches", async () => {
-    seedStaffedFunction();
+    seedStaffedFunctionWithSigner();
     startTaskMenu();
 
     const ask = await handleCommandMenuReply("1");
@@ -499,7 +510,7 @@ describe("interactive /enterprise and /function menus", () => {
   });
 
   it("offers a web search instead of a --search-query switch", async () => {
-    seedStaffedFunction();
+    seedStaffedFunctionWithSigner();
     startTaskMenu();
     await handleCommandMenuReply("1");
     const evidenceAsk = await handleCommandMenuReply("Find out what competitors charge.");
@@ -585,7 +596,7 @@ describe("interactive /enterprise and /function menus", () => {
   });
 
   it("walks a schedule through description, cadence, and time", async () => {
-    seedStaffedFunction();
+    seedStaffedFunctionWithSigner();
     startScheduleMenu();
 
     const menu = await handleCommandMenuReply("1");
@@ -606,7 +617,7 @@ describe("interactive /enterprise and /function menus", () => {
   });
 
   it("asks which day for a weekly schedule", async () => {
-    seedStaffedFunction();
+    seedStaffedFunctionWithSigner();
     startScheduleMenu();
     await handleCommandMenuReply("1");
     await handleCommandMenuReply("Prepare a weekly summary.");

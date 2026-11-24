@@ -13,6 +13,21 @@ describe("chain limits", () => {
     expect(limits.MAX_DAILY_STARTS).toBe(20);
     expect(limits.MAX_AWAITING_SIGNOFF).toBe(3);
     expect(limits.SWITCH_ON_COOLING_OFF_HOURS).toBe(12);
+    expect(limits.OFF_TERMINAL_LINK_LIFE_MS).toBe(3 * 24 * 60 * 60 * 1000);
+    expect(limits.ENROLMENT_LINK_LIFE_MS).toBe(30 * 60 * 1000);
+    expect(limits.ENROLMENT_CONFIRM_WAIT_HOURS).toBe(12);
+    expect(limits.ENROLMENT_CONFIRM_WAIT_HOURS).toBe(limits.SWITCH_ON_COOLING_OFF_HOURS);
+  });
+
+  it("lets an owner shorten the off-terminal link life, but never lengthen it", () => {
+    expect(limits.resolveOffTerminalLinkLifeMs()).toBe(limits.OFF_TERMINAL_LINK_LIFE_MS);
+    expect(limits.resolveOffTerminalLinkLifeMs(60 * 60 * 1000)).toBe(60 * 60 * 1000);
+    expect(limits.resolveOffTerminalLinkLifeMs(limits.OFF_TERMINAL_LINK_LIFE_MS + 1)).toBe(
+      limits.OFF_TERMINAL_LINK_LIFE_MS
+    );
+    expect(limits.resolveOffTerminalLinkLifeMs(0)).toBe(limits.OFF_TERMINAL_LINK_LIFE_MS);
+    expect(limits.resolveOffTerminalLinkLifeMs(-1)).toBe(limits.OFF_TERMINAL_LINK_LIFE_MS);
+    expect(limits.resolveOffTerminalLinkLifeMs(Number.NaN)).toBe(limits.OFF_TERMINAL_LINK_LIFE_MS);
   });
 
   it("orders them: AI-in-a-row <= plan steps <= chain depth, with 1 <= 2 <= 4", () => {

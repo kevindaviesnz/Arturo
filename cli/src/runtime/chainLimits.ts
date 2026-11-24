@@ -54,3 +54,27 @@ export const WEB_SEARCH_REASON_MAX_CHARS = 500;
 
 /** The search words of one web step: a person's own, never a model's (S4). */
 export const WEB_SEARCH_QUERY_MAX_CHARS = 500;
+
+/** Default life of an off-terminal sign-off or set-aside link, in milliseconds (off-terminal sign-off brief). An owner may only shorten this, not lengthen it. */
+export const OFF_TERMINAL_LINK_LIFE_MS = 3 * 24 * 60 * 60 * 1000;
+
+/** Life of an owner-started passkey enrolment link, in milliseconds (off-terminal sign-off brief). */
+export const ENROLMENT_LINK_LIFE_MS = 30 * 60 * 1000;
+
+/** Hours a newly enrolled passkey must wait before the owner can confirm it, and before it can sign anything off (off-terminal sign-off brief). Same length as the switch-on wait. */
+export const ENROLMENT_CONFIRM_WAIT_HOURS = 12;
+
+/**
+ * An owner may only shorten the off-terminal sign-off link life, never lengthen it.
+ * Missing, zero, or invalid requests use the default.
+ */
+export function resolveOffTerminalLinkLifeMs(requestedMs?: number): number {
+  if (
+    requestedMs === undefined ||
+    !Number.isFinite(requestedMs) ||
+    requestedMs <= 0
+  ) {
+    return OFF_TERMINAL_LINK_LIFE_MS;
+  }
+  return Math.min(Math.floor(requestedMs), OFF_TERMINAL_LINK_LIFE_MS);
+}

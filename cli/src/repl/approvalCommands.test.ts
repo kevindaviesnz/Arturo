@@ -82,7 +82,7 @@ describe("resolveApprovalCommandIdentity", () => {
 
   it("still asks for a first Human when none is registered at all", () => {
     expect(() => resolveApprovalCommandIdentity(["task-1"])).toThrow(
-      "No one is on record who can approve this yet"
+      "No one is on record who can sign off work and give go-aheads yet"
     );
     // Answers the solo operator's "why can't I just approve?" — even if it's you.
     expect(() => resolveApprovalCommandIdentity(["task-1"])).toThrow(
@@ -93,7 +93,7 @@ describe("resolveApprovalCommandIdentity", () => {
   it("distinguishes a registered-but-unauthorised human from an unknown one", () => {
     addWorker(createHumanWorker("Taylor", "creator"));
 
-    // Known identity, but their role does not include approving.
+    // Known identity, but their role does not include signing off work or giving go-aheads.
     expect(() =>
       resolveApprovalCommandIdentity(["job-1", "--as", "Taylor"])
     ).toThrow("not an approval-capable Worker");

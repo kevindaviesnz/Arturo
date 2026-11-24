@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Meridian Newsroom
 Publish only what has been checked, with an editor accountable for every claim.
-skip
+q
 /function
 1
 Fact Check Desk
@@ -22,6 +21,9 @@ skip
 /task
 1
 For a hypothetical local story claiming a new cycleway cut commute times by 30 percent, list the specific claims to verify, the primary sources and data needed, the caveats, and which statements must not run until checked. Do not assert any figure as verified.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

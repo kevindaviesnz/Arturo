@@ -171,6 +171,14 @@ describe("truthful labels", () => {
     expect(readsAsRefusal("Nothing was changed yet. To go ahead: /work cancel w --confirm")).toBe(false);
   });
 
+  it("labels a staff-check refusal [Refused], not [Task created]", () => {
+    const body = "Product Safety needs an AI worker and someone who can sign off. Nothing was created and no AI was asked.";
+    expect(readsAsRefusal(body)).toBe(true);
+    expect(captureUiCommandOutput("Task created", () => {
+      console.log(body);
+    }).label).toBe("Refused");
+  });
+
   it("does not read an ordinary assignment as a refusal", () => {
     expect(readsAsRefusal("Human task is assigned to Client Liaison.")).toBe(false);
     expect(

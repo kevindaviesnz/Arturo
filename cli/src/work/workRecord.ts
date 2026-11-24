@@ -25,18 +25,20 @@ export const WORK_KINDS = ["matter", "book", "deal", "work"] as const;
 export type WorkKind = (typeof WORK_KINDS)[number];
 
 /**
- * Matter types a law practice may use for AI drafting (Amy, addendum 1).
- * Employment is non-contentious only: a grievance, a personal grievance claim
- * or a dismissal is a dispute. Property and conveyancing has no precedents in
- * v1, but the type exists so the matter is set up correctly.
+ * Work types any business may use for AI work (setup-and-staff final v3).
+ * The stored ids of the first four stay as they are, because they are already
+ * signed into work records, settings and WORK_TYPE_PRECEDENTS. `general`
+ * ("General work") is the new built-in unlocked type every business can use.
+ * Existing labels for the first four stay until the open question on plain
+ * labels is settled (brief section 8, question 4).
  */
-export const UNLOCKED_MATTER_TYPES = ["commercial", "employment", "property", "general-advice"] as const;
+export const UNLOCKED_WORK_TYPES = ["commercial", "employment", "property", "general-advice", "general"] as const;
 
 /**
- * Matter types that never reach an AI worker. Fixed in code, with no off
- * switch and no exception for a single matter (Grace, Amy).
+ * Work types that never reach an AI worker. Fixed in code, in every business,
+ * with no off switch and no exception for a single piece of work (Grace, Amy).
  */
-export const FIXED_LOCKED_MATTER_TYPES = [
+export const FIXED_LOCKED_WORK_TYPES = [
   "will",
   "court",
   "dispute",
@@ -45,16 +47,26 @@ export const FIXED_LOCKED_MATTER_TYPES = [
   "relationship-property",
 ] as const;
 
-export const BUILT_IN_MATTER_TYPES = [...UNLOCKED_MATTER_TYPES, ...FIXED_LOCKED_MATTER_TYPES] as const;
-export type BuiltInMatterType = (typeof BUILT_IN_MATTER_TYPES)[number];
+export const BUILT_IN_WORK_TYPES = [...UNLOCKED_WORK_TYPES, ...FIXED_LOCKED_WORK_TYPES] as const;
+export type BuiltInWorkType = (typeof BUILT_IN_WORK_TYPES)[number];
+/** @deprecated Use UNLOCKED_WORK_TYPES. */
+export const UNLOCKED_MATTER_TYPES = UNLOCKED_WORK_TYPES;
+/** @deprecated Use FIXED_LOCKED_WORK_TYPES. */
+export const FIXED_LOCKED_MATTER_TYPES = FIXED_LOCKED_WORK_TYPES;
+/** @deprecated Use BUILT_IN_WORK_TYPES. */
+export const BUILT_IN_MATTER_TYPES = BUILT_IN_WORK_TYPES;
+/** @deprecated Use BuiltInWorkType. */
+export type BuiltInMatterType = BuiltInWorkType;
 /** A built-in type, or one the owner added (practiceSetting.ts). */
 export type MatterType = string;
+export type WorkType = MatterType;
 
-export const MATTER_TYPE_LABELS: Readonly<Record<BuiltInMatterType, string>> = {
+export const WORK_TYPE_LABELS: Readonly<Record<BuiltInWorkType, string>> = {
   commercial: "Commercial contracts",
   employment: "Employment (non-contentious)",
   property: "Property and conveyancing",
   "general-advice": "General advice",
+  general: "General work",
   will: "Will",
   court: "Court work",
   dispute: "Dispute",
@@ -62,17 +74,20 @@ export const MATTER_TYPE_LABELS: Readonly<Record<BuiltInMatterType, string>> = {
   "estate-administration": "Estate administration",
   "relationship-property": "Relationship property or prenuptial agreement",
 };
+/** @deprecated Use WORK_TYPE_LABELS. */
+export const MATTER_TYPE_LABELS = WORK_TYPE_LABELS;
 
 /**
- * Which precedents each matter type may offer. A precedent is never suggested
+ * Which precedents each work type may offer. A precedent is never suggested
  * for a type it is not listed for. Step 1 keeps the list; the precedent
  * library that reads it is step 3.
  */
-export const MATTER_TYPE_PRECEDENTS: Readonly<Record<BuiltInMatterType, readonly string[]>> = {
+export const WORK_TYPE_PRECEDENTS: Readonly<Record<BuiltInWorkType, readonly string[]>> = {
   commercial: ["mutual-nda", "one-way-nda", "supplier-services-agreement"],
   employment: ["employment-agreement"],
   property: [],
   "general-advice": [],
+  general: [],
   will: [],
   court: [],
   dispute: [],
@@ -80,6 +95,8 @@ export const MATTER_TYPE_PRECEDENTS: Readonly<Record<BuiltInMatterType, readonly
   "estate-administration": [],
   "relationship-property": [],
 };
+/** @deprecated Use WORK_TYPE_PRECEDENTS. */
+export const MATTER_TYPE_PRECEDENTS = WORK_TYPE_PRECEDENTS;
 
 /**
  * A type the owner added. It starts locked until the owner unlocks it, and the
@@ -224,16 +241,16 @@ export function isWorkKind(value: string): value is WorkKind {
 
 /** PURE: No side effects. */
 export function isBuiltInMatterType(value: string): value is BuiltInMatterType {
-  return (BUILT_IN_MATTER_TYPES as readonly string[]).includes(value);
+  return (BUILT_IN_WORK_TYPES as readonly string[]).includes(value);
 }
 
 /** PURE: No side effects. */
 export function isFixedLockedMatterType(value: string): boolean {
-  return (FIXED_LOCKED_MATTER_TYPES as readonly string[]).includes(value);
+  return (FIXED_LOCKED_WORK_TYPES as readonly string[]).includes(value);
 }
 
 /**
- * Whether a matter type is locked. The fixed types are locked whatever any
+ * Whether a work type is locked. The fixed types are locked whatever any
  * setting says; an owner-added type is locked until the owner unlocks it; an
  * unknown type, including any "other", is locked.
  *
@@ -246,7 +263,7 @@ export function isFixedLockedMatterType(value: string): boolean {
  */
 export function isLockedMatterType(type: string, custom: readonly CustomMatterType[] = [], openedAt?: number): boolean {
   if (isFixedLockedMatterType(type)) return true;
-  if ((UNLOCKED_MATTER_TYPES as readonly string[]).includes(type)) return false;
+  if ((UNLOCKED_WORK_TYPES as readonly string[]).includes(type)) return false;
   if (type === "other") return true;
   const added = custom.find((one) => one.id === type);
   if (!added || added.locked) return true;
@@ -306,12 +323,12 @@ export function isKnownMatterType(type: string, custom: readonly CustomMatterTyp
 
 /** The words for a type. PURE: No side effects. */
 export function matterTypeLabel(type: string, custom: readonly CustomMatterType[] = []): string {
-  return isBuiltInMatterType(type) ? MATTER_TYPE_LABELS[type] : custom.find((one) => one.id === type)?.label ?? type;
+  return isBuiltInMatterType(type) ? WORK_TYPE_LABELS[type] : custom.find((one) => one.id === type)?.label ?? type;
 }
 
-/** The precedents a matter type may offer. PURE: No side effects. */
+/** The precedents a work type may offer. PURE: No side effects. */
 export function precedentsForMatterType(type: string): readonly string[] {
-  return isBuiltInMatterType(type) ? MATTER_TYPE_PRECEDENTS[type] : [];
+  return isBuiltInMatterType(type) ? WORK_TYPE_PRECEDENTS[type] : [];
 }
 
 /** Why a typed reason will not do (reason_missing, reason_too_long), or undefined. PURE: No side effects. */
@@ -391,6 +408,8 @@ export const WORK_REFUSAL_CODES = [
   "type_no_off_switch",
   "type_not_added",
   "type_already_unlocked",
+  "typed_work_off_not_available",
+  "typed_work_unchanged",
 ] as const;
 export type WorkRefusalCode = (typeof WORK_REFUSAL_CODES)[number];
 export type WorkRefusal = { readonly code: WorkRefusalCode; readonly values?: Readonly<Record<string, string>> };
@@ -460,16 +479,16 @@ export const WORK_REFUSAL_WORDING: Readonly<Record<WorkRefusalCode, { readonly t
     page: (v) => `No client ${v.id} is recorded for this business.`,
   },
   matter_fields_on_non_matter: {
-    terminal: () => "Only a matter has a matter number and a matter type.",
-    page: () => "Only a matter has a matter number and a matter type.",
+    terminal: () => "Only a matter has a matter number and a work type.",
+    page: () => "Only a matter has a matter number and a work type.",
   },
   matter_number_pattern: {
     terminal: () => "A matter number is up to 40 letters, digits, dashes, slashes or dots, starting with a letter or digit.",
     page: () => "Up to 40 letters, digits, dashes, slashes or dots, starting with a letter or digit.",
   },
   matter_type_unknown: {
-    terminal: (v) => `Choose one of this business's matter types${v.types ? `: ${v.types}` : ""}.`,
-    page: () => "Choose one of this business's matter types.",
+    terminal: (v) => `Choose one of this business's work types${v.types ? `: ${v.types}` : ""}.`,
+    page: () => "Choose one of this business's work types.",
   },
   matter_number_in_use: {
     terminal: (v) => `Matter number ${v.number} is already used at this business.`,
@@ -500,8 +519,8 @@ export const WORK_REFUSAL_WORDING: Readonly<Record<WorkRefusalCode, { readonly t
     page: (v) => `Nobody called ${v.name || "that"} works at this business.`,
   },
   type_locked_to_unlocked: {
-    terminal: () => "A locked matter type can't be changed to an unlocked one. Cancel the matter with a reason and open a new one.",
-    page: (v) => `${v.type || "Locked"} matters can't be changed to an unlocked type. If it was opened with the wrong type, cancel it with a reason and open a new matter.`,
+    terminal: () => "A locked work type can't be changed to an unlocked one. Cancel the matter with a reason and open a new one.",
+    page: (v) => `${v.type || "Locked"} work can't be changed to an unlocked type. If it was opened with the wrong type, cancel it with a reason and open a new matter.`,
   },
   carry_over_unverified: {
     terminal: () => "No AI is on and the type is locked because Arturo couldn't confirm the record this replaces.",
@@ -560,8 +579,8 @@ export const WORK_REFUSAL_WORDING: Readonly<Record<WorkRefusalCode, { readonly t
     page: (v) => `${v.name}'s access is suspended.`,
   },
   not_a_matter: {
-    terminal: () => "Only a matter has a matter type.",
-    page: () => "Only a matter has a matter type.",
+    terminal: () => "Only a matter has a work type.",
+    page: () => "Only a matter has a work type.",
   },
   type_unchanged: {
     terminal: (v) => `${v.name} is already ${v.type}. Nothing was changed.`,
@@ -592,7 +611,7 @@ export const WORK_REFUSAL_WORDING: Readonly<Record<WorkRefusalCode, { readonly t
     page: () => 'There is no "Other" type. Name the kind of matter it is.',
   },
   type_id_pattern: {
-    terminal: () => "A matter type's short name is 2 to 40 lower-case letters, digits or dashes, starting with a letter.",
+    terminal: () => "A work type's short name is 2 to 40 lower-case letters, digits or dashes, starting with a letter.",
     page: () => "The short name is 2 to 40 lower-case letters, digits or dashes, starting with a letter.",
   },
   type_label: {
@@ -600,20 +619,28 @@ export const WORK_REFUSAL_WORDING: Readonly<Record<WorkRefusalCode, { readonly t
     page: () => "Give the type a name for the list, up to 80 characters.",
   },
   type_exists: {
-    terminal: (v) => `There is already a matter type called ${v.id}.`,
-    page: (v) => `There is already a matter type called ${v.id}.`,
+    terminal: (v) => `There is already a work type called ${v.id}.`,
+    page: (v) => `There is already a work type called ${v.id}.`,
   },
   type_no_off_switch: {
-    terminal: (v) => `${v.type} matters are locked with no off switch. Only a matter type the owner added can be unlocked.`,
-    page: (v) => `${v.type} matters never go to an AI worker, and this lock has no off switch.`,
+    terminal: (v) => `${v.type} is a fixed locked work type, with no off switch. Only a work type the owner added can be unlocked.`,
+    page: (v) => `${v.type} never goes to an AI worker, and this lock has no off switch.`,
   },
   type_not_added: {
-    terminal: (v) => `There is no added matter type called ${v.id}.`,
-    page: (v) => `There is no added matter type called ${v.id}.`,
+    terminal: (v) => `There is no added work type called ${v.id}.`,
+    page: (v) => `There is no added work type called ${v.id}.`,
   },
   type_already_unlocked: {
     terminal: (v) => `${v.type} is already unlocked. Nothing was changed.`,
     page: (v) => `${v.type} is already unlocked. Nothing was changed.`,
+  },
+  typed_work_off_not_available: {
+    terminal: () => 'Switching off "AI work must belong to a typed piece of work" is an owner-only change and is not available at the terminal yet. The setting was not changed.',
+    page: () => 'Switching off "AI work must belong to a typed piece of work" is an owner-only change and is not available yet. The setting was not changed.',
+  },
+  typed_work_unchanged: {
+    terminal: (v) => `"AI work must belong to a typed piece of work" is already ${v.state}. Nothing was changed.`,
+    page: (v) => `"AI work must belong to a typed piece of work" is already ${v.state}. Nothing was changed.`,
   },
 };
 
@@ -678,13 +705,17 @@ export function refuseWorkRecord(input: WorkRecordInput, context: WorkRecordCont
   if (input.clientId !== undefined) {
     if (context.clientBusiness(input.clientId) !== input.enterpriseId) return { code: "client_not_found", values: { id: input.clientId } };
   }
-  if (input.kind !== "matter" && (input.matterNumber !== undefined || input.matterType !== undefined)) {
+  if (input.kind !== "matter" && input.matterNumber !== undefined) {
+    return { code: "matter_fields_on_non_matter" };
+  }
+  // Work types belong to any business's work, not only law-practice matters.
+  if (input.matterType !== undefined && input.kind !== "matter" && input.kind !== "work") {
     return { code: "matter_fields_on_non_matter" };
   }
   const number = input.matterNumber?.trim();
   if (number !== undefined && !MATTER_NUMBER_PATTERN.test(number)) return { code: "matter_number_pattern" };
   if (input.matterType !== undefined && !isKnownMatterType(input.matterType, context.customMatterTypes)) {
-    return { code: "matter_type_unknown", values: { types: [...BUILT_IN_MATTER_TYPES, ...context.customMatterTypes.map((one) => one.id)].join(", ") } };
+    return { code: "matter_type_unknown", values: { types: [...BUILT_IN_WORK_TYPES, ...context.customMatterTypes.map((one) => one.id)].join(", ") } };
   }
   if (input.replaces) {
     const old = input.replaces;

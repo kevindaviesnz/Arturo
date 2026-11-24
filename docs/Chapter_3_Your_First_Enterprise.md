@@ -22,57 +22,41 @@ command.
 
 ## 1. Create Ethical Toys
 
-Type the command on its own:
+Type `/setup`. `/enterprise` on its own is the same command.
 
 ```text
-/enterprise
+/setup
 ```
 
-Arturo asks what you want to do:
-
-```text
-What would you like to do?
-
-  1. Set up a new business — a name, then one sentence
-  2. Talk it through with Arturo first
-  3. Look at a business you've set up
-  4. Change a business's details
-  5. See all your businesses
-
-Reply with a number, or or ESC to go back.
-```
-
-Answer `1`. Arturo then asks three short questions. Answer each one and press
-Return:
+Arturo starts a four-step route. The first screen is labelled **Step 1 of 4**
+and asks one question at a time. Answer each one and press Return:
 
 | Arturo asks | You answer |
 |---|---|
 | What is the business called? | `Ethical Toys` |
-| Mission | `Help families choose safe and responsibly made toys.` |
-| Description | `A teaching example that uses synthetic toy information only.` |
+| In one sentence, what does Ethical Toys exist to do? | `Help families choose safe and responsibly made toys.` |
+| What should Arturo call you? | Type `q` for this lesson |
 
-The third question is optional. Type `skip` to leave it blank. It is extra
-background for people and for Workers, so it is worth answering.
+The name and mission are saved once you have answered both. Arturo then asks
+what to call you, which is used later when you mark work. For this chapter,
+type `q` to pause. You can type `/setup` later to continue from where you left
+off (next is Step 2 of 4, Functions). Chapter 4 creates a Function by hand
+instead.
 
 Arturo should create an Enterprise with an ID such as `enterprise-1`. The exact
 ID and time will be different on your computer.
 
-You can type `cancel` at any question to stop. Nothing is created until you
-have answered them all.
+You can type `q` or `cancel` at any question to pause. Nothing is created until
+you have answered the name and the mission. Each screen also offers `b` to go
+back.
 
-### If you are not sure what to say
-
-Choose `2` instead of `1`. Arturo talks it through with you in plain language,
-reacting to what you say rather than working through a fixed list. When it
-understands the business, it creates the Enterprise with a mission drawn from
-the conversation and goes on to recommend areas of work. If you have no name
-yet, it will suggest one — you can accept it, decline to be asked again, or
-type your own.
+If you are not sure what the mission should say, write one short sentence in
+your own words. You can change it later.
 
 ## 2. Inspect it
 
-Run `/enterprise` again and answer `3`. With only one business set up, Arturo
-shows it straight away.
+Run `/enterprise inspect`. With only one business set up, Arturo shows it
+straight away.
 
 You should see:
 
@@ -114,12 +98,12 @@ better next time. Type `no` to leave it.
 
 ## 4. Change something later
 
-Details are not locked in. Run `/enterprise`, answer `4`, and pick the detail
-to change — the name, what the business does, or the extra background.
+Details are not locked in. Run `/enterprise update "Ethical Toys"` and pick the
+detail to change — the name, what the business does, or the extra background.
 
 ## 5. List Enterprises
 
-Run `/enterprise` and answer `5`.
+Run `/enterprise list`.
 
 You should see Ethical Toys in the list.
 
@@ -144,8 +128,8 @@ Business Functions, projects, or Tasks inside the same Enterprise.
 
 You are ready for Chapter 4 when:
 
-- `/enterprise` answered with `5` shows Ethical Toys;
-- looking at Ethical Toys shows its mission; and
+- `/enterprise list` shows Ethical Toys;
+- `/enterprise inspect` shows its mission; and
 - you can explain that an Enterprise is the organisation, not a task or AI
   Worker.
 

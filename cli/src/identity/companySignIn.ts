@@ -33,6 +33,9 @@
 import crypto from "node:crypto";
 
 import { peopleOf } from "../clients/clientCommands";
+import { endDraftsForInvolving } from "../staffing/draftsFor";
+import { formatRoleChangeHandBackConfirm, openHandBacksForLostRight, waitingDraftsForPerson } from "../staffing/handBack";
+import { recordStaffChangeEvent } from "../staffing/staffChanges";
 import { isApprovalCapableMode } from "../control/humanWorkerMode";
 import { addWorker, getWorker, setHumanWorkerSignOff } from "../control/workers";
 import { getEnterprise } from "../enterprise/enterpriseStore";
@@ -64,6 +67,7 @@ import {
   setEnterpriseMembership,
   type EnterpriseMembership,
 } from "./organisationIdentity";
+import { revokeOffTerminalLinksForPerson } from "../offterminal/offTerminalLinks";
 
 export type Role = EnterpriseMembership["role"];
 
@@ -153,7 +157,7 @@ export function signInRequired(): boolean {
 }
 
 /** SIDE EFFECT: Reads the authority log and the signing secret. */
-function logAuthorityChange(change: Omit<AuthorityChange, "prevSha256" | "signature">): void {
+export function logAuthorityChange(change: Omit<AuthorityChange, "prevSha256" | "signature">): void {
   const earlier = loadAuthorityChanges();
   const prevSha256 = earlier.length ? sha256(JSON.stringify(earlier[earlier.length - 1])) : "";
   const payload = { ...change, prevSha256 };
@@ -291,8 +295,16 @@ function recordGrant(enterpriseId: string, workerName: string, granted: boolean,
  *
  * SIDE EFFECT: Reads Worker, sign-in and grant state.
  */
+/** Whether this person is an active owner of the business. SIDE EFFECT: Reads memberships. */
+export function isOwner(enterpriseId: string, workerName: string): boolean {
+  const membership = membershipOf(enterpriseId, workerName);
+  return membership?.role === "owner" && membership.status === "active";
+}
+
 export function maySignOff(enterpriseId: string | undefined, workerName: string): boolean {
   if (!isApprovalCapableMode(getWorker(workerName)?.humanMode)) return false;
+  // The owner can always sign off, so a hand-back never lands on nobody.
+  if (enterpriseId && isOwner(enterpriseId, workerName)) return true;
   if (!enterpriseId || !signInOn(enterpriseId)) return true;
   const grant = loadSignOffGrant(enterpriseId, workerName);
   if (!grant) return false;
@@ -558,6 +570,7 @@ export function setRole(input: { readonly enterpriseId: string; readonly person:
   if (!person || !membership) return { refused: "Invite them first." };
   if (membership.role === "owner" && input.role !== "owner" && ownerCount(input.enterpriseId) <= 1) return { refused: "A business needs an owner. Make someone else the owner first." };
   setEnterpriseMembership({ ...membership, role: input.role as Role });
+  revokeOffTerminalLinksForPerson(input.enterpriseId, person, input.now ?? Date.now());
   logAuthorityChange({ enterpriseId: input.enterpriseId, what: `role is now ${input.role}`, person, by: input.actor?.workerName ?? "the terminal", ...(input.actor ? { byUserId: input.actor.userId } : {}), at: input.now ?? Date.now() });
   return { message: `${person} is now ${ROLE_WORDS[input.role as Role]}.` };
 }
@@ -585,7 +598,10 @@ export function setSuspended(input: { readonly enterpriseId: string; readonly pe
   if (input.actor && same(input.actor.workerName, person)) return { refused: "You cannot suspend yourself." };
   if (membership.role === "owner" && input.suspended && ownerCount(input.enterpriseId) <= 1) return { refused: "A business needs an owner." };
   setEnterpriseMembership({ ...membership, status: input.suspended ? "suspended" : "active" });
-  if (input.suspended) endSessions(membership.userId);
+  if (input.suspended) {
+    endSessions(membership.userId);
+    revokeOffTerminalLinksForPerson(input.enterpriseId, person, input.now ?? Date.now());
+  }
   logAuthorityChange({ enterpriseId: input.enterpriseId, what: input.suspended ? "access suspended" : "access restored", person, by: input.actor?.workerName ?? "the terminal", ...(input.actor ? { byUserId: input.actor.userId } : {}), at: input.now ?? Date.now() });
   return { message: input.suspended ? `${person} can no longer sign in. What they did stays on file under their name.` : `${person} can sign in again.` };
 }
@@ -606,8 +622,34 @@ export function setSignOffRight(input: { readonly enterpriseId: string; readonly
   setHumanWorkerSignOff(person, input.canSignOff);
   const by = input.actor?.workerName ?? "the terminal";
   recordGrant(input.enterpriseId, person, input.canSignOff, by, input.actor?.userId, now);
-  logAuthorityChange({ enterpriseId: input.enterpriseId, what: input.canSignOff ? "may sign off work" : "may no longer sign off work", person, by, ...(input.actor ? { byUserId: input.actor.userId } : {}), at: now });
-  return { message: input.canSignOff ? `${person} can now sign off work and give go-aheads.` : `${person} can no longer sign off work or give go-aheads.` };
+  if (input.canSignOff) {
+    // Tama overlap / Tama fix: granting the right creates the account in the
+    // same signed step, so the signer appears in the staff list with a
+    // membership and maySignOff can see the grant once sign-in is on.
+    const existing = membershipOf(input.enterpriseId, person);
+    const role = existing?.role ?? (ownerCount(input.enterpriseId) > 0 ? "member" : "owner");
+    ensureUser(input.enterpriseId, person, role);
+  } else {
+    revokeOffTerminalLinksForPerson(input.enterpriseId, person, now);
+    const waiting = waitingDraftsForPerson(input.enterpriseId, person);
+    endDraftsForInvolving(input.enterpriseId, person, by, now);
+    openHandBacksForLostRight({
+      enterpriseId: input.enterpriseId,
+      person,
+      changedBy: by,
+      ...(input.actor ? { changedByUserId: input.actor.userId } : {}),
+      at: now,
+    });
+    logAuthorityChange({ enterpriseId: input.enterpriseId, what: "may no longer sign off work", person, by, ...(input.actor ? { byUserId: input.actor.userId } : {}), at: now });
+    recordStaffChangeEvent({ what: `took the sign-off right from ${person}`, by });
+    const message = `${person} can no longer sign off work or give go-aheads.` + (
+      waiting.length > 0 ? `\n\n${formatRoleChangeHandBackConfirm(waiting.length)}` : ""
+    );
+    return { message };
+  }
+  logAuthorityChange({ enterpriseId: input.enterpriseId, what: "may sign off work", person, by, ...(input.actor ? { byUserId: input.actor.userId } : {}), at: now });
+  recordStaffChangeEvent({ what: `gave ${person} the right to sign off work and give go-aheads`, by });
+  return { message: `${person} can now sign off work and give go-aheads.` };
 }
 
 /** SIDE EFFECT: Deletes every sign-in record and guess count (tests and /reset). */

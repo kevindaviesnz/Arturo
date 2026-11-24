@@ -455,7 +455,7 @@ export function formatPlan(
         ]
       : []),
     "",
-    "AI Workers do the routine work. A person approves anything that reaches",
+    "AI Workers do the routine work. A person gives a go-ahead for anything that reaches",
     "outside Arturo — sending an email, running a command, writing a file.",
     "Nothing is created until you say yes.",
     "For Accounts, Customers and Operations, accepted staffing includes record tools and draft preparation. Existing restrictions still apply. Workers cannot issue or send invoices.",
@@ -466,7 +466,7 @@ export function formatPlan(
     `  ${plan.humanApprovals.length} Function${plan.humanApprovals.length === 1 ? "" : "s"} that will ask before acting outside Arturo`,
     ...(unassignedApprovals.length
       ? [
-          `  ${unassignedApprovals.length} still need${unassignedApprovals.length === 1 ? "s" : ""} a person to approve — add one with /add-human-worker (that can be you)`,
+          `  ${unassignedApprovals.length} still need${unassignedApprovals.length === 1 ? "s" : ""} a person who can sign off work and give go-aheads — add one with /add-human-worker (that can be you)`,
         ]
       : []),
     "",
@@ -489,7 +489,7 @@ export function formatPlan(
     ...(plan.humanApprovals.length
       ? plan.humanApprovals.flatMap((approval, index) => [
           `${index + 1}. ${functionReference(approval.functionId)}`,
-          `   Approver: ${approval.workerName ?? 'Nobody yet — add a person who can approve with /add-human-worker (that can be you).'}`,
+          `   Approver: ${approval.workerName ?? 'Nobody yet — add a person who can sign off work and give go-aheads with /add-human-worker (that can be you).'}`,
           `   Why:      ${approval.rationale}`,
         ])
       : ["  Nothing here needs a person's approval."]),
@@ -722,6 +722,7 @@ export function applyStaffingPlan(
   // staffed by a team, and execution routes each Task to the right member.
   const definitions = listBusinessFunctionDefinitions();
   const created = new Set<string>();
+  const staffingRefusals: string[] = [];
   for (const proposal of plan.workers) {
     if (!proposal.existing && !created.has(proposal.name)) {
       registerAiWorker(
@@ -731,7 +732,11 @@ export function applyStaffingPlan(
       created.add(proposal.name);
     }
     for (const businessFunctionId of proposal.functionIds) {
-      saveStaffingAssignment({ businessFunctionId, workerName: proposal.name, role: "ai", rationale: proposal.rationale });
+      try {
+        saveStaffingAssignment({ businessFunctionId, workerName: proposal.name, role: "ai", rationale: proposal.rationale });
+      } catch (error) {
+        staffingRefusals.push(error instanceof Error ? error.message : String(error));
+      }
     }
   }
   for (const approval of plan.humanApprovals) {
@@ -830,6 +835,7 @@ export function applyStaffingPlan(
     }));
 
   return [
+    ...staffingRefusals.map((body) => ({ actor: "Arturo" as const, label: "Refused", body })),
     {
       actor: "Arturo",
       label: "Staffing applied",
@@ -897,7 +903,7 @@ export function formatStaffingAppliedBody(
   const approverGap =
     unassignedApproverFunctions.length === 1
       ? [
-          `${unassignedApproverFunctions[0]} still needs a person who can approve work requiring sign-off.`,
+          `${unassignedApproverFunctions[0]} still needs a person who can sign off work and give go-aheads.`,
           "",
           "Add that person with /add-human-worker — it can be you. Once they're on",
           "the team, work waiting for sign-off shows under /approvals.",
@@ -905,7 +911,7 @@ export function formatStaffingAppliedBody(
         ]
       : unassignedApproverFunctions.length > 1
         ? [
-            `${numberWord(unassignedApproverFunctions.length)} Functions still need a person who can approve work requiring sign-off:`,
+            `${numberWord(unassignedApproverFunctions.length)} Functions still need a person who can sign off work and give go-aheads:`,
             ...unassignedApproverFunctions.map((label) => `  · ${label}`),
             "",
             "Add that person with /add-human-worker — it can be you. Once they're on",

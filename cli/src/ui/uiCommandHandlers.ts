@@ -2,7 +2,11 @@ import { checkPassOn, describePassOn, getPassOnRule, setPassOn, type PassOnSetti
 import { stopRoute } from "../runtime/resultPassOn";
 import { setAsideTaskResult } from "../task/taskSetAside";
 import { addClient, CLIENT_ADD_USAGE, describeClients, flagValue, resolveEnterprise, setUpBusiness } from "../clients/clientCommands";
+import { startSetupFlow, replyToSetup, isSetupFlowActive, clearSetupFlow, runSetupScript, setupFlowHasSavedEnterprise, commandContinuesSetup } from "../setup/setupFlow";
+import { startTaskWorkType, replyToTaskWorkType, isTaskWorkTypeActive, clearTaskWorkType } from "./uiTaskWorkType";
+import { startLaterStaffMenu, replyToLaterStaff, isLaterStaffActive, clearLaterStaff } from "./uiStaffLater";
 import { runWorkCommand } from "../work/workCommands";
+import { refuseTypedWorkSettingCommand, resolveEnterpriseIdForTypedWorkCheck } from "../work/workLocks";
 import { assignClientDesk, createClientAssistant, describeProposal, findClientAssistant, latestProposal, proposeClientAssistant } from "../clients/clientAssistant";
 import { checklistFor, talkToAssistant } from "../clients/clientIntake";
 import { changeFunctionChecks, describeFunctionChecks, getFunctionChecks, parseWordLimit } from "../business/functionChecks";
@@ -128,7 +132,9 @@ import {
 import {
   WorkStreamEntry,
 } from "./uiState";
-import { createUiOverviewEntries } from "./uiOverviewEntries";
+import { createUiOverviewEntries, createWhatsWaitingEntries } from "./uiOverviewEntries";
+import { formatWeeklyEmailAcceptances } from "../staffing/emailAcceptance";
+import { isOwner } from "../identity/companySignIn";
 import {
   formatSetupRequiredBody,
   isReadyForWork,
@@ -1951,8 +1957,8 @@ export function handleUiAddHumanWorker(
     ? []
     : [
         "",
-        `${name} can be assigned Human Tasks, but their role does not include approving governed work.`,
-        `To register someone who can approve, add --archetype guardian (or --archetype reviewer), then re-run /staff.`,
+        `${name} can be assigned Human Tasks, but their role does not include signing off work or giving go-aheads governed work.`,
+        `To register someone who can sign off work and give go-aheads, add --archetype guardian (or --archetype reviewer), then re-run /staff.`,
       ];
 
   return [
@@ -2869,9 +2875,9 @@ export function handleUiEnterpriseUpdateSubcommand(
  * SIDE EFFECT:
  * - May read or mutate the enterprise store.
  */
-export function handleUiEnterpriseCommand(
+export async function handleUiEnterpriseCommand(
   args: readonly string[]
-): readonly WorkStreamEntry[] | Promise<readonly WorkStreamEntry[]> {
+): Promise<readonly WorkStreamEntry[]> {
   const [
     subcommand,
     ...subcommandArgs
@@ -2894,6 +2900,23 @@ export function handleUiEnterpriseCommand(
   
 
   if (subcommand === "inspect") {
+    if (subcommandArgs.length === 0 && isInteractiveSession()) {
+      const names = listEnterprises().map((enterprise) => enterprise.name);
+      if (names.length === 0) {
+        return [
+          {
+            actor: "Arturo",
+            label: "No businesses yet",
+            body: "You haven't set up a business yet. Type /setup to start.",
+          },
+        ];
+      }
+      if (names.length === 1) {
+        return handleUiEnterpriseInspectSubcommand([names[0]]);
+      }
+      commandMenu = { kind: "enterprise", stage: "inspect-pick", names };
+      return pickList("Which business?", names);
+    }
     return handleUiEnterpriseInspectSubcommand(
       subcommandArgs
     );
@@ -2946,7 +2969,7 @@ export function handleUiEnterpriseCommand(
   // at / list) rather than a switch-laden usage block. Headless runs keep the
   // usage text so nothing waits on a prompt that can't be answered.
   if (!subcommand && isInteractiveSession()) {
-    return startEnterpriseMenu();
+    return [...await startSetupFlow()];
   }
 
   return [
@@ -4439,6 +4462,9 @@ function createTaskFromAnswers(
   functionName: string | undefined,
   extraArgs: readonly string[]
 ): readonly WorkStreamEntry[] {
+  if (isInteractiveSession()) {
+    return startTaskWorkType({ request, functionName, extraArgs });
+  }
   return [
     captureUiCommandOutput("Task created", () =>
       handleTaskCreateCommand([
@@ -4693,10 +4719,13 @@ function createScheduleFromAnswers(
 
 export function clearCommandMenu(): void {
   commandMenu = undefined;
+  clearSetupFlow();
+  clearTaskWorkType();
+  clearLaterStaff();
 }
 
 export function isCommandMenuActive(): boolean {
-  return commandMenu !== undefined;
+  return commandMenu !== undefined || isSetupFlowActive() || isTaskWorkTypeActive() || isLaterStaffActive();
 }
 
 /** What each guided flow is collecting, for the line that says it was dropped. */
@@ -4730,11 +4759,27 @@ const MENU_SUBJECTS: Readonly<Record<string, string>> = {
  *
  * SIDE EFFECT: Clears the module-level menu state.
  */
-export function abandonCommandMenu(): string | undefined {
+export function abandonCommandMenu(): { subject: string; unsaved: boolean } | undefined {
+  if (isLaterStaffActive()) {
+    clearLaterStaff();
+    commandMenu = undefined;
+    return { subject: "changing staff", unsaved: false };
+  }
+  if (isTaskWorkTypeActive()) {
+    clearTaskWorkType();
+    commandMenu = undefined;
+    return { subject: "creating a Task", unsaved: true };
+  }
+  if (isSetupFlowActive()) {
+    const unsaved = !setupFlowHasSavedEnterprise();
+    clearSetupFlow();
+    commandMenu = undefined;
+    return { subject: "setting up a business", unsaved };
+  }
   if (!commandMenu) return undefined;
   const subject = MENU_SUBJECTS[commandMenu.kind] ?? "what you had started";
   clearCommandMenu();
-  return subject;
+  return { subject, unsaved: true };
 }
 
 function menuNumber(reply: string): number | undefined {
@@ -6286,6 +6331,9 @@ export function stripSurroundingQuotes(value: string): string {
 export async function handleCommandMenuReply(
   reply: string
 ): Promise<readonly WorkStreamEntry[] | undefined> {
+  if (isLaterStaffActive()) return replyToLaterStaff(reply);
+  if (isSetupFlowActive()) return replyToSetup(reply);
+  if (isTaskWorkTypeActive()) return replyToTaskWorkType(reply);
   if (!commandMenu) return undefined;
 
   const state = commandMenu;
@@ -9466,6 +9514,10 @@ export async function handleUiCommand(
   command: string,
   args: readonly string[]
 ): Promise<readonly WorkStreamEntry[]> {
+  if (!commandContinuesSetup(command, args) && isSetupFlowActive()) {
+    clearSetupFlow();
+  }
+
   if (command === "/chat") {
     return [await handleUiWorkerChatCommand(args)];
   }
@@ -9768,6 +9820,23 @@ export async function handleUiCommand(
     return createUiOverviewEntries();
   }
 
+  if (command === "/waiting") {
+    return createWhatsWaitingEntries();
+  }
+
+  if (command === "/acceptances") {
+    const enterprise = listEnterprises()[0];
+    if (!enterprise) {
+      return [{ actor: "Arturo", label: "Acceptances", body: "Set up a business first." }];
+    }
+    const asIndex = args.indexOf("--as");
+    const as = asIndex >= 0 ? String(args[asIndex + 1] ?? "").trim() : "";
+    if (as && !isOwner(enterprise.id, as)) {
+      return [{ actor: "Arturo", label: "Acceptances", body: "Only the owner can see the weekly list of freelancer email acceptances." }];
+    }
+    return [{ actor: "Arturo", label: "Acceptances", body: formatWeeklyEmailAcceptances(enterprise.id) }];
+  }
+
   if (command === "/ask") {
     if (args.length === 0) {
       return [
@@ -9816,6 +9885,20 @@ export async function handleUiCommand(
   }
 
   if (command === "/workflow") {
+    const enterpriseFlagIndex = args.indexOf("--enterprise");
+    const blocked = refuseTypedWorkSettingCommand(
+      resolveEnterpriseIdForTypedWorkCheck(enterpriseFlagIndex >= 0 ? stripSurroundingQuotes(String(args[enterpriseFlagIndex + 1] ?? "")) : undefined),
+      "workflow",
+    );
+    if (blocked) {
+      return [
+        {
+          actor: "Arturo" as const,
+          label: "Refused",
+          body: blocked,
+        },
+      ];
+    }
     // "create" plus a name: ask for the objective and then the ordered steps,
     // rather than refusing until --step pairs are supplied.
     if (
@@ -9873,6 +9956,20 @@ export async function handleUiCommand(
   }
 
   if (command === "/run") {
+    const enterpriseFlagIndex = args.indexOf("--enterprise");
+    const blocked = refuseTypedWorkSettingCommand(
+      resolveEnterpriseIdForTypedWorkCheck(enterpriseFlagIndex >= 0 ? stripSurroundingQuotes(String(args[enterpriseFlagIndex + 1] ?? "")) : undefined),
+      "run",
+    );
+    if (blocked) {
+      return [
+        {
+          actor: "Arturo" as const,
+          label: "Refused",
+          body: blocked,
+        },
+      ];
+    }
     if (args.length === 0) {
       // Bare /run: pick a saved Workflow by number rather than typing its name.
       if (isInteractiveSession()) {
@@ -10375,8 +10472,8 @@ if (command === "/workers") {
   }
 
   if (command === "/setup") {
-    const outcome = setUpBusiness(args);
-    return [{ actor: "Arturo", label: outcome.created ? "Business set up" : "Setup", body: outcome.message }];
+    if (isInteractiveSession()) return [...await startSetupFlow()];
+    return [...runSetupScript(args)];
   }
 
   if (command === "/clients") {
@@ -10427,7 +10524,7 @@ if (command === "/workers") {
   }
 
   if (command === "/enterprise") {
-    return handleUiEnterpriseCommand(
+    return await handleUiEnterpriseCommand(
       args
     );
   }
@@ -10592,6 +10689,9 @@ if (command === "/next") {
 }
 
 if (command === "/staff") {
+  if (args[0] === "later" || args[0] === "menu" || args[0] === "change") {
+    return startLaterStaffMenu({ as: undefined });
+  }
   return await handleUiStaffCommand(args);
 }
 

@@ -39,7 +39,7 @@ Empty or unfilled required inputs count as missing. Empty optional inputs mean n
 3. Check the result against OUTPUT FORMAT and VALIDATION before returning it.
 
 Task rules:
-You are in READ-ONLY WORKER CHAT. You have no tools and cannot execute actions, create Tasks, send messages, change records, or approve work.
+You are in READ-ONLY WORKER CHAT. You have no tools and cannot execute actions, create Tasks, send messages, change records, or sign off work or give go-aheads.
 
 Never claim an action occurred. If asked to act, explain that the user must create a governed Arturo Task.
 

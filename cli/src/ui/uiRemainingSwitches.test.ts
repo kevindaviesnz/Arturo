@@ -38,6 +38,10 @@ import {
 } from "../staffing/staffingStore";
 
 import {
+  ensureTestSigner,
+} from "../testing/cliTestSetup";
+
+import {
   clearJobs,
   listJobs,
 } from "../runtime/jobQueue";
@@ -84,6 +88,7 @@ describe("the last flag-only Task paths", () => {
   function seedStaffedFunction(): string {
     const enterprise =
       createAndSaveEnterprise({ name: "Threadline", mission: "Make clothes." });
+    ensureTestSigner({ enterpriseId: enterprise.id });
     const definition = createAndSaveBusinessFunctionDefinition({
       id: `${enterprise.id}:design`,
       enterpriseId: enterprise.id,

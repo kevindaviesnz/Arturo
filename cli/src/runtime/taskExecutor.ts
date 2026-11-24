@@ -627,6 +627,7 @@ export async function executeWorkerJob(
         ? refuseWorkUnderLocks({
             workId: job.workId,
             enterpriseId: job.enterpriseId,
+            functionId: job.businessFunctionId,
             when: "send",
             taskCreatedAt: job.createdAt,
           })

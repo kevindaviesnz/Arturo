@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Riverside Hospital Flow
 Move patients through care safely, with clinicians accountable for every clinical decision.
-skip
+q
 /function
 1
 Triage Support

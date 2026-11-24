@@ -77,6 +77,10 @@ describe("safelyRemoveWorker", () => {
       "Old Research Worker",
       "researcher"
     );
+    registerAiWorker(
+      "Keep Research Worker",
+      "researcher"
+    );
     saveStaffingAssignment({
       businessFunctionId:
         "enterprise-1:function-1",
@@ -86,6 +90,16 @@ describe("safelyRemoveWorker", () => {
         "ai",
       rationale:
         "Historical coverage",
+    });
+    saveStaffingAssignment({
+      businessFunctionId:
+        "enterprise-1:function-1",
+      workerName:
+        "Keep Research Worker",
+      role:
+        "ai",
+      rationale:
+        "Still covers the Function",
     });
     createWorkflow(
       "Old research path",
@@ -138,7 +152,14 @@ describe("safelyRemoveWorker", () => {
     ).toBe(false);
     expect(
       listStaffingAssignments()
-    ).toEqual([]);
+    ).toEqual([
+      {
+        businessFunctionId: "enterprise-1:function-1",
+        workerName: "Keep Research Worker",
+        role: "ai",
+        rationale: "Still covers the Function",
+      },
+    ]);
     expect(
       listJobs().find(
         (item) =>

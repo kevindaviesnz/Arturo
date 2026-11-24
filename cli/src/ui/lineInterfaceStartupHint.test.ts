@@ -22,3 +22,12 @@ describe("formatEmptyEnterpriseHint", () => {
     expect(formatEmptyEnterpriseHint(5)).toBeUndefined();
   });
 });
+
+import { formatHandBackSessionLine } from "../staffing/handBack";
+
+describe("formatHandBackSessionLine", () => {
+  it("is a line until handed-back drafts are dealt with", () => {
+    expect(formatHandBackSessionLine(0)).toBeUndefined();
+    expect(formatHandBackSessionLine(3)).toBe("3 need a new signer — name a new signer from the staff menu.");
+  });
+});

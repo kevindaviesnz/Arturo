@@ -2,10 +2,9 @@
 yes
 @timeout 90
 /enterprise
-1
 Threadline
 Make garments from supplied trend evidence.
-skip
+q
 /function
 1
 Design

@@ -10,6 +10,7 @@ import { listApprovalChains } from "../runtime/approvalChainStore";
 import { listRuntimeEventStore } from "../runtime/runtimeEventStore";
 import { listAllOperationalMemory } from "../memory/operationalMemoryStore";
 import type { WorkStreamEntry } from "./uiState";
+import { formatHandBackCount, formatHandBackWaitingSection, listOpenHandBacks } from "../staffing/handBack";
 
 function percentage(part: number, total: number): string {
   return total === 0 ? "—" : `${Math.round((part / total) * 100)}%`;
@@ -83,6 +84,7 @@ export function createUiOverviewEntries(): readonly WorkStreamEntry[] {
         `Workers available    ${workers.filter((worker) => isWorkerAvailableForNewTask(worker)).length}/${workers.length}`,
         `Human tasks          ${tasks.length}`,
         `Approvals waiting    ${waiting}`,
+        ...(listOpenHandBacks().length ? [formatHandBackCount(listOpenHandBacks().length)] : []),
       ].join("\n"),
     },
     {
@@ -96,6 +98,13 @@ export function createUiOverviewEntries(): readonly WorkStreamEntry[] {
         "Every action remains inspectable through /events, /timeline, /tasks, /memory, and /governance.",
       ].join("\n"),
     },
+    ...(formatHandBackWaitingSection()
+      ? [{
+          actor: "Arturo" as const,
+          label: "What's waiting",
+          body: formatHandBackWaitingSection() as string,
+        }]
+      : []),
     {
       actor: "Arturo",
       label: "Next move",
@@ -108,4 +117,21 @@ export function createUiOverviewEntries(): readonly WorkStreamEntry[] {
             : "The operating model is live. Enter a plain-English objective or inspect /timeline for execution evidence.",
     },
   ];
+}
+
+/** What's waiting: its own section for handed-back drafts, plus any other waits. */
+export function createWhatsWaitingEntries(): readonly WorkStreamEntry[] {
+  const section = formatHandBackWaitingSection();
+  if (!section) {
+    return [{
+      actor: "Arturo",
+      label: "What's waiting",
+      body: "Nothing needs a new signer.",
+    }];
+  }
+  return [{
+    actor: "Arturo",
+    label: "What's waiting",
+    body: section,
+  }];
 }

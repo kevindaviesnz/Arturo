@@ -12,6 +12,7 @@ import { addWorker, createHumanWorker, getWorker, listWorkers } from "../control
 import type { Enterprise } from "../enterprise/enterprise";
 import { createAndSaveEnterprise, getEnterpriseByIdOrName, getEnterpriseByName, listEnterprises } from "../enterprise/enterpriseStore";
 import { assignWorkerOwnership, getWorkerOwnership, listEnterpriseWorkers } from "../identity/organisationIdentity";
+import { saveBusinessFoundation } from "../setup/setupSaves";
 import { capitalise, checkClientDetails, describeClient, findClientLookalikes, type ClientLookalike, type ClientRecord } from "./clientRecords";
 import { addClientRecord, getClientTerms, listClientRecords } from "./clientStore";
 
@@ -61,37 +62,19 @@ export const SETUP_USAGE = 'Usage: /setup "<business name>" --owner "<your name>
  * SIDE EFFECT: Creates an Enterprise and a Human Worker, and records ownership and terms.
  */
 export function setUpBusiness(args: readonly string[]): SetupOutcome {
-  const refuse = (message: string): SetupOutcome => ({ created: false, message });
   const name = tidy(positional(args, ["--owner", "--about"]).join(" "));
   const owner = tidy(flagValue(args, "--owner"));
-  if (!name) return refuse(SETUP_USAGE);
-  if (name.length > MAX_NAME) return refuse(`Keep the business name under ${MAX_NAME} characters.`);
-  if (!owner) return refuse('Say who runs the business: --owner "<your name>".');
-  if (owner.length > MAX_NAME) return refuse(`Keep your name under ${MAX_NAME} characters.`);
-  if (getEnterpriseByName(name)) return refuse(`A business called ${name} is already set up.`);
-  const existing = getWorker(owner);
-  if (existing && (existing.kind !== "human" || getWorkerOwnership(owner))) {
-    return refuse(`The name ${owner} is already used in Arturo. Use your full name, or a slightly different one.`);
-  }
-  // The owner approves work and signs off results, and the message below says
-  // so. Reusing someone already registered who cannot approve would make that
-  // untrue, and changing what an existing person may do is not this step's call.
-  if (existing && !isApprovalCapableMode(existing.humanMode)) {
-    return refuse(`The name ${owner} is already used in Arturo by someone who cannot approve work. Use your full name, or a slightly different one.`);
-  }
   const about = tidy(flagValue(args, "--about"));
-  if (!about) return refuse('Say in a few words what the business does: --about "<what it does>".');
-  if (about.length > 500) return refuse("Keep what the business does under 500 characters.");
-
-  const enterprise = createAndSaveEnterprise({ name, mission: "", description: about });
-  if (!existing) addWorker(createHumanWorker(owner, "guardian"));
-  assignWorkerOwnership({ workerName: owner, enterpriseId: enterprise.id });
+  const outcome = saveBusinessFoundation({ name, owner: owner ?? "", about: about ?? "" });
+  if (!outcome.created) return outcome;
+  // Retired command wording is kept for existing tests that call this helper
+  // directly. The /setup command itself does not use this message.
   return {
     created: true,
-    enterpriseId: enterprise.id,
+    enterpriseId: outcome.enterpriseId,
     message: [
       `${name} is set up, run by ${owner}.`,
-      `${owner} can approve work and sign off results.`,
+      `${owner} can sign off work and give go-aheads.`,
     ].join("\n"),
   };
 }

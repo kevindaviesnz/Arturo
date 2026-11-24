@@ -143,8 +143,8 @@ describe("passing a result on to be checked before a person signs it off", () =>
       const receipt = replaceJob({ ...getJob(ask("Draft an NDA."))!, status: "completed", output: "Evidence status: DETERMINISTIC TRANSFORMATION\n\nDone.", completedAt: 1 });
       expect(deliverPassOn(receipt)).toBeUndefined();
 
-      removeStaffingAssignmentsForFunction(fn("Contract review"));
       const draft = finish(ask("Draft an NDA for Harbour St."));
+      removeStaffingAssignmentsForFunction(fn("Contract review"));
       expect(deliverPassOn(draft)).toEqual({ stopped: "Contract review has no AI worker to check results yet." });
       expect(passOnOf(draft.id)).toMatchObject({ stopped: "Contract review has no AI worker to check results yet." });
       expect(deliverPassOn(draft)).toBeUndefined();

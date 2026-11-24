@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Meridian People Co
 Write clear, fair HR policies that a qualified person always signs off.
-skip
+q
 /function
 1
 Policy Drafting
@@ -23,6 +22,9 @@ skip
 /task
 1
 Draft a plain-language outline of a remote-work policy: scope, eligibility, expectations, equipment, security, and the points that need jurisdiction-specific legal review. Do not give legal advice or cite specific statutes as settled.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

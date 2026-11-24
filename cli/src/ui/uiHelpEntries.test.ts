@@ -42,6 +42,12 @@ describe("terminal help", () => {
     expect(findUiCommandHelp("/start")).toBeDefined();
   });
 
+  it("hides /next from the grouped guide, while keeping it a working primary command", () => {
+    expect(UI_PRIMARY_COMMANDS).toContain("/next");
+    expect(findUiCommandHelp("/next")).toBeDefined();
+    expect(formatUiHelpText()).not.toMatch(/(?:^|\n)\s*\/next\b/);
+  });
+
   it("keeps one unique detail record for every primary command", () => {
     expect(new Set(UI_PRIMARY_COMMANDS).size).toBe(UI_PRIMARY_COMMANDS.length);
     expect(new Set(UI_COMMAND_HELP.map((entry) => entry.command)).size)

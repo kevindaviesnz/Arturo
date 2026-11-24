@@ -82,14 +82,18 @@ describe("the /work commands", () => {
   const work = (...args: string[]) => handleWorkCommand(args);
   const openedId = (text: string) => /--work (work-[\w-]+)/.exec(text)?.[1] ?? "";
 
-  it("opens, lists, inspects and lists matter types", () => {
+  it("opens, lists, inspects and lists work types", () => {
     const opened = work("create", "Smithers lease", "--kind", "matter", "--client", clientId, "--number", "HL-1", "--type", "property", "--as", "Amy Wise", "--enterprise", enterpriseId);
     expect(opened).toContain("Opened:");
     const id = openedId(opened);
     expect(getWork(id).state).toBe("verified");
     expect(work("list", "--enterprise", enterpriseId)).toContain("Smithers lease");
     expect(work("inspect", id)).toContain("Nothing has been sent to an AI worker");
-    expect(work("types", "--enterprise", enterpriseId)).toMatch(/will .*locked/i);
+    const types = work("types", "--enterprise", enterpriseId);
+    expect(types).toMatch(/Work types at/);
+    expect(types).toMatch(/will .*locked/i);
+    expect(types).toContain("General work");
+    expect(types).toContain("general-advice");
     expect(work("create", "--kind", "matter", "--enterprise", enterpriseId)).toContain("Usage");
   });
 

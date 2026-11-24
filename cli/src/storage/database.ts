@@ -619,6 +619,11 @@ export function migrateRuntimeDatabase(
       record_json TEXT NOT NULL
     );
 
+    CREATE TABLE IF NOT EXISTS function_marks (
+      function_id TEXT PRIMARY KEY,
+      record_json TEXT NOT NULL
+    );
+
     CREATE TABLE IF NOT EXISTS pass_on_rules (
       function_id TEXT PRIMARY KEY,
       record_json TEXT NOT NULL
@@ -798,6 +803,59 @@ export function migrateRuntimeDatabase(
       key TEXT PRIMARY KEY,
       value TEXT NOT NULL,
       updated_at INTEGER NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS drafts_for (
+      id TEXT PRIMARY KEY,
+      enterprise_id TEXT NOT NULL,
+      ai_worker TEXT NOT NULL,
+      record_json TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS hand_backs (
+      id TEXT PRIMARY KEY,
+      enterprise_id TEXT NOT NULL,
+      job_id TEXT NOT NULL,
+      record_json TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS email_acceptances (
+      id TEXT PRIMARY KEY,
+      enterprise_id TEXT NOT NULL,
+      job_id TEXT NOT NULL,
+      record_json TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS off_terminal_links (
+      token_sha256 TEXT PRIMARY KEY,
+      enterprise_id TEXT NOT NULL,
+      job_id TEXT,
+      person TEXT NOT NULL,
+      record_json TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS off_terminal_path (
+      enterprise_id TEXT PRIMARY KEY,
+      record_json TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS verified_emails (
+      enterprise_id TEXT NOT NULL,
+      person TEXT NOT NULL,
+      record_json TEXT NOT NULL,
+      PRIMARY KEY (enterprise_id, person)
+    );
+
+    CREATE TABLE IF NOT EXISTS off_terminal_passkeys (
+      credential_id TEXT PRIMARY KEY,
+      enterprise_id TEXT NOT NULL,
+      person TEXT NOT NULL,
+      record_json TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS real_person_test (
+      id TEXT PRIMARY KEY,
+      record_json TEXT NOT NULL
     );
 
   `);

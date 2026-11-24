@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Kotuku Bank
 Lend responsibly, with evidence and a person accountable for every credit decision.
-skip
+q
 /function
 1
 Credit Review
@@ -25,6 +24,9 @@ skip
 /task
 1
 Using the synthetic loan summary only, frame a responsible-lending review: affordability evidence needed, income verification gaps, sensitivity to rate rises, hardship considerations, and the reasons a credit officer must decide. Do not approve or decline; do not invent figures beyond the summary.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

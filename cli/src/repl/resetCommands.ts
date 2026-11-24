@@ -89,6 +89,12 @@ import { clearArtefacts } from "../artefacts/artefactStore";
 import { resetWebSearchSessionUsage } from "../integrations/webSearch";
 import { clearJobCompletionEventRules } from "../events/jobCompletionEventRuleStore";
 import { clearEventSchedules } from "../scheduling/eventScheduleStore";
+import { clearOffTerminalLinks } from "../offterminal/offTerminalLinks";
+import { clearOffTerminalPath } from "../offterminal/offTerminalPathState";
+import { clearVerifiedEmails } from "../offterminal/verifiedEmail";
+import { clearPasskeys } from "../offterminal/passkeys";
+import { clearSignOffSessions } from "../offterminal/signOffPages";
+import { clearRealPersonTest } from "../offterminal/realPersonTest";
 
 /**
  * Resets application-level runtime state to initial first-use state.
@@ -144,6 +150,12 @@ clearBusinessFunctions();
   clearWorkSends();
   clearProviderSends();
   clearNextActions();
+  clearOffTerminalLinks();
+  clearOffTerminalPath();
+  clearVerifiedEmails();
+  clearPasskeys();
+  clearSignOffSessions();
+  clearRealPersonTest();
 }
 
 /**

@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 BrightSky Solar
 Help residential solar customers make good decisions with honest, uncertainty-aware information.
-skip
+q
 /function
 1
 Customer Education
@@ -21,6 +20,9 @@ skip
 /task
 1
 Prepare a concise homeowner guide to evaluating residential solar in Auckland. Separate general considerations from claims that require current local evidence, identify the evidence still needed, and finish with a pre-publication fact-check checklist. Do not invent current prices, incentives, payback periods, regulations, or performance figures.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

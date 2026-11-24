@@ -26,3 +26,9 @@ for (const stream of [process.stdin, process.stdout, process.stderr]) {
 }
 
 process.env.NO_COLOR = "1";
+
+// GitHub Actions sets CI=true. That is a correct signal for the real CLI, which
+// must not block a pipeline on a prompt. These tests opt into the interactive
+// path by setting process.stdin.isTTY; if CI is left set, that opt-in is
+// ignored and the guided-flow assertions fail only in CI.
+delete process.env.CI;

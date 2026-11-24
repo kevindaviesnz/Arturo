@@ -8,6 +8,7 @@ import {
   createAndSaveBusinessFunctionDefinition,
 } from "../business/businessFunctionDefinitionStore";
 import { addWorker, clearWorkers } from "../control/workers";
+import { ensureTestSigner } from "../testing/cliTestSetup";
 import { clearStaffingAssignments, saveStaffingAssignment } from "../staffing/staffingStore";
 
 /**
@@ -31,6 +32,7 @@ describe("a schedule Arturo refuses", () => {
       name: "Greenline Waste",
       mission: "Collect efficiently.",
     });
+    ensureTestSigner({ enterpriseId: enterprise.id });
     const definition = createAndSaveBusinessFunctionDefinition({
       id: `${enterprise.id}:route-planning`,
       enterpriseId: enterprise.id,

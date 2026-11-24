@@ -28,12 +28,17 @@ import {
   saveStaffingAssignment,
 } from "../staffing/staffingStore";
 import {
+  clearCommandMenu,
   handleCommandMenuReply,
   handleUiCommand,
   isCommandMenuActive,
 } from "./uiCommandHandlers";
+import {
+  ensureTestSigner,
+} from "../testing/cliTestSetup";
 
 function clearChapterState(): void {
+  clearCommandMenu();
   clearJobCompletionEventRules();
   clearOperationalMemory();
   clearJobs();
@@ -89,13 +94,13 @@ async function createProductSafety(): Promise<void> {
 
 /** Chapter 3's ending state, which Chapter 4 begins from. */
 async function createEthicalToys(): Promise<void> {
-  await handleUiCommand("/enterprise", []);
-  await handleCommandMenuReply("1");
+  await handleUiCommand("/setup", []);
   await handleCommandMenuReply("Ethical Toys");
   await handleCommandMenuReply(
     "Help families choose safe and responsibly made toys."
   );
-  await handleCommandMenuReply("skip");
+  // The name and mission are already saved. Pause before step 2 (Functions).
+  await handleCommandMenuReply("q");
 }
 
 /**
@@ -108,66 +113,51 @@ async function createEthicalToys(): Promise<void> {
  */
 describe("Chapter 3 walkthrough", () => {
   it("creates Ethical Toys from the answers the chapter gives", async () => {
-    const menu = await handleUiCommand(
-      "/enterprise",
+    const start = await handleUiCommand(
+      "/setup",
       []
     );
 
-    // The chapter reproduces this list, and tells the reader to answer 1.
-    expect(menu[0].body).toContain(
-      "1. Set up a new business"
-    );
-    expect(menu[0].body).toContain(
-      "2. Talk it through with Arturo first"
-    );
-    expect(menu[0].body).toContain(
-      "3. Look at a business you've set up"
-    );
-    expect(menu[0].body).toContain(
-      "4. Change a business's details"
-    );
-    expect(menu[0].body).toContain(
-      "5. See all your businesses"
+    // The chapter starts with /setup (or /enterprise, the same flow).
+    expect(start[0].label).toBe("Step 1 of 4");
+    expect(start[0].body.replace(/\s+/g, " ")).toContain(
+      "What is the business called?"
     );
     expect(isCommandMenuActive()).toBe(true);
-
-    const nameAsk = await handleCommandMenuReply("1");
-    expect(nameAsk?.[0].label).toBe("Name:");
 
     const missionAsk = await handleCommandMenuReply(
       "Ethical Toys"
     );
-    expect(missionAsk?.[0].label).toBe("Mission:");
+    expect(missionAsk?.[0].label).toBe("Step 1 of 4");
+    expect((missionAsk?.[0].body ?? "").replace(/\s+/g, " ")).toContain(
+      "what does Ethical Toys exist to do?"
+    );
+    // Nothing is written until the mission is answered.
+    expect(listEnterprises()).toHaveLength(0);
 
-    const descriptionAsk = await handleCommandMenuReply(
+    const whoAsk = await handleCommandMenuReply(
       "Help families choose safe and responsibly made toys."
     );
-    // The chapter calls this one optional. Nothing on screen says so any
-    // more, so what has to hold is the behaviour: Enter on its own leaves it
-    // blank rather than re-asking.
-    expect(descriptionAsk?.[0].label).toBe("Description:");
-
-    await handleCommandMenuReply(
-      "A teaching example that uses synthetic toy information only."
+    expect(whoAsk?.[0].label).toBe("Step 1 of 4");
+    expect((whoAsk?.[0].body ?? "").replace(/\s+/g, " ")).toContain(
+      "What should Arturo call you?"
     );
-
-    expect(isCommandMenuActive()).toBe(false);
 
     const [enterprise] = listEnterprises();
     expect(enterprise.name).toBe("Ethical Toys");
     expect(enterprise.mission).toContain(
       "responsibly made toys"
     );
-    expect(enterprise.description).toContain(
-      "synthetic toy information"
-    );
+
+    // The chapter says to type q here and leave Functions for later.
+    await handleCommandMenuReply("q");
+    expect(isCommandMenuActive()).toBe(false);
   });
 
-  it("lists the Enterprise when the reader answers 5", async () => {
+  it("lists the Enterprise with /enterprise list", async () => {
     await createEthicalToys();
 
-    await handleUiCommand("/enterprise", []);
-    const listed = await handleCommandMenuReply("5");
+    const listed = await handleUiCommand("/enterprise", ["list"]);
 
     expect(isCommandMenuActive()).toBe(false);
     expect(JSON.stringify(listed)).toContain(
@@ -175,11 +165,10 @@ describe("Chapter 3 walkthrough", () => {
     );
   });
 
-  it("shows the one Enterprise straight away when the reader answers 3", async () => {
+  it("shows the one Enterprise straight away with /enterprise inspect", async () => {
     await createEthicalToys();
 
-    await handleUiCommand("/enterprise", []);
-    const inspected = await handleCommandMenuReply("3");
+    const inspected = await handleUiCommand("/enterprise", ["inspect"]);
 
     // The chapter says a single business is shown without a further question.
     expect(isCommandMenuActive()).toBe(false);
@@ -271,7 +260,7 @@ describe("Chapter 4 walkthrough", () => {
 });
 
 /**
- * Chapter 6 asks for a Task before any Worker exists, and the refusal it gets
+ * Chapter 6 asks for a Task before staff are in place, and the refusal it gets
  * back is the whole lesson of the chapter. If that message ever softens into
  * creating the Task anyway, the chapter stops making sense.
  */
@@ -289,13 +278,13 @@ describe("Chapter 6 walkthrough", () => {
     );
     const refused = await handleCommandMenuReply("1");
 
-    // The chapter quotes all three lines of this, so all three are pinned.
+    // The chapter quotes the staff-check refusal, so both lines are pinned.
+    expect(refused?.[0].label).toBe("Refused");
     expect(refused?.[0].body).toContain(
-      "Product Safety has no Worker assigned to it, so there is nobody to do this."
+      "Product Safety needs an AI worker and someone who can sign off."
     );
-    expect(refused?.[0].body).toContain("/staff");
     expect(refused?.[0].body).toContain(
-      "Registering a Worker does not assign it to a Function"
+      "Nothing was created and no AI was asked."
     );
     expect(listJobs()).toHaveLength(0);
   });
@@ -371,9 +360,10 @@ describe("Chapter 7 walkthrough", () => {
     await startProductSafety();
     await addProductSafetyWorker();
 
-    // Chapter 7 section 4 makes the point that having a Worker is not enough:
-    // the reader tries again after registering one and is refused identically,
-    // which is what /staff then fixes.
+    // Chapter 7 section 4 makes the point that registering a Worker is not
+    // enough: the reader tries again and is refused by the staff check, which
+    // is what the staff step or /staff then fixes (a signer and an assigned
+    // AI worker).
     await handleUiCommand("/task", []);
     await handleCommandMenuReply("1");
     await handleCommandMenuReply(
@@ -383,15 +373,18 @@ describe("Chapter 7 walkthrough", () => {
 
     expect(refused?.[0].label).toBe("Refused");
     expect(refused?.[0].body).toContain(
-      "Product Safety has no Worker assigned to it"
+      "Product Safety needs an AI worker and someone who can sign off."
     );
-    expect(refused?.[0].body).toContain("/staff");
+    expect(refused?.[0].body).toContain(
+      "Nothing was created and no AI was asked."
+    );
     expect(listJobs()).toHaveLength(0);
   });
 
   it("creates the bounded Task once the Function is staffed", async () => {
     await startProductSafety();
     await addProductSafetyWorker();
+    ensureTestSigner({ enterpriseId: getEnterpriseByIdOrName("Ethical Toys")!.id });
 
     // What /staff persists. The command itself asks a model for the proposal,
     // so the chapter tells the reader the wording will vary; the assignment
@@ -435,6 +428,14 @@ describe("Chapter 7 walkthrough", () => {
           ) ?? ""
       )?.[1] ?? "";
     await handleCommandMenuReply(noneNumber);
+
+    // Start a task now asks for a work type, then a go-ahead, before anything
+    // is created. Nothing is pre-selected.
+    const typeAsk = await handleCommandMenuReply("");
+    expect((typeAsk?.[0].body ?? "").replace(/\s+/g, " ")).toContain("What kind of work is this?");
+    const goAhead = await handleCommandMenuReply("1");
+    expect((goAhead?.[0].body ?? "").replace(/\s+/g, " ")).toContain("Work type:");
+    await handleCommandMenuReply("1");
 
     expect(isCommandMenuActive()).toBe(false);
     expect(listJobs().length).toBeGreaterThan(0);

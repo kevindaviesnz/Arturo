@@ -33,7 +33,7 @@ import {
 
 import {
   clearEnterprises,
-  createAndSaveEnterprise,
+  createAndSaveEnterprise as persistEnterprise,
 } from "../enterprise/enterpriseStore";
 
 import {
@@ -67,6 +67,18 @@ import {
   publishConfiguredEventsForCompletedJob,
   resolveVerifiedWebSearchEvidence,
 } from "./jobCompletionEventPublisher";
+
+import { ensureTestSigner } from "../testing/cliTestSetup";
+
+function createAndSaveEnterprise(
+  input: Parameters<typeof persistEnterprise>[0]
+): ReturnType<typeof persistEnterprise> {
+  const enterprise = persistEnterprise(input);
+  ensureTestSigner({ enterpriseId: enterprise.id });
+  return enterprise;
+}
+
+
 
 let temporaryDirectory:
   string;
@@ -190,7 +202,9 @@ function createScienceCompletionFixture() {
     },
   });
   // The downstream Task is created through createTask (C1), which needs the
-  // Function to be staffed, as it does for a person's Task.
+  // Function to be staffed, as it does for a person's Task. Every Function at
+  // the business must be staffed, including Discovery.
+  saveStaffingAssignment({ businessFunctionId: discovery.id, workerName: researcher.name, role: "ai", rationale: "test" });
   saveStaffingAssignment({ businessFunctionId: summary.id, workerName: "Science Summary Worker", role: "ai", rationale: "test" });
   const queued =
     enqueueJob(

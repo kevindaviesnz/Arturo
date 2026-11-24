@@ -203,7 +203,7 @@ const WRONG_PERSON_TEXT = /\bassigned to\b[^.]*\bnot\b/i;
  * which carry none of the words above, so Amy saw them under "[Task
  * created]" (addendum 1, "Amy after the demo").
  */
-const NOTHING_HAPPENED_TEXT = /\bNothing was (started|recorded|opened|created)\./;
+const NOTHING_HAPPENED_TEXT = /\bNothing was (started|recorded|opened|created)\b/;
 
 /**
  * Whether captured output is reporting a refusal.

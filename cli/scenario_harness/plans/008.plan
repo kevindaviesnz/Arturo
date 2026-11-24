@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Harbour Bank NZ
 Protect customer services through controlled, evidence-led security operations.
-skip
+q
 /function
 1
 Incident Response
@@ -23,6 +22,9 @@ skip
 /task
 1
 Using a synthetic alert description only, prepare an incident triage plan for unusual employee authentication activity. Separate known facts, hypotheses, evidence requests, severity criteria, customer-impact questions, and authorised containment decision points. Do not claim access to telemetry and do not execute containment.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

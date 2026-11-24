@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Pacific Climate Research Institute
 Maintain useful, transparent, and uncertainty-aware climate evidence briefings.
-skip
+q
 /function
 1
 Climate Evidence Synthesis
@@ -26,6 +25,9 @@ skip
 /task
 1
 Frame the evidence questions for a coastal-flooding briefing for a specified New Zealand region: observed versus projected data needed, tide and storm-surge uncertainty, key assumptions, and what must be verified against primary sources. Do not invent figures or claim data access.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

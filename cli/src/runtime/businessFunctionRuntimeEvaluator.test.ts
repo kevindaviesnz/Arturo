@@ -22,7 +22,7 @@ import {
 
 import {
   clearEnterprises,
-  createAndSaveEnterprise,
+  createAndSaveEnterprise as persistEnterprise,
 } from "../enterprise/enterpriseStore";
 
 import {
@@ -61,6 +61,18 @@ import {
 
 import { clearStaffingAssignments, saveStaffingAssignment } from "../staffing/staffingStore";
 import { clearNextActions } from "./nextActions";
+
+import { ensureTestSigner } from "../testing/cliTestSetup";
+
+function createAndSaveEnterprise(
+  input: Parameters<typeof persistEnterprise>[0]
+): ReturnType<typeof persistEnterprise> {
+  const enterprise = persistEnterprise(input);
+  ensureTestSigner({ enterpriseId: enterprise.id });
+  return enterprise;
+}
+
+
 
 // A Function's Task from an Event is created through createTask (C1), which
 // refuses work for a Function nobody is staffed on, as it does for a person.

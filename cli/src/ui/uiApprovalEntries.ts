@@ -93,8 +93,8 @@ export function createApprovalWorkStreamEntry(
       // Who may decide was recorded by the staffing plan but never shown here,
       // so the operator could not tell whom to ask — or that it mattered.
       designatedApprovers.length > 0
-        ? `Who can approve: ${designatedApprovers.join(", ")}`
-        : "Who can approve: anyone on your team with the approve role (that can be you)",
+        ? `Who can give a go-ahead: ${designatedApprovers.join(", ")}`
+        : "Who can give a go-ahead: anyone on your team who can sign off work and give go-aheads (that can be you)",
       ...(chain.status === "pending"
         ? [
             "",

@@ -9,6 +9,7 @@ import {
   handleNextReviewReply,
   clearNextReview,
 } from "./uiCommandHandlers";
+import { commandContinuesSetup, isSetupFlowActive } from "../setup/setupFlow";
 import { clearStaffReview, handleUiStaffConfirmation, isStaffReviewActive, handleStaffReviewReply } from "./uiStaffingEntries";
 import { handleUiSuggestConfirmation } from "./uiSuggestEntries";
 import { clearPendingModelState, handleUiModelReply, isModelMenuActive } from "./uiModelEntries";
@@ -77,13 +78,17 @@ export function classifyUiLine(
  *
  * SIDE EFFECT: Clears whichever flow state was set.
  */
-function endOpenQuestion(): string | undefined {
+function namedAbandon(subject: string | undefined): { subject: string; unsaved: boolean } | undefined {
+  return subject ? { subject, unsaved: true } : undefined;
+}
+
+function endOpenQuestion(): { subject: string; unsaved: boolean } | undefined {
   const open =
     abandonCommandMenu() ??
-    abandonAddHumanWorkerFlow() ??
-    (isStaffReviewActive() ? "reviewing the suggested team" : undefined) ??
-    (isNextReviewActive() ? "reviewing the suggested Functions" : undefined) ??
-    (isModelMenuActive() ? "choosing a model" : undefined);
+    namedAbandon(abandonAddHumanWorkerFlow()) ??
+    namedAbandon(isStaffReviewActive() ? "reviewing the suggested team" : undefined) ??
+    namedAbandon(isNextReviewActive() ? "reviewing the suggested Functions" : undefined) ??
+    namedAbandon(isModelMenuActive() ? "choosing a model" : undefined);
   // Cleared unconditionally: naming the first one open is for the operator,
   // but leaving a second one set would reintroduce the same bug behind it.
   clearStaffReview();
@@ -227,15 +232,25 @@ export async function routeUiLine(
     // person swallowed the "yes" confirming a staffing plan, the staffing was
     // never applied, and the Task that needed those Workers failed several
     // steps later with "no Worker assigned to it".
-    const abandoned = endOpenQuestion();
+    //
+    // /setup and bare /enterprise are the same route, so they resume rather
+    // than abandon an open setup conversation.
+    const abandoned = commandContinuesSetup(parsed.command, parsed.args) && isSetupFlowActive()
+      ? undefined
+      : endOpenQuestion();
     const entries = await handleUiCommand(parsed.command, parsed.args);
+    const stopped = abandoned
+      ? abandoned.unsaved
+        ? `You were ${abandoned.subject}. That is not saved — nothing was created.`
+        : `You were ${abandoned.subject}. What was already saved is still there. Type /setup to continue.`
+      : undefined;
     return {
-      entries: abandoned
+      entries: stopped
         ? [
             {
               actor: "Arturo",
               label: "Stopped part-way",
-              body: `You were ${abandoned}. That is not saved — nothing was created.`,
+              body: stopped,
             },
             ...entries,
           ]

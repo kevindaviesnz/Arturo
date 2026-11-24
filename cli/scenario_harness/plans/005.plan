@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Asteria Therapeutics
 Frame research questions with scientific caution and accountable human oversight.
-skip
+q
 /function
 1
 Discovery Framing
@@ -21,6 +20,9 @@ skip
 /task
 1
 For a hypothetical neurodegenerative-disease programme, create a non-operational research-question map covering mechanism uncertainty, evidence types needed, reproducibility, translational risk, safety unknowns, and stop criteria. Do not invent studies or provide laboratory, synthesis, dosing, or clinical instructions.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

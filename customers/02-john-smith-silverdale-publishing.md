@@ -28,7 +28,9 @@ John sets up Silverdale Publishing in Arturo from scratch, accepts suggested Bus
 2. **Enforced Check:** On **Manuscript review**, he enables **Require a document** and a **5,000-word limit** in code. Uploading a missing or oversized manuscript is refused before any AI call runs.
 3. **AI Check Before Sign-Off:** He sets **Write book blurbs** to send drafts to **Manuscript review** for an AI check first. The task page displays *"Checked by Manuscript review AI worker, not by a person"* with a point count (never a pass/fail tick).
 4. **Two-Step Route:** He configures a route on **Rights enquiries** (pausing after step 1 for his sign-off) and signs off each resulting document individually — with no "Sign off all" button.
-5. **Team Permissions:** John invites *Dana Editor* via an invite code. Dana signs in, can view work and draft requests, but cannot sign off results or create new workers until John grants sign-off rights.
+5. **Work type:** Every Task for an AI worker is given a work type, picked by John, with no default.
+6. **Team Permissions:** John invites *Dana Editor* via an invite code. Dana signs in, can view work and draft requests, but cannot sign off results or create new workers until John grants sign-off rights. Until Dana can sign in, John can attach an owner-only note that she accepted a draft by email; it is never recorded as Dana signing off.
+7. **Staff later:** John can add, change or remove people and AI workers at any time from a staff menu. If someone loses the sign-off right, their waiting drafts come back to John to name a new signer.
 
 ## MVP Pass / Fail Criteria
 

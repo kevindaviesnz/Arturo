@@ -1,3 +1,4 @@
+import { refuseStartIfNotReady } from "../business/staffCheck";
 import {
   enqueueJob,
   requestJobApproval,
@@ -73,6 +74,14 @@ export function queueWorkflowExecutionForRun(
 
   const isOperatorStep =
     firstStep.archetype === "operator";
+
+  const startBlocked =
+    refuseStartIfNotReady({
+      enterpriseId,
+    });
+  if (startBlocked) {
+    throw new Error(startBlocked);
+  }
 
   const job =
     enqueueJob(
@@ -191,6 +200,14 @@ export function queueWorkflowExecution(
   readonly workflowRunId: string;
   readonly jobIds: readonly string[];
 } {
+  const startBlocked =
+    refuseStartIfNotReady({
+      enterpriseId,
+    });
+  if (startBlocked) {
+    throw new Error(startBlocked);
+  }
+
   const run =
     createWorkflowRun(
       plan.objective,

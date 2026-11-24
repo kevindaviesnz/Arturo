@@ -1,3 +1,4 @@
+import { refuseTypedWorkSettingCommand, resolveEnterpriseIdForTypedWorkCheck } from "../work/workLocks";
 import {
   createWorkflowPlan,
 } from "../agents/createWorkflowPlan";
@@ -326,6 +327,14 @@ export function buildReusableWorkflowPlannerRequest(
 export async function createGeneratedWorkflow(
   args: readonly string[]
 ): Promise<GeneratedWorkflowResult> {
+  const enterpriseFlag = args.indexOf("--enterprise");
+  const blocked = refuseTypedWorkSettingCommand(
+    resolveEnterpriseIdForTypedWorkCheck(enterpriseFlag >= 0 ? String(args[enterpriseFlag + 1] ?? "") : undefined),
+    "workflow",
+  );
+  if (blocked) {
+    throw new Error(blocked);
+  }
   if (
     args[0] ===
     "create"

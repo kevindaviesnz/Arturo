@@ -23,7 +23,7 @@ import {
 
 import {
   clearEnterprises,
-  createAndSaveEnterprise,
+  createAndSaveEnterprise as persistEnterprise,
 } from "../enterprise/enterpriseStore";
 
 import {
@@ -40,6 +40,18 @@ import {
   handleTaskCreateCommand,
   parseTaskCreateOptions,
 } from "./taskRoutingCommands";
+
+import { ensureTestSigner } from "../testing/cliTestSetup";
+
+function createAndSaveEnterprise(
+  input: Parameters<typeof persistEnterprise>[0]
+): ReturnType<typeof persistEnterprise> {
+  const enterprise = persistEnterprise(input);
+  ensureTestSigner({ enterpriseId: enterprise.id });
+  return enterprise;
+}
+
+
 
 function createSafetyJob(): {
   readonly enterpriseId: string;
@@ -344,7 +356,8 @@ describe("handleTaskCreateCommand", () => {
         label: "Backup Operations",
         objective: "Create and verify recoverable backups.",
       });
-    createAndSaveBusinessFunctionDefinition({
+    const supportJob =
+      createAndSaveBusinessFunctionDefinition({
       id: `${enterprise.id}:support`,
       enterpriseId: enterprise.id,
       label: "Customer Support",
@@ -361,6 +374,18 @@ describe("handleTaskCreateCommand", () => {
     staffJob(
       backupJob.id,
       "Backup Operations Assistant"
+    );
+    addWorker({
+      name: "Customer Support Assistant",
+      kind: "ai",
+      archetype: "assistant",
+      run: function* (input: unknown) {
+        return input;
+      },
+    });
+    staffJob(
+      supportJob.id,
+      "Customer Support Assistant"
     );
 
     handleTaskCreateCommand([
@@ -487,7 +512,7 @@ describe("handleTaskCreateCommand", () => {
     expect(listJobs()).toHaveLength(0);
     expect(console.log).toHaveBeenCalledWith(
       expect.stringContaining(
-        "/staff"
+        "Product Safety needs an AI worker. Nothing was created and no AI was asked."
       )
     );
   });

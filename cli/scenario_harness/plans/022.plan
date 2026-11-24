@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Kauri University Research Office
 Support sound research administration with accountable human decisions on every submission.
-skip
+q
 /function
 1
 Grant Readiness
@@ -25,6 +24,9 @@ skip
 /task
 1
 Using synthetic assumptions only, draft a grant-readiness checklist for a research funding application: eligibility, ethics approval status, data-management plan, budget justification, and named gaps that must be resolved before submission. Do not claim access to a real application.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

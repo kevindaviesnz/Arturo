@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Northstar Outfitters
 Recommend the right outdoor gear using evidence, not guesswork, with a person accountable for every launch decision.
-skip
+q
 /function
 1
 Product Assessment
@@ -21,6 +20,9 @@ skip
 /task
 1
 Assess a proposed hiking-gear recommendation feature. Identify user value, required inputs, privacy risks, failure modes, accessibility concerns, evidence gaps, and a smallest testable version. Do not claim access to catalogue, weather, customer, or repository data.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

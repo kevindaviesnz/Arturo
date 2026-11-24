@@ -4,10 +4,9 @@ yes
 @timeout 240
 /overview
 /enterprise
-1
 BrightPath Studio
 Help independent professionals explain their services clearly to prospective customers.
-skip
+q
 /enterprise
 3
 /function
@@ -25,6 +24,9 @@ skip
 /task
 1
 BrightPath Studio helps independent professionals write clear service-page content. Its standard package includes a 45-minute discovery call, a first draft, and one revision. It does not include website design, technical setup, or publishing. Using only these supplied facts, identify the three most important points the service page should make clear. Do not claim customer research.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 25
 @cap TASK_ID {(task-[0-9]+)}
