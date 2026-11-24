@@ -153,7 +153,7 @@ export function signInRequired(): boolean {
 }
 
 /** SIDE EFFECT: Reads the authority log and the signing secret. */
-function logAuthorityChange(change: Omit<AuthorityChange, "prevSha256" | "signature">): void {
+export function logAuthorityChange(change: Omit<AuthorityChange, "prevSha256" | "signature">): void {
   const earlier = loadAuthorityChanges();
   const prevSha256 = earlier.length ? sha256(JSON.stringify(earlier[earlier.length - 1])) : "";
   const payload = { ...change, prevSha256 };
@@ -606,6 +606,14 @@ export function setSignOffRight(input: { readonly enterpriseId: string; readonly
   setHumanWorkerSignOff(person, input.canSignOff);
   const by = input.actor?.workerName ?? "the terminal";
   recordGrant(input.enterpriseId, person, input.canSignOff, by, input.actor?.userId, now);
+  if (input.canSignOff) {
+    // Tama overlap / Tama fix: granting the right creates the account in the
+    // same signed step, so the signer appears in the staff list with a
+    // membership and maySignOff can see the grant once sign-in is on.
+    const existing = membershipOf(input.enterpriseId, person);
+    const role = existing?.role ?? (ownerCount(input.enterpriseId) > 0 ? "member" : "owner");
+    ensureUser(input.enterpriseId, person, role);
+  }
   logAuthorityChange({ enterpriseId: input.enterpriseId, what: input.canSignOff ? "may sign off work" : "may no longer sign off work", person, by, ...(input.actor ? { byUserId: input.actor.userId } : {}), at: now });
   return { message: input.canSignOff ? `${person} can now sign off work and give go-aheads.` : `${person} can no longer sign off work or give go-aheads.` };
 }

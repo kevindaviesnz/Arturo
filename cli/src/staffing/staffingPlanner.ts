@@ -631,7 +631,7 @@ export function assignUnambiguousApprovers(
   // accountable approver produces a plan the approval gate then rejects — the
   // two subsystems must agree, so a Human who cannot approve is never named
   // here. The plan is left with the requirement unassigned, and the operator is
-  // told they need an approving Human, not merely any Human.
+  // told they need a Human who can sign off work and give go-aheads, not merely any Human.
   const approvers =
     humans.filter(
       (worker) => isApprovalCapableMode(worker.humanMode)
@@ -652,7 +652,7 @@ export function assignUnambiguousApprovers(
           : {
               ...approval,
               workerName: approver.name,
-              rationale: `${endSentence(approval.rationale)} Assigned to ${approver.name}, the only registered Human Worker who can approve.`,
+              rationale: `${endSentence(approval.rationale)} Assigned to ${approver.name}, the only registered Human Worker who can sign off work and give go-aheads.`,
             }
     ),
   };

@@ -79,7 +79,7 @@ describe(
             // asking for human review. Claiming a rule would be false.
             "Why it needs you: This Task asks for human review.",
             "Signed off so far: 0 of 2",
-            "Who can approve: anyone on your team with the approve role (that can be you)",
+            "Who can give a go-ahead: anyone on your team who can sign off work and give go-aheads (that can be you)",
             "",
             "To approve:   /approve job-1",
             'To turn down: /reject job-1 "<reason>"',

@@ -43,7 +43,7 @@ describe("setting up a business and its clients", () => {
   it("does not make an owner of someone already registered who cannot approve, which would make 'can approve' untrue", () => {
     addWorker(createHumanWorker("Dana Editor"));
     const refused = setUpBusiness(["Silverdale Publishing", "--owner", "Dana Editor", "--about", "Children's books"]);
-    expect(refused).toMatchObject({ created: false, message: expect.stringContaining("cannot approve work") });
+    expect(refused).toMatchObject({ created: false, message: expect.stringContaining("cannot sign off work or give go-aheads") });
     expect(listEnterprises()).toHaveLength(0);
     expect(getWorker("Dana Editor")?.humanMode).not.toBe("approval");
     // Someone already registered who can approve may still become the owner.

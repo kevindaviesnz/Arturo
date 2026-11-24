@@ -77,9 +77,9 @@ describe("formatPlan", () => {
     expect(text).toContain("Resource Development (enterprise-1:function-1)");
     expect(text).toContain("Arturo added this, please review");
     expect(text).toContain(
-      'Nobody yet — add a person who can approve with /add-human-worker (that can be you).'
+      'Nobody yet — add a person who can sign off work and give go-aheads with /add-human-worker (that can be you).'
     );
-    expect(text).toContain("1 still needs a person to approve");
+    expect(text).toContain("1 still needs a person who can sign off work and give go-aheads");
     expect(text).toContain("Accountable approval is required.");
   });
 
@@ -203,7 +203,7 @@ describe("formatStaffingAppliedBody", () => {
     const body = formatStaffingAppliedBody(2, 3, "Product Safety", "Ethical Toys", [
       "Product Safety",
     ]);
-    expect(body).toContain("Product Safety still needs a person who can approve");
+    expect(body).toContain("Product Safety still needs a person who can sign off work and give go-aheads");
     expect(body).toContain("/add-human-worker");
     // Switch-free: the gap guidance no longer tells the user to type a flag.
     expect(body).not.toContain("--archetype guardian");
@@ -217,7 +217,7 @@ describe("formatStaffingAppliedBody", () => {
       "Product Safety",
       "Evidence Gathering",
     ]);
-    expect(body).toContain("two Functions still need a person who can approve");
+    expect(body).toContain("two Functions still need a person who can sign off work and give go-aheads");
     expect(body).toContain("· Product Safety");
     expect(body).toContain("· Evidence Gathering");
   });

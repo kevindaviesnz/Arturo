@@ -291,18 +291,18 @@ export function resolveApprovalCommandIdentity(
 
       if (registered.kind !== "human") {
         throw new Error(
-          `${requestedName} is a registered AI Worker, and only a Human can approve. Register a Human with /add-human-worker.`
+          `${requestedName} is a registered AI Worker, and only a Human can sign off work and give go-aheads. Register a Human with /add-human-worker.`
         );
       }
 
       if (registered.availability === "offline") {
         throw new Error(
-          `${requestedName} is registered as a Human but is marked offline, so cannot approve right now. Set their availability with /add-human-worker, or use another approver.`
+          `${requestedName} is registered as a Human but is marked offline, so cannot sign off work or give go-aheads right now. Set their availability with /add-human-worker, or use another approver.`
         );
       }
 
       throw new Error(
-        `${requestedName} is a registered Human but not an approval-capable Worker (their role does not include approving). Register an approving Human — for example --archetype guardian — with /add-human-worker.`
+        `${requestedName} is a registered Human but not an approval-capable Worker (their role does not include signing off work or giving go-aheads). Register a Human who can sign off work and give go-aheads — for example --archetype guardian — with /add-human-worker.`
       );
     }
 
@@ -322,7 +322,7 @@ export function resolveApprovalCommandIdentity(
 
   if (eligibleHumans.length === 0) {
     // Distinguish "nobody to approve" from "someone is registered but their role
-    // does not include approving". Telling an operator who just added a Human to
+    // does not include signing off work or giving go-aheads". Telling an operator who just added a Human to
     // "add a Human" sends them to repeat the step that did not work; a registered
     // Human in "task" mode needs an approving role, not another registration.
     const registeredHumans = listWorkers().filter(
@@ -339,13 +339,13 @@ export function resolveApprovalCommandIdentity(
         .map((worker) => worker.displayName ?? worker.name)
         .join(", ");
       throw new Error(
-        `${names} ${incapable.length === 1 ? "is registered as a Human" : "are registered as Humans"} but not approval-capable (their role does not include approving). Run /add-human-worker to add a person who can approve, then re-run /staff so the plan names them.`
+        `${names} ${incapable.length === 1 ? "is registered as a Human" : "are registered as Humans"} but not approval-capable (their role does not include signing off work or giving go-aheads). Run /add-human-worker to add a person who can sign off work and give go-aheads, then re-run /staff so the plan names them.`
       );
     }
 
     throw new Error(
       [
-        "No one is on record who can approve this yet.",
+        "No one is on record who can sign off work and give go-aheads yet.",
         "An approval is signed in a named person's name so there's an auditable",
         "record of who allowed the work — Arturo can't assume that's whoever is",
         "at the keyboard. Add that person first, even if it's you: run",
