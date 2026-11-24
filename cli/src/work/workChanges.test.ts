@@ -30,7 +30,7 @@ import { getPracticeSetting } from "./practiceSetting";
 import { getWork, listWorkChanges, verifyWorkChangeLog } from "./workStore";
 import { refuseWorkUnderLocks } from "./workLocks";
 import { handleWorkCommand } from "./workCommands";
-import { addMatterType, allowPaidEscalation, changeMatterType, describeNoAiEffects, noAiOffConfirmLine, setLawPractice, setWorkNoAi, unlockMatterType } from "./workChanges";
+import { addMatterType, allowPaidEscalation, changeMatterType, describeNoAiEffects, noAiOffConfirmLine, setLawPractice, setTypedWorkRequired, setWorkNoAi, unlockMatterType } from "./workChanges";
 
 const reset = () => {
   clearJobs(); clearResultSignOffs(); clearResultSetAsides(); clearClients(); clearWorkers(); clearStaffingAssignments(); clearBusinessFunctions();
@@ -147,6 +147,33 @@ describe("changing named work", () => {
       expect(refuseWorkUnderLocks({ workId: matter.id, when: "create" })).toContain("never goes to an AI worker");
       const later = open({ name: "Second trust", kind: "matter", matterType: "trusts", now: unlockedAt + 1 });
       expect(refuseWorkUnderLocks({ workId: later.id, when: "create" })).toBeUndefined();
+    });
+  });
+
+
+  describe("the setting 'AI work must belong to a typed piece of work'", () => {
+    it("tightening takes effect at once, and switching it off stays refused", () => {
+      const amy = signedInOwner();
+      expect(getPracticeSetting(enterpriseId).typedWorkRequired).toBe(false);
+      const on = setTypedWorkRequired({ enterpriseId, on: true, actor: amy });
+      expect(on).toEqual({ message: expect.stringContaining("The setting is on.") });
+      expect(getPracticeSetting(enterpriseId)).toMatchObject({ typedWorkRequired: true, state: "verified" });
+      expect(setTypedWorkRequired({ enterpriseId, on: true, actor: amy })).toMatchObject({ refusal: { code: "typed_work_unchanged" } });
+      const before = getPracticeSetting(enterpriseId);
+      expect(setTypedWorkRequired({ enterpriseId, on: false, reason: "We want general untyped work.", actor: amy })).toMatchObject({
+        refused: expect.stringContaining("not available yet"),
+        refusal: { code: "typed_work_off_not_available" },
+      });
+      expect(getPracticeSetting(enterpriseId)).toMatchObject({ typedWorkRequired: true, setting: { version: before.setting?.version } });
+      expect(setTypedWorkRequired({ enterpriseId, on: false, reason: "We want general untyped work.", actor: undefined })).toMatchObject({ refusal: { code: "owner_only" } });
+    });
+
+    it("turning the law-practice setting on switches the typed-work setting on, and turning the law-practice setting off does not loosen it", () => {
+      const amy = signedInOwner();
+      expect(setLawPractice({ enterpriseId, on: true, actor: amy })).not.toHaveProperty("refused");
+      expect(getPracticeSetting(enterpriseId)).toMatchObject({ lawPractice: true, typedWorkRequired: true });
+      expect(setLawPractice({ enterpriseId, on: false, reason: "We closed the practice.", actor: amy })).not.toHaveProperty("refused");
+      expect(getPracticeSetting(enterpriseId)).toMatchObject({ lawPractice: false, typedWorkRequired: true, state: "verified" });
     });
   });
 
@@ -267,7 +294,7 @@ describe("changing named work", () => {
       expect(rowCounts()).toEqual(before);
       expect(getPracticeSetting(enterpriseId).customMatterTypes).toEqual([{ id: "trusts", label: "Trusts", locked: true }]);
       expect(unlockMatterType({ enterpriseId, id: "trusts", reason: "Simple family trusts only.", actor: amy })).not.toHaveProperty("refused");
-      expect(listWorkChanges(enterpriseId).at(-1)).toMatchObject({ what: "matter type trusts unlocked", by: "Amy Wise", byUserId: amy.userId, reason: "Simple family trusts only.", at: expect.any(Number) });
+      expect(listWorkChanges(enterpriseId).at(-1)).toMatchObject({ what: "work type trusts unlocked", by: "Amy Wise", byUserId: amy.userId, reason: "Simple family trusts only.", at: expect.any(Number) });
       expect(verifyWorkChangeLog()).toBe(-1);
       runtimeDb.prepare("UPDATE work_changes SET record_json = replace(record_json, 'Simple family', 'Any') WHERE seq = (SELECT max(seq) FROM work_changes)").run();
       expect(verifyWorkChangeLog()).toBeGreaterThanOrEqual(0);
@@ -284,7 +311,7 @@ describe("changing named work", () => {
         expect(refuseWorkUnderLocks({ workId: open({ name: `A ${id} matter`, kind: "matter", matterType: id, matterNumber: `HL-${id}` }).id, when: "create" })).toContain("never goes to an AI worker");
       }
       // Built-in unlocked types aren't the owner's to lock or unlock either.
-      expect(unlockMatterType({ enterpriseId, id: "commercial", reason: "Why not.", actor: amy })).toMatchObject({ refused: expect.stringContaining("no added matter type") });
+      expect(unlockMatterType({ enterpriseId, id: "commercial", reason: "Why not.", actor: amy })).toMatchObject({ refused: expect.stringContaining("no added work type") });
       const after = rowCounts();
       expect({ ...after, work_records: before.work_records, work_changes: before.work_changes }).toEqual(before);
       expect(getPracticeSetting(enterpriseId).customMatterTypes).toEqual([]);

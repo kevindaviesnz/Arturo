@@ -31,6 +31,8 @@ import type { Account } from "../identity/companySignIn";
 import { getWebSearchConfiguration, type WebSearchConfiguration } from "../integrations/webSearchConfig";
 import { clearPersistedWebSearchSwitches, loadWebSearchSwitchRow, saveWebSearchSwitchRow } from "../storage/webSearchSwitchRepository";
 import { getPracticeSetting } from "../work/practiceSetting";
+import { isLockedMatterType } from "../work/workRecord";
+import { getWork } from "../work/workStore";
 import { getApprovalChain } from "./approvalChainStore";
 import { resolveApprovalGate } from "./approvalGate";
 import { WEB_SEARCH_QUERY_MAX_CHARS, WEB_SEARCH_REASON_MAX_CHARS } from "./chainLimits";
@@ -82,6 +84,7 @@ export const WEB_SEARCH_REFUSAL_CODES = [
   "web_search_words_too_long",
   "web_search_no_business",
   "web_search_on_matter",
+  "web_search_on_locked_work",
   "web_search_no_go_ahead",
 ] as const;
 
@@ -110,6 +113,7 @@ export const WEB_SEARCH_REFUSAL_WORDING: Readonly<Record<WebSearchRefusalCode, (
   web_search_words_too_long: () => `Keep the search words under ${WEB_SEARCH_QUERY_MAX_CHARS} characters.`,
   web_search_no_business: () => "A web step must belong to one business, so Arturo can check that business has web search on.",
   web_search_on_matter: () => "This is matter work at a law practice. Search words would come from the matter and leave the practice, so matter work never searches.",
+  web_search_on_locked_work: () => "This work is of a locked type, so it never searches. Search words would come from the work and leave the business.",
   web_search_no_go_ahead: (v) => `${v.taskId ?? "This web step"} has no signed go-ahead, so it doesn't search. A person gives each web step its own go-ahead.`,
 };
 
@@ -274,7 +278,14 @@ export function refuseWebStepRequest(input: { readonly enterpriseId?: string; re
   if (!words) return webSearchRefusal("web_search_no_words");
   if (words.length > WEB_SEARCH_QUERY_MAX_CHARS) return webSearchRefusal("web_search_words_too_long");
   if (!input.enterpriseId) return webSearchRefusal("web_search_no_business");
-  if (input.workId && getPracticeSetting(input.enterpriseId).lawPractice) return webSearchRefusal("web_search_on_matter");
+  if (input.workId && getPracticeSetting(input.enterpriseId).typedWorkRequired) return webSearchRefusal("web_search_on_matter");
+  if (input.workId) {
+    const standing = getWork(input.workId);
+    const setting = getPracticeSetting(input.enterpriseId);
+    if (standing.state === "verified" && standing.work.matterType && isLockedMatterType(standing.work.matterType, setting.customMatterTypes, standing.work.createdAt)) {
+      return webSearchRefusal("web_search_on_locked_work");
+    }
+  }
   return refuseWebSearchFor(input.enterpriseId, configuration);
 }
 

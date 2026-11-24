@@ -497,7 +497,7 @@ export function refuseFollowUpWork(
   // Work on a named piece of work comes straight back to a person: nothing
   // continues it on its own, as passing on and routes are off for it.
   if (source?.workId) return "the Task belongs to a named piece of work, and work on it is never continued automatically.";
-  // The rule for a law practice's Task that must belong to a matter, and the
+  // The rule for a law practice's Task that must belong to a typed piece of work, and the
   // refusal of anything naming a client with "no AI" work (work/workLocks.ts).
   const unbound = refuseTaskWithoutWork({
     enterpriseId: definition.enterpriseId ?? "",

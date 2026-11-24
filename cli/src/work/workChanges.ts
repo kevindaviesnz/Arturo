@@ -1,6 +1,6 @@
 /**
  * Opening named work and changing it: "no AI", a matter's type, paid
- * escalation, and the business's law-practice setting and matter types.
+ * escalation, and the business's law-practice setting and work types.
  *
  * Who may do what:
  *   - anyone who works at the business may open work; on a law practice,
@@ -9,7 +9,7 @@
  *     direction), at the terminal too, with no reason;
  *   - only the owner, signed in on the company page, may turn "no AI" off,
  *     switch on paid escalation, turn the law-practice setting on or off,
- *     add or unlock a matter type, change a matter from one unlocked type to
+ *     add or unlock a work type, change a matter from one unlocked type to
  *     another, or reopen a cancelled locked matter's number as an unlocked
  *     type. The terminal is refused inside refuseUnlessOwner itself, so the
  *     page and the terminal follow one rule. Each owner-only change that
@@ -247,7 +247,7 @@ export function cancelledTitleMatches(enterpriseId: string, name: string, kind: 
  * question nothing is written.
  *
  * Replacing cancelled work: with replacesWorkId, the newest record in that
- * chain is checked (resolveReplacement), and "no AI" and a locked matter type
+ * chain is checked (resolveReplacement), and "no AI" and a locked work type
  * are carried over only if it had them. If the check fails, the work opens
  * with "no AI" on and, for a matter, its type held locked. A matter number
  * held by cancelled work is reused only this way.
@@ -654,7 +654,7 @@ export function changeMatterType(input: { readonly workId: string; readonly matt
   logWorkChange({
     enterpriseId: work.enterpriseId,
     workId: work.id,
-    what: `matter type changed from ${work.matterType ?? "none"} to ${type}${work.typeHeld ? ", releasing the held type" : ""}`,
+    what: `work type changed from ${work.matterType ?? "none"} to ${type}${work.typeHeld ? ", releasing the held type" : ""}`,
     by,
     ...userOf(actor),
     reason,
@@ -663,7 +663,7 @@ export function changeMatterType(input: { readonly workId: string; readonly matt
   const cancelled: string[] = [];
   for (const id of before.cancellable) {
     try {
-      cancelJob(id, `Cancelled: the matter type of ${changed.name} was changed by ${by}. Nothing ticked before is sent again until someone asks.`);
+      cancelJob(id, `Cancelled: the work type of ${changed.name} was changed by ${by}. Nothing ticked before is sent again until someone asks.`);
       cancelled.push(id);
     } catch {
       // Started in the meantime: its result is set aside when it finishes.
@@ -703,10 +703,10 @@ export function addTypeChangeReason(input: { readonly workId: string; readonly r
   if ("refused" in who) return who;
   const reasonProblem = reasonRefusal(input.reason, actor);
   if (reasonProblem) return reasonProblem;
-  const last = listWorkChanges(work.enterpriseId, work.id).filter((entry) => entry.what.startsWith("matter type changed from ")).at(-1);
+  const last = listWorkChanges(work.enterpriseId, work.id).filter((entry) => entry.what.startsWith("matter type changed from ") || entry.what.startsWith("work type changed from ")).at(-1);
   if (!last) return refuse({ code: "type_unchanged", values: { name: work.name, type: matterTypeLabel(work.matterType ?? "", getPracticeSetting(work.enterpriseId).customMatterTypes).toLowerCase() } }, actor);
   const now = input.now ?? Date.now();
-  logWorkChange({ enterpriseId: work.enterpriseId, workId: work.id, what: `reason added for the matter type change at ${last.at}`, by: who.by, ...userOf(actor), reason: tidy(input.reason), at: now });
+  logWorkChange({ enterpriseId: work.enterpriseId, workId: work.id, what: `reason added for the work type change at ${last.at}`, by: who.by, ...userOf(actor), reason: tidy(input.reason), at: now });
   return { message: `The reason was added to the log for ${work.name}, in its own signed entry.` };
 }
 
@@ -766,6 +766,9 @@ export function setLawPractice(input: { readonly enterpriseId: string; readonly 
   saveSignedPracticeSetting({
     enterpriseId: input.enterpriseId,
     lawPractice: input.on,
+    // Turning a law practice on also switches the typed-work setting on.
+    // Turning the law-practice setting off must not loosen it.
+    typedWorkRequired: input.on ? true : standing.typedWorkRequired,
     customMatterTypes: standing.customMatterTypes,
     version: (standing.setting?.version ?? 0) + 1,
     changedBy: by,
@@ -776,19 +779,52 @@ export function setLawPractice(input: { readonly enterpriseId: string; readonly 
   logWorkChange({ enterpriseId: input.enterpriseId, what: input.on ? "law-practice setting turned on" : "law-practice setting turned off", by, ...userOf(input.actor), ...(tidy(input.reason) ? { reason: tidy(input.reason) } : {}), at: now });
   return {
     message: input.on
-      ? "This business is now a law practice: every matter needs a matter number and a matter type, and will, court, dispute and the other locked types never go to an AI worker."
+      ? "This business is now a law practice: every matter needs a matter number and a work type, and will, court, dispute and the other locked types never go to an AI worker."
       : "The law-practice setting is off. Matters already of a locked type stay locked, and each affected matter says the setting is off.",
   };
 }
 
 /**
- * Adds a matter type. A new type starts locked until the owner unlocks it.
+ * Turns the general setting "AI work must belong to a typed piece of work"
+ * on or off. Tightening (on) takes effect at once, owner-only. Switching it
+ * off is an owner-only loosening step and stays refused until a terminal
+ * route is designed (Grace).
+ *
+ * SIDE EFFECT: May write the setting and append to the change log.
+ */
+export function setTypedWorkRequired(input: { readonly enterpriseId: string; readonly on: boolean; readonly reason?: string; readonly actor: Actor; readonly now?: number }): { readonly message: string } | Refusal {
+  const refusal = ownerOnly(input.actor, input.enterpriseId, "change whether AI work must belong to a typed piece of work");
+  if (refusal) return refusal;
+  if (!input.on) return refuse({ code: "typed_work_off_not_available" }, input.actor);
+  if (!signInOn(input.enterpriseId)) return refuse({ code: "sign_in_off" }, input.actor);
+  const standing = settingToChange(input.enterpriseId, input.actor);
+  if ("refused" in standing) return standing;
+  if (standing.typedWorkRequired === true) return refuse({ code: "typed_work_unchanged", values: { state: "on" } }, input.actor);
+  const now = input.now ?? Date.now();
+  const by = byOf(input.actor);
+  saveSignedPracticeSetting({
+    enterpriseId: input.enterpriseId,
+    lawPractice: standing.lawPractice,
+    typedWorkRequired: true,
+    customMatterTypes: standing.customMatterTypes,
+    version: (standing.setting?.version ?? 0) + 1,
+    changedBy: by,
+    ...(input.actor ? { changedByUserId: input.actor.userId } : {}),
+    at: now,
+    ...(tidy(input.reason) ? { reason: tidy(input.reason) } : {}),
+  });
+  logWorkChange({ enterpriseId: input.enterpriseId, what: "AI work must belong to a typed piece of work: turned on", by, ...userOf(input.actor), ...(tidy(input.reason) ? { reason: tidy(input.reason) } : {}), at: now });
+  return { message: "AI work must belong to a typed piece of work at this business. The setting is on." };
+}
+
+/**
+ * Adds a work type. A new type starts locked until the owner unlocks it.
  * There is no unlocked "Other".
  *
  * SIDE EFFECT: May write the setting and append to the change log.
  */
 export function addMatterType(input: { readonly enterpriseId: string; readonly id: string; readonly label: string; readonly actor: Actor; readonly now?: number }): { readonly message: string } | Refusal {
-  const refusal = ownerOnly(input.actor, input.enterpriseId, "add a matter type");
+  const refusal = ownerOnly(input.actor, input.enterpriseId, "add a work type");
   if (refusal) return refusal;
   const id = tidy(input.id).toLowerCase();
   const label = tidy(input.label);
@@ -803,18 +839,19 @@ export function addMatterType(input: { readonly enterpriseId: string; readonly i
   saveSignedPracticeSetting({
     enterpriseId: input.enterpriseId,
     lawPractice: standing.lawPractice,
+    typedWorkRequired: standing.typedWorkRequired,
     customMatterTypes: [...standing.customMatterTypes, { id, label, locked: true }],
     version: (standing.setting?.version ?? 0) + 1,
     changedBy: by,
     ...(input.actor ? { changedByUserId: input.actor.userId } : {}),
     at: now,
   });
-  logWorkChange({ enterpriseId: input.enterpriseId, what: `matter type ${id} ("${label}") added, locked`, by, ...userOf(input.actor), at: now });
+  logWorkChange({ enterpriseId: input.enterpriseId, what: `work type ${id} ("${label}") added, locked`, by, ...userOf(input.actor), at: now });
   return { message: `Added ${label}. It is locked: nothing on it goes to an AI worker until you unlock it.` };
 }
 
 /**
- * Unlocks a matter type the owner added, with a typed reason. The fixed locked
+ * Unlocks a work type the owner added, with a typed reason. The fixed locked
  * types (will, court, dispute and the others) have no off switch.
  *
  * The unlock applies only to matters opened afterwards (Grace's ruling): the
@@ -834,7 +871,7 @@ export function unlockMatterType(input: { readonly enterpriseId: string; readonl
   const id = tidy(input.id).toLowerCase();
   if (isFixedLockedMatterType(id)) return refuse({ code: "type_no_off_switch", values: { type: matterTypeLabel(id) } }, input.actor);
   if (id === "other") return refuse({ code: "type_other" }, input.actor);
-  const refusal = ownerOnly(input.actor, input.enterpriseId, "unlock a matter type");
+  const refusal = ownerOnly(input.actor, input.enterpriseId, "unlock a work type");
   if (refusal) return refusal;
   const reasonProblem = reasonRefusal(input.reason, input.actor);
   if (reasonProblem) return reasonProblem;
@@ -848,6 +885,7 @@ export function unlockMatterType(input: { readonly enterpriseId: string; readonl
   saveSignedPracticeSetting({
     enterpriseId: input.enterpriseId,
     lawPractice: standing.lawPractice,
+    typedWorkRequired: standing.typedWorkRequired,
     customMatterTypes: standing.customMatterTypes.map((one) => (one.id === id ? { ...one, locked: false, unlockedAt: now } : one)),
     version: (standing.setting?.version ?? 0) + 1,
     changedBy: by,
@@ -855,7 +893,7 @@ export function unlockMatterType(input: { readonly enterpriseId: string; readonl
     at: now,
     reason: tidy(input.reason),
   });
-  logWorkChange({ enterpriseId: input.enterpriseId, what: `matter type ${id} unlocked`, by, ...userOf(input.actor), reason: tidy(input.reason), at: now });
+  logWorkChange({ enterpriseId: input.enterpriseId, what: `work type ${id} unlocked`, by, ...userOf(input.actor), reason: tidy(input.reason), at: now });
   return { message: `${type.label} is unlocked. Matters opened from now on as ${type.label} may go to an AI worker when someone asks and gives the go-ahead. Matters already open as ${type.label} stay locked.` };
 }
 

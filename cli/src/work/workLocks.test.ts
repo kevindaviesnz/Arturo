@@ -18,6 +18,7 @@ import { clearStaffingAssignments } from "../staffing/staffingStore";
 import { clearPolicyRules } from "../storage/policyRepository";
 import { runtimeDb } from "../storage/runtimeDatabase";
 import { clearPracticeSettings, saveSignedPracticeSetting } from "./practiceSetting";
+import { refuseWebStepRequest } from "../runtime/webSearchSwitch";
 import { createWork, type CreateWorkInput } from "./workChanges";
 import type { WorkRecord } from "./workRecord";
 import { clearWork } from "./workStore";
@@ -30,7 +31,7 @@ import { startRuntimeForBusinessFunction } from "../repl/runtimeCommands";
 import { getBusinessFunctionDefinition } from "../business/businessFunctionDefinitionStore";
 import { completeJob, getJob } from "../runtime/jobQueue";
 import { listRuntimeEventStore } from "../runtime/runtimeEventStore";
-import { refuseTaskWithoutWork, refuseWorkUnderLocks } from "./workLocks";
+import { refuseTaskWithoutWork, refuseTypedWorkSettingCommand, refuseWorkUnderLocks, TYPED_WORK_SETTING_REFUSALS } from "./workLocks";
 import { setWorkNoAi } from "./workChanges";
 
 const reset = () => {
@@ -170,7 +171,7 @@ describe("the locks on named work, when a Task is created", () => {
   });
 });
 
-describe("when a law practice's Task must belong to a matter (addendum 1)", () => {
+describe("when a law practice's Task must belong to a typed piece of work (addendum 1)", () => {
   beforeEach(() => { setUp(); lawPractice(); });
   afterEach(() => { vi.restoreAllMocks(); reset(); });
 
@@ -257,10 +258,10 @@ describe("only matters on a law practice (Amy, addendum 1)", () => {
     expect(task("Draft the leave policy.", "--work", office.id).created).toBe(true);
     lawPractice();
     for (const work of [office, book, deal]) {
-      expect(refuseWorkUnderLocks({ workId: work.id, when: "start" }), work.name).toContain("open a matter with a number and type first");
+      expect(refuseWorkUnderLocks({ workId: work.id, when: "start" }), work.name).toContain("AI work must belong to a typed piece of work");
     }
     const before = rowCounts();
-    expect(task("Draft the leave policy.", "--work", office.id)).toMatchObject({ created: false, message: expect.stringContaining("Office admin is not a matter.") });
+    expect(task("Draft the leave policy.", "--work", office.id)).toMatchObject({ created: false, message: expect.stringContaining("Office admin is not a typed piece of work.") });
     expect(rowCounts()).toEqual(before);
   });
 });
@@ -281,7 +282,7 @@ describe("the paths that skip createTask", () => {
     );
     expect(listJobs().length).toBe(before);
     expect(publication.evaluations).toHaveLength(1);
-    expect(JSON.stringify(listRuntimeEventStore())).toContain("must belong to a matter");
+    expect(JSON.stringify(listRuntimeEventStore())).toContain("must belong to a typed piece of work");
   });
 
   it("an Event from a Task on named work is never read by a model", async () => {
@@ -311,8 +312,77 @@ describe("the paths that skip createTask", () => {
     const schedule = addEventScheduleFromArgs(["add", "Check in with Jane Smithers.", "--every", "daily", "--at", "06:00", "--timezone", "Pacific/Auckland", "--function", "Drafting", "--enterprise", enterpriseId]);
     lawPractice();
     const results = await runDueEventSchedules(schedule.nextRunAt);
-    expect(results).toEqual([expect.objectContaining({ status: "skipped", reason: expect.stringContaining("must belong to a matter") })]);
+    expect(results).toEqual([expect.objectContaining({ status: "skipped", reason: expect.stringContaining("must belong to a typed piece of work") })]);
     expect(getJob(schedule.taskId)?.status).toBe("scheduled");
     clearEventSchedules();
+  });
+});
+
+describe("the general setting 'AI work must belong to a typed piece of work' (setup-and-staff final v3)", () => {
+  beforeEach(setUp);
+  afterEach(() => { vi.restoreAllMocks(); reset(); });
+
+  const typedWork = (id = enterpriseId, on = true, law = false) =>
+    saveSignedPracticeSetting({ enterpriseId: id, lawPractice: law, typedWorkRequired: on, customMatterTypes: [], version: 1, changedBy: "Amy Wise", at: 1 });
+
+  it("switches on for an existing law practice without the new field, and untyped work is refused", () => {
+    const office = open({ name: "Office admin", kind: "work" });
+    lawPractice();
+    expect(refuseWorkUnderLocks({ workId: office.id, when: "create" })).toContain("AI work must belong to a typed piece of work");
+    expect(refuseTypedWorkSettingCommand(enterpriseId, "workflow")).toBe(TYPED_WORK_SETTING_REFUSALS.workflow);
+  });
+
+  it("applies in a business that is not a law practice when the setting is on, and does not when it is off", () => {
+    typedWork(enterpriseId, true, false);
+    expect(refuseTaskWithoutWork({ enterpriseId, hasDocuments: true, instruction: "Review this." })).toContain("must belong to a typed piece of work");
+    expect(task("Draft a letter.", "--client", clientId).created).toBe(false);
+    typedWork(enterpriseId, false, false);
+    expect(refuseTaskWithoutWork({ enterpriseId, hasDocuments: true, instruction: "Review this." })).toBeUndefined();
+    expect(task("Draft a letter.", "--client", clientId).created).toBe(true);
+  });
+
+  it("a locked work type is refused in every business, whether the setting is on or off", () => {
+    typedWork(enterpriseId, false, false);
+    const will = open({ name: "A will", kind: "matter", matterType: "will", matterNumber: "W-1" });
+    expect(refuseWorkUnderLocks({ workId: will.id, when: "create" })).toContain("never goes to an AI worker");
+    typedWork(enterpriseId, true, false);
+    expect(refuseWorkUnderLocks({ workId: will.id, when: "send" })).toContain("never goes to an AI worker");
+  });
+
+  it("the four named refusals fire when the setting is on, each logged, and not when it is off", () => {
+    typedWork(enterpriseId, true, false);
+    for (const kind of ["workflow", "run", "recurring", "send"] as const) {
+      expect(refuseTypedWorkSettingCommand(enterpriseId, kind), kind).toBe(TYPED_WORK_SETTING_REFUSALS[kind]);
+    }
+    const before = rowCounts();
+    expect(() => addEventScheduleFromArgs(["add", "Draft the monthly office notes.", "--every", "daily", "--at", "06:00", "--timezone", "Pacific/Auckland", "--function", "Drafting", "--enterprise", enterpriseId]))
+      .toThrow(TYPED_WORK_SETTING_REFUSALS.recurring);
+    expect(rowCounts()).toEqual(before);
+    typedWork(enterpriseId, false, false);
+    for (const kind of ["workflow", "run", "recurring", "send"] as const) {
+      expect(refuseTypedWorkSettingCommand(enterpriseId, kind), kind).toBeUndefined();
+    }
+    const schedule = addEventScheduleFromArgs(["add", "Draft the monthly office notes.", "--every", "daily", "--at", "06:00", "--timezone", "Pacific/Auckland", "--function", "Drafting", "--enterprise", enterpriseId]);
+    expect(schedule.taskId).toBeTruthy();
+    clearEventSchedules();
+  });
+
+  it("recurring and scheduled AI work on locked work stays refused when the setting is on, drafts included", () => {
+    typedWork(enterpriseId, true, false);
+    const will = open({ name: "A will", kind: "matter", matterType: "will", matterNumber: "W-1" });
+    expect(refuseWorkUnderLocks({ workId: will.id, when: "start" })).toContain("never goes to an AI worker");
+    const before = rowCounts();
+    expect(() => addEventScheduleFromArgs(["add", "Draft the will.", "--every", "daily", "--at", "06:00", "--timezone", "Pacific/Auckland", "--function", "Drafting", "--enterprise", enterpriseId]))
+      .toThrow("Nothing was scheduled.");
+    expect(rowCounts()).toEqual(before);
+  });
+
+  it("web search is refused on typed work when the setting is on, and on a locked type in every business when it is off", () => {
+    const lease = open({ name: "Lease", kind: "matter", matterType: "property", matterNumber: "HL-2" });
+    const will = open({ name: "A will", kind: "matter", matterType: "will", matterNumber: "W-2" });
+    typedWork(enterpriseId, true, false);
+    expect(refuseWebStepRequest({ enterpriseId, workId: lease.id, words: "search these words" })?.code).toBe("web_search_on_matter");
+    typedWork(enterpriseId, false, false);
+    expect(refuseWebStepRequest({ enterpriseId, workId: will.id, words: "search these words" })?.code).toBe("web_search_on_locked_work");
   });
 });
