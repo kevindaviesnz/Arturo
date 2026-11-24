@@ -1,3 +1,4 @@
+import { refuseAiStaffingOnFunction } from "../business/functionMark";
 import { runtimeDb } from "../storage/runtimeDatabase";
 
 export type StaffingAssignment = {
@@ -8,6 +9,8 @@ export type StaffingAssignment = {
 };
 
 export function saveStaffingAssignment(assignment: StaffingAssignment): void {
+  const refused = refuseAiStaffingOnFunction(assignment.businessFunctionId, assignment.role);
+  if (refused) throw new Error(refused);
   runtimeDb.prepare(`
     INSERT OR REPLACE INTO business_function_staffing
       (business_function_id, worker_name, role, human_approval_required, rationale)
