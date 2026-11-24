@@ -20,7 +20,7 @@ types.
 Chapter 6 ended with Arturo refusing to create a Task:
 
 ```text
-Product Safety has no Worker assigned to it, so there is nobody to do this.
+Product Safety needs an AI worker and someone who can sign off. Nothing was created and no AI was asked.
 ```
 
 That refusal is what this chapter answers. If you have not seen it, work through
@@ -97,19 +97,20 @@ Check:
 - availability is available; and
 - capabilities include safety-related work.
 
-## 4. Assign the Worker to the Function
+## 4. Put staff in place
 
 You now have a Worker. Try Chapter 6's Task again and it will **still be
-refused**, with the same message.
-
-That is not a mistake. Registering a Worker puts it in the company. It does not
-put it behind any particular Function. Those are two separate acts, and this is
-the single easiest step to miss in Arturo — which is why Chapter 6 spent a page
-on the last line of that refusal:
+refused**, with the same message:
 
 ```text
-Registering a Worker does not assign it to a Function; /staff does that.
+Product Safety needs an AI worker and someone who can sign off. Nothing was created and no AI was asked.
 ```
+
+That is not a mistake. Registering a Worker puts it in the company. It does not
+assign it to a Function, and it does not give anyone the right to sign off.
+Those are separate acts, and this is the single easiest step to miss in
+Arturo. The staff step in `/setup`, or `/staff`, is what puts both in place: a
+person who can sign off, and an AI worker assigned to the Function.
 
 `/staff` is what assigns Workers to Functions:
 
@@ -135,7 +136,8 @@ Product Safety should now show a staffed Worker.
 ## 5. Ask for the same Task again
 
 Now repeat the request Arturo refused in Chapter 6. Nothing about it has
-changed; what changed is that the Function has somebody behind it.
+changed; what changed is that staff are in place — a signer and an AI worker
+assigned to the Function.
 
 ```text
 /task

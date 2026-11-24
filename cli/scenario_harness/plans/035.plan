@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Meridian Telecom NOC
 Keep the network up with evidence-led analysis and accountable human control of every change.
-skip
+q
 /function
 1
 Fault Analysis
@@ -29,6 +28,9 @@ skip
 /task
 1
 Analyse a synthetic scenario where a regional link shows rising packet loss during peak hours: evidence needed, likely causes at a high level, customer-impact questions, and the change decisions a shift lead must make. Do not issue a network change.
+1
+1
+@note Work type, then go-ahead.
 1
 1
 @wait 20

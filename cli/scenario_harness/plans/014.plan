@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Larkfield Software
 Support customers quickly and honestly, with a person accountable for every judgement call.
-skip
+q
 /function
 1
 Support Triage
@@ -23,6 +22,9 @@ skip
 /task
 1
 Draft a triage rubric for inbound support tickets: severity levels, information needed from the customer, escalation criteria, and when a human must reply. Do not claim access to the ticket system or customer data.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

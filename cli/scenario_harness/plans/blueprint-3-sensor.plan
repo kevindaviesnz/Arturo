@@ -14,10 +14,9 @@ yes
 /clear
 @timeout 300
 /enterprise
-1
 Ashgrove Instruments
 Value and resell second-hand stringed instruments honestly.
-@blank
+q
 /function
 1
 Instrument Valuation
@@ -45,6 +44,9 @@ Back length 356mm. Two-piece back, medium flame. Old repaired crack in the upper
 1
 Set out what the luthier's findings mean for value, what the asking price should turn on, and what must be disclosed to a buyer. Do not state a price as though it were verified market data.
 2
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 240
 @note the record, end to end: both lists, both records in full, and the trail

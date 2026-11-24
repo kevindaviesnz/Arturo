@@ -3,10 +3,9 @@
 yes
 /model-routing
 /enterprise
-1
 Harbour Capital Partners
 Make evidence-based investment decisions within mandate and risk appetite.
-skip
+q
 /function
 1
 Investment Assessment
@@ -22,6 +21,9 @@ skip
 /task
 1
 Using hypothetical inputs only, assess a software company described as fast-growing and currently unprofitable. Build a decision framework covering evidence needed, unit economics, cash runway, concentration, governance, downside cases, valuation uncertainty, mandate fit, and reasons not to invest. Do not recommend a trade.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

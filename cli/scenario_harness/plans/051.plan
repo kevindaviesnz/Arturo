@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Harbourstone Architects
 Turn client instructions into reviewed specification versions with a named person accountable for every decision.
-skip
+q
 /function
 1
 Design Documentation
@@ -43,6 +42,9 @@ Received from the client outside Arturo.
 1
 Analyse the supplied client brief and list every requirement it states, every decision it leaves open, and the information still needed before a specification can be written.
 2
+1
+@note Work type, then go-ahead.
+1
 1
 @cap BRIEF_TASK {(task-[0-9]+)}
 skip
@@ -119,6 +121,9 @@ artefact-3@1
 Analyse the returned structural review comments against the approved specification version and list every clause they contradict, every clause they confirm, and what must change.
 2
 artefact-2@2,artefact-3@1
+@note Work type, then go-ahead.
+1
+1
 @cap RECONCILE {(task-[0-9]+)}
 artefact-3@1
 /tasks

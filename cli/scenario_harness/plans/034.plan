@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Beacon Platform Trust
 Moderate consistently and fairly, with a person accountable for every enforcement decision.
-skip
+q
 /function
 1
 Policy Framing
@@ -24,6 +23,9 @@ skip
 1
 Analyse, using a fully synthetic and anonymised example only, the moderation process for suspected coordinated inauthentic behaviour: signals to gather, false-positive risks, proportionate responses, appeal rights, and why a human must decide. Do not identify anyone or decide enforcement.
 1
+@note Work type, then go-ahead.
+1
+1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}
 /tasks
@@ -33,6 +35,9 @@ Analyse, using a fully synthetic and anonymised example only, the moderation pro
 /task
 1
 Revised analysis, fully synthetic and anonymised: analyse only the moderation process steps, signal thresholds, proportionality ladder, appeal rights, and the point a human must decide. No identities, no enforcement.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK2 {(task-[0-9]+)}

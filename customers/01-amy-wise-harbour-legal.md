@@ -26,7 +26,9 @@ A prospective small-business client emails Amy a lopsided draft services agreeme
 1. **Setup:** Amy starts Arturo in the terminal (`npm run ui` or `npm run try`) and runs `/setup` (business name, her owner account, and mission).
 2. **Client Intake:** She runs `/assistant` and `/talk` to add a fictional client (*Example Joinery Ltd*), confirming Arturo's read-back (and seeing the explicit reminder that Arturo does not run a legal conflict check).
 3. **Upload & Governed Go-Ahead:** She registers the `.docx` agreement with `/artefact add` and creates a Task under **Client Advice / Contract Review** (`/task create`). Because a deterministic Governance rule requires go-ahead for contract analysis, the Task pauses in `/approvals`.
-4. **Execution & Sign-Off:** Amy inspects the pending Task (`/task inspect`), gives the go-ahead (`/approve`), reads the finished clause list, and signs it off (`/task signoff`) or sets it aside (`/task setaside`) with a recorded reason.
+4. **Work type:** Every Task for an AI worker is given a work type, picked by a person, with no default. Locked types are marked.
+
+5. **Execution & Sign-Off:** Amy inspects the pending Task (`/task inspect`), gives the go-ahead (`/approve`), reads the finished clause list, and signs it off (`/task signoff`) or sets it aside (`/task setaside`) with a recorded reason.
 5. **Audit Check:** She checks `/governance`, `/approval-status`, and `/timeline` to verify the go-ahead, sign-off, and exact document fingerprint are recorded.
 
 ## MVP Pass / Fail Criteria

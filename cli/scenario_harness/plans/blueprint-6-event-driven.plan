@@ -10,10 +10,9 @@ yes
 /clear
 @timeout 300
 /enterprise
-1
 Kid Edu
 Publish educational articles on complex topics, written for young children.
-@blank
+q
 /function
 1
 Article Writing
@@ -47,6 +46,9 @@ article drafted
 /task
 1
 Write a short article explaining how rainbows form, for six year olds.
+1
+1
+@note Work type, then go-ahead.
 1
 1
 @wait 150

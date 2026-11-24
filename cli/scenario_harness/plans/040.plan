@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Maker Studio
 Estimate honestly from supplied data, with a person accountable for every quote.
-skip
+q
 /function
 1
 Cost Estimation

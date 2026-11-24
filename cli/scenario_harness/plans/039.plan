@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Portside Logistics
 Move cargo on time with evidence-led planning and accountable human decisions.
-skip
+q
 /function
 1
 Berth Scheduling
@@ -27,6 +26,9 @@ skip
 /task
 1
 Analyse a synthetic berth-scheduling scenario where two vessels request the same tide window: evidence needed, sequencing options at a high level, knock-on yard effects, and the decisions an operations manager must make. Do not commit a berth.
+1
+1
+@note Work type, then go-ahead.
 1
 1
 @wait 20

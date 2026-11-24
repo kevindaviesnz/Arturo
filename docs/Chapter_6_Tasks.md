@@ -65,34 +65,29 @@ Answer `1`, then:
 Arturo does not create the Task. It says:
 
 ```text
-Product Safety has no Worker assigned to it, so there is nobody to do this.
-
-  /staff
-
-Registering a Worker does not assign it to a Function; /staff does that.
+Product Safety needs an AI worker and someone who can sign off. Nothing was created and no AI was asked.
 ```
 
 **This is the chapter.** Nothing has gone wrong.
 
 You have described a piece of work and named the responsibility it belongs to.
-What you have not done is say who performs it. Arturo will not quietly pick
-somebody, and it will not accept work it cannot route — because a Task that
-exists but can never run is worse than one that was never created. It looks like
-progress.
+What you have not done is put staff in place. A Function is not ready for AI
+work until it has both: an AI worker assigned to it, and a person who can sign
+off. That is what the staff step in `/setup` does, and what `/staff` does later.
+Arturo will not quietly pick somebody, and it will not accept work it cannot
+route — because a Task that exists but can never run is worse than one that was
+never created. It looks like progress.
 
-Note the last line carefully, because it is the single easiest thing to get
-wrong in Arturo:
-
-> Registering a Worker does not assign it to a Function; `/staff` does that.
-
-Adding a Worker to the company and putting that Worker behind a particular
-Function are two separate acts. Chapter 7 does both, in that order.
+Note that carefully, because it is the single easiest thing to get wrong in
+Arturo: registering a Worker, or adding a person, is not enough on its own.
+The staff step or `/staff` is what puts both in place — a signer and an AI
+worker. Chapter 7 does that.
 
 ## Why a Task waits
 
 Once Tasks do exist, one can sit and not run. The honest reasons are:
 
-- no Worker is assigned to the Function that owns it;
+- staff are not yet in place (an AI worker and someone who can sign off);
 - no assigned Worker holds a capability the Task requires;
 - Governance is holding it until a person decides; or
 - it is queued and the Function has not reached it yet.

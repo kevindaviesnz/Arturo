@@ -8,10 +8,9 @@ yes
 /clear
 @timeout 300
 /enterprise
-1
 Bellhaven Supplies
 Pack and ship customer orders accurately and on time.
-@blank
+q
 /function
 1
 Order Preparation
@@ -30,6 +29,9 @@ Warehouse Lead
 /task
 1
 An order came in for two ceramic mugs, one boxed teapot and a card. Produce a pick list in bin order, state the box size and how the fragile items must be separated, and list what the packer must check before sealing.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 120
 /tasks

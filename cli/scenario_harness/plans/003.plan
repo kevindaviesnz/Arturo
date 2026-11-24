@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Harbour Legal
 Provide careful, independent and client-centred legal services.
-skip
+q
 /function
 1
 Commercial Contract Review
@@ -23,6 +22,9 @@ skip
 /task
 1
 Using synthetic assumptions only, identify the material commercial issues a principal lawyer should check in a software supply agreement: liability, indemnities, IP ownership, data protection, termination, and service levels. Separate general issue-spotting from claims needing the actual contract text. Do not give legal advice or claim to have read a real agreement.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

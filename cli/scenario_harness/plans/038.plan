@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Amberton Pharma
 Make medicines to specification, with a quality person accountable for every deviation decision.
-skip
+q
 /function
 1
 Deviation Management

@@ -18,10 +18,9 @@ yes
 /clear
 @timeout 300
 /enterprise
-1
 Larkfield Software
 Answer customer support enquiries quickly and honestly.
-@blank
+q
 /function
 1
 Support Triage
@@ -43,6 +42,9 @@ You are an expert customer support analyst specialising in software licensing an
 A customer writes that the licence key they paid for never arrived. Classify the enquiry, state what is needed to resolve it, and list what must be confirmed before anything is sent.
 1
 1
+@note Work type, then go-ahead.
+1
+1
 @wait 150
 /tasks
 @note step two: created only now, and told to continue from step one
@@ -51,6 +53,9 @@ A customer writes that the licence key they paid for never arrived. Classify the
 Draft the reply to the customer, using only what the triage established. Do not claim anything that was not confirmed.
 2
 2
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 150
 /tasks

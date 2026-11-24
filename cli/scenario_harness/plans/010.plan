@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Harbour Financial Group
 Investigate security concerns using verified evidence and controlled escalation.
-skip
+q
 /function
 1
 Security Incident Investigation
@@ -24,6 +23,9 @@ skip
 /task
 1
 Using a synthetic alert only, prepare a triage plan for a suspected customer-database anomaly: known facts, hypotheses, evidence to request, severity criteria, customer-impact questions, and authorised decision points. Do not claim telemetry access or execute containment.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}

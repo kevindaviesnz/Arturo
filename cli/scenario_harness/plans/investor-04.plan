@@ -3,10 +3,9 @@ yes
 /clear
 @timeout 240
 /enterprise
-1
 Harbour Learning
 Create accessible community learning workshops from supplied local needs.
-skip
+q
 /function
 1
 Programme Design

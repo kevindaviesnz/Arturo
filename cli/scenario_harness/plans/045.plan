@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Rimu University Integrity
 Uphold academic integrity fairly, with a person accountable for every finding.
-skip
+q
 /function
 1
 Integrity Review
@@ -24,6 +23,9 @@ skip
 1
 Analyse, using a fully synthetic and anonymised example only, how a suspected-collusion case should be handled as fair process: evidence standards, the student's right to respond, proportionality, appeal rights, and why a panel must decide. Do not make a finding or identify anyone.
 1
+@note Work type, then go-ahead.
+1
+1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}
 /tasks
@@ -33,6 +35,9 @@ Analyse, using a fully synthetic and anonymised example only, how a suspected-co
 /task
 1
 Revised analysis, fully synthetic and anonymised: analyse only the fair-process steps, evidence standards, right to respond, proportionality, and appeal rights, and the point a panel must decide. No identities, no finding.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK2 {(task-[0-9]+)}

@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Asteria Therapeutics
 Explore research strategy with scientific caution and accountable human oversight.
-skip
+q
 /function
 1
 Strategy Review
@@ -23,6 +22,9 @@ skip
 1
 Analyse only the high-level route-strategy evaluation criteria for a hypothetical small-molecule programme, and the missing evidence and quality controls a reviewer would flag. Do not name a real target or provide executable chemistry, quantities, conditions, or laboratory instructions.
 1
+@note Work type, then go-ahead.
+1
+1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}
 /tasks
@@ -32,6 +34,9 @@ Analyse only the high-level route-strategy evaluation criteria for a hypothetica
 /task
 1
 Revised analysis: high-level route-strategy criteria plus explicit source-verification, independent review, patent review, and stop criteria. No real target, no executable chemistry, quantities, conditions, or laboratory instructions.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK2 {(task-[0-9]+)}

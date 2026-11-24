@@ -3,10 +3,9 @@
 yes
 @timeout 90
 /enterprise
-1
 Wexley Legal
 Review software contracts for local firms and flag risky clauses.
-skip
+q
 /function
 1
 Contract Review

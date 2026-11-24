@@ -9,10 +9,9 @@ yes
 /clear
 @timeout 300
 /enterprise
-1
 Larkfield Software
 Answer customer support enquiries quickly and honestly.
-skip
+q
 /function
 1
 Order Preparation
@@ -27,6 +26,9 @@ lead@example.com
 /task
 1
 List what a picker must check before sealing a box.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 120
 /tasks

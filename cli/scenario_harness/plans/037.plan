@@ -2,10 +2,9 @@
 /reset
 yes
 /enterprise
-1
 Regional Support Agency
 Assess entitlements consistently and fairly, with a person accountable for every determination.
-skip
+q
 /function
 1
 Entitlement Framing
@@ -24,6 +23,9 @@ skip
 1
 Analyse, using a fully synthetic and anonymised example only, how a hardship-grant request should be assessed as a process: evidence needed, eligibility questions, fairness and vulnerability considerations, appeal rights, and why a case manager must decide. Do not determine eligibility or identify anyone.
 1
+@note Work type, then go-ahead.
+1
+1
 @wait 20
 @cap TASK_ID {(task-[0-9]+)}
 /tasks
@@ -33,6 +35,9 @@ Analyse, using a fully synthetic and anonymised example only, how a hardship-gra
 /task
 1
 Revised analysis, fully synthetic and anonymised: analyse only the assessment process, evidence needs, fairness checks, appeal rights, and the point a case manager must decide. No identities, no determination.
+1
+@note Work type, then go-ahead.
+1
 1
 @wait 20
 @cap TASK2 {(task-[0-9]+)}
