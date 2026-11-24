@@ -19,7 +19,14 @@ import {
   designatedApproversForFunction,
   mayDecideForFunction,
 } from "../staffing/functionApprovers";
-import { maySignOff } from "../identity/companySignIn";
+import { isOwner, maySignOff } from "../identity/companySignIn";
+import { handBackForJob, refuseHandBackSignOff } from "../staffing/handBack";
+import {
+  formatEmailAcceptanceLine,
+  recordEmailAcceptance,
+  refuseEmailAcceptance,
+  type EmailAcceptanceInput,
+} from "../staffing/emailAcceptance";
 
 export type TaskSignOffOutcome = {
   readonly signedOff: boolean;
@@ -28,7 +35,47 @@ export type TaskSignOffOutcome = {
   readonly code?: string;
 };
 
-const USAGE = 'Usage: /task signoff <task-id> [--as "<human-worker>"]';
+const USAGE = 'Usage: /task signoff <task-id> [--as "<human-worker>"] [--accepted-by "<name>"] [--email-date "<date>"] [--email-subject "<subject>"] [--email-from "<sender>"]';
+
+const NOTE_FLAGS = new Set(["--accepted-by", "--email-date", "--email-subject", "--email-from"]);
+
+function parseEmailAcceptanceArgs(args: readonly string[]): {
+  readonly rest: string[];
+  readonly note?: {
+    readonly freelancerName?: string;
+    readonly emailDate?: string;
+    readonly emailSubject?: string;
+    readonly emailSender?: string;
+  };
+} {
+  const rest: string[] = [];
+  const note: {
+    freelancerName?: string;
+    emailDate?: string;
+    emailSubject?: string;
+    emailSender?: string;
+  } = {};
+  for (let index = 0; index < args.length; index += 1) {
+    const option = args[index]!;
+    if (!NOTE_FLAGS.has(option)) {
+      rest.push(option);
+      continue;
+    }
+    const value = args[index + 1]?.trim();
+    if (!value || value.startsWith("--")) {
+      return { rest: [...args] };
+    }
+    index += 1;
+    if (option === "--accepted-by") note.freelancerName = value;
+    if (option === "--email-date") note.emailDate = value;
+    if (option === "--email-subject") note.emailSubject = value;
+    if (option === "--email-from") note.emailSender = value;
+  }
+  if (!note.freelancerName && !note.emailDate && !note.emailSubject && !note.emailSender) {
+    return { rest };
+  }
+  return { rest, note };
+}
 
 /**
  * Records that a named person has read a finished result and accepts it.
@@ -59,7 +106,8 @@ export function signOffTaskResult(
     return refused(error instanceof Error ? error.message : String(error));
   }
 
-  const [taskId, ...unexpected] = identity.remainingArgs;
+  const parsed = parseEmailAcceptanceArgs(identity.remainingArgs);
+  const [taskId, ...unexpected] = parsed.rest;
   if (!taskId || taskId.startsWith("--") || unexpected.length > 0) {
     return refused(USAGE);
   }
@@ -93,8 +141,25 @@ export function signOffTaskResult(
     );
   }
 
+  const handedBack = refuseHandBackSignOff(taskId, identity.workerName);
+  if (handedBack) {
+    broadcastEvent(
+      "job.result_sign_off_refused",
+      "warn",
+      `Sign-off of Task ${taskId} refused: handed-back draft`
+    );
+    return refused(handedBack, "hand_back");
+  }
+
   const designated = designatedApproversForFunction(job.businessFunctionId);
-  if (!mayDecideForFunction(designated, identity.workerName)) {
+  const handBack = handBackForJob(taskId);
+  const namedForHandBack = Boolean(
+    handBack && (
+      (handBack.newSigner && handBack.newSigner.trim().toLowerCase() === identity.workerName.trim().toLowerCase()) ||
+      (job.enterpriseId && isOwner(job.enterpriseId, identity.workerName))
+    )
+  );
+  if (!namedForHandBack && !mayDecideForFunction(designated, identity.workerName)) {
     broadcastEvent(
       "job.result_sign_off_refused",
       "warn",
@@ -124,7 +189,7 @@ export function signOffTaskResult(
 
   // Named work is checked again at sign-off: a result on work that is now
   // locked, or has "no AI" on, is not accepted (work/workLocks.ts).
-  const locked = refuseWorkUnderLocks({ workId: job.workId, enterpriseId: job.enterpriseId, when: "signoff" });
+  const locked = refuseWorkUnderLocks({ workId: job.workId, enterpriseId: job.enterpriseId, functionId: job.businessFunctionId, when: "signoff" });
   if (locked) {
     return refused(`${locked} Nothing was recorded.`);
   }
@@ -136,11 +201,35 @@ export function signOffTaskResult(
     );
   }
 
+  let acceptanceInput: EmailAcceptanceInput | undefined;
+  if (parsed.note) {
+    if (!job.enterpriseId) {
+      return refused("This Task has no business, so a freelancer note cannot be attached. Nothing was recorded.");
+    }
+    acceptanceInput = {
+      enterpriseId: job.enterpriseId,
+      jobId: job.id,
+      recordedBy: identity.workerName,
+      freelancerName: parsed.note.freelancerName ?? "",
+      emailDate: parsed.note.emailDate ?? "",
+      ...(parsed.note.emailSubject ? { emailSubject: parsed.note.emailSubject } : {}),
+      ...(parsed.note.emailSender ? { emailSender: parsed.note.emailSender } : {}),
+    };
+    const noteRefused = refuseEmailAcceptance(acceptanceInput, job);
+    if (noteRefused) return refused(noteRefused);
+  }
+
   // The sign-off and the step that follows it are written together (C2).
   const signedAt = Date.now();
+  let acceptanceLine: string | undefined;
   runtimeDb.transaction(() => {
     recordResultSignOff(job, identity.workerName, signedAt, signOffAlongside(job));
     recordNextAction("after-sign-off", job.id, signedAt, identity.workerName);
+    if (acceptanceInput) {
+      const recorded = recordEmailAcceptance({ ...acceptanceInput, now: signedAt }, job);
+      if ("refused" in recorded) throw new Error(recorded.refused);
+      acceptanceLine = formatEmailAcceptanceLine(recorded, identity.workerName);
+    }
   })();
   broadcastEvent(
     "job.result_signed_off",
@@ -161,7 +250,7 @@ export function signOffTaskResult(
     signedOff: true,
     message: [
       `Signed off: ${taskId}`,
-      `Signed off by: ${identity.workerName}`,
+      acceptanceLine ?? `Signed off by: ${identity.workerName}`,
       "This records that they read the result and accept it as it stands now. It does not prove the result is correct.",
       ...(routeLine ? ["", routeLine] : []),
       ...(handOff.message ? ["", handOff.message] : []),

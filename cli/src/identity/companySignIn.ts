@@ -33,6 +33,9 @@
 import crypto from "node:crypto";
 
 import { peopleOf } from "../clients/clientCommands";
+import { endDraftsForInvolving } from "../staffing/draftsFor";
+import { formatRoleChangeHandBackConfirm, openHandBacksForLostRight, waitingDraftsForPerson } from "../staffing/handBack";
+import { recordStaffChangeEvent } from "../staffing/staffChanges";
 import { isApprovalCapableMode } from "../control/humanWorkerMode";
 import { addWorker, getWorker, setHumanWorkerSignOff } from "../control/workers";
 import { getEnterprise } from "../enterprise/enterpriseStore";
@@ -291,8 +294,16 @@ function recordGrant(enterpriseId: string, workerName: string, granted: boolean,
  *
  * SIDE EFFECT: Reads Worker, sign-in and grant state.
  */
+/** Whether this person is an active owner of the business. SIDE EFFECT: Reads memberships. */
+export function isOwner(enterpriseId: string, workerName: string): boolean {
+  const membership = membershipOf(enterpriseId, workerName);
+  return membership?.role === "owner" && membership.status === "active";
+}
+
 export function maySignOff(enterpriseId: string | undefined, workerName: string): boolean {
   if (!isApprovalCapableMode(getWorker(workerName)?.humanMode)) return false;
+  // The owner can always sign off, so a hand-back never lands on nobody.
+  if (enterpriseId && isOwner(enterpriseId, workerName)) return true;
   if (!enterpriseId || !signInOn(enterpriseId)) return true;
   const grant = loadSignOffGrant(enterpriseId, workerName);
   if (!grant) return false;
@@ -585,7 +596,9 @@ export function setSuspended(input: { readonly enterpriseId: string; readonly pe
   if (input.actor && same(input.actor.workerName, person)) return { refused: "You cannot suspend yourself." };
   if (membership.role === "owner" && input.suspended && ownerCount(input.enterpriseId) <= 1) return { refused: "A business needs an owner." };
   setEnterpriseMembership({ ...membership, status: input.suspended ? "suspended" : "active" });
-  if (input.suspended) endSessions(membership.userId);
+  if (input.suspended) {
+    endSessions(membership.userId);
+    }
   logAuthorityChange({ enterpriseId: input.enterpriseId, what: input.suspended ? "access suspended" : "access restored", person, by: input.actor?.workerName ?? "the terminal", ...(input.actor ? { byUserId: input.actor.userId } : {}), at: input.now ?? Date.now() });
   return { message: input.suspended ? `${person} can no longer sign in. What they did stays on file under their name.` : `${person} can sign in again.` };
 }
@@ -613,9 +626,26 @@ export function setSignOffRight(input: { readonly enterpriseId: string; readonly
     const existing = membershipOf(input.enterpriseId, person);
     const role = existing?.role ?? (ownerCount(input.enterpriseId) > 0 ? "member" : "owner");
     ensureUser(input.enterpriseId, person, role);
+  } else {
+    const waiting = waitingDraftsForPerson(input.enterpriseId, person);
+    endDraftsForInvolving(input.enterpriseId, person, by, now);
+    openHandBacksForLostRight({
+      enterpriseId: input.enterpriseId,
+      person,
+      changedBy: by,
+      ...(input.actor ? { changedByUserId: input.actor.userId } : {}),
+      at: now,
+    });
+    logAuthorityChange({ enterpriseId: input.enterpriseId, what: "may no longer sign off work", person, by, ...(input.actor ? { byUserId: input.actor.userId } : {}), at: now });
+    recordStaffChangeEvent({ what: `took the sign-off right from ${person}`, by });
+    const message = `${person} can no longer sign off work or give go-aheads.` + (
+      waiting.length > 0 ? `\n\n${formatRoleChangeHandBackConfirm(waiting.length)}` : ""
+    );
+    return { message };
   }
-  logAuthorityChange({ enterpriseId: input.enterpriseId, what: input.canSignOff ? "may sign off work" : "may no longer sign off work", person, by, ...(input.actor ? { byUserId: input.actor.userId } : {}), at: now });
-  return { message: input.canSignOff ? `${person} can now sign off work and give go-aheads.` : `${person} can no longer sign off work or give go-aheads.` };
+  logAuthorityChange({ enterpriseId: input.enterpriseId, what: "may sign off work", person, by, ...(input.actor ? { byUserId: input.actor.userId } : {}), at: now });
+  recordStaffChangeEvent({ what: `gave ${person} the right to sign off work and give go-aheads`, by });
+  return { message: `${person} can now sign off work and give go-aheads.` };
 }
 
 /** SIDE EFFECT: Deletes every sign-in record and guess count (tests and /reset). */
