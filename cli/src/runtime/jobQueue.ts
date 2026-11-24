@@ -32,6 +32,7 @@ import { runtimeDb } from "../storage/runtimeDatabase";
 
 import { clearNextActions, recordNextAction } from "./nextActions";
 import { revokeOffTerminalLinksForJob } from "../offterminal/offTerminalLinks";
+import { notifyOffTerminalResultReady } from "../offterminal/signOffEmail";
 
 export type JobStatus =
   | "scheduled"
@@ -776,6 +777,14 @@ export function replaceJob(
 
   if (previous && previous.output !== normalizedUpdated.output) {
     revokeOffTerminalLinksForJob(normalizedUpdated.id);
+  }
+
+  if (
+    normalizedUpdated.status === "completed" &&
+    normalizedUpdated.output !== undefined &&
+    (previous?.status !== "completed" || previous.output !== normalizedUpdated.output)
+  ) {
+    notifyOffTerminalResultReady(normalizedUpdated);
   }
 
   return normalizedUpdated;
