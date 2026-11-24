@@ -15,6 +15,7 @@ import { listEnterprises } from "../enterprise/enterpriseStore";
 import { SUPPLIED_ARTEFACTS_END } from "../artefacts/artefactStore";
 import { describeActivity, startActivityIndicator } from "./uiActivityIndicator";
 import { isInteractiveSession } from "../core/interactivity";
+import { formatHandBackSessionLine, listOpenHandBacks } from "../staffing/handBack";
 
 // Only the markup the shared formatters actually emit. Matching anything in
 // braces also deleted every JSON object from a supplied document on its way to
@@ -857,6 +858,10 @@ export function startLineInterface(
   const startupHint = formatEmptyEnterpriseHint(listEnterprises().length);
   if (startupHint) {
     process.stdout.write(`\n${colour(startupHint, ansi.mint)}\n`);
+  }
+  const handBackLine = formatHandBackSessionLine(listOpenHandBacks().length);
+  if (handBackLine) {
+    process.stdout.write(`\n${colour(handBackLine, ansi.mint)}\n`);
   }
   const botMode =
     options.bot && options.bot.kind !== "human" ? options.bot : undefined;
