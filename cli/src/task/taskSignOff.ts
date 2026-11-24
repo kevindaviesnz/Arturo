@@ -19,6 +19,7 @@ import {
   designatedApproversForFunction,
   mayDecideForFunction,
 } from "../staffing/functionApprovers";
+import { maySignOff } from "../identity/companySignIn";
 
 export type TaskSignOffOutcome = {
   readonly signedOff: boolean;
@@ -32,10 +33,13 @@ const USAGE = 'Usage: /task signoff <task-id> [--as "<human-worker>"]';
 /**
  * Records that a named person has read a finished result and accepts it.
  *
- * Who may sign is decided exactly as it is for `/approve`: a registered,
- * approval-capable Human, and where a staffing plan made someone accountable
- * for the Function, only them. Every refusal happens before anything is
- * written.
+ * Who may sign is decided by maySignOff (identity/companySignIn.ts): they
+ * must be a registered, approval-capable Human, and with sign-in on they
+ * also need a verified grant from the owner. Identity resolution still
+ * checks the person's mode first, so a Human in "task" mode is refused
+ * with that more specific reason before the grant is considered. Where a
+ * staffing plan made someone accountable for the Function, only them.
+ * Every refusal happens before anything is written.
  *
  * SIDE EFFECT: May write a signed sign-off and broadcast a runtime event.
  */
@@ -72,6 +76,20 @@ export function signOffTaskResult(
   if (checking) {
     return refused(
       `${taskId} is a check of ${checking.sourceTaskId}, kept with it. Sign off ${checking.sourceTaskId} instead. Nothing was recorded.`
+    );
+  }
+
+  // The person's sign-off right, checked again here so a grant taken away
+  // (or never given) cannot be bypassed by an approval-capable mode alone.
+  if (!maySignOff(job.enterpriseId, identity.workerName)) {
+    broadcastEvent(
+      "job.result_sign_off_refused",
+      "warn",
+      `Sign-off of Task ${taskId} refused: ${identity.workerName} may not sign off work`
+    );
+    return refused(
+      `${identity.workerName} may not sign off work at this business, so this sign-off was not recorded.`,
+      "cannot_sign_off"
     );
   }
 
