@@ -96,6 +96,7 @@ every model-backed command until you change it there. See
 | `/complete-human-task` | Complete a Human Task, preserve attribution, and attach exact output Artefacts. |
 | `/block-task` | Mark a Human Task blocked and record why. |
 | `/revise-task` | Return a Human Task for revision with explicit instructions. |
+| `/off-terminal` | Switch off-terminal sign-off on or off, verify a person's email, start or confirm a device check, and record the real-person test. |
 
 Approval authorises the proposed execution boundary. It is not a judgement that
 the eventual result is correct, safe, or externally verified.

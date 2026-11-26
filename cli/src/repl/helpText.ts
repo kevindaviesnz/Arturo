@@ -245,6 +245,7 @@ export function createFullHelpText(): string {
     "/approve <task-id>",
     '/reject <task-id> "<reason>"',
     "/approval-status <task-id>",
+    "/off-terminal",
   ],
 },
     {
@@ -350,6 +351,7 @@ export function listKnownCommands(): readonly string[] {
     "/kernel-clear-snapshot",
     "/kernel-snapshot-status",
     "/approval-status",
+    "/off-terminal",
     "/replay-events",
     "/replay-state",
     "/replay-checkpoint",

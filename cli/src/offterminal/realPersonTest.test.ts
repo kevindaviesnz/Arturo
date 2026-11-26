@@ -49,5 +49,7 @@ describe("the real-person test gate", () => {
     expect(text).toContain("Wait 12 hours");
     expect(text).toContain("without help");
     expect(text).toContain("the rest is not built");
+    expect(text).toContain("/off-terminal on --reason");
+    expect(text).toContain("/off-terminal record-test --outcome passed");
   });
 });
