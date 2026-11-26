@@ -134,6 +134,7 @@ import {
 } from "./uiState";
 import { createUiOverviewEntries, createWhatsWaitingEntries } from "./uiOverviewEntries";
 import { formatWeeklyEmailAcceptances } from "../staffing/emailAcceptance";
+import { runOffTerminalCommand } from "../offterminal/offTerminalCommands";
 import { isOwner } from "../identity/companySignIn";
 import {
   formatSetupRequiredBody,
@@ -9822,6 +9823,11 @@ export async function handleUiCommand(
 
   if (command === "/waiting") {
     return createWhatsWaitingEntries();
+  }
+
+  if (command === "/off-terminal") {
+    const outcome = await runOffTerminalCommand(args);
+    return [{ actor: "Arturo", label: outcome.refused ? REFUSED_LABEL : "Off-terminal sign-off", body: outcome.text }];
   }
 
   if (command === "/acceptances") {

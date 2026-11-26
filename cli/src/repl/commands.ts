@@ -191,6 +191,7 @@ import {
 import {
   handleWebSearchCommand,
 } from "../ui/uiWebSearchEntries";
+import { runOffTerminalCommand } from "../offterminal/offTerminalCommands";
 
 export {
   formatReplayCheckpointSummary,
@@ -400,6 +401,12 @@ export async function handleCommand(
         handleWebSearchCommand(args).body
       );
 
+      break;
+    }
+
+    case "/off-terminal": {
+      const outcome = await runOffTerminalCommand(args);
+      console.log(outcome.text);
       break;
     }
 

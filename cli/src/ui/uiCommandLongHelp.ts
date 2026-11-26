@@ -413,4 +413,36 @@ export const UI_COMMAND_LONG_HELP: Readonly<Record<string, UiCommandLongHelp>> =
     failures: ["Ctrl+C is the fallback when the terminal cannot accept commands."],
     boundaries: ["Exit does not reset persistent state.", "Background external effects already initiated are not undone."],
   },
+  "/off-terminal": {
+    whenToUse: [
+      "To switch off-terminal sign-off on or off at this computer.",
+      "To record and verify a person's email, start or confirm a device check, or record the real-person test.",
+    ],
+    workflow: [
+      "status reports whether the path is off, waiting, or on.",
+      "on starts a 12-hour wait after a typed reason and a claim-once email notice.",
+      "cancel stops a waiting switch-on; name, with --as, someone who can sign off.",
+      "off turns the path off at once and revokes issued links.",
+      "verify-email sends a one-time code; confirm-email records the address when the code matches.",
+      "enrol issues a 30-minute setup link; confirm records the device check after the 12-hour wait, only with a confirmation that names the person.",
+      "record-test stores whether the real-person test passed. A pass requires --unaided yes.",
+      "instructions prints the real-person test steps, including these commands.",
+    ],
+    verification: [
+      "Run /off-terminal status after on, cancel, or off.",
+      "Confirm the notice and setup emails arrived before waiting or sending a link.",
+      "For the real-person test, follow /off-terminal instructions on the business's own tunnel.",
+    ],
+    failures: [
+      "A typeless yes is not a reason or a confirmation.",
+      "The notice or setup email must be accepted, or nothing is changed and any issued link is consumed.",
+      "Enrolment will not start without a verified email for the person and for the owner, and without the path on.",
+      "Confirming before the 12-hour wait is refused.",
+    ],
+    boundaries: [
+      "These commands only call the existing off-terminal functions; they add no special cases.",
+      "Go-aheads stay at the terminal. The hosted relay is not used. TLS must end at this computer.",
+      "A recorded acceptance or a passkey on a phone is not a legal signature.",
+    ],
+  },
 };

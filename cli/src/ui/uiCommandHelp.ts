@@ -72,6 +72,7 @@ const COMMAND_EXPLANATIONS: Readonly<
   "/reset": "Reset asks for confirmation, listing what would be destroyed, then returns the local Arturo application to first-use state by deleting its stored records, including Enterprises, ongoing Functions, Workers, Tasks, workflows, approvals, Events, Schedules, Memory, Human Tasks, Delegations, and chat state. It is intended for disposable demonstrations or deliberately abandoned local data, not routine troubleshooting, and Arturo has no built-in undo for it. Reset cannot retract external model calls, emails, HTTP actions, files, provider logs, or backups that already exist outside Arturo.",
   "/help": "Help is Arturo's built-in guide to the supported terminal surface. The overview groups primary commands by purpose, while /help followed by a command explains the concept, prerequisites, syntax, switches, examples, internal workflow, side effects, verification, recovery, and safety boundaries; /help all exposes lower-level developer commands separately. Help is read-only and reflects the maintained command catalog, but it cannot prove that an external provider, credential, connector, or Human participant is currently available.",
   "/exit": "Exit closes the current native Arturo terminal process cleanly and returns control to the surrounding shell. It does not reset the installation or delete persistent records, so the next Arturo session can reload the saved Enterprises, Functions, Workers, Tasks, Events, and other state. Work already sent to an external system is not undone merely because the local terminal closes.",
+  "/off-terminal": "Off-terminal sign-off lets a person who can sign off work do so from their own device, behind the business's own tunnel, always with a device check. The path starts off. Switching it on is owner-only loosening: a typed reason, a 12-hour wait, and an email notice; anyone who can sign off may cancel during the wait, and turning it off is immediate. The same command family records and verifies email addresses, starts and confirms device-check enrolment, and records the real-person test. Go-aheads stay at the terminal. The hosted relay is not used here.",
 };
 
 const COMMAND_OPTION_HELP: Readonly<
@@ -336,6 +337,29 @@ export const UI_COMMAND_HELP: readonly UiCommandHelp[] = [
   help("/models", "Same as /model: choose which AI model Arturo uses.", ["/models"], ["/models"], ["Kept as an alias so both spellings work."]),
   help("/model-routing", "Inspect the effective local-first policy, approved aliases, and external-call session cap.", ["/model-routing"], ["/model-routing"], ["External escalation is disabled unless every required environment setting is present.", "Configuration readiness does not prove live provider quota or availability.", "Automatic escalation is limited to repeated structured-output validation failure; /next and /staff can also use an approved alias after an explicit user command."]),
   help("/web-search", "Inspect governed Web Search configuration, domain policy, and process-local call usage.", ["/web-search"], ["/web-search", "/capabilities web-research"], ["This view makes no search or model call.", "Use /task create with the web-research capability to perform a search.", "Result snippets are captured as evidence but remain unverified until important source pages are checked."]),
+  help("/off-terminal", "Turn off-terminal sign-off on or off, verify an email, start or confirm a device check, and record the real-person test.", [
+    '/off-terminal status [--enterprise "<business>"]',
+    '/off-terminal on --reason "<why, in your own words>" --notify-to "<email>" [--enterprise "<business>"] [--as "<owner>"]',
+    '/off-terminal cancel --as "<name>" [--enterprise "<business>"]',
+    '/off-terminal off [--enterprise "<business>"] [--as "<owner>"]',
+    '/off-terminal verify-email --person "<name>" --address "<email>" [--enterprise "<business>"] [--as "<owner>"]',
+    '/off-terminal confirm-email --person "<name>" --code "<code from the email>" [--enterprise "<business>"]',
+    '/off-terminal enrol --person "<name>" --reason "<why, in your own words>" [--enterprise "<business>"] [--as "<owner>"]',
+    '/off-terminal confirm --person "<name>" --confirmation "<text that names them>" [--enterprise "<business>"] [--as "<owner>"] [--credential <id>]',
+    '/off-terminal record-test --outcome passed|failed --person "<name>" --recorded-by "<your name>" --unaided yes|no --started <time> [--enrolled <time>] [--signed-off <time>] [--minutes <n>] [--notes "<text>"]',
+    "/off-terminal instructions",
+  ], [
+    '/off-terminal on --reason "Staff need to sign off when they are not at the computer." --notify-to "owner@example.com"',
+    '/off-terminal cancel --as "Priya Nair"',
+    '/off-terminal verify-email --person "Priya Nair" --address "priya@example.com"',
+    '/off-terminal confirm --person "Priya Nair" --confirmation "I spoke to Priya Nair and they set this up."',
+    '/off-terminal record-test --outcome passed --person "Priya Nair" --recorded-by "Kevin Brown" --unaided yes --started now --minutes 18',
+  ], [
+    "The path starts off. Switching on waits 12 hours; switching off is immediate.",
+    "A cancel must name, with --as, someone who can sign off.",
+    "Confirm enrolment only after the 12-hour wait, with a confirmation that names the person, not only yes.",
+    "The hosted relay is not used. TLS must end at this computer. See /off-terminal instructions.",
+  ]),
   help("/clear", "Clear the terminal display without deleting Arturo records.", ["/clear"], ["/clear"]),
   help("/reset", "Delete application state and return Arturo to first-use state.", ["/reset"], ["/reset"], ["This is destructive. It clears Enterprises, ongoing Functions, Workers, bounded Tasks, Events, Schedules, Memory, chat history, approvals, Human Tasks, and Delegations."]),
   help("/help", "Show the command overview or detailed help for one command.", ["/help", "/help <command>"], ["/help", "/help delegation"]),
@@ -353,7 +377,7 @@ export const UI_HELP_GROUPS: readonly UiCommandHelpGroup[] = [
   { title: "Clients", commands: ["/talk", "/assistant", "/clients", "/client", "/work"] },
   { title: "Workers and work", commands: ["/workers", "/archetypes", "/capabilities", "/add-ai-worker", "/add-human-worker", "/refine-worker", "/tasks", "/task", "/chat", "/ask"] },
   { title: "Knowledge and operations", commands: ["/artefacts", "/artefact", "/memory", "/event", "/schedule", "/events", "/health", "/delegation", "/timeline", "/web-search", "/model", "/model-routing"] },
-  { title: "Governance and people", commands: ["/governance", "/approvals", "/approve", "/reject", "/approval-status", "/human-tasks", "/human-task", "/create-human-task", "/complete-human-task", "/block-task", "/revise-task"] },
+  { title: "Governance and people", commands: ["/governance", "/approvals", "/approve", "/reject", "/approval-status", "/human-tasks", "/human-task", "/create-human-task", "/complete-human-task", "/block-task", "/revise-task", "/off-terminal"] },
   { title: "Terminal", commands: ["/clear", "/reset", "/help", "/exit"] },
 ];
 
@@ -447,6 +471,10 @@ const PREREQUISITES: Readonly<Record<string, readonly string[]>> = {
   "/complete-human-task": ["An open Human Task.", "Use --as with a registered Human Worker when attribution matters."],
   "/block-task": ["An open Human Task and a reason."],
   "/revise-task": ["A Human Task that can be returned for revision."],
+  "/off-terminal": [
+    "A business already set up, with you as owner for switch-on, email checks, enrolment, and turning the path off.",
+    "APPROVAL_SIGNING_SECRET and PUBLIC_BASE_URL set in the shell, and the listener running behind the business's own tunnel, before any link is sent.",
+  ],
   "/delegation": ["Two ongoing Functions in the same Enterprise.", "The receiving Function must be running and have a suitable AI Worker for executable delegated work."],
 };
 
@@ -506,6 +534,7 @@ const EFFECTS: Readonly<Record<string, string>> = {
   "/reset": "Destructive. Deletes application runtime state and cannot be undone by Arturo.",
   "/help": "Read-only.",
   "/exit": "Stops the current terminal process without deleting persistent state.",
+  "/off-terminal": "Conditional. Switch-on, email, enrolment and confirmation write only after the existing module checks pass; a refused command writes nothing. Status and instructions are read-only.",
 };
 
 const RELATED: Readonly<Record<string, readonly string[]>> = {
@@ -563,6 +592,7 @@ const RELATED: Readonly<Record<string, readonly string[]>> = {
   "/reset": ["/overview", "/enterprise"],
   "/help": ["/overview"],
   "/exit": ["/help"],
+  "/off-terminal": ["/staff", "/task", "/help"],
 };
 
 export function getUiCommandGuidance(command: string): UiCommandGuidance {
